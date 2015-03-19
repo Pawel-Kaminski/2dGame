@@ -1,6 +1,9 @@
 local sti = require "sti"
 
 function love.load()
+
+    love.window.setMode(800, 600, {fullscreen=true}) 
+
     -- Grab window size
 	windowWidth = love.graphics.getWidth()
 	windowHeight = love.graphics.getHeight()
@@ -10,6 +13,8 @@ function love.load()
 
     --Load a map exported to Lua from Tiled
     map = sti.new("assets/maps/example2")
+
+    love.resize(windowWidth, windowHeight)
 
     -- Create a Custom Layer
     map:addCustomLayer("Sprite Layer", 3)
@@ -41,6 +46,10 @@ function love.update(dt)
 end
 
 function love.draw()
+    
+    local scaleX = 1
+    local scaleY = 1
+    
     -- Translation would normally be based on a player's x/y
     --local translateX = 0
     --local translateY = 0
@@ -49,9 +58,9 @@ function love.draw()
     --map:setDrawRange(translateX, translateY, windowWidth, windowHeight)
     
     -- Draw the map and all objects within
-    map:draw()
+    map:draw(scaleX, scaleY)
 end
 
-function love.resize(w, h)
-    map:resize(w, h)
+function love.resize(windowWidth, windowHeight)
+    map:resize(windowWidth, windowHeight)
 end
