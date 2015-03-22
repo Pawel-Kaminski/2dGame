@@ -2,7 +2,7 @@ local sti = require "sti"
 
 function love.load()
 
-    love.window.setMode(800, 600, {fullscreen=true}) 
+    love.window.setMode(1920, 1080, {fullscreen=true}) 
 
     -- Grab window size
 	windowWidth = love.graphics.getWidth()
@@ -12,20 +12,22 @@ function love.load()
 	--love.physics.setMeter(32)
 
     --Load a map exported to Lua from Tiled
-    map = sti.new("assets/maps/example2")
+    map = sti.new("assets/maps/new_map")
+    --map = sti.new("assets/maps/example2")
 
     love.resize(windowWidth, windowHeight)
 
     -- Create a Custom Layer
-    map:addCustomLayer("Sprite Layer", 3)
+    --map:addCustomLayer("Sprite Layer", 3)
+    map:addCustomLayer("Sprite Layer", 2)
 
     -- Add data to Custom Layer
     local spriteLayer = map.layers["Sprite Layer"]
     spriteLayer.sprites = {
         player = {
-            image = love.graphics.newImage("assets/sprites/army.png"),
-            x = 64,
-            y = 64,
+            image = love.graphics.newImage("assets/sprites/man2.png"),
+            x = 60,
+            y = 60,
             r = 0,       
         }
     }
