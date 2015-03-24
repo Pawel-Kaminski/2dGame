@@ -1,10 +1,32 @@
 local sti = require "sti"
+Gamestate = require "hump.gamestate"
+
+local mapState = {}
+local battleState = {}
+
+function battleState:enter()
+    sound = love.audio.newSource("music/battleThemeA.mp3")
+end
+
+function battleState:update(dt)
+end
+
+function battleState:draw()
+    love.audio.play(sound)
+    battleArena:draw()
+end
 
 function love.load()
+    Gamestate.registerEvents()
+    Gamestate.switch(mapState)
+
+    sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
+    love.audio.play(sound)
 
     xx = 0
     yy = 0
     love.keyboard.setKeyRepeat(true)
+    love.mouse.setVisible(false)
     love.window.setMode(1920, 1080, {fullscreen=true}) 
 
     -- Grab window size
@@ -16,6 +38,7 @@ function love.load()
 
     --Load a map exported to Lua from Tiled
     map = sti.new("assets/maps/new_map")
+    battleArena = sti.new("assets/maps/battle_map")
     --map = sti.new("assets/maps/example2")
 
     love.resize(windowWidth, windowHeight)
@@ -24,22 +47,31 @@ function love.load()
     map:addCustomLayer("Sprite Layer", 2)
 
     -- Add data to Custom Layer
-    local spriteLayer = map.layers["Sprite Layer"]
+    --local spriteLayer = map.layers["Sprite Layer"]
+    spriteLayer = map.layers["Sprite Layer"]
     spriteLayer.sprites = {
         player = {
             image = love.graphics.newImage("assets/sprites/man2.png"),
-            x = xx,
-            y = 60,
+            x = 0,
+            y = 0,
             r = 0,       
+        },
+        enemy = {
+            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            x = 1200,
+            y = 120,
+            r = 0
         }
     }
 
     -- Update callback for Custom Layer
     function spriteLayer:update(dt)
-        for _, sprite in pairs(self.sprites) do
-            sprite.x = xx
-            sprite.y = yy
-        end
+        --for _, sprite in pairs(self.sprites) do
+            --sprite.x = xx
+            --sprite.y = yy
+        --end
+        self.sprites.player.x = xx
+        self.sprites.player.y = yy
     end
 
     -- Draw callback for Custom Layer
@@ -55,6 +87,12 @@ end
 
 function love.update(dt)
     map:update(dt)
+    if spriteLayer.sprites.player.x == spriteLayer.sprites.enemy.x then
+        if spriteLayer.sprites.player.y == spriteLayer.sprites.enemy.y then
+            love.audio.stop()
+            Gamestate.switch(battleState)
+        end
+    end
 end
 
 function love.draw()
