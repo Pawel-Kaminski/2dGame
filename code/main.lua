@@ -1,20 +1,8 @@
-local sti = require "sti"
+sti = require "sti"
 Gamestate = require "hump.gamestate"
+Battle = require "battle"
 
 local mapState = {}
-local battleState = {}
-
-function battleState:enter()
-    sound = love.audio.newSource("music/battleThemeA.mp3")
-end
-
-function battleState:update(dt)
-end
-
-function battleState:draw()
-    love.audio.play(sound)
-    battleArena:draw()
-end
 
 function love.load()
     Gamestate.registerEvents()
@@ -33,13 +21,8 @@ function love.load()
 	windowWidth = love.graphics.getWidth()
 	windowHeight = love.graphics.getHeight()
 
-    -- Set world meter size (in pixels)
-	--love.physics.setMeter(32)
-
     --Load a map exported to Lua from Tiled
     map = sti.new("assets/maps/new_map")
-    battleArena = sti.new("assets/maps/battle_map")
-    --map = sti.new("assets/maps/example2")
 
     love.resize(windowWidth, windowHeight)
 
@@ -47,7 +30,6 @@ function love.load()
     map:addCustomLayer("Sprite Layer", 2)
 
     -- Add data to Custom Layer
-    --local spriteLayer = map.layers["Sprite Layer"]
     spriteLayer = map.layers["Sprite Layer"]
     spriteLayer.sprites = {
         player = {
@@ -66,10 +48,6 @@ function love.load()
 
     -- Update callback for Custom Layer
     function spriteLayer:update(dt)
-        --for _, sprite in pairs(self.sprites) do
-            --sprite.x = xx
-            --sprite.y = yy
-        --end
         self.sprites.player.x = xx
         self.sprites.player.y = yy
     end
@@ -99,13 +77,6 @@ function love.draw()
     
     local scaleX = 1
     local scaleY = 1
-    
-    -- Translation would normally be based on a player's x/y
-    --local translateX = xx
-    --local translateY = 0
-
-    -- Draw Range culls unnecessary tiles
-    --map:setDrawRange(translateX, translateY, windowWidth, windowHeight)
     
     -- Draw the map and all objects within
     map:draw(scaleX, scaleY)
