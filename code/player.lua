@@ -1,0 +1,1 @@
+Player = {healthPoints = 50, magicPoints = 20, waitingTime = 50, remainingWaitingTime = 25, defence = 0}

@@ -9,6 +9,7 @@ function love.load()
     Gamestate.switch(mapState)
 
     sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
+    sound2 = love.audio.newSource("music/battleThemeA.mp3")
     love.audio.play(sound)
 
     xx = 0
@@ -36,7 +37,7 @@ function love.load()
             image = love.graphics.newImage("assets/sprites/man2.png"),
             x = 0,
             y = 0,
-            r = 0,       
+            r = 0       
         },
         enemy = {
             image = love.graphics.newImage("assets/sprites/enemy.png"),
@@ -63,7 +64,8 @@ function love.load()
     end
 end
 
-function love.update(dt)
+--function love.update(dt)
+function mapState:update(dt)
     map:update(dt)
     if spriteLayer.sprites.player.x == spriteLayer.sprites.enemy.x then
         if spriteLayer.sprites.player.y == spriteLayer.sprites.enemy.y then

@@ -1,8 +1,7 @@
 battleState = {}
 
 function battleState:enter()
-    sound = love.audio.newSource("music/battleThemeA.mp3")
-    love.audio.play(sound)
+
 end
 
 function battleState:update(dt)
@@ -17,7 +16,25 @@ function battleState:draw()
             image = love.graphics.newImage("assets/sprites/battle.png"),
             x = 870,
             y = 30,
-            r = 0,       
+            r = 0       
+        },
+        player = {
+            image = love.graphics.newImage("assets/sprites/man2.png"),
+            x = 180,
+            y = 300,
+            r = 0, 
+        },
+        enemy1 = {
+            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            x = 1320,
+            y = 300,
+            r = 0, 
+        },
+        lifebar = {
+            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            x = 10,
+            y = 10,
+            r = 0
         }
     }
     function battleSpriteLayer:draw()
@@ -29,4 +46,9 @@ function battleState:draw()
         end
     end
     battleArena:draw()
+    fight()
+end
+
+function fight()
+    love.audio.play(sound2)
 end
