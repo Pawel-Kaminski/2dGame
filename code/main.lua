@@ -16,7 +16,7 @@ function love.load()
     yy = 0
     love.keyboard.setKeyRepeat(true)
     love.mouse.setVisible(false)
-    love.window.setMode(1920, 1080, {fullscreen=true}) 
+    love.window.setMode(1920, 1080, {fullscreen=true})
 
     -- Grab window size
 	windowWidth = love.graphics.getWidth()

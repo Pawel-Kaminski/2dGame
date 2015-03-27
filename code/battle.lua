@@ -1,7 +1,9 @@
+require "player"
+require "enemy1"
+
 battleState = {}
 
 function battleState:enter()
-
 end
 
 function battleState:update(dt)
@@ -46,9 +48,14 @@ function battleState:draw()
         end
     end
     battleArena:draw()
-    fight()
+    love.graphics.setColor(0, 0, 0)
+    twenty = love.graphics.newFont(20)
+    love.graphics.setFont(twenty)
+    love.graphics.printf(Player.healthPoints.."/"..Player.maxHealth, 153, 23, 200, "left", 0)
+    love.graphics.printf(Player.magicPoints.."/"..Player.maxMagic, 173, 58, 200, "left", 0)
+    love.audio.play(sound2)
+    fight(Enemy1)
 end
 
-function fight()
-    love.audio.play(sound2)
+function fight(o1)
 end
