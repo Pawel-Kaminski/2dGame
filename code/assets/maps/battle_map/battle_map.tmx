@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="128" height="72" tilewidth="15" tileheight="15" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="128" height="72" tilewidth="15" tileheight="15" backgroundcolor="#000000" nextobjectid="1">
  <tileset firstgid="1" name="_MAP_small" tilewidth="15" tileheight="15">
   <image source="_MAP_small.png" width="614" height="614"/>
  </tileset>
  <layer name="Tile Layer 1" width="128" height="72">
   <data encoding="base64" compression="zlib">
-   eJzt3bENhDAQRUGLFpDcAB0gItqgMFqG0CkS1oJ3ggl+dgfBE9HWqZS9Ue1UeyG1jdTW29ywc+3o/tj6j/6j/7b+2/qP/qP/dv99AAAAAAAA6ZzlmejfG2205zXa//G8APgi/cjN+wcAAPgH32+5ef8AAAAAAAAAAAAAQC/R92ds939w/wf3f2z3/2z9R//Rf1v/bf1H/9F/+/19AdpQDpc=
+   eJzt2bENgCAQBVB0BRMWcANj5RoWjuXKWtKaaEDuFa/4HRzFD7k8prQVshwqz4S2EtpymwpyrFy7f2T9j/5H/8v6X9b/6H/0v/x93gEAAAAAgHDO9Ezt89bW27x6u495AdAi/RGb9wcAAPgH/7fYvD8AAAAALTkGAAAAAACgN7X3D9j/AAAAAAAA77oA+F0whg==
   </data>
  </layer>
 </map>
