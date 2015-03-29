@@ -12,8 +12,10 @@ function love.load()
     sound2 = love.audio.newSource("music/battleThemeA.mp3")
     love.audio.play(sound)
 
+    enableMoving = true
     xx = 0
     yy = 0
+    arrowY = 900
     love.keyboard.setKeyRepeat(true)
     love.mouse.setVisible(false)
     love.window.setMode(1920, 1080, {fullscreen=true})
@@ -62,6 +64,54 @@ function love.load()
             love.graphics.draw(sprite.image, x, y, r)
         end
     end
+
+    battleArena = sti.new("assets/maps/battle_map")
+    battleArena:addCustomLayer("Sprite Layer", 2)
+    battleSpriteLayer = battleArena.layers["Sprite Layer"]
+    battleSpriteLayer.sprites = {
+        title = {
+            image = love.graphics.newImage("assets/sprites/battle.png"),
+            x = 870,
+            y = 30,
+            r = 0       
+        },
+        player = {
+            image = love.graphics.newImage("assets/sprites/man2.png"),
+            x = 180,
+            y = 300,
+            r = 0, 
+        },
+        enemy1 = {
+            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            x = 1320,
+            y = 300,
+            r = 0, 
+        },
+        lifebar = {
+            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            x = 10,
+            y = 10,
+            r = 0
+        },
+        arrow = {
+            image = love.graphics.newImage("assets/sprites/arrow.png"),
+            x = 90,
+            y = arrowY,
+            r = 0
+        }
+    }
+    function battleSpriteLayer:update(dt)
+        self.sprites.arrow.y = arrowY
+    end
+    function battleSpriteLayer:draw()
+        for _, sprite in pairs(self.sprites) do
+            local x = math.floor(sprite.x)
+            local y = math.floor(sprite.y)
+            local r = sprite.r
+            love.graphics.draw(sprite.image, x, y, r)
+        end
+    end
+
 end
 
 --function love.update(dt)
@@ -70,6 +120,7 @@ function mapState:update(dt)
     if spriteLayer.sprites.player.x == spriteLayer.sprites.enemy.x then
         if spriteLayer.sprites.player.y == spriteLayer.sprites.enemy.y then
             love.audio.stop()
+            enableMoving = false
             Gamestate.switch(battleState)
         end
     end
@@ -91,13 +142,27 @@ end
 function love.keypressed(key)
     if key == "escape" then
         love.event.quit()
-    elseif key == "right" then
-        xx = xx + 60
-    elseif key == "left" then
-        xx = xx - 60
+    elseif enableMoving then
+        if key == "right" then
+            xx = xx + 60
+        elseif key == "left" then
+            xx = xx - 60
+        elseif key == "down" then
+            yy = yy + 60
+        elseif key == "up" then
+            yy = yy - 60
+        end
     elseif key == "down" then
-        yy = yy + 60
+        if arrowY < 960 then
+            arrowY = arrowY + 30
+        else
+            arrowY = 900
+        end
     elseif key == "up" then
-        yy = yy - 60
+        if arrowY > 900 then
+            arrowY = arrowY - 30
+        else
+            arrowY = 960
+        end
     end
 end
