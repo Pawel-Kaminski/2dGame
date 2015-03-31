@@ -32,6 +32,7 @@ function mapState:enter()
 
     -- Draw callback for Custom Layer
     function spriteLayer:draw()
+        --pairs function iterates over all elements in a table
         for _, sprite in pairs(self.sprites) do
             local x = math.floor(sprite.x)
             local y = math.floor(sprite.y)

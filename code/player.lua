@@ -41,12 +41,17 @@ playerActionFlags = {
 }
 
 --This function returns list of all available actions
-function listOfAllAction()
+function listOfAllActions()
     --create empty list of actions
+    actions = {}
 
     --foreach action in playerActionFlags
+    for _, action in pairs(playerActionFlags) do
         --if second attribute is true
+        if action[2] then
             --add first attribute to list of actions
-
-    --return list of actions
+            table.insert(actions, action[1])
+        end
+    end
+    return actions
 end
