@@ -1,59 +1,9 @@
 require "player"
 require "enemy1"
-battleState = {}
 
-function battleState:enter()
-    sound2 = love.audio.newSource("music/battleThemeA.mp3")
-    love.audio.play(sound2)
-    battleArena = sti.new("assets/maps/battle_map")
-    battleArena:addCustomLayer("Sprite Layer", 2)
-    battleSpriteLayer = battleArena.layers["Sprite Layer"]
-    arrowY = 900
-    battleSpriteLayer.sprites = {
-        title = {
-            image = love.graphics.newImage("assets/sprites/battle.png"),
-            x = 870,
-            y = 30,
-            r = 0       
-        },
-        player = {
-            image = love.graphics.newImage("assets/sprites/man2.png"),
-            x = 180,
-            y = 300,
-            r = 0, 
-        },
-        enemy1 = {
-            image = love.graphics.newImage("assets/sprites/enemy.png"),
-            x = 1320,
-            y = 300,
-            r = 0, 
-        },
-        lifebar = {
-            image = love.graphics.newImage("assets/sprites/lifebar.png"),
-            x = 10,
-            y = 10,
-            r = 0
-        },
-        arrow = {
-            image = love.graphics.newImage("assets/sprites/arrow.png"),
-            x = 90,
-            y = arrowY,
-            r = 0
-        }
-    }
-    function battleSpriteLayer:update(dt)
-        self.sprites.arrow.y = arrowY
-    end
-    function battleSpriteLayer:draw()
-        for _, sprite in pairs(self.sprites) do
-            local x = math.floor(sprite.x)
-            local y = math.floor(sprite.y)
-            local r = sprite.r
-            love.graphics.draw(sprite.image, x, y, r)
-        end
-    end
-    twenty = love.graphics.newFont(20)
-end
+battleState = {}
+require "battleLoading"
+require "battleControls"
 
 dtotal = 0
 countingActive = true
@@ -68,7 +18,14 @@ function battleState:update(dt)
     end
 end
 
-MenuOption = 1
+function colourIfNeeded(expectedValue)
+    if arrowY == expectedValue then
+        love.graphics.setColor(255, 0, 0)
+    else
+        love.graphics.setColor(255, 255, 255)
+    end
+end
+
 function battleState:draw()
     battleArena:draw()
     love.graphics.setColor(0, 0, 0)
@@ -79,11 +36,26 @@ function battleState:draw()
     love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
     love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
     if displayMenu then
+        colourIfNeeded(900)
         love.graphics.printf("Akcja", 150, 915, 500, "left", 0)
+        colourIfNeeded(930)
         love.graphics.printf("Przedmiot", 150, 945, 500, "left", 0)
+        colourIfNeeded(960)
         love.graphics.printf("Ucieczka", 150, 975, 500, "left", 0)
-        love.graphics.printf(battleSpriteLayer.sprites.arrow.y, 150, 1005, 500, "left", 0)
-        love.graphics.printf(arrowY, 150, 1035, 500, "left", 0)
+    end    
+    
+    function displayAction(actionName, actionPositionY)
+        love.graphics.printf(actionName, 150, actionPositionY, 500, "left", 0)
+    end
+
+    if displayActions then
+        displayMenu = false
+        lastPositionY = 915
+        for _, action in pairs(actions) do
+            colourIfNeeded(lastPositionY - 15)
+            displayAction(action, lastPositionY)
+            lastPositionY = lastPositionY + 30
+        end
     end
 end
 
@@ -108,21 +80,10 @@ function playerTurn()
 end
 
 function enemyTurn()
-    
 end
 
-function battleState:keypressed(key)
-    if key == "down" then
-        if arrowY < 960 then
-            arrowY = arrowY + 30
-        else
-            arrowY = 900
-        end
-    elseif key == "up" then
-        if arrowY > 900 then
-            arrowY = arrowY - 30
-        else
-            arrowY = 960
-        end
-    end
+function displayItems()
+end
+
+function escapeBattle()
 end

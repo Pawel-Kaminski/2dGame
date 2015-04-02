@@ -37,7 +37,7 @@ playerActionFlags = {
     action1 = {"Zwykły atak", true},
     action2 = {"Atak magiczny", true},
     action3 = {"Akcja zablokowana", false},
-    action4 = {"Ulecz się", true}
+    action4 = {"Ulecz sie", true}
 }
 
 --This function returns list of all available actions
