@@ -1,9 +1,5 @@
-require "player"
-require "enemy1"
-
 battleState = {}
 require "battleLoading"
-require "battleControls"
 
 dtotal = 0
 countingActive = true
@@ -35,6 +31,7 @@ function battleState:draw()
     love.graphics.setColor(255,255,255)
     love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
     love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
+    
     if displayMenu then
         colourIfNeeded(900)
         love.graphics.printf("Akcja", 150, 915, 500, "left", 0)
@@ -48,6 +45,7 @@ function battleState:draw()
         love.graphics.printf(actionName, 150, actionPositionY, 500, "left", 0)
     end
 
+    countActions = 0
     if displayActions then
         displayMenu = false
         lastPositionY = 915
@@ -55,6 +53,7 @@ function battleState:draw()
             colourIfNeeded(lastPositionY - 15)
             displayAction(action, lastPositionY)
             lastPositionY = lastPositionY + 30
+            countActions = countActions + 1
         end
     end
 end

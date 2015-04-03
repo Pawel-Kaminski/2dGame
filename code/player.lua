@@ -2,7 +2,7 @@ Player = {
     healthPoints = 50,
     magicPoints = 20,
     waitingTime = 50,
-    remainingWaitingTime = 25,
+    remainingWaitingTime = 15,
     defence = 0,
     maxHealth = 50,
     maxMagic = 20
@@ -33,11 +33,17 @@ function heal(Player)
     --TODO: implement action
 end
 
+--Player's defence attribute increases by 10 points
+function defend(Player)
+    --TODO: implement action
+end
+
 playerActionFlags = {
     action1 = {"Zwykły atak", true},
     action2 = {"Atak magiczny", true},
     action3 = {"Akcja zablokowana", false},
-    action4 = {"Ulecz sie", true}
+    action4 = {"Ulecz sie", true},
+    action5 = {"Bron sie", true}
 }
 
 --This function returns list of all available actions

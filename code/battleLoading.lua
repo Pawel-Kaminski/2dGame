@@ -1,11 +1,14 @@
+require "player"
+require "enemy1"
+require "battleControls"
 function battleState:enter()
+    actions = listOfAllActions()
     sound2 = love.audio.newSource("music/battleThemeA.mp3")
     love.audio.play(sound2)
     battleArena = sti.new("assets/maps/battle_map")
     battleArena:addCustomLayer("Sprite Layer", 2)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]
     arrowY = 900
-    actions = listOfAllActions()
     battleSpriteLayer.sprites = {
         title = {
             image = love.graphics.newImage("assets/sprites/battle.png"),
@@ -43,10 +46,12 @@ function battleState:enter()
     end
     function battleSpriteLayer:draw()
         for _, sprite in pairs(self.sprites) do
-            local x = math.floor(sprite.x)
-            local y = math.floor(sprite.y)
-            local r = sprite.r
-            love.graphics.draw(sprite.image, x, y, r)
+            if sprite.y ~= arrowY or displayMenu or displayActions then
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
+            end
         end
     end
     twenty = love.graphics.newFont(20)
