@@ -50,10 +50,12 @@ function battleState:draw()
         displayMenu = false
         lastPositionY = 915
         for _, action in pairs(actions) do
-            colourIfNeeded(lastPositionY - 15)
-            displayAction(action, lastPositionY)
-            lastPositionY = lastPositionY + 30
             countActions = countActions + 1
+        end
+        for i=1, countActions do
+            colourIfNeeded(lastPositionY - 15)
+            displayAction(actions[i][1], lastPositionY)
+            lastPositionY = lastPositionY + 30
         end
     end
 end
@@ -85,4 +87,13 @@ function displayItems()
 end
 
 function escapeBattle()
+end
+
+function makeAction(selectedAction)
+    if selectedAction == 1 then
+    elseif selectedAction == 2 then
+    elseif selectedAction == 4 then
+    elseif selectedAction == 5 then
+    end
+    --love.event.quit()
 end

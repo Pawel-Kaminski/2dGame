@@ -29,21 +29,22 @@ end
 
 --Healing spell which restores 20 health points,
 --but costs 10 magic points
-function heal(Player)
-    --TODO: implement action
+function heal()
+    Player.healthPoints = player.healthPoints + 20
+    Player.magicPoints = player.magicPoints - 10
 end
 
 --Player's defence attribute increases by 10 points
-function defend(Player)
+function defend()
     --TODO: implement action
 end
 
 playerActionFlags = {
-    action1 = {"Zwykły atak", true},
-    action2 = {"Atak magiczny", true},
-    action3 = {"Akcja zablokowana", false},
-    action4 = {"Ulecz sie", true},
-    action5 = {"Bron sie", true}
+    {"Zwykly atak", true, 1},
+    {"Atak magiczny", true, 2},
+    {"Akcja zablokowana", false, 3},
+    {"Ulecz sie", true, 4},
+    {"Bron sie", true, 5}
 }
 
 --This function returns list of all available actions
@@ -51,13 +52,18 @@ function listOfAllActions()
     --create empty list of actions
     actions = {}
 
+    local index = 1;
     --foreach action in playerActionFlags
-    for _, action in pairs(playerActionFlags) do
         --if second attribute is true
+            --add to list of actions: name of action, number of function, index
+        --index = index + 1
+    --end
+    for i = 1, 5 do
+        local action = playerActionFlags[i]
         if action[2] then
-            --add first attribute to list of actions
-            table.insert(actions, action[1])
+            table.insert(actions, {action[1], action[3], index})
         end
+        index = index + 1
     end
     return actions
 end

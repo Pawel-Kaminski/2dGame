@@ -15,6 +15,7 @@ function battleState:keypressed(key)
         elseif key == "return" then
             if arrowY == 900 then
                 displayActions = true
+                return
             elseif arrowY == 930 then
                 displayItems()
             elseif arrowY == 960 then
@@ -38,6 +39,9 @@ function battleState:keypressed(key)
             else
                 arrowY = 900 + 30 * (countActions - 1)
             end
+        elseif key == "return" then
+            selectedAction = (arrowY - 900)/30 + 1
+            makeAction(selectedAction)
         end
     end
 end
