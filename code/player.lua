@@ -19,7 +19,12 @@ end
 --Powerful magic attack that inflicts 10 points of damage to one enemy,
 --but costs 5 magic points
 function magicAttack(o1)
-    --TODO: implement action
+    if Player.magicPoints < 5 then return end
+    o1.healthPoints = o1.healthPoints - 10
+    if o1.healthPoints < 0 then
+        o1.healthPoints = 0
+    end
+    Player.magicPoints = Player.magicPoints - 5
 end
 
 --This action is locked and should not be visible for player
@@ -27,16 +32,20 @@ end
 function lockedAction(o1)
 end
 
---Healing spell which restores 20 health points,
+--Healing spell which restores up to 20 health points,
 --but costs 10 magic points
 function heal()
-    Player.healthPoints = player.healthPoints + 20
-    Player.magicPoints = player.magicPoints - 10
+    if Player.magicPoints < 10 then return end
+    Player.healthPoints = Player.healthPoints + 20
+    Player.magicPoints = Player.magicPoints - 10
+    if Player.healthPoints > Player.maxHealth then
+        Player.healthPoints = Player.maxHealth
+    end
 end
 
 --Player's defence attribute increases by 10 points
 function defend()
-    --TODO: implement action
+    Player.defence = Player.defence + 10
 end
 
 playerActionFlags = {

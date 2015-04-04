@@ -28,9 +28,15 @@ function battleState:enter()
             y = 300,
             r = 0, 
         },
-        lifebar = {
+        lifebarPlayer = {
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
             x = 10,
+            y = 10,
+            r = 0
+        },
+        lifebarEnemy = {
+            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            x = 1670,
             y = 10,
             r = 0
         },

@@ -28,6 +28,8 @@ function battleState:draw()
     love.graphics.setFont(twenty)
     love.graphics.printf(Player.healthPoints.."/"..Player.maxHealth, 153, 23, 200, "left", 0)
     love.graphics.printf(Player.magicPoints.."/"..Player.maxMagic, 173, 58, 200, "left", 0)
+    love.graphics.printf(Enemy1.healthPoints.."/"..Enemy1.maxHealth, 1813, 23, 200, "left", 0)
+    love.graphics.printf(Enemy1.magicPoints.."/"..Enemy1.maxMagic, 1833, 58, 200, "left", 0)
     love.graphics.setColor(255,255,255)
     love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
     love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
@@ -66,6 +68,7 @@ function fight(o1, o2, o3)
     else
         countingActive = false
         playerTurn()
+        return
     end
 
     if o1.remainingWaitingTime > 0 then
@@ -73,6 +76,7 @@ function fight(o1, o2, o3)
     else
         countingActive = false
         enemyTurn()
+        return
     end
 end
 
@@ -81,6 +85,16 @@ function playerTurn()
 end
 
 function enemyTurn()
+    Player.healthPoints = Player.healthPoints - (15 * (100 - Player.defence)/100)
+    if Player.healthPoints < 0 then
+        Player.healthPoints = 0    
+    end
+    Enemy1.remainingWaitingTime = Enemy1.waitingTime
+    if isDead(Player) then
+        --TODO: Implement Enemy's victory
+    else
+        countingActive = true
+    end
 end
 
 function displayItems()
@@ -91,9 +105,28 @@ end
 
 function makeAction(selectedAction)
     if selectedAction == 1 then
+        attack(Enemy1)
     elseif selectedAction == 2 then
+        magicAttack(Enemy1)
     elseif selectedAction == 4 then
+        heal()
     elseif selectedAction == 5 then
+        defend()
     end
-    --love.event.quit()
+    Player.remainingWaitingTime = Player.waitingTime
+    if isDead(Enemy1) then
+        --TODO: Implement Player's victory
+    else
+        countingActive = true
+        displayActions = false
+        arrowY = 900
+    end
+end
+
+function isDead(o1)
+    if o1.healthPoints == 0 then
+        return true
+    else
+        return false
+    end
 end
