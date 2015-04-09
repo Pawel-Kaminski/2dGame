@@ -3,11 +3,12 @@ require "battleLoading"
 
 dtotal = 0
 countingActive = true
+local displayTurnInfo = true
 function battleState:update(dt)
     battleArena:update(dt)
     if countingActive then
         dtotal = dtotal + dt
-        if dtotal >= 0.25 then
+        if dtotal >= 0.1 then
             fight(Enemy1)
             dtotal = 0
         end
@@ -31,8 +32,13 @@ function battleState:draw()
     love.graphics.printf(Enemy1.healthPoints.."/"..Enemy1.maxHealth, 1813, 23, 200, "left", 0)
     love.graphics.printf(Enemy1.magicPoints.."/"..Enemy1.maxMagic, 1833, 58, 200, "left", 0)
     love.graphics.setColor(255,255,255)
-    love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
-    love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
+
+    if displayTurnInfo then
+        love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
+        love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
+    else
+        love.graphics.printf("Zwyciestwo!!!", 150, 745, 500, "left", 0)
+    end
     
     if displayMenu then
         colourIfNeeded(900)
@@ -115,7 +121,13 @@ function makeAction(selectedAction)
     end
     Player.remainingWaitingTime = Player.waitingTime
     if isDead(Enemy1) then
-        --TODO: Implement Player's victory
+        --Player's victory
+        love.audio.stop()
+        displayActions = false
+        displayMenu = false
+        displayTurnInfo = false
+        sound3 = love.audio.newSource("music/VictoryTheme.mp3")
+        love.audio.play(sound3)
     else
         countingActive = true
         displayActions = false
