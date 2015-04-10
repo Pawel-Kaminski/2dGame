@@ -49,11 +49,11 @@ function defend()
 end
 
 playerActionFlags = {
-    {"Zwykly atak", true, 1},
+    {"Zwykły atak", true, 1},
     {"Atak magiczny", true, 2},
     {"Akcja zablokowana", false, 3},
-    {"Ulecz sie", true, 4},
-    {"Bron sie", true, 5}
+    {"Ulecz się", true, 4},
+    {"Broń się", true, 5}
 }
 
 --This function returns list of all available actions

@@ -4,6 +4,8 @@ Gamestate = require "hump.gamestate"
 require "map"
 
 function love.load() --this function is called only once
+    mainFont = love.graphics.newFont("DroidSansMono.ttf", 20)
+    love.graphics.setFont(mainFont)
     Gamestate.registerEvents() --this makes callbacks Gamestate.update(), Gamestate.draw(), etc. work
     love.keyboard.setKeyRepeat(true)
     love.mouse.setVisible(false)

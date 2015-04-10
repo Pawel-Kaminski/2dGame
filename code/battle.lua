@@ -26,7 +26,7 @@ end
 function battleState:draw()
     battleArena:draw()
     love.graphics.setColor(0, 0, 0)
-    love.graphics.setFont(twenty)
+    --love.graphics.setFont(twenty)
     love.graphics.printf(Player.healthPoints.."/"..Player.maxHealth, 153, 23, 200, "left", 0)
     love.graphics.printf(Player.magicPoints.."/"..Player.maxMagic, 173, 58, 200, "left", 0)
     love.graphics.printf(Enemy1.healthPoints.."/"..Enemy1.maxHealth, 1813, 23, 200, "left", 0)
@@ -36,8 +36,10 @@ function battleState:draw()
     if displayTurnInfo then
         love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
         love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
-    else
+    elseif victory then
         love.graphics.printf("Zwyciestwo!!!", 150, 745, 500, "left", 0)
+    else
+        love.graphics.printf("Porazka...", 150, 745, 500, "left", 0)
     end
     
     if displayMenu then
@@ -97,7 +99,12 @@ function enemyTurn()
     end
     Enemy1.remainingWaitingTime = Enemy1.waitingTime
     if isDead(Player) then
-        --TODO: Implement Enemy's victory
+        love.audio.stop()
+        displayActions = false
+        displayMenu = false
+        displayTurnInfo = false
+        sound3 = love.audio.newSource("music/A_Singular_Perversion.mp3")
+        love.audio.play(sound3)
     else
         countingActive = true
     end
@@ -126,6 +133,7 @@ function makeAction(selectedAction)
         displayActions = false
         displayMenu = false
         displayTurnInfo = false
+        victory = true
         sound3 = love.audio.newSource("music/VictoryTheme.mp3")
         love.audio.play(sound3)
     else
