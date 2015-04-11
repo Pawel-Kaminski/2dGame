@@ -2,8 +2,6 @@ battleState = {}
 require "battleLoading"
 
 dtotal = 0
-countingActive = true
-local displayTurnInfo = true
 function battleState:update(dt)
     battleArena:update(dt)
     if countingActive then
@@ -37,7 +35,7 @@ function battleState:draw()
         love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
         love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
     elseif victory then
-        love.graphics.printf("Zwyciestwo!!!", 150, 745, 500, "left", 0)
+        love.graphics.printf("Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej", 150, 745, 1000, "left", 0)
     else
         love.graphics.printf("Porazka...", 150, 745, 500, "left", 0)
     end

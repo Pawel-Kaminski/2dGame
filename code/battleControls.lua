@@ -22,8 +22,7 @@ function battleState:keypressed(key)
                 escapeBattle()
             end
         end
-    end
-    if displayActions then
+    elseif displayActions then
         if key == "backspace" then
             displayActions = false
             displayMenu = true
@@ -48,6 +47,11 @@ function battleState:keypressed(key)
                 end
             end
             makeAction(selectedAction)
+        end
+    elseif victory then
+        if key == "return" then
+            love.audio.stop()
+            Gamestate.switch(mapState)
         end
     end
 end

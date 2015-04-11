@@ -2,6 +2,9 @@ require "player"
 require "enemy1"
 require "battleControls"
 function battleState:enter()
+    victory = false
+    displayTurnInfo = true
+    countingActive = true
     actions = listOfAllActions()
     sound2 = love.audio.newSource("music/battleThemeA.mp3")
     love.audio.play(sound2)
