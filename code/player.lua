@@ -1,12 +1,32 @@
-Player = {
-    healthPoints = 50,
-    magicPoints = 20,
+PlayerStatistics = {
+    --PlayerStatistics table contains attributes which should be loaded before the fight
+    health = 50,
+    magic = 20,
     waitingTime = 50,
     remainingWaitingTime = 15,
-    defence = 0,
-    maxHealth = 50,
-    maxMagic = 20
+    defence = 0
 }
+
+Player = {
+    --Player table contains attributes that can be modified during the fight
+    healthPoints,
+    magicPoints,
+    waitingTime,
+    remainingWaitingTime,
+    defence,
+    maxHealth,
+    maxMagic
+}
+
+function setInitialValues()
+    Player.healthPoints = PlayerStatistics.health
+    Player.magicPoints = PlayerStatistics.magic
+    Player.waitingTime = PlayerStatistics.waitingTime
+    Player.remainingWaitingTime = PlayerStatistics.remainingWaitingTime
+    Player.defence = PlayerStatistics.defence
+    Player.maxHealth = Player.healthPoints
+    Player.maxMagic = Player.magicPoints
+end
 
 --Regular attack that inflicts 5 points of damage to one enemy
 function attack(o1)

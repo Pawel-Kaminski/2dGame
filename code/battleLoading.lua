@@ -2,6 +2,7 @@ require "player"
 require "enemy1"
 require "battleControls"
 function battleState:enter()
+    setInitialValues()
     victory = false
     displayTurnInfo = true
     countingActive = true
