@@ -18,16 +18,6 @@ Player = {
     maxMagic
 }
 
-function setInitialValues()
-    Player.healthPoints = PlayerStatistics.health
-    Player.magicPoints = PlayerStatistics.magic
-    Player.waitingTime = PlayerStatistics.waitingTime
-    Player.remainingWaitingTime = PlayerStatistics.remainingWaitingTime
-    Player.defence = PlayerStatistics.defence
-    Player.maxHealth = Player.healthPoints
-    Player.maxMagic = Player.magicPoints
-end
-
 --Regular attack that inflicts 5 points of damage to one enemy
 function attack(o1)
     o1.healthPoints = o1.healthPoints - 5

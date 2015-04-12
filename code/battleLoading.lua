@@ -1,8 +1,10 @@
 require "player"
 require "enemy1"
+require "battleBackend"
 require "battleControls"
 function battleState:enter()
-    setInitialValues()
+    setInitialValues(Player, PlayerStatistics)
+    setInitialValues(Enemy1, Enemy1Statistics)
     victory = false
     displayTurnInfo = true
     countingActive = true
