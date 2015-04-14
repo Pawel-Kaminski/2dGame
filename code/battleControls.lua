@@ -43,6 +43,7 @@ function battleState:keypressed(key)
             for i=1, selectedAction do
                 local action = playerActionFlags[i]
                 if not action[2] then
+                --don't increment when action[2] is false
                     selectedAction = selectedAction + 1
                 end
             end
@@ -52,6 +53,27 @@ function battleState:keypressed(key)
         if key == "return" then
             love.audio.stop()
             Gamestate.switch(mapState)
+        end
+    elseif defeat then
+        if key == "down" then
+            if arrowY < 820 then
+                arrowY = arrowY + 30
+            else
+                arrowY = 790
+            end
+        elseif key == "up" then
+            if arrowY > 790 then
+                arrowY = arrowY - 30
+            else
+                arrowY = 820
+            end
+        elseif key == "return" then
+            if arrowY == 820 then
+                love.event.quit()
+            elseif arrowY == 790 then
+                love.audio.stop()
+                Gamestate.switch(battleState)
+            end
         end
     end
 end

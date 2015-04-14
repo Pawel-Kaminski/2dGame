@@ -27,10 +27,13 @@ function enemyTurn(o1)
     end
     o1.remainingWaitingTime = o1.waitingTime
     if isDead(Player) then
+        --Enemy's victory
         love.audio.stop()
         displayActions = false
         displayMenu = false
         displayTurnInfo = false
+        defeat = true
+        arrowY = 790
         sound3 = love.audio.newSource("music/A_Singular_Perversion.mp3")
         love.audio.play(sound3)
     else

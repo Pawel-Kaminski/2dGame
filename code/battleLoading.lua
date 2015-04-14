@@ -6,6 +6,7 @@ function battleState:enter()
     setInitialValues(Player, PlayerStatistics)
     setInitialValues(Enemy1, Enemy1Statistics)
     victory = false
+    defeat = false
     displayTurnInfo = true
     countingActive = true
     actions = listOfAllActions()
@@ -58,7 +59,7 @@ function battleState:enter()
     end
     function battleSpriteLayer:draw()
         for _, sprite in pairs(self.sprites) do
-            if sprite.y ~= arrowY or displayMenu or displayActions then
+            if sprite.y ~= arrowY or displayMenu or displayActions or defeat then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
                 local r = sprite.r

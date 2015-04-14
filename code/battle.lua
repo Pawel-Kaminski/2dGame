@@ -35,8 +35,12 @@ function battleState:draw()
         love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
     elseif victory then
         love.graphics.printf("Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej", 150, 745, 1000, "left", 0)
-    else
-        love.graphics.printf("Porazka...", 150, 745, 500, "left", 0)
+    elseif defeat then
+        love.graphics.printf("Porażka...", 150, 745, 500, "left", 0)
+        colourIfNeeded(790)
+        love.graphics.printf("Spróbuj ponownie", 150, 805, 1000, "left", 0)
+        colourIfNeeded(820)
+        love.graphics.printf("Wyjdź z gry", 150, 835, 1000, "left", 0)
     end
     
     if displayMenu then
