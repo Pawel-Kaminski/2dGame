@@ -11,7 +11,7 @@ function fight(o1, o2, o3)
         o1.remainingWaitingTime = o1.remainingWaitingTime - 1
     else
         countingActive = false
-        enemyTurn()
+        enemyTurn(o1)
         return
     end
 end
@@ -20,12 +20,12 @@ function playerTurn()
     displayMenu = true
 end
 
-function enemyTurn()
+function enemyTurn(o1)
     Player.healthPoints = Player.healthPoints - (15 * (100 - Player.defence)/100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0    
     end
-    Enemy1.remainingWaitingTime = Enemy1.waitingTime
+    o1.remainingWaitingTime = o1.waitingTime
     if isDead(Player) then
         love.audio.stop()
         displayActions = false
