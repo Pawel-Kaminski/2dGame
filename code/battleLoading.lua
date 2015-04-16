@@ -30,9 +30,21 @@ function battleState:enter()
             r = 0, 
         },
         enemy1 = {
-            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            image = activeEnemySprite.image,
             x = 1320,
             y = 300,
+            r = 0, 
+        },
+        enemy2 = {
+            image = activeEnemySprite.image,
+            x = 1530,
+            y = 360,
+            r = 0, 
+        },
+        enemy3 = {
+            image = activeEnemySprite.image,
+            x = 1320,
+            y = 480,
             r = 0, 
         },
         lifebarPlayer = {

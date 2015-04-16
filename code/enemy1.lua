@@ -1,5 +1,5 @@
 Enemy1Statistics = {
-    --Ptable contains attributes which should be loaded before the fight
+    --Table contains attributes which should be loaded before the fight
     health = 40,
     magic = 10,
     waitingTime = 61,
