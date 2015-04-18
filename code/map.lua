@@ -84,6 +84,9 @@ function mapState:update(dt)
         --if enemies.sprites.sprite ~= null then
             if spriteLayer.sprites.player.x == sprite.x then
                 if spriteLayer.sprites.player.y == sprite.y then
+                    firstEnemy = Enemy1
+                    secondEnemy = Enemy1_Second
+                    thirdEnemy = Enemy1_Third
                     love.audio.stop()
                     activeEnemySprite = sprite
                     Gamestate.switch(battleState)

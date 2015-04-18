@@ -6,7 +6,7 @@ function battleState:update(dt)
     if countingActive then
         dtotal = dtotal + dt
         if dtotal >= 0.1 then
-            fight(Enemy1)
+            fight(Enemy1, Enemy1_Second, Enemy1_Third)
             dtotal = 0
         end
     end
@@ -32,7 +32,9 @@ function battleState:draw()
 
     if displayTurnInfo then
         love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
-        love.graphics.printf("Tura "..Enemy1.name.." za: "..Enemy1.remainingWaitingTime, 150, 745, 500, "left", 0)
+        love.graphics.printf("Tura przeciwnika - "..firstEnemy.name.." za: "..firstEnemy.remainingWaitingTime, 150, 745, 1000, "left", 0)
+        love.graphics.printf("Tura przeciwnika - "..secondEnemy.name.." za: "..secondEnemy.remainingWaitingTime, 150, 775, 1000, "left", 0)
+        love.graphics.printf("Tura przeciwnika - "..thirdEnemy.name.." za: "..thirdEnemy.remainingWaitingTime, 150, 805, 1000, "left", 0)
     elseif victory then
         love.graphics.printf("Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej", 150, 745, 1000, "left", 0)
     elseif defeat then

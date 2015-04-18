@@ -14,6 +14,22 @@ function fight(o1, o2, o3)
         enemyTurn(o1)
         return
     end
+
+    if o2.remainingWaitingTime > 0 then
+        o2.remainingWaitingTime = o2.remainingWaitingTime - 1
+    else
+        countingActive = false
+        enemyTurn(o2)
+        return
+    end
+
+    if o3.remainingWaitingTime > 0 then
+        o3.remainingWaitingTime = o3.remainingWaitingTime - 1
+    else
+        countingActive = false
+        enemyTurn(o3)
+        return
+    end
 end
 
 function playerTurn()
@@ -86,7 +102,7 @@ function setInitialValues(tmpValues, initialValues)
     tmpValues.healthPoints = initialValues.health
     tmpValues.magicPoints = initialValues.magic
     tmpValues.waitingTime = initialValues.waitingTime
-    tmpValues.remainingWaitingTime = initialValues.remainingWaitingTime
+    --tmpValues.remainingWaitingTime = initialValues.remainingWaitingTime
     tmpValues.defence = initialValues.defence
     tmpValues.maxHealth = tmpValues.healthPoints
     tmpValues.maxMagic = tmpValues.magicPoints

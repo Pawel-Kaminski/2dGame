@@ -3,7 +3,7 @@ PlayerStatistics = {
     health = 50,
     magic = 20,
     waitingTime = 50,
-    remainingWaitingTime = 15,
+    --remainingWaitingTime = 15,
     defence = 0
 }
 
@@ -12,7 +12,7 @@ Player = {
     healthPoints,
     magicPoints,
     waitingTime,
-    remainingWaitingTime,
+    remainingWaitingTime = 15,
     defence,
     maxHealth,
     maxMagic

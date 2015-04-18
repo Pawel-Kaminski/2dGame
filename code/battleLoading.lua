@@ -5,6 +5,8 @@ require "battleControls"
 function battleState:enter()
     setInitialValues(Player, PlayerStatistics)
     setInitialValues(Enemy1, Enemy1Statistics)
+    setInitialValues(Enemy1_Second, Enemy1Statistics)
+    setInitialValues(Enemy1_Third, Enemy1Statistics)
     victory = false
     defeat = false
     displayTurnInfo = true
@@ -54,6 +56,18 @@ function battleState:enter()
             r = 0
         },
         lifebarEnemy = {
+            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            x = 1070,
+            y = 10,
+            r = 0
+        },
+        lifebarEnemy2 = {
+            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            x = 1370,
+            y = 10,
+            r = 0
+        },
+        lifebarEnemy3 = {
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
             x = 1670,
             y = 10,
