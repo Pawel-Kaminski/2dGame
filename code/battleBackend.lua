@@ -65,8 +65,11 @@ end
 
 function makeAction(selectedAction)
     if selectedAction == 1 then
-        attack(Enemy1)
+        --Player should be able to select enemy
+        --attack(Enemy1)
+        attack(selectEnemy())
     elseif selectedAction == 2 then
+        --Player should be able to select enemy
         magicAttack(Enemy1)
     elseif selectedAction == 4 then
         heal()
@@ -88,6 +91,10 @@ function makeAction(selectedAction)
         displayActions = false
         arrowY = 900
     end
+end
+
+function selectEnemy()
+    return secondEnemy
 end
 
 function isDead(o1)
