@@ -81,4 +81,9 @@ function battleState:draw()
             lastPositionY = lastPositionY + 30
         end
     end
+
+    if selectingEnemy then
+        displayActions = false
+        arrowY = 330
+    end
 end

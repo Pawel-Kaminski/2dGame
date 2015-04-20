@@ -66,8 +66,8 @@ end
 function makeAction(selectedAction)
     if selectedAction == 1 then
         --Player should be able to select enemy
-        --attack(Enemy1)
-        attack(selectEnemy())
+        selectingEnemy = true
+        --attack(selectEnemy())
     elseif selectedAction == 2 then
         --Player should be able to select enemy
         magicAttack(Enemy1)
@@ -87,12 +87,15 @@ function makeAction(selectedAction)
         sound3 = love.audio.newSource("music/VictoryTheme.mp3")
         love.audio.play(sound3)
     else
-        countingActive = true
-        displayActions = false
-        arrowY = 900
+        if not selectingEnemy then
+            countingActive = true
+            displayActions = false
+            arrowY = 900
+        end
     end
 end
 
+--selectEnemy function
 function selectEnemy()
     return secondEnemy
 end

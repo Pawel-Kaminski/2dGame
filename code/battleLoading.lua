@@ -85,7 +85,7 @@ function battleState:enter()
     end
     function battleSpriteLayer:draw()
         for _, sprite in pairs(self.sprites) do
-            if sprite.y ~= arrowY or displayMenu or displayActions or defeat then
+            if sprite.y ~= arrowY or displayMenu or displayActions or defeat or selectingEnemy then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
                 local r = sprite.r
