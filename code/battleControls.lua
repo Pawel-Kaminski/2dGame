@@ -1,5 +1,18 @@
 function battleState:keypressed(key)
-    if displayMenu then
+    if selectingEnemy then
+        --possible arrowX positions: 1270, 1480
+        --possible arrowY positions: 300, 360, 480
+        if key == "down" then
+            if arrowY == 300 then arrowX = 1480 arrowY = 360
+            elseif arrowY == 360 then arrowX = 1270 arrowY = 480
+            elseif arrowY == 480 then arrowX = 1270 arrowY = 300 end
+        elseif key == "up" then
+            if arrowY == 300 then arrowX = 1270 arrowY = 480 
+            elseif arrowY == 360 then arrowX = 1270 arrowY = 300
+            elseif arrowY == 480 then arrowX = 1480 arrowY = 360 end
+        end
+        return
+    elseif displayMenu then
         if key == "down" then
             if arrowY < 960 then
                 arrowY = arrowY + 30

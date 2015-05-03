@@ -63,10 +63,14 @@ end
 function escapeBattle()
 end
 
+--makeAction() function is started when list of actions is displayed
+--and user pressed enter key
 function makeAction(selectedAction)
     if selectedAction == 1 then
         --Player should be able to select enemy
         selectingEnemy = true
+        arrowX = 1270
+        arrowY = 300
         --attack(selectEnemy())
     elseif selectedAction == 2 then
         --Player should be able to select enemy

@@ -82,8 +82,8 @@ function battleState:draw()
         end
     end
 
-    if selectingEnemy then
-        displayActions = false
-        arrowY = 330
-    end
+    --if selectingEnemy then
+        --displayActions = false
+        --arrowY = 330
+    --end
 end

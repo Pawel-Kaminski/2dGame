@@ -17,6 +17,7 @@ function battleState:enter()
     battleArena = sti.new("assets/maps/battle_map")
     battleArena:addCustomLayer("Sprite Layer", 2)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]
+    arrowX = 90
     arrowY = 900
     battleSpriteLayer.sprites = {
         title = {
@@ -75,12 +76,13 @@ function battleState:enter()
         },
         arrow = {
             image = love.graphics.newImage("assets/sprites/arrow.png"),
-            x = 90,
+            x = arrowX,
             y = arrowY,
             r = 0
         }
     }
     function battleSpriteLayer:update(dt)
+        self.sprites.arrow.x = arrowX
         self.sprites.arrow.y = arrowY
     end
     function battleSpriteLayer:draw()
