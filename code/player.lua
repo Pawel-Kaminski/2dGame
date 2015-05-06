@@ -18,19 +18,19 @@ Player = {
     maxMagic
 }
 
---Regular attack that inflicts 5 points of damage to one enemy
+--Regular attack that inflicts 10 points of damage to one enemy
 function attack(o1)
-    o1.healthPoints = o1.healthPoints - 5
+    o1.healthPoints = o1.healthPoints - 10
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
 end
 
---Powerful magic attack that inflicts 10 points of damage to one enemy,
+--Powerful magic attack that inflicts 20 points of damage to one enemy,
 --but costs 5 magic points
 function magicAttack(o1)
     if Player.magicPoints < 5 then return end
-    o1.healthPoints = o1.healthPoints - 10
+    o1.healthPoints = o1.healthPoints - 20
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end

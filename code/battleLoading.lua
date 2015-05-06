@@ -17,6 +17,9 @@ function battleState:enter()
     actions = listOfAllActions()
     sound2 = love.audio.newSource("music/battleThemeA.mp3")
     love.audio.play(sound2)
+
+    sound2:setLooping(true)
+
     battleArena = sti.new("assets/maps/battle_map")
     battleArena:addCustomLayer("Sprite Layer", 2)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]

@@ -24,6 +24,7 @@ function battleState:keypressed(key)
             end
             countingActive = true
             displayActions = false
+            Player.remainingWaitingTime = Player.waitingTime
         end
         return
     elseif displayMenu then

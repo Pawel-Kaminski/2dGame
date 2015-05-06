@@ -5,8 +5,9 @@ function mapState:enter()
     activeEnemySprite = null
     sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
     love.audio.play(sound)
-    playerPositionX = 0
-    playerPositionY = 0
+    sound:setLooping(true)
+    --playerPositionX = 0
+    --playerPositionY = 0
     map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
     map:addCustomLayer("Sprite Layer", 2) -- Create a Custom Layer
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
@@ -67,12 +68,10 @@ function mapState:enter()
     function enemies:draw()
         --pairs function iterates over all elements in a table
         for _, sprite in pairs(self.sprites) do
-            --if sprite ~= null then
-                local x = math.floor(sprite.x)
-                local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
-            --end
+            local x = math.floor(sprite.x)
+            local y = math.floor(sprite.y)
+            local r = sprite.r
+            love.graphics.draw(sprite.image, x, y, r)
         end
     end
 
@@ -81,18 +80,16 @@ end
 function mapState:update(dt)
     map:update(dt)
     for _, sprite in pairs(enemies.sprites) do
-        --if enemies.sprites.sprite ~= null then
-            if spriteLayer.sprites.player.x == sprite.x then
-                if spriteLayer.sprites.player.y == sprite.y then
-                    firstEnemy = Enemy1
-                    secondEnemy = Enemy1_Second
-                    thirdEnemy = Enemy1_Third
-                    love.audio.stop()
-                    activeEnemySprite = sprite
-                    Gamestate.switch(battleState)
-                end
+        if spriteLayer.sprites.player.x == sprite.x then
+            if spriteLayer.sprites.player.y == sprite.y then
+                firstEnemy = Enemy1
+                secondEnemy = Enemy1_Second
+                thirdEnemy = Enemy1_Third
+                love.audio.stop()
+                activeEnemySprite = sprite
+                Gamestate.switch(battleState)
             end
-        --end
+        end
     end
 end
 

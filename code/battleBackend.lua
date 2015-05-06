@@ -47,7 +47,8 @@ function enemyTurn(o1)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0    
     end
-    o1.remainingWaitingTime = o1.waitingTime
+
+--XXXXXXX
     if isDead(Player) then
         --Enemy's victory
         love.audio.stop()
@@ -62,6 +63,10 @@ function enemyTurn(o1)
         --HERE SHOULD BE PAUSE
         --countingActive = true
         pause = true
+    end
+
+    if not pause then
+        o1.remainingWaitingTime = o1.waitingTime
     end
 end
 
@@ -89,7 +94,11 @@ function makeAction(selectedAction)
     elseif selectedAction == 5 then
         defend()
     end
-    Player.remainingWaitingTime = Player.waitingTime
+
+    if not selectingEnemy then
+        Player.remainingWaitingTime = Player.waitingTime
+    end
+
     if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
         --Player's victory
         love.audio.stop()
