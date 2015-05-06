@@ -102,12 +102,20 @@ end
 
 function mapState:keypressed(key)
     if key == "right" then
-        playerPositionX = playerPositionX + 60
+        if playerPositionX < 1860 then
+            playerPositionX = playerPositionX + 60
+        end
     elseif key == "left" then
-        playerPositionX = playerPositionX - 60
+        if playerPositionX > 0 then
+            playerPositionX = playerPositionX - 60
+        end
     elseif key == "down" then
-        playerPositionY = playerPositionY + 60
+        if playerPositionY < 1020 then
+            playerPositionY = playerPositionY + 60
+        end
     elseif key == "up" then
-        playerPositionY = playerPositionY - 60
+        if playerPositionY > 0 then
+            playerPositionY = playerPositionY - 60
+        end
     end
 end

@@ -1,6 +1,7 @@
 battleState = {}
 require "battleLoading"
 dtotal = 0 --time after calling fight(enemy) function
+dtotalPause = 0
 function battleState:update(dt)
     battleArena:update(dt)
     if countingActive then
@@ -8,6 +9,13 @@ function battleState:update(dt)
         if dtotal >= 0.1 then
             fight(Enemy1, Enemy1_Second, Enemy1_Third)
             dtotal = 0
+        end
+    elseif pause then
+        dtotalPause = dtotalPause + dt
+        if dtotalPause > 2 then
+            pause = false
+            dtotalPause = 0
+            countingActive = true
         end
     end
 end

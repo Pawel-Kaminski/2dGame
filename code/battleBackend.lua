@@ -60,7 +60,8 @@ function enemyTurn(o1)
         love.audio.play(sound3)
     else
         --HERE SHOULD BE PAUSE
-        countingActive = true
+        --countingActive = true
+        pause = true
     end
 end
 
