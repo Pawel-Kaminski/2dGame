@@ -7,6 +7,9 @@ function battleState:enter()
     setInitialValues(Enemy1, Enemy1Statistics)
     setInitialValues(Enemy1_Second, Enemy1Statistics)
     setInitialValues(Enemy1_Third, Enemy1Statistics)
+
+    selectedEnemy = Enemy1
+
     victory = false
     defeat = false
     displayTurnInfo = true

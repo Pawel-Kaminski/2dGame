@@ -10,6 +10,20 @@ function battleState:keypressed(key)
             if arrowY == 300 then arrowX = 1270 arrowY = 480 
             elseif arrowY == 360 then arrowX = 1270 arrowY = 300
             elseif arrowY == 480 then arrowX = 1480 arrowY = 360 end
+        elseif key == "return" then
+            if arrowY == 300 then selectedEnemy = Enemy1
+            elseif arrowY == 360 then selectedEnemy = Enemy1_Second
+            elseif arrowY == 480 then selectedEnemy = Enemy1_Third end
+            selectingEnemy = false
+            arrowX = 90
+            arrowY = 900
+            if selectedAction == 1 then
+                attack(selectedEnemy)
+            elseif selectedAction == 2 then
+                magicAttack(selectedEnemy)
+            end
+            countingActive = true
+            displayActions = false
         end
         return
     elseif displayMenu then

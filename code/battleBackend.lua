@@ -7,28 +7,34 @@ function fight(o1, o2, o3)
         return
     end
 
-    if o1.remainingWaitingTime > 0 then
-        o1.remainingWaitingTime = o1.remainingWaitingTime - 1
-    else
-        countingActive = false
-        enemyTurn(o1)
-        return
+    if not isDead(o1) then
+        if o1.remainingWaitingTime > 0 then
+            o1.remainingWaitingTime = o1.remainingWaitingTime - 1
+        else
+            countingActive = false
+            enemyTurn(o1)
+            return
+        end
     end
 
-    if o2.remainingWaitingTime > 0 then
-        o2.remainingWaitingTime = o2.remainingWaitingTime - 1
-    else
-        countingActive = false
-        enemyTurn(o2)
-        return
+    if not isDead(o2) then
+        if o2.remainingWaitingTime > 0 then
+            o2.remainingWaitingTime = o2.remainingWaitingTime - 1
+        else
+            countingActive = false
+            enemyTurn(o2)
+            return
+        end
     end
 
-    if o3.remainingWaitingTime > 0 then
-        o3.remainingWaitingTime = o3.remainingWaitingTime - 1
-    else
-        countingActive = false
-        enemyTurn(o3)
-        return
+    if not isDead(o3) then
+        if o3.remainingWaitingTime > 0 then
+            o3.remainingWaitingTime = o3.remainingWaitingTime - 1
+        else
+            countingActive = false
+            enemyTurn(o3)
+            return
+        end
     end
 end
 
@@ -37,7 +43,7 @@ function playerTurn()
 end
 
 function enemyTurn(o1)
-    Player.healthPoints = Player.healthPoints - (15 * (100 - Player.defence)/100)
+    Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence)/100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0    
     end
@@ -53,6 +59,7 @@ function enemyTurn(o1)
         sound3 = love.audio.newSource("music/A_Singular_Perversion.mp3")
         love.audio.play(sound3)
     else
+        --HERE SHOULD BE PAUSE
         countingActive = true
     end
 end
@@ -71,17 +78,18 @@ function makeAction(selectedAction)
         selectingEnemy = true
         arrowX = 1270
         arrowY = 300
-        --attack(selectEnemy())
     elseif selectedAction == 2 then
         --Player should be able to select enemy
-        magicAttack(Enemy1)
+        selectingEnemy = true
+        arrowX = 1270
+        arrowY = 300
     elseif selectedAction == 4 then
         heal()
     elseif selectedAction == 5 then
         defend()
     end
     Player.remainingWaitingTime = Player.waitingTime
-    if isDead(Enemy1) then
+    if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
         --Player's victory
         love.audio.stop()
         displayActions = false
@@ -97,11 +105,6 @@ function makeAction(selectedAction)
             arrowY = 900
         end
     end
-end
-
---selectEnemy function
-function selectEnemy()
-    return secondEnemy
 end
 
 function isDead(o1)
