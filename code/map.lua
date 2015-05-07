@@ -8,6 +8,7 @@ function mapState:enter()
     sound:setLooping(true)
     --playerPositionX = 0
     --playerPositionY = 0
+
     map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
     map:addCustomLayer("Sprite Layer", 2) -- Create a Custom Layer
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
@@ -27,19 +28,22 @@ function mapState:enter()
             image = love.graphics.newImage("assets/sprites/enemy.png"),
             x = 1200,
             y = 120,
-            r = 0
+            r = 0,
+            active = true
         },
         enemy2 = {
             image = love.graphics.newImage("assets/sprites/enemy.png"),
             x = 1200,
             y = 300,
-            r = 0
+            r = 0,
+            active = true
         },
         enemy3 = {
             image = love.graphics.newImage("assets/sprites/enemy.png"),
             x = 600,
             y = 360,
-            r = 0
+            r = 0,
+            active = true
         }
     }
 
@@ -53,10 +57,10 @@ function mapState:enter()
     function spriteLayer:draw()
         --pairs function iterates over all elements in a table
         for _, sprite in pairs(self.sprites) do
-            local x = math.floor(sprite.x)
-            local y = math.floor(sprite.y)
-            local r = sprite.r
-            love.graphics.draw(sprite.image, x, y, r)
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
         end
     end
 
@@ -68,10 +72,12 @@ function mapState:enter()
     function enemies:draw()
         --pairs function iterates over all elements in a table
         for _, sprite in pairs(self.sprites) do
-            local x = math.floor(sprite.x)
-            local y = math.floor(sprite.y)
-            local r = sprite.r
-            love.graphics.draw(sprite.image, x, y, r)
+            if sprite.active ~= false then
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
+            end
         end
     end
 
@@ -87,6 +93,7 @@ function mapState:update(dt)
                 thirdEnemy = Enemy1_Third
                 love.audio.stop()
                 activeEnemySprite = sprite
+                sprite.active = false
                 Gamestate.switch(battleState)
             end
         end

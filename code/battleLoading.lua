@@ -36,25 +36,28 @@ function battleState:enter()
             image = love.graphics.newImage("assets/sprites/man2.png"),
             x = 180,
             y = 300,
-            r = 0, 
+            r = 0 
         },
         enemy1 = {
             image = activeEnemySprite.image,
             x = 1320,
             y = 300,
-            r = 0, 
+            r = 0,
+            active = true
         },
         enemy2 = {
             image = activeEnemySprite.image,
             x = 1530,
             y = 360,
-            r = 0, 
+            r = 0,
+            active = true
         },
         enemy3 = {
             image = activeEnemySprite.image,
             x = 1320,
             y = 480,
-            r = 0, 
+            r = 0,
+            active = true
         },
         lifebarPlayer = {
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
@@ -93,7 +96,8 @@ function battleState:enter()
     end
     function battleSpriteLayer:draw()
         for _, sprite in pairs(self.sprites) do
-            if sprite.y ~= arrowY or displayMenu or displayActions or defeat or selectingEnemy then
+            --if describes conditions when arrow is displayed
+            if (sprite.y ~= arrowY or displayMenu or displayActions or defeat or selectingEnemy) and sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
                 local r = sprite.r

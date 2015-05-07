@@ -22,6 +22,11 @@ function battleState:keypressed(key)
             elseif selectedAction == 2 then
                 magicAttack(selectedEnemy)
             end
+            if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
+                --Player's victory
+                winning()
+                return
+            end
             countingActive = true
             displayActions = false
             Player.remainingWaitingTime = Player.waitingTime

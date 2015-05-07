@@ -15,6 +15,9 @@ function fight(o1, o2, o3)
             enemyTurn(o1)
             return
         end
+    else
+        --do not display first enemy
+        battleSpriteLayer.sprites.enemy1.active = false
     end
 
     if not isDead(o2) then
@@ -25,6 +28,8 @@ function fight(o1, o2, o3)
             enemyTurn(o2)
             return
         end
+    else
+        battleSpriteLayer.sprites.enemy2.active = false
     end
 
     if not isDead(o3) then
@@ -35,6 +40,8 @@ function fight(o1, o2, o3)
             enemyTurn(o3)
             return
         end
+    else
+        battleSpriteLayer.sprites.enemy3.active = false
     end
 end
 
@@ -48,7 +55,6 @@ function enemyTurn(o1)
         Player.healthPoints = 0    
     end
 
---XXXXXXX
     if isDead(Player) then
         --Enemy's victory
         love.audio.stop()
@@ -101,13 +107,7 @@ function makeAction(selectedAction)
 
     if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
         --Player's victory
-        love.audio.stop()
-        displayActions = false
-        displayMenu = false
-        displayTurnInfo = false
-        victory = true
-        sound3 = love.audio.newSource("music/VictoryTheme.mp3")
-        love.audio.play(sound3)
+        winning()
     else
         if not selectingEnemy then
             countingActive = true
@@ -115,6 +115,16 @@ function makeAction(selectedAction)
             arrowY = 900
         end
     end
+end
+
+function winning()
+   love.audio.stop()
+   displayActions = false
+   displayMenu = false
+   displayTurnInfo = false
+   victory = true
+   sound3 = love.audio.newSource("music/VictoryTheme.mp3")
+   love.audio.play(sound3)
 end
 
 function isDead(o1)
