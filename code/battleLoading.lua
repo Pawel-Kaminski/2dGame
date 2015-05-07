@@ -69,19 +69,22 @@ function battleState:enter()
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
             x = 1070,
             y = 10,
-            r = 0
+            r = 0,
+            active = true
         },
         lifebarEnemy2 = {
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
             x = 1370,
             y = 10,
-            r = 0
+            r = 0,
+            active = true
         },
         lifebarEnemy3 = {
             image = love.graphics.newImage("assets/sprites/lifebar.png"),
             x = 1670,
             y = 10,
-            r = 0
+            r = 0,
+            active = true
         },
         arrow = {
             image = love.graphics.newImage("assets/sprites/arrow.png"),

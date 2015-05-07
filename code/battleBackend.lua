@@ -16,8 +16,9 @@ function fight(o1, o2, o3)
             return
         end
     else
-        --do not display first enemy
+        --do not display first enemy and his lifebar
         battleSpriteLayer.sprites.enemy1.active = false
+        battleSpriteLayer.sprites.lifebarEnemy.active = false
     end
 
     if not isDead(o2) then
@@ -30,6 +31,7 @@ function fight(o1, o2, o3)
         end
     else
         battleSpriteLayer.sprites.enemy2.active = false
+        battleSpriteLayer.sprites.lifebarEnemy2.active = false
     end
 
     if not isDead(o3) then
@@ -42,6 +44,7 @@ function fight(o1, o2, o3)
         end
     else
         battleSpriteLayer.sprites.enemy3.active = false
+        battleSpriteLayer.sprites.lifebarEnemy3.active = false
     end
 end
 
@@ -125,6 +128,16 @@ function winning()
    victory = true
    sound3 = love.audio.newSource("music/VictoryTheme.mp3")
    love.audio.play(sound3)
+
+   --do not display first enemy and his lifebar
+   battleSpriteLayer.sprites.enemy1.active = false
+   battleSpriteLayer.sprites.lifebarEnemy.active = false
+
+   battleSpriteLayer.sprites.enemy2.active = false
+   battleSpriteLayer.sprites.lifebarEnemy2.active = false
+
+   battleSpriteLayer.sprites.enemy3.active = false
+   battleSpriteLayer.sprites.lifebarEnemy3.active = false
 end
 
 function isDead(o1)
