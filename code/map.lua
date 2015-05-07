@@ -1,6 +1,10 @@
 require "battle"
 mapState = {} --STI: creates new state called "mapState"
 
+active1 = true
+active2 = true
+active3 = true
+
 function mapState:enter()
     activeEnemySprite = null
     sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
@@ -29,21 +33,21 @@ function mapState:enter()
             x = 1200,
             y = 120,
             r = 0,
-            active = true
+            active = active1
         },
         enemy2 = {
             image = love.graphics.newImage("assets/sprites/enemy.png"),
             x = 1200,
             y = 300,
             r = 0,
-            active = true
+            active = active2
         },
         enemy3 = {
             image = love.graphics.newImage("assets/sprites/enemy.png"),
             x = 600,
             y = 360,
             r = 0,
-            active = true
+            active = active3
         }
     }
 
@@ -87,13 +91,15 @@ function mapState:update(dt)
     map:update(dt)
     for _, sprite in pairs(enemies.sprites) do
         if spriteLayer.sprites.player.x == sprite.x then
-            if spriteLayer.sprites.player.y == sprite.y then
+            if spriteLayer.sprites.player.y == sprite.y and sprite.active then
                 firstEnemy = Enemy1
                 secondEnemy = Enemy1_Second
                 thirdEnemy = Enemy1_Third
                 love.audio.stop()
                 activeEnemySprite = sprite
-                sprite.active = false
+                if sprite.y == 120 then active1 = false end
+                if sprite.y == 300 then active2 = false end
+                if sprite.y == 360 then active3 = false end
                 Gamestate.switch(battleState)
             end
         end
