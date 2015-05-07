@@ -91,13 +91,11 @@ function makeAction(selectedAction)
     if selectedAction == 1 then
         --Player should be able to select enemy
         selectingEnemy = true
-        arrowX = 1270
-        arrowY = 300
+        setArrow()
     elseif selectedAction == 2 then
         --Player should be able to select enemy
         selectingEnemy = true
-        arrowX = 1270
-        arrowY = 300
+        setArrow()
     elseif selectedAction == 4 then
         heal()
     elseif selectedAction == 5 then
@@ -117,6 +115,19 @@ function makeAction(selectedAction)
             displayActions = false
             arrowY = 900
         end
+    end
+end
+
+function setArrow()
+    if not isDead(Enemy1) then
+        arrowX = 1270
+        arrowY = 300
+    elseif not isDead(Enemy1_Second) then
+        arrowX = 1480
+        arrowY = 360
+    else
+        arrowX = 1270
+        arrowY = 480
     end
 end
 
