@@ -58,6 +58,9 @@ function defend()
     Player.defence = Player.defence + 10
 end
 
+--playerActionFlags descibes which functions are unlocked for the player.
+--Similar function for enemy is not required,
+--because all actions of enemies will be always available to them
 playerActionFlags = {
     {"Zwykły atak", true, 1},
     {"Atak magiczny", true, 2},

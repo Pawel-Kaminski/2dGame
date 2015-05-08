@@ -1,15 +1,57 @@
+--Position 1: x = 1270, y = 300
+--Position 2: x = 1480, y = 360
+--Position 3: x = 1270, y = 480
+
+function moveArrowDown()
+     if arrowY == 300 then
+        if not isDead(Enemy1_Second) then
+            arrowX = 1480 arrowY = 360
+        else
+            arrowX = 1270 arrowY = 480
+        end
+     elseif arrowY == 360 then
+        if not isDead(Enemy1_Third) then
+            arrowX = 1270 arrowY = 480
+        else
+            arrowX = 1270 arrowY = 300
+        end
+     elseif arrowY == 480 then
+        if not isDead(Enemy1) then
+            arrowX = 1270 arrowY = 300
+        else
+            arrowX = 1480 arrowY = 360
+        end
+    end
+end
+
+function moveArrowUp()
+     if arrowY == 300 then
+        if not isDead(Enemy1_Third) then
+            arrowX = 1270 arrowY = 480
+        else
+            arrowX = 1480 arrowY = 360
+        end
+     elseif arrowY == 360 then
+        if not isDead(Enemy1) then
+            arrowX = 1270 arrowY = 300
+        else
+            arrowX = 1270 arrowY = 480
+        end
+     elseif arrowY == 480 then
+        if not isDead(Enemy1_Second) then
+            arrowX = 1480 arrowY = 360
+        else
+            arrowX = 1270 arrowY = 300
+        end
+    end
+end
+
 function battleState:keypressed(key)
     if selectingEnemy then
-        --possible arrowX positions: 1270, 1480
-        --possible arrowY positions: 300, 360, 480
         if key == "down" then
-            if arrowY == 300 then arrowX = 1480 arrowY = 360
-            elseif arrowY == 360 then arrowX = 1270 arrowY = 480
-            elseif arrowY == 480 then arrowX = 1270 arrowY = 300 end
+            moveArrowDown()
         elseif key == "up" then
-            if arrowY == 300 then arrowX = 1270 arrowY = 480 
-            elseif arrowY == 360 then arrowX = 1270 arrowY = 300
-            elseif arrowY == 480 then arrowX = 1480 arrowY = 360 end
+            moveArrowUp()
         elseif key == "return" then
             if arrowY == 300 then selectedEnemy = Enemy1
             elseif arrowY == 360 then selectedEnemy = Enemy1_Second

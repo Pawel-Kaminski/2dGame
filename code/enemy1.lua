@@ -41,3 +41,20 @@ Enemy1_Third = {
     maxHealth,
     maxMagic
 }
+
+function attack()
+    --TODO: implement function
+end
+
+function magicAttack()
+    --TODO: implement function
+end
+
+function heal(o1)
+    --TODO: implement function
+end
+
+function defend()
+    --TODO: implement function
+end
+
