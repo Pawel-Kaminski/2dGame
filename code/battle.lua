@@ -1,4 +1,5 @@
 battleState = {}
+--All code to draw enemies is in battleLoading.lua
 require "battleLoading"
 dtotal = 0 --time after calling fight(enemy) function
 dtotalPause = 0

@@ -21,8 +21,10 @@ function battleState:enter()
     sound2:setLooping(true)
 
     battleArena = sti.new("assets/maps/battle_map")
-    battleArena:addCustomLayer("Sprite Layer", 2)
+    battleArena:addCustomLayer("Background Layer", 2)
+    battleArena:addCustomLayer("Sprite Layer", 3)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]
+    battleBackgroundLayer = battleArena.layers["Background Layer"]
     arrowX = 90
     arrowY = 900
     battleSpriteLayer.sprites = {
@@ -93,6 +95,14 @@ function battleState:enter()
             r = 0
         }
     }
+    battleBackgroundLayer.sprites = {
+        background = {
+            image = love.graphics.newImage("assets/sprites/bg2.png"),
+            x = 0,
+            y = 180,
+            r = 0
+        }
+    }
     function battleSpriteLayer:update(dt)
         self.sprites.arrow.x = arrowX
         self.sprites.arrow.y = arrowY
@@ -106,6 +116,14 @@ function battleState:enter()
                 local r = sprite.r
                 love.graphics.draw(sprite.image, x, y, r)
             end
+        end
+    end
+    function battleBackgroundLayer:draw()
+        for _, sprite in pairs(self.sprites) do
+            local x = math.floor(sprite.x)
+            local y = math.floor(sprite.y)
+            local r = sprite.r
+            love.graphics.draw(sprite.image, x, y, r)
         end
     end
     twenty = love.graphics.newFont(20)
