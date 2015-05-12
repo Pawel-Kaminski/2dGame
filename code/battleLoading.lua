@@ -36,7 +36,7 @@ function battleState:enter()
         },
         player = {
             image = love.graphics.newImage("assets/sprites/man2.png"),
-            x = 180,
+            x = 300,
             y = 300,
             r = 0 
         },
@@ -92,6 +92,30 @@ function battleState:enter()
             image = love.graphics.newImage("assets/sprites/arrow.png"),
             x = arrowX,
             y = arrowY,
+            r = 0
+        },
+        belka1 = {
+            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            x = 230,
+            y = 360,
+            r = 0
+        },
+        belka2 = {
+            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            x = 1260,
+            y = 360,
+            r = 0
+        },
+        belka3 = {
+            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            x = 1260,
+            y = 540,
+            r = 0
+        },
+        belka4 = {
+            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            x = 1500,
+            y = 420,
             r = 0
         }
     }
