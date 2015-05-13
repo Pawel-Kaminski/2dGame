@@ -43,18 +43,31 @@ Enemy1_Third = {
 }
 
 function attack()
-    --TODO: implement function
+    Player.healthPoints = Player.healthPoints - 2
+    if Player.healthPoints < 0 then
+        Player.healthPoints = 0
+    end
 end
 
-function magicAttack()
-    --TODO: implement function
+function magicAttack(attackingEnemy)
+    if attackingEnemy.magicPoints < 5 then return end
+    Player.healthPoints = Player.healthPoints - 5
+    if Player.healthPoints < 0 then
+        Player.healthPoints = 0
+    end
+    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 5
 end
 
-function heal(o1)
-    --TODO: implement function
+--Enemy is able to heal only himself
+function heal(castingEnemy)
+    if castingEnemy.magicPoints < 10 then return end
+    castingEnemy.healthPoints = castingEnemy.healthPoints + 5
+    castingEnemy.magicPoints = castingEnemy.magicPoints - 10
+    if castingEnemy.healthPoints > castingEnemy.maxHealth then
+        castingEnemy.healthPoints = castingEnemy.maxHealth    
+    end
 end
 
-function defend()
-    --TODO: implement function
+function defend(castingEnemy)
+    castingEnemy.defence = castingEnemy.defence + 2
 end
-

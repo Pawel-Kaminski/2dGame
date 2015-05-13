@@ -53,7 +53,9 @@ function playerTurn()
 end
 
 function enemyTurn(o1)
+    --Here is a place for enemies' AI---------------------------------------------
     Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence)/100)
+    ------------------------------------------------------------------------------
     if Player.healthPoints < 0 then
         Player.healthPoints = 0    
     end
