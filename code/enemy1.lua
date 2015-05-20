@@ -42,14 +42,14 @@ Enemy1_Third = {
     maxMagic
 }
 
-function attack()
+function E_attack()
     Player.healthPoints = Player.healthPoints - 2
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
 end
 
-function magicAttack(attackingEnemy)
+function E_magicAttack(attackingEnemy)
     if attackingEnemy.magicPoints < 5 then return end
     Player.healthPoints = Player.healthPoints - 5
     if Player.healthPoints < 0 then
@@ -59,7 +59,7 @@ function magicAttack(attackingEnemy)
 end
 
 --Enemy is able to heal only himself
-function heal(castingEnemy)
+function E_heal(castingEnemy)
     if castingEnemy.magicPoints < 10 then return end
     castingEnemy.healthPoints = castingEnemy.healthPoints + 5
     castingEnemy.magicPoints = castingEnemy.magicPoints - 10
@@ -68,6 +68,6 @@ function heal(castingEnemy)
     end
 end
 
-function defend(castingEnemy)
+function E_defend(castingEnemy)
     castingEnemy.defence = castingEnemy.defence + 2
 end
