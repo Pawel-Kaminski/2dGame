@@ -28,12 +28,6 @@ function battleState:enter()
     arrowX = 90
     arrowY = 900
     battleSpriteLayer.sprites = {
-        title = {
-            image = love.graphics.newImage("assets/sprites/battle.png"),
-            x = 870,
-            y = 30,
-            r = 0       
-        },
         player = {
             image = love.graphics.newImage("assets/sprites/man2.png"),
             x = 300,
@@ -124,6 +118,12 @@ function battleState:enter()
             image = love.graphics.newImage("assets/sprites/bg2.png"),
             x = 0,
             y = 180,
+            r = 0
+        },
+        bar = {
+            image = love.graphics.newImage("assets/sprites/bar.png"),
+            x = 0,
+            y = 0,
             r = 0
         }
     }
