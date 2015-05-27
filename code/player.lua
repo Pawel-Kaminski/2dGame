@@ -62,11 +62,16 @@ end
 --Similar function for enemy is not required,
 --because all actions of enemies will be always available to them
 playerActionFlags = {
-    {"Zwykły atak", true, 1},
-    {"Atak magiczny", true, 2},
-    {"Akcja zablokowana", false, 3},
-    {"Ulecz się", true, 4},
-    {"Broń się", true, 5}
+    {"Zwykły atak", true, 1, 
+"Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi."},
+    {"Atak magiczny", true, 2, 
+"Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi."},
+    {"Akcja zablokowana", false, 3,
+""},
+    {"Ulecz się", true, 4,
+"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia"},
+    {"Broń się", true, 5,
+"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych"}
 }
 
 --This function returns list of all available actions
