@@ -18,7 +18,7 @@ function mapState:enter()
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
     spriteLayer.sprites = {
         player = {
-            image = love.graphics.newImage("assets/sprites/man2.png"),
+            image = love.graphics.newImage("assets/sprites/ViviM.png"),
             x = 0,
             y = 0,
             r = 0       
