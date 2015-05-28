@@ -88,7 +88,7 @@ function listOfAllActions()
     for i = 1, 5 do
         local action = playerActionFlags[i]
         if action[2] then
-            table.insert(actions, {action[1], action[3], index})
+            table.insert(actions, {action[1], action[3], index, action[4]})
         end
         index = index + 1
     end
