@@ -98,6 +98,14 @@ function battleState:keypressed(key)
             end
         end
     elseif displayActions then
+        selectedAction = (arrowY - 900)/30 + 1
+        for i=1, selectedAction do
+           local action = playerActionFlags[i]
+           if not action[2] then
+                --don't increment when action[2] is false
+                selectedAction = selectedAction + 1
+           end
+        end
         if key == "backspace" then
             displayActions = false
             displayMenu = true
@@ -114,14 +122,6 @@ function battleState:keypressed(key)
                 arrowY = 900 + 30 * (countActions - 1)
             end
         elseif key == "return" then
-            selectedAction = (arrowY - 900)/30 + 1
-            for i=1, selectedAction do
-                local action = playerActionFlags[i]
-                if not action[2] then
-                --don't increment when action[2] is false
-                    selectedAction = selectedAction + 1
-                end
-            end
             makeAction(selectedAction)
         end
     elseif victory then

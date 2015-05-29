@@ -30,9 +30,11 @@ end
 
 function colourIfNeeded(expectedValue)
     if arrowY == expectedValue then
-        love.graphics.setColor(255, 0, 0)
+        love.graphics.setColor(255, 0, 0) --red colour
     else
-        love.graphics.setColor(255, 255, 255)
+        love.graphics.setColor(255, 255, 255) --white colour
+    end
+    if displayActions then
     end
 end
 
@@ -92,10 +94,14 @@ function battleState:draw()
         love.graphics.printf("Ucieczka", 150, 975, 500, "left", 0)
     end    
     
-    function displayAction(actionName, actionPositionY, actionDescription)
+    function displayAction(actionName, actionPositionY)
         --love.graphics.printf(text, x, y, limit, align)
         love.graphics.printf(actionName, 150, actionPositionY, 500, "left", 0)
         love.graphics.setColor(255, 255, 255)
+    end
+
+    function displayActionDescription(actionDescription)
+        --TODO: complete this function
         love.graphics.printf(actionDescription, 1000, 915, 1000, "left", 0)
     end
 
@@ -108,7 +114,8 @@ function battleState:draw()
         end
         for i=1, countActions do
             colourIfNeeded(lastPositionY - 15)
-            displayAction(actions[i][1], lastPositionY, actions[i][4])
+            displayAction(actions[i][1], lastPositionY)
+            --displayAction(actions[i][1], lastPositionY, actions[i][4])
             --displayAction(actions[i][1], lastPositionY, "test")
             lastPositionY = lastPositionY + 30
         end
