@@ -98,13 +98,17 @@ function battleState:draw()
         --love.graphics.setColor(255, 255, 255)
     end
 
-    function displayActionDescription(actionDescription)
+    function displayActionDescription()
         --TODO: complete this function
-        love.graphics.printf(actionDescription..selectedAction, 1000, 915, 1000, "left", 0)
+        if (selectedAction == null) then
+            selectedAction = 1
+        end
+        love.graphics.printf(actions[selectedAction][4], 1000, 915, 900, "left", 0)
     end
 
     countActions = 0
     if displayActions then
+        displayActionDescription()
         displayMenu = false
         lastPositionY = 915
         for _, action in pairs(actions) do
@@ -113,10 +117,7 @@ function battleState:draw()
         for i=1, countActions do
             colourIfNeeded(lastPositionY - 15)
             displayAction(actions[i][1], lastPositionY)
-            --displayAction(actions[i][1], lastPositionY, actions[i][4])
-            displayAction(actions[i][1], lastPositionY)
             if (selectedAction == null) then selectedAction = 1 end
-            --displayActionDescription(actions[selectedAction][4])
             lastPositionY = lastPositionY + 30
         end
     end

@@ -115,12 +115,14 @@ function battleState:keypressed(key)
             else
                 arrowY = 900
             end
+            selectedAction = (arrowY - 900)/30 + 1
         elseif key == "up" then
             if arrowY > 900 then
                 arrowY = arrowY - 30
             else
                 arrowY = 900 + 30 * (countActions - 1)
             end
+            selectedAction = (arrowY - 900)/30 + 1
         elseif key == "return" then
             makeAction(selectedAction)
         end

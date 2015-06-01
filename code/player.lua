@@ -69,9 +69,9 @@ playerActionFlags = {
     {"Akcja zablokowana", false, 3,
 "BŁĄD"},
     {"Ulecz się", true, 4,
-"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia"},
+"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia."},
     {"Broń się", true, 5,
-"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych"}
+"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych."}
 }
 
 --This function returns list of all available actions
