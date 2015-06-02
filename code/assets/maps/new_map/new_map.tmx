@@ -3,9 +3,20 @@
  <tileset firstgid="1" name="_MAP_small" tilewidth="15" tileheight="15">
   <image source="_MAP_small.png" width="614" height="614"/>
  </tileset>
+ <tileset firstgid="1601" name="tree-1" tilewidth="15" tileheight="15">
+  <image source="../../sprites/tree-1.png" width="48" height="76"/>
+ </tileset>
+ <tileset firstgid="1616" name="tree-2" tilewidth="15" tileheight="15">
+  <image source="../../sprites/tree-2.png" width="48" height="76"/>
+ </tileset>
  <layer name="Tile Layer 1" width="128" height="72">
   <data encoding="base64" compression="zlib">
    eJzt2DFOA0EQRFETcDaOgO9/EuQQAoNZ7Vb1zAt+iKe7H0gW97fb7f6kzz/07Of/85mvfl5jR3Zc+S6SJD36eP9eeh7xF3/x37GfHr/V7v/qPlfv3xZ//vz589/Tf7V7nv37mo4/f/78+fOf2HT/1e612j78u+M/6/1p+/Dvjv+s96ftw787/rPen7YP/y7fdNPvn36fP3/+/Pnv4d92//T8bU27H/9Z95w2L//u+/Gfdc+0X1vpe/Dnz58/f/78179/+v30vm2l78GfP3/+U/2v/v/I2Z1977Z50vu1xZ8/f/78z/m8s/dL36P9Pvy77902z7T90vdovw//7nu3fx85+n2Ff9c8/Pnz589/T//V7n10ntX/PtL3T7/Pnz9//vz57zhPet/0+7vPk943/f7u86T3Tb+/+zxXf9+ZFv+94793/PdudX9JkiRJkjS/L2PvFHY=
+  </data>
+ </layer>
+ <layer name="Drzewka i domki" width="128" height="72">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwbkAAAAQ==
   </data>
  </layer>
 </map>
