@@ -14,7 +14,7 @@ function mapState:enter()
     --playerPositionY = 0
 
     map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
-    map:addCustomLayer("Sprite Layer", 2) -- Create a Custom Layer
+    map:addCustomLayer("Sprite Layer", 3) -- Create a Custom Layer
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
     spriteLayer.sprites = {
         player = {
@@ -25,7 +25,7 @@ function mapState:enter()
         }
     }
     
-    map:addCustomLayer("Enemies", 3) --Layer created for displaying enemies
+    map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]
     enemies.sprites = {
         enemy = {
