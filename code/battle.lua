@@ -99,10 +99,6 @@ function battleState:draw()
     end
 
     function displayActionDescription()
-        --TODO: complete this function
-        if (selectedAction == null) then
-            selectedAction = 1
-        end
         love.graphics.printf(actions[selectedAction][4], 1000, 915, 900, "left", 0)
     end
 

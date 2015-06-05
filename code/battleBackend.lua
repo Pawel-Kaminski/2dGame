@@ -49,6 +49,7 @@ function fight(o1, o2, o3)
 end
 
 function playerTurn()
+    selectedAction = 1
     displayMenu = true
 end
 
