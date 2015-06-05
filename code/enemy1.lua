@@ -9,7 +9,7 @@ Enemy1Statistics = {
 }
 
 Enemy1 = {
-    name = "Czerwony ludzik",
+    name = "Dorver",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -21,7 +21,7 @@ Enemy1 = {
 
 --this will let me create multiple instances of enemy
 Enemy1_Second = {
-    name = "Czerwony ludzik 2",
+    name = "Dorver 2",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -32,7 +32,7 @@ Enemy1_Second = {
 }
 
 Enemy1_Third = {
-    name = "Czerwony ludzik 3",
+    name = "Dorver 3",
     healthPoints,
     magicPoints,
     waitingTime,

@@ -29,21 +29,21 @@ function mapState:enter()
     enemies = map.layers["Enemies"]
     enemies.sprites = {
         enemy = {
-            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
             x = 1200,
             y = 120,
             r = 0,
             active = active1
         },
         enemy2 = {
-            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
             x = 1200,
             y = 300,
             r = 0,
             active = active2
         },
         enemy3 = {
-            image = love.graphics.newImage("assets/sprites/enemy.png"),
+            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
             x = 600,
             y = 360,
             r = 0,
