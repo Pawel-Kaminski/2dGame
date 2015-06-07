@@ -93,9 +93,7 @@ function battleState:draw()
     end    
     
     function displayAction(actionName, actionPositionY)
-        --love.graphics.printf(text, x, y, limit, align)
         love.graphics.printf(actionName, 150, actionPositionY, 500, "left", 0)
-        --love.graphics.setColor(255, 255, 255)
     end
 
     function displayActionDescription()
@@ -111,15 +109,14 @@ function battleState:draw()
             countActions = countActions + 1
         end
         for i=1, countActions do
-            colourIfNeeded(lastPositionY - 15)
+            if actions[i][5] > Player.magicPoints then
+                love.graphics.setColor(139, 137, 137)
+            else
+                colourIfNeeded(lastPositionY - 15)
+            end
             displayAction(actions[i][1], lastPositionY)
-            if (selectedAction == null) then selectedAction = 1 end
+            --if (selectedAction == null) then selectedAction = 1 end
             lastPositionY = lastPositionY + 30
         end
     end
-
-    --if selectingEnemy then
-        --displayActions = false
-        --arrowY = 330
-    --end
 end

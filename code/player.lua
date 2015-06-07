@@ -61,17 +61,29 @@ end
 --playerActionFlags descibes which functions are unlocked for the player.
 --Similar function for enemy is not required,
 --because all actions of enemies will be always available to them
+--Description of elements:
+--1. Name of action
+--2. Is action unlocked?
+--3. Id of action
+--4. Description of action
+--5. How many magic points you need to use action?
+--6. Is action available to use now?
 playerActionFlags = {
     {"Zwykły atak", true, 1, 
-"Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi."},
+"Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
+0, true},
     {"Atak magiczny", true, 2, 
-"Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi."},
+"Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
+5, true},
     {"Akcja zablokowana", false, 3,
-"BŁĄD"},
+"BŁĄD",
+0, false},
     {"Ulecz się", true, 4,
-"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia."},
+"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
+10, true},
     {"Broń się", true, 5,
-"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych."}
+"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych.",
+0, true}
 }
 
 --This function returns list of all available actions
@@ -88,7 +100,7 @@ function listOfAllActions()
     for i = 1, 5 do
         local action = playerActionFlags[i]
         if action[2] then
-            table.insert(actions, {action[1], action[3], index, action[4]})
+            table.insert(actions, {action[1], action[3], index, action[4], action[5], action[6]})
         end
         index = index + 1
     end
