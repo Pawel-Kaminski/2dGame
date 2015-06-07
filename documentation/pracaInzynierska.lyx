@@ -78,5 +78,536 @@ Temat pracy: Stworzenie gry RPG z użyciem grafiki 2D.
  
 \end_layout
 
+\begin_layout Section
+Zarys oczekiwanego efektu końcowego
+\end_layout
+
+\begin_layout Standard
+Celem jest stworzenie gry 2D zawierającej mechanikę gry inspirowaną grami
+ z serii Final Fantasy.
+\end_layout
+
+\begin_layout Section
+Planowane moduły gry
+\end_layout
+
+\begin_layout Itemize
+mapa świata
+\end_layout
+
+\begin_layout Itemize
+mapy lokalne
+\end_layout
+
+\begin_layout Itemize
+pole bitwy
+\end_layout
+
+\begin_layout Itemize
+ekran menu głównego
+\end_layout
+
+\begin_layout Itemize
+ekran rozwoju postaci
+\end_layout
+
+\begin_layout Itemize
+ekran ekwipunku
+\end_layout
+
+\begin_layout Itemize
+ekran ustawiania opcji
+\end_layout
+
+\begin_layout Itemize
+ekran wczytywania gry
+\end_layout
+
+\begin_layout Itemize
+ekran zapisywania gry
+\end_layout
+
+\begin_layout Standard
+Przełączanie pomiędzy poszczególnymi modułami będzie możliwe dzięki użyciu
+ State Machine.
+\end_layout
+
+\begin_layout Section
+Założenia ogólne
+\end_layout
+
+\begin_layout Standard
+Gracz może poruszać się pomiędzy kilkoma lokacjami, wybierając lokację,
+ do której chce się udać, z mapy świata.
+ Po wybraniu danej lokacji gracz może poruszać się po mapie lokalnej.
+ Na mapie lokalnej może dojść do następujących wydarzeń:
+\end_layout
+
+\begin_layout Itemize
+Gracz opuszcza mapę lokalną korzystając ze zdefiniowanego wyjścia.
+ W takim wypadku gracz jest przenoszony na mapę świata.
+\end_layout
+
+\begin_layout Itemize
+Gracz napotyka przeciwnika.
+ W takim wypadku gracz jest przenoszony na pole bitwy.
+\end_layout
+
+\begin_layout Itemize
+Gracz napotyka NPC (inną postać).
+ W takim przypadku:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+jeżeli jest to postać znacząca, przeprowadza dłuższy dialog z daną postacią,
+ może dostać zadanie lub ukończyć zadanie
+\end_layout
+
+\begin_layout Itemize
+jeżeli jest to postać nieznacząca, może przeczytać krótkie zdanie wypowiadane
+ przez daną postać, bez wpływu na przebieg fabuły
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gracz znajduje przedmiot.
+ W takim przypadku przedmiot dodawany jest do ekwipunku.
+\end_layout
+
+\begin_layout Section
+Założenia odnośnie zadań w grze
+\end_layout
+
+\begin_layout Standard
+Gra nie będzie zawierała zadań pobocznych.
+ Zadania będą mogły być wykonywane wyłącznie w ustalonej kolejności.
+\end_layout
+
+\begin_layout Section
+Założenia odnośnie systemu walki w grze
+\end_layout
+
+\begin_layout Standard
+Planowany system walki to turowy system walki z elementami czasu rzeczywistego.
+ W czasie jednej walki postać sterowana przez gracza mierzy się z pewną
+ liczbą przeciwników (od 1 do 3).
+ Każda postać posiada punkty życia (healthPoints).
+ Niektóre postaci mogą posiadać dodatkowo punkty magiczne (magicPoints).
+ Gracz i przeciwnicy mogą wykonywać działania tylko wtedy, gdy mają swoją
+ turę.
+ 
+\end_layout
+
+\begin_layout Standard
+W przeciwieństwie do klasycznego turowego systemu walki, tury nie muszą
+ występować na zmianę.
+ Każda z postaci posiada licznik odliczający czas wstecz do możliwości wykonania
+ następnego ruchu (remainingWaitingTime).
+ Informacja o czasie pozostałym do wykonania ataku przez przeciwnika jest
+ jawna dla gracza.
+ Gdy któryś licznik osiągnie 0, dana postać ma prawo wykonać akcję.
+ Niektórzy z napotkanych przeciwników mogą być szybsi lub wolniejsi od gracza
+ w swoich działaniach, tzn.
+ każda postać posiada swój własny współczynnik czasu oczekiwania (waitingTime).
+\end_layout
+
+\begin_layout Standard
+Celem akcji wykonywanej w czasie swojej tury będzie zazwyczaj wykonanie
+ ataku odbierającego punkty życia przeciwnikowi (damage).
+ W zależności od etapu gry, mogą być możliwe różne inne rozwiązania, takie
+ jak przyspieszanie działań własnej postaci, spowalnianie działań przeciwnika,
+ rzucanie czarów defensywnych redukujących przyszłe obrażenia itp.
+ Walka będzie polegać na analizowaniu obecnej sytuacji i wybieraniu jak
+ najskuteczniejszej akcji spośród listy dostępnych akcji.
+ 
+\end_layout
+
+\begin_layout Standard
+Każda z akcji posiada pewien czas potrzebny na jej przygotowanie.
+ Jeżeli postać zostanie zaatakowana w trakcie przygotowywania swojego ataku,
+ jej tura przepada.
+ Zazwyczaj akcje wymagające więcej czasu są potężniejsze, jednak ich wybieranie
+ wiąże się z większym ryzykiem, gdyż przeciwnik może w tym czasie wykonać
+ atak.
+ Z punktu widzenia gracza istotne jest analizowanie współczynnika remainingWaiti
+ngTime dla każdego z przeciwników i dobieranie dłuższych ataków wtedy, gdy
+ jest jeszcze dużo czasu do tury przeciwnika.
+\end_layout
+
+\begin_layout Standard
+Każda postać posiada współczynnik obrony (defence).
+ Jest on wyrażony w skali od 0 do 100 i określa, ile procent obrażeń zadawanych
+ przez przeciwnika jest unikanych.
+ Ilość punktów odbieranych przez atak jest wyrażona wzorem: effectiveDamage
+ = damage * (100 – defence)
+\end_layout
+
+\begin_layout Standard
+Jeżeli effectiveDamage jest większe niż ilość punktów życia posiadana przez
+ postać, która została zaatakowana, odbierana jest liczba punktów równa
+ ilości punktów życia zaatakowanej postaci, tak aby liczba punktów życia
+ nigdy nie była ujemna.
+\end_layout
+
+\begin_layout Standard
+Po każdej turze następuje sprawdzenie, czy liczba punktów życia gracza lub
+ wszystkich przeciwników wynosi 0.
+ Liczba punktów równa 0 oznacza śmierć postaci.
+\end_layout
+
+\begin_layout Standard
+Jeżeli liczba punktów życia wszystkich przeciwników wyniesie 0, walka jest
+ zakończona sukcesem.
+ Gracz jest przenoszony z powrotem do mapy lokalnej.
+ Jeżeli liczba punktów życia gracza wyniesie 0, walka jest zakończona porażką.
+ Gracz otrzymuje propozycję podjęcia ponownej próby.
+\end_layout
+
+\begin_layout Section
+Dźwięk
+\end_layout
+
+\begin_layout Standard
+Gra będzie posiadała ścieżkę dźwiękową odtwarzaną w czasie eksploracji,
+ walk oraz na ekranach menu.
+ W tym celu planuję wykorzystać utwory udostępnione publicznie na wolnych
+ licencjach.
+ Rozważam również wykorzystanie dźwięków związanych z wykonywaniem konkretnych
+ działań w czasie walki lub przy znalezieniu przedmiotu.
+ Wszelkie dialogi w grze będą dostępne wyłącznie w formie tekstowej.
+\end_layout
+
+\begin_layout Section
+Rozwój postaci
+\end_layout
+
+\begin_layout Standard
+Wraz z postępami w odkrywaniu fabuły gracz dostanie do dyspozycji nowe umiejętno
+ści.
+ Gracz może zobaczyć odblokowane umiejętności na ekranie rozwoju postaci.
+ Rozwój postaci jest liniowy i ściśle powiązany z fabułą.
+ Gracz nie ma możliwości wybierania umiejętności do rozwoju, a ekran rozwoju
+ postaci służy jedynie do sprawdzenia, jakie umiejętności są już odblokowane.
+\end_layout
+
+\begin_layout Section
+Platforma docelowa
+\end_layout
+
+\begin_layout Standard
+Gra jest skierowana na komputery osobiste z systemami z rodziny Linux oraz
+ Windows.
+\end_layout
+
+\begin_layout Section
+Technologia używana do wykonania projektu
+\end_layout
+
+\begin_layout Standard
+Technologia, którą chciałbym wykorzystać to język Lua (http://www.lua.org/)
+ oraz framework LÖVE (https://love2d.org/) do języka Lua.
+ Jeśli chodzi o tworzenie map, chciałbym wykorzystać edytor map Tiled (http://ww
+w.mapeditor.org/).
+\end_layout
+
+\begin_layout Standard
+Dlaczego wybrałem taką technologię? Framework LÖVE jest na wolnej licencji,
+ umożliwiającej wykorzystywanie projektu w dowolnym celu.
+ Kod pisany przy użyciu LÖVE działa na Linuksie, Mac OS X oraz Windows.
+ W porównaniu do np.
+ C++ nie trzeba się zajmować wieloma niskopoziomowymi operacjami.
+ Posiada rozbudowaną i dobrze udokumentowaną bibliotekę HUMP (LÖVE Helper
+ Utilities for Massive Progression), która umożliwia wykonywanie przejść
+ pomiędzy poszczególnymi modułami gry (State Machine).
+ Wykonanie typowych czynności, takich jak np.
+ odtworzenie pliku muzycznego sprowadza się do kilku linijek kodu.
+\end_layout
+
+\begin_layout Section
+Opisanie zawartości plików
+\end_layout
+
+\begin_layout Subsection
+battle.lua
+\end_layout
+
+\begin_layout Standard
+Plik battle.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+battleState:update(dt) - funkcja zajmująca się głównie odliczaniem czasu
+\end_layout
+
+\begin_layout Standard
+resetCounter(o1, o2, o3) - funkcja przywracająca domyślne wartości czasu
+ oczekiwania na rozpoczęcie tury
+\end_layout
+
+\begin_layout Standard
+colourIfNeeded(expectedValue) - funkcja zmieniająca kolor czcionki w zależności
+ od tego, czy tekst jest wskazywany przez strzałkę
+\end_layout
+
+\begin_layout Subsection
+battleBackend.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackend.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+fight(o1, o2, o3) - funkcja obsługująca liczniki do rozpoczęcia tury gracza
+ oraz przeciwników
+\end_layout
+
+\begin_layout Standard
+setArrow() - funkcja zapobiegająca wskazywaniu strzałką na martwych przeciwników
+\end_layout
+
+\begin_layout Standard
+isDead(o1) - funkcja sprawdzająca, czy ktoś jest martwy
+\end_layout
+
+\begin_layout Standard
+setInitialValues(tmpValues, initialValues) - funkcja przywracająca domyślne
+ wartości atrybutów postaci
+\end_layout
+
+\begin_layout Subsection
+battleBackendMakeAction.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendMakeAction.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+makeAction(selectedAction) - funkcja wykonująca akcję o indeksie zawartym
+ w argumencie oraz sprawdzająca, czy walka powinna już zakończyć się zwycięstwem
+\end_layout
+
+\begin_layout Subsection
+battleBackendTurns.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendTurns.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+playerTurn() - funkcja obsługująca rozpoczęcie się tury gracza
+\end_layout
+
+\begin_layout Standard
+enemyTurn(o1) - funkcja obsługująca całość przebiegu tury przeciwnika
+\end_layout
+
+\begin_layout Subsection
+battleBackendWinning.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendWinning.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+winning() - funkcja obsługująca zakończenie walki zwycięstwem gracza
+\end_layout
+
+\begin_layout Subsection
+battleControls.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleControls.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:keypressed(key) - funkcja obsługująca sterowanie za pomocą klawiatur
+y w stanie walki
+\end_layout
+
+\begin_layout Subsection
+battleControlsMoveArrow.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleControlsMoveArrow.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+moveArrowDown() - funkcja ustawiająca odpowiednio współrzędne strzałki wskazując
+ej na przeciwnika w przypadku naciśnięcia klawisza strzałki w dół
+\end_layout
+
+\begin_layout Standard
+moveArrowUp() - funkcja ustawiająca odpowiednio współrzędne strzałki wskazującej
+ na przeciwnika w przypadku naciśnięcia klawisza strzałki w górę
+\end_layout
+
+\begin_layout Subsection
+battleDraw.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleDraw.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:draw() - funkcja odpowiadająca za wyświetlanie klatki obrazu
+\end_layout
+
+\begin_layout Subsection
+battleLoading.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleLoading.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:enter() - funkcja odpowiadająca za wczytanie plików graficznych
+ i muzyki
+\end_layout
+
+\begin_layout Subsection
+enemy1.lua
+\end_layout
+
+\begin_layout Standard
+Plik enemy1.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+E_attack() - funkcja odpowiadająca za wykonanie zwykłego ataku przez Dorvera
+\end_layout
+
+\begin_layout Standard
+E_magicAttack(attackingEnemy) - funkcja odpowiadająca za wykonanie magicznego
+ ataku przez Dorvera
+\end_layout
+
+\begin_layout Standard
+E_heal(castingEnemy) - funkcja odpowiadająca za uleczanie się Dorvera
+\end_layout
+
+\begin_layout Standard
+E_defend(castingEnemy) - funkcja odpowiadająca za bronienie się Dorvera
+\end_layout
+
+\begin_layout Standard
+Enemy1AI() - niezaimplementowana, docelowo ma zawierać algorytm działań
+ w czasie tury Dorvera, sztuczną inteligencję przeciwnika
+\end_layout
+
+\begin_layout Subsection
+main.lua
+\end_layout
+
+\begin_layout Standard
+Plik main.lua to główny plik gry.
+ Zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+love.load() - funkcja wczytująca ustawienia, takie jak czcionka, domyślna
+ pozycja gracza itp.
+\end_layout
+
+\begin_layout Standard
+love.keypressed(key) - funkcja zawierająca obsługę poleceń klawiaturowych
+ działających globalnie w całej grze
+\end_layout
+
+\begin_layout Standard
+love.draw() - funkcja wywoływana przed wyświetleniem każdej klatki, dostosowuje
+ wyświetlany obraz do rozdzielczości ekranu
+\end_layout
+
+\begin_layout Subsection
+map.lua
+\end_layout
+
+\begin_layout Standard
+Plik map.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+mapState:update(dt) - funkcja zajmująca się uaktualnianiem mapy i w razie
+ potrzeby przełączeniem w stan walki
+\end_layout
+
+\begin_layout Standard
+mapState:draw() - funkcja wyświetlająca mapę
+\end_layout
+
+\begin_layout Standard
+mapState:keypressed(key) - funkcja obsługująca sterowanie w stanie chodzenia
+ po mapie
+\end_layout
+
+\begin_layout Subsection
+mapEnterState.lua
+\end_layout
+
+\begin_layout Standard
+Plik mapEnterState.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+mapState:enter() - funkcja odpowiadająca za wczytanie plików graficznych
+ do wyświetlenia na mapie
+\end_layout
+
+\begin_layout Subsection
+player.lua
+\end_layout
+
+\begin_layout Standard
+Plik player.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+attack(o1) - funkcja odpowiadająca za wykonanie przez gracza zwykłego ataku
+\end_layout
+
+\begin_layout Standard
+magicAttack(o1) - funkcja odpowiadająca za wykonanie przez gracza magicznego
+ ataku
+\end_layout
+
+\begin_layout Standard
+lockedAction(o1) - ta funkcja nic nie robi.
+ Jest obecna w celach testowych.
+\end_layout
+
+\begin_layout Standard
+heal() - funkcja odpowiadająca za rzucanie czaru uleczającego
+\end_layout
+
+\begin_layout Standard
+defend() - funkcja odpowiadająca za akcję obronną
+\end_layout
+
+\begin_layout Standard
+listOfAllActions() - funkcja odpowiadająca za stworzenie tabeli zawierającej
+ wszystkie dostępne akcje (tzn.
+ z pominięciem tych, które są zablokowane)
+\end_layout
+
+\begin_layout Subsection
+playerActionFlags.lua
+\end_layout
+
+\begin_layout Standard
+Plik playerActionFlags.lua nie zawiera żadnych funkcji.
+ Zawarta jest tu tabela zawierająca nazwy akcji, informacje o odblokowaniu
+ akcji, id, opis, liczba potrzebnych punktów magicznych do wykonania oraz
+ czy można obecnie wykonać akcję.
+\end_layout
+
 \end_body
 \end_document
