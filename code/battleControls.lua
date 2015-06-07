@@ -5,9 +5,9 @@ function battleState:keypressed(key)
         elseif key == "up" then
             moveArrowUp()
         elseif key == "return" then
-            if arrowY == 300 then selectedEnemy = Enemy1
-            elseif arrowY == 360 then selectedEnemy = Enemy1_Second
-            elseif arrowY == 480 then selectedEnemy = Enemy1_Third end
+            if arrowY == 300 then selectedEnemy = firstEnemy
+            elseif arrowY == 360 then selectedEnemy = secondEnemy
+            elseif arrowY == 480 then selectedEnemy = thirdEnemy end
             selectingEnemy = false
             arrowX = 90
             arrowY = 900
@@ -16,7 +16,7 @@ function battleState:keypressed(key)
             elseif selectedAction == 2 then
                 magicAttack(selectedEnemy)
             end
-            if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
+            if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then
                 --Player's victory
                 winning()
                 return

@@ -1,0 +1,261 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language polish
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language polish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Author
+Paweł Kamiński
+\end_layout
+
+\begin_layout Title
+Temat pracy: Stworzenie gry RPG z użyciem grafiki 2D.
+ 
+\end_layout
+
+\begin_layout Section
+Opisanie zawartości plików
+\end_layout
+
+\begin_layout Subsection
+battle.lua
+\end_layout
+
+\begin_layout Standard
+Plik battle.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+battleState:update(dt) - funkcja zajmująca się głównie odliczaniem czasu
+\end_layout
+
+\begin_layout Standard
+resetCounter(o1, o2, o3) - funkcja przywracająca domyślne wartości czasu
+ oczekiwania na rozpoczęcie tury
+\end_layout
+
+\begin_layout Standard
+colourIfNeeded(expectedValue) - funkcja zmieniająca kolor czcionki w zależności
+ od tego, czy tekst jest wskazywany przez strzałkę
+\end_layout
+
+\begin_layout Subsection
+battleBackend.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackend.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+fight(o1, o2, o3) - funkcja obsługująca liczniki do rozpoczęcia tury gracza
+ oraz przeciwników
+\end_layout
+
+\begin_layout Standard
+setArrow() - funkcja zapobiegająca wskazywaniu strzałką na martwych przeciwników
+\end_layout
+
+\begin_layout Standard
+isDead(o1) - funkcja sprawdzająca, czy ktoś jest martwy
+\end_layout
+
+\begin_layout Standard
+setInitialValues(tmpValues, initialValues) - funkcja przywracająca domyślne
+ wartości atrybutów postaci
+\end_layout
+
+\begin_layout Subsection
+battleBackendMakeAction.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendMakeAction.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+makeAction(selectedAction) - funkcja wykonująca akcję o indeksie zawartym
+ w argumencie oraz sprawdzająca, czy walka powinna już zakończyć się zwycięstwem
+\end_layout
+
+\begin_layout Subsection
+battleBackendTurns.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendTurns.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+playerTurn() - funkcja obsługująca rozpoczęcie się tury gracza
+\end_layout
+
+\begin_layout Standard
+enemyTurn(o1) - funkcja obsługująca całość przebiegu tury przeciwnika
+\end_layout
+
+\begin_layout Subsection
+battleBackendWinning.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleBackendWinning.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+winning() - funkcja obsługująca zakończenie walki zwycięstwem gracza
+\end_layout
+
+\begin_layout Subsection
+battleControls.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleControls.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:keypressed(key) - funkcja obsługująca sterowanie za pomocą klawiatur
+y
+\end_layout
+
+\begin_layout Subsection
+battleControlsMoveArrow.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleControlsMoveArrow.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+moveArrowDown() - funkcja ustawiająca odpowiednio współrzędne strzałki wskazując
+ej na przeciwnika w przypadku naciśnięcia klawisza strzałki w dół
+\end_layout
+
+\begin_layout Standard
+moveArrowUp() - funkcja ustawiająca odpowiednio współrzędne strzałki wskazującej
+ na przeciwnika w przypadku naciśnięcia klawisza strzałki w górę
+\end_layout
+
+\begin_layout Subsection
+battleDraw.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleDraw.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:draw() - funkcja odpowiadająca za wyświetlanie klatki obrazu
+\end_layout
+
+\begin_layout Subsection
+battleLoading.lua
+\end_layout
+
+\begin_layout Standard
+Plik battleLoading.lua zawiera funkcję:
+\end_layout
+
+\begin_layout Standard
+battleState:enter() - funkcja odpowiadająca za wczytanie plików graficznych
+ i muzyki
+\end_layout
+
+\begin_layout Subsection
+enemy1.lua
+\end_layout
+
+\begin_layout Standard
+Plik enemy1.lua zawiera funkcje:
+\end_layout
+
+\begin_layout Standard
+E_attack() - funkcja odpowiadająca za wykonanie zwykłego ataku przez Dorvera
+\end_layout
+
+\begin_layout Standard
+E_magicAttack(attackingEnemy) - funkcja odpowiadająca za wykonanie magicznego
+ ataku przez Dorvera
+\end_layout
+
+\begin_layout Standard
+E_heal(castingEnemy) - funkcja odpowiadająca za uleczanie się Dorvera
+\end_layout
+
+\begin_layout Standard
+E_defend(castingEnemy) - funkcja odpowiadająca za bronienie się Dorvera
+\end_layout
+
+\begin_layout Standard
+Enemy1AI() - niezaimplementowana, docelowo ma zawierać algorytm działań
+ w czasie tury Dorvera
+\end_layout
+
+\end_body
+\end_document

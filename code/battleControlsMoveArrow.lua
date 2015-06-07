@@ -4,19 +4,19 @@
 
 function moveArrowDown()
      if arrowY == 300 then
-        if not isDead(Enemy1_Second) then
+        if not isDead(secondEnemy) then
             arrowX = 1480 arrowY = 360
         else
             arrowX = 1270 arrowY = 480
         end
      elseif arrowY == 360 then
-        if not isDead(Enemy1_Third) then
+        if not isDead(thirdEnemy) then
             arrowX = 1270 arrowY = 480
         else
             arrowX = 1270 arrowY = 300
         end
      elseif arrowY == 480 then
-        if not isDead(Enemy1) then
+        if not isDead(firstEnemy) then
             arrowX = 1270 arrowY = 300
         else
             arrowX = 1480 arrowY = 360
@@ -26,19 +26,19 @@ end
 
 function moveArrowUp()
      if arrowY == 300 then
-        if not isDead(Enemy1_Third) then
+        if not isDead(thirdEnemy) then
             arrowX = 1270 arrowY = 480
         else
             arrowX = 1480 arrowY = 360
         end
      elseif arrowY == 360 then
-        if not isDead(Enemy1) then
+        if not isDead(firstEnemy) then
             arrowX = 1270 arrowY = 300
         else
             arrowX = 1270 arrowY = 480
         end
      elseif arrowY == 480 then
-        if not isDead(Enemy1_Second) then
+        if not isDead(secondEnemy) then
             arrowX = 1480 arrowY = 360
         else
             arrowX = 1270 arrowY = 300

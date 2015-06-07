@@ -1,10 +1,9 @@
 function mapState:enter()
+    --activeEnemySprite contains sprite of enemy on which player entered
     activeEnemySprite = null
     sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
     love.audio.play(sound)
     sound:setLooping(true)
-    --playerPositionX = 0
-    --playerPositionY = 0
 
     map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
     map:addCustomLayer("Sprite Layer", 3) -- Create a Custom Layer
@@ -20,23 +19,24 @@ function mapState:enter()
     
     map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]
+    dorver = love.graphics.newImage("assets/sprites/dorver/used.png")
     enemies.sprites = {
         enemy = {
-            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
+            image = dorver,
             x = 1200,
             y = 120,
             r = 0,
             active = active1
         },
         enemy2 = {
-            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
+            image = dorver,
             x = 1200,
             y = 300,
             r = 0,
             active = active2
         },
         enemy3 = {
-            image = love.graphics.newImage("assets/sprites/dorver/used.png"),
+            image = dorver,
             x = 600,
             y = 360,
             r = 0,

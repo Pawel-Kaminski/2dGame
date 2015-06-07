@@ -1,7 +1,7 @@
 require "battle"
 require "playerActionFlags"
 require "player"
-require "enemy1"
+require "enemyDorver"
 require "battleBackend"
 require "battleBackendMakeAction"
 require "battleBackendTurns"
@@ -10,9 +10,9 @@ require "battleControlsMoveArrow"
 require "battleControls"
 function battleState:enter()
     setInitialValues(Player, PlayerStatistics)
-    setInitialValues(Enemy1, Enemy1Statistics)
-    setInitialValues(Enemy1_Second, Enemy1Statistics)
-    setInitialValues(Enemy1_Third, Enemy1Statistics)
+    setInitialValues(firstEnemy, stats)
+    setInitialValues(secondEnemy, stats)
+    setInitialValues(thirdEnemy, stats)
 
     selectedEnemy = Enemy1
 
@@ -94,25 +94,25 @@ function battleState:enter()
             y = arrowY,
             r = 0
         },
-        belka1 = {
+        platform1 = {
             image = love.graphics.newImage("assets/sprites/platform2.png"),
             x = 230,
             y = 360,
             r = 0
         },
-        belka2 = {
+        platform2 = {
             image = love.graphics.newImage("assets/sprites/platform2.png"),
             x = 1260,
             y = 360,
             r = 0
         },
-        belka3 = {
+        platform3 = {
             image = love.graphics.newImage("assets/sprites/platform2.png"),
             x = 1260,
             y = 540,
             r = 0
         },
-        belka4 = {
+        platform4 = {
             image = love.graphics.newImage("assets/sprites/platform2.png"),
             x = 1500,
             y = 420,

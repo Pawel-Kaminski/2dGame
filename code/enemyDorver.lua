@@ -1,14 +1,12 @@
-Enemy1Statistics = {
+EnemyDorverStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 40,
     magic = 10,
     waitingTime = 61,
-    --IT SHOULD BE RANDOM
-    --remainingWaitingTime = 29,
     defence = 0
 }
 
-Enemy1 = {
+EnemyDorver_First = {
     name = "Dorver",
     healthPoints,
     magicPoints,
@@ -20,7 +18,7 @@ Enemy1 = {
 }
 
 --this will let me create multiple instances of enemy
-Enemy1_Second = {
+EnemyDorver_Second = {
     name = "Dorver 2",
     healthPoints,
     magicPoints,
@@ -31,7 +29,7 @@ Enemy1_Second = {
     maxMagic
 }
 
-Enemy1_Third = {
+EnemyDorver_Third = {
     name = "Dorver 3",
     healthPoints,
     magicPoints,
@@ -42,14 +40,14 @@ Enemy1_Third = {
     maxMagic
 }
 
-function E_attack()
+function Dorver_attack()
     Player.healthPoints = Player.healthPoints - 2
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
 end
 
-function E_magicAttack(attackingEnemy)
+function Dorver_magicAttack(attackingEnemy)
     if attackingEnemy.magicPoints < 5 then return end
     Player.healthPoints = Player.healthPoints - 5
     if Player.healthPoints < 0 then
@@ -59,7 +57,7 @@ function E_magicAttack(attackingEnemy)
 end
 
 --Enemy is able to heal only himself
-function E_heal(castingEnemy)
+function Dorver_heal(castingEnemy)
     if castingEnemy.magicPoints < 10 then return end
     castingEnemy.healthPoints = castingEnemy.healthPoints + 5
     castingEnemy.magicPoints = castingEnemy.magicPoints - 10
@@ -68,9 +66,9 @@ function E_heal(castingEnemy)
     end
 end
 
-function E_defend(castingEnemy)
+function Dorver_defend(castingEnemy)
     castingEnemy.defence = castingEnemy.defence + 2
 end
 
-function Enemy1AI()
+function DorverAI()
 end

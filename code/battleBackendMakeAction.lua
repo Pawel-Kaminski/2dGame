@@ -19,7 +19,7 @@ function makeAction(selectedAction)
         Player.remainingWaitingTime = Player.waitingTime
     end
 
-    if isDead(Enemy1) and isDead(Enemy1_Second) and isDead(Enemy1_Third) then
+    if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then
         --Player's victory
         winning()
     else

@@ -24,6 +24,7 @@ function love.keypressed(key)
 end
 
 function love.draw()
+    --these functions adjust image to the resolution
     TLfres.transform()
     TLfres.letterbox(16,9)
 end

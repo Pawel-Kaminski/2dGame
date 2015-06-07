@@ -6,7 +6,7 @@ function battleState:update(dt)
     if countingActive then
         dtotal = dtotal + dt
         if dtotal >= 0.1 then
-            fight(Enemy1, Enemy1_Second, Enemy1_Third)
+            fight(firstEnemy, secondEnemy, thirdEnemy)
             dtotal = 0
         end
     elseif pause then
@@ -14,7 +14,7 @@ function battleState:update(dt)
         if dtotalPause > 2 then
             pause = false
             dtotalPause = 0
-            resetCounter(Enemy1, Enemy1_Second, Enemy1_Third)
+            resetCounter(firstEnemy, secondEnemy, thirdEnemy)
             countingActive = true
         end
     end

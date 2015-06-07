@@ -49,10 +49,10 @@ function fight(o1, o2, o3)
 end
 
 function setArrow()
-    if not isDead(Enemy1) then
+    if not isDead(firstEnemy) then
         arrowX = 1270
         arrowY = 300
-    elseif not isDead(Enemy1_Second) then
+    elseif not isDead(secondEnemy) then
         arrowX = 1480
         arrowY = 360
     else
