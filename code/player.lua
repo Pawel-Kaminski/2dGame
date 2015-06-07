@@ -58,9 +58,9 @@ function defend()
     Player.defence = Player.defence + 10
 end
 
---playerActionFlags descibes which functions are unlocked for the player.
---Similar function for enemy is not required,
---because all actions of enemies will be always available to them
+--playerActionFlags describes which functions are unlocked for the player.
+--Similar table for enemy is not required,
+--because all actions of enemies will be always available
 --Description of elements:
 --1. Name of action
 --2. Is action unlocked?

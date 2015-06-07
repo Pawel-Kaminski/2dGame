@@ -110,8 +110,10 @@ function battleState:draw()
         end
         for i=1, countActions do
             if actions[i][5] > Player.magicPoints then
+                actions[i][6] = false
                 love.graphics.setColor(139, 137, 137)
             else
+                actions[i][6] = true
                 colourIfNeeded(lastPositionY - 15)
             end
             displayAction(actions[i][1], lastPositionY)

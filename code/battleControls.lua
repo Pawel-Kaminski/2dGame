@@ -98,7 +98,9 @@ function battleState:keypressed(key)
             end
         end
     elseif displayActions then
+        tmp = selectedAction
         selectedAction = (arrowY - 900)/30 + 1
+        indexOnTheList = selectedAction
         for i=1, selectedAction do
            local action = playerActionFlags[i]
            if not action[2] then
@@ -124,7 +126,11 @@ function battleState:keypressed(key)
             end
             selectedAction = (arrowY - 900)/30 + 1
         elseif key == "return" then
-            makeAction(selectedAction)
+            if actions[indexOnTheList][6] then
+                makeAction(selectedAction)
+            else
+                selectedAction = tmp
+            end
         end
     elseif victory then
         if key == "return" then
