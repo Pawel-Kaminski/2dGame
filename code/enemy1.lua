@@ -71,3 +71,6 @@ end
 function E_defend(castingEnemy)
     castingEnemy.defence = castingEnemy.defence + 2
 end
+
+function Enemy1AI()
+end

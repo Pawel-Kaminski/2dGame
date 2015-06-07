@@ -1,6 +1,12 @@
+require "battle"
+require "playerActionFlags"
 require "player"
 require "enemy1"
 require "battleBackend"
+require "battleBackendMakeAction"
+require "battleBackendTurns"
+require "battleBackendWinning"
+require "battleControlsMoveArrow"
 require "battleControls"
 function battleState:enter()
     setInitialValues(Player, PlayerStatistics)
