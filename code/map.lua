@@ -19,8 +19,8 @@ function mapState:enter()
     spriteLayer.sprites = {
         player = {
             image = love.graphics.newImage("assets/sprites/ViviM.png"),
-            x = 0,
-            y = 0,
+            x = playerPositionX,
+            y = playerPositionY,
             r = 0       
         }
     }

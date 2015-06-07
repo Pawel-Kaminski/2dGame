@@ -152,6 +152,8 @@ function winning()
 
    battleSpriteLayer.sprites.enemy3.active = false
    battleSpriteLayer.sprites.lifebarEnemy3.active = false
+
+   Player.remainingWaitingTime = 15
 end
 
 function isDead(o1)

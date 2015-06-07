@@ -4,8 +4,8 @@ Gamestate = require "hump.gamestate"
 require "map"
 
 function love.load() --this function is called only once
-    playerPositionX = 0
-    playerPositionY = 0
+    playerPositionX = 60
+    playerPositionY = 120
 
     mainFont = love.graphics.newFont("DroidSansMono.ttf", 20)
     love.graphics.setFont(mainFont)
