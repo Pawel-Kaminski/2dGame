@@ -20,7 +20,8 @@ Player = {
 
 --Regular attack that inflicts 10 points of damage to one enemy
 function attack(o1)
-    o1.healthPoints = o1.healthPoints - 10
+    --o1.healthPoints = o1.healthPoints - 10
+    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence)/100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
@@ -30,7 +31,8 @@ end
 --but costs 5 magic points
 function magicAttack(o1)
     if Player.magicPoints < 5 then return end
-    o1.healthPoints = o1.healthPoints - 20
+    --o1.healthPoints = o1.healthPoints - 20
+    o1.healthPoints = o1.healthPoints - (20 * (100 - o1.defence)/100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end

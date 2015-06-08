@@ -5,7 +5,8 @@ end
 
 function enemyTurn(o1)
     --Here is a place for enemies' AI---------------------------------------------
-    Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence)/100)
+    --Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence)/100)
+    AI(o1)
     ------------------------------------------------------------------------------
     if Player.healthPoints < 0 then
         Player.healthPoints = 0    
@@ -29,5 +30,11 @@ function enemyTurn(o1)
 
     if not pause then
         o1.remainingWaitingTime = o1.waitingTime
+    end
+end
+
+function AI(o1)
+    if o1.name == "Dorver" or o1.name == "Dorver 2" or o1.name == "Dorver 3" then
+        DorverAI(o1)
     end
 end
