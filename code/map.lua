@@ -6,7 +6,6 @@ require "mapEnterState"
 active1 = true
 active2 = true
 active3 = true
-timeCounter = 0
 doNotDisplay = false
 
 function mapState:update(dt)
@@ -44,14 +43,6 @@ function mapState:update(dt)
     if selectedNPC ~= null and selectedNPC.important and not playerIsTalking and not doNotDisplay then
         Talking.sprites.quest.active = true
     end
-    if Talking.sprites.quest.active then
-        timeCounter = timeCounter + dt
-        if timeCounter > 8 then
-            Talking.sprites.quest.active = false
-            timeCounter = 0
-            doNotDisplay = true
-        end
-    end
 end
 
 function mapState:draw()
@@ -83,5 +74,9 @@ function mapState:keypressed(key)
         if playerPositionY > 0 then
             playerPositionY = playerPositionY - 60
         end
+    end
+    if Talking.sprites.quest.active then
+        doNotDisplay = true
+        Talking.sprites.quest.active = false
     end
 end
