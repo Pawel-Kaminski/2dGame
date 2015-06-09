@@ -27,10 +27,23 @@ function mapState:update(dt)
             end
         end
     end
+    playerIsTalking = false
+    for _, sprite in pairs(NPCs.sprites) do
+        if spriteLayer.sprites.player.x >= sprite.x - 60
+        and spriteLayer.sprites.player.x <= sprite.x + 60
+        and spriteLayer.sprites.player.y >= sprite.y - 60
+        and spriteLayer.sprites.player.y <= sprite.y + 60 then
+                selectedNPC = sprite
+                playerIsTalking = true
+        end
+    end
 end
 
 function mapState:draw()
     map:draw()
+    if playerIsTalking then
+        love.graphics.printf(selectedNPC.dialog, 510, 130, 900, "left", 0)
+    end
 end
 
 function mapState:keypressed(key)

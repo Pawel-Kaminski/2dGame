@@ -7,19 +7,25 @@ function moveArrowDown()
         if not isDead(secondEnemy) then
             arrowX = 1480 arrowY = 360
         else
-            arrowX = 1270 arrowY = 480
+            if not isDead(thirdEnemy) then
+                arrowX = 1270 arrowY = 480
+            end
         end
      elseif arrowY == 360 then
         if not isDead(thirdEnemy) then
             arrowX = 1270 arrowY = 480
         else
-            arrowX = 1270 arrowY = 300
+            if not isDead(firstEnemy) then
+                arrowX = 1270 arrowY = 300
+            end
         end
      elseif arrowY == 480 then
         if not isDead(firstEnemy) then
             arrowX = 1270 arrowY = 300
         else
-            arrowX = 1480 arrowY = 360
+            if not isDead(secondEnemy) then
+                arrowX = 1480 arrowY = 360
+            end
         end
     end
 end

@@ -41,7 +41,7 @@ EnemyDorver_Third = {
 }
 
 function Dorver_attack()
-    Player.healthPoints = Player.healthPoints - 3
+    Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
@@ -49,7 +49,7 @@ end
 
 function Dorver_magicAttack(attackingEnemy)
     if attackingEnemy.magicPoints < 5 then return end
-    Player.healthPoints = Player.healthPoints - 5
+    Player.healthPoints = Player.healthPoints - (5 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end

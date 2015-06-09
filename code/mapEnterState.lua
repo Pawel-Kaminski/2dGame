@@ -44,6 +44,56 @@ function mapState:enter()
         }
     }
 
+    map:addCustomLayer("NPCs", 5) --Layer created for displaying non-player characters
+    NPCs = map.layers["NPCs"]
+    NPCs.sprites = {
+        npc1 = {
+            image = love.graphics.newImage("assets/sprites/man2.png"),
+            x = 600,
+            y = 600,
+            r = 0,
+            dialog = "Proszę, pomóż nam! Groźne bestie terroryzują naszą wioskę. Tylko ty możesz nam pomóc."
+        }
+    }
+
+    map:addCustomLayer("Talking", 7)
+    Talking = map.layers["Talking"]
+    Talking.sprites = {
+        dialogBackground = { 
+            image = love.graphics.newImage("assets/sprites/dialogBackground.png"),
+            x = 480,
+            y = 100,
+            r = 0
+        }
+    }
+    
+    function Talking:update(dt)
+    end
+   
+    --playerIsTalking = true
+    function Talking:draw()
+        if playerIsTalking then
+            for _, sprite in pairs(self.sprites) do
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
+            end
+        end
+    end
+
+    function NPCs:update(dt)
+    end
+
+    function NPCs:draw()
+        for _, sprite in pairs(self.sprites) do
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
+        end
+    end
+
     -- Update callback for Custom Layer
     function spriteLayer:update(dt)
         self.sprites.player.x = playerPositionX
