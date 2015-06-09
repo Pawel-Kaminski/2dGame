@@ -15,6 +15,9 @@ function fight(o1, o2, o3)
             enemyTurn(o1)
             return
         end
+    elseif displayAnimation then
+        enemyDestinedToDie = battleSpriteLayer.sprites.enemy1
+        hideBar = battleSpriteLayer.sprites.lifebarEnemy
     else
         --do not display first enemy and his lifebar
         battleSpriteLayer.sprites.enemy1.active = false
@@ -29,6 +32,9 @@ function fight(o1, o2, o3)
             enemyTurn(o2)
             return
         end
+    elseif displayAnimation then
+        enemyDestinedToDie = battleSpriteLayer.sprites.enemy2
+        hideBar = battleSpriteLayer.sprites.lifebarEnemy2
     else
         battleSpriteLayer.sprites.enemy2.active = false
         battleSpriteLayer.sprites.lifebarEnemy2.active = false
@@ -42,6 +48,9 @@ function fight(o1, o2, o3)
             enemyTurn(o3)
             return
         end
+    elseif displayAnimation then
+        enemyDestinedToDie = battleSpriteLayer.sprites.enemy3
+        hideBar = battleSpriteLayer.sprites.lifebarEnemy
     else
         battleSpriteLayer.sprites.enemy3.active = false
         battleSpriteLayer.sprites.lifebarEnemy3.active = false

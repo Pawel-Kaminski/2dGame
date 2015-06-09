@@ -30,6 +30,7 @@ end
 --Powerful magic attack that inflicts 20 points of damage to one enemy,
 --but costs 5 magic points
 function magicAttack(o1)
+    displayAnimation = true
     if Player.magicPoints < 5 then return end
     --o1.healthPoints = o1.healthPoints - 20
     o1.healthPoints = o1.healthPoints - (20 * (100 - o1.defence)/100)

@@ -41,7 +41,7 @@ EnemyDorver_Third = {
 }
 
 function Dorver_attack()
-    Player.healthPoints = Player.healthPoints - 2
+    Player.healthPoints = Player.healthPoints - 3
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
