@@ -6,6 +6,8 @@ require "mapEnterState"
 active1 = true
 active2 = true
 active3 = true
+timeCounter = 0
+doNotDisplay = false
 
 function mapState:update(dt)
     map:update(dt)
@@ -28,6 +30,7 @@ function mapState:update(dt)
         end
     end
     playerIsTalking = false
+    Talking.sprites.dialogBackground.active = false
     for _, sprite in pairs(NPCs.sprites) do
         if spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
@@ -35,6 +38,18 @@ function mapState:update(dt)
         and spriteLayer.sprites.player.y <= sprite.y + 60 then
                 selectedNPC = sprite
                 playerIsTalking = true
+                Talking.sprites.dialogBackground.active = true
+        end
+    end
+    if selectedNPC ~= null and selectedNPC.important and not playerIsTalking and not doNotDisplay then
+        Talking.sprites.quest.active = true
+    end
+    if Talking.sprites.quest.active then
+        timeCounter = timeCounter + dt
+        if timeCounter > 8 then
+            Talking.sprites.quest.active = false
+            timeCounter = 0
+            doNotDisplay = true
         end
     end
 end
@@ -42,7 +57,11 @@ end
 function mapState:draw()
     map:draw()
     if playerIsTalking then
+        love.graphics.setColor(255, 255, 255)
         love.graphics.printf(selectedNPC.dialog, 510, 130, 900, "left", 0)
+    elseif Talking.sprites.quest.active then
+        love.graphics.setColor(0, 0, 0)
+        love.graphics.printf(selectedNPC.quest, 620, 440, 600, "left", 0)
     end
 end
 

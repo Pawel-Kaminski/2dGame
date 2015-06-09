@@ -52,7 +52,17 @@ function mapState:enter()
             x = 600,
             y = 600,
             r = 0,
-            dialog = "Proszę, pomóż nam! Groźne bestie terroryzują naszą wioskę. Tylko ty możesz nam pomóc."
+            dialog = "Jestem mało znaczącą postacią. Nie dam ci żadnego zadania do zrobienia. I zawsze jak do mnie przyjdziesz, będę mówił tę samą kwestię.",
+            important = false
+        },
+        npc2 = {
+            image = love.graphics.newImage("assets/sprites/man2.png"),
+            x = 1020,
+            y = 900,
+            r = 0,
+            dialog = "Proszę, pomóż nam! Groźne bestie terroryzują naszą wioskę. Tylko ty możesz nam pomóc. Jestem postacią, która daje ci zadanie do zrobienia. Jeśli je zrobisz i wrócisz do mnie, powiem ci coś innego niż teraz.",
+            important = true,
+            quest = "Właśnie otrzymałeś zadanie. Pozbądź się wszystkich bestii znajdujących się na mapie! Po wykonaniu zadania poinformuj o jego wykonaniu zleceniodawcę."
         }
     }
 
@@ -63,7 +73,15 @@ function mapState:enter()
             image = love.graphics.newImage("assets/sprites/dialogBackground.png"),
             x = 480,
             y = 100,
-            r = 0
+            r = 0,
+            active = false
+        },
+        quest = {
+            image = love.graphics.newImage("assets/sprites/quest.png"),
+            x = 480,
+            y = 200,
+            r = 0,
+            active = false
         }
     }
     
@@ -72,8 +90,8 @@ function mapState:enter()
    
     --playerIsTalking = true
     function Talking:draw()
-        if playerIsTalking then
-            for _, sprite in pairs(self.sprites) do
+        for _, sprite in pairs(self.sprites) do
+            if sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
                 local r = sprite.r
