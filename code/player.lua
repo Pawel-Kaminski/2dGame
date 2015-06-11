@@ -31,6 +31,7 @@ end
 --but costs 5 magic points
 function magicAttack(o1)
     displayAnimation = true
+    animationId = 2
     if Player.magicPoints < 5 then return end
     --o1.healthPoints = o1.healthPoints - 20
     o1.healthPoints = o1.healthPoints - (20 * (100 - o1.defence)/100)

@@ -161,6 +161,7 @@ function battleState:enter()
     function battleAnimationLayer:update(dt)
         if displayAnimation then
             self.sprites.fireball.active = true
+            dtotal = 0 --this will stop counting while animation is displayed
             if selectedEnemy == firstEnemy and self.sprites.fireball.x < 1350 then
                 self.sprites.fireball.x = self.sprites.fireball.x + 3
             elseif selectedEnemy == secondEnemy and self.sprites.fireball.x < 1530 then
