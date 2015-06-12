@@ -20,7 +20,8 @@ Player = {
 
 --Regular attack that inflicts 10 points of damage to one enemy
 function attack(o1)
-    --o1.healthPoints = o1.healthPoints - 10
+    displayAnimation = true
+    animationId = 1
     o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence)/100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0

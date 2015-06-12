@@ -49,6 +49,20 @@ function battleState:enter()
             y = 0,
             r = 0,
             active = false
+        },
+        arrow_0 = {
+            image = love.graphics.newImage("assets/sprites/Arrow_0.png"),
+            x = 310,
+            y = 330,
+            r = 90,
+            active = false
+        },
+        blood = {
+            image = love.graphics.newImage("assets/sprites/blood.png"),
+            x = 0,
+            y = 0,
+            r = 0,
+            active = false
         }
     }
     battleSpriteLayer.sprites = {
@@ -159,7 +173,29 @@ function battleState:enter()
     }
 
     function battleAnimationLayer:update(dt)
-        if displayAnimation then
+        if displayAnimation and animationId == 1 then
+            self.sprites.arrow_0.active = true
+            dtotal = 0
+            if selectedEnemy == firstEnemy and self.sprites.arrow_0.x < 1350 then
+                self.sprites.arrow_0.x = self.sprites.arrow_0.x + 3
+            elseif selectedEnemy == secondEnemy and self.sprites.arrow_0.x < 1530 then
+                self.sprites.arrow_0.x = self.sprites.arrow_0.x + 3
+                self.sprites.arrow_0.y = 0.04878 * self.sprites.arrow_0.x + 285.36585
+            elseif selectedEnemy == thirdEnemy and self.sprites.arrow_0.x < 1350 then
+                self.sprites.arrow_0.x = self.sprites.arrow_0.x + 3
+                self.sprites.arrow_0.y = 0.17647 * self.sprites.arrow_0.x + 247.059
+            else
+                displayAnimation = false
+                self.sprites.arrow_0.active = false
+                self.sprites.blood.x = self.sprites.arrow_0.x - 15
+                self.sprites.blood.y = self.sprites.arrow_0.y - 15
+                self.sprites.blood.active = true
+                self.sprites.arrow_0.x = 310
+                self.sprites.arrow_0.y = 330
+                countingForBlood = 0
+            end
+        end
+        if displayAnimation and animationId == 2 then
             self.sprites.fireball.active = true
             dtotal = 0 --this will stop counting while animation is displayed
             if selectedEnemy == firstEnemy and self.sprites.fireball.x < 1350 then
@@ -185,6 +221,17 @@ function battleState:enter()
             countingForFire = countingForFire + dt
             if countingForFire > 1 then
                 self.sprites.fire.active = false
+                if enemyDestinedToDie ~= null then
+                    enemyDestinedToDie.active = false
+                    hideBar.active = false
+                    enemyDestinedToDie = null
+                end
+            end
+        end
+        if self.sprites.blood.active then
+            countingForBlood = countingForBlood + dt
+            if countingForBlood > 0.5 then
+                self.sprites.blood.active = false
                 if enemyDestinedToDie ~= null then
                     enemyDestinedToDie.active = false
                     hideBar.active = false
