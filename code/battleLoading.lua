@@ -40,11 +40,14 @@ function battleState:enter()
     loadSpriteLayer()
     loadBackgroundLayer()
     function battleAnimationLayer:update(dt)
-        if displayAnimation and animationId ~= null then
-            startAnimation(self)
+        if displayAnimation and (animationId == 1 or animationId == 2) then
+            startAttackAnimation(self)
+        elseif displayAnimation and animationId == 3 then
+            startDefensiveAnimation(self)
         end
         if secondSprite ~= null and secondSprite.active then
             counting = counting + dt
+            dtotal = 0
             if counting > speed then
                 secondSprite.active = false
                 if enemyDestinedToDie ~= null then

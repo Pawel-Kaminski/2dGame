@@ -50,6 +50,8 @@ end
 --Healing spell which restores up to 20 health points,
 --but costs 10 magic points
 function heal()
+    displayAnimation = true
+    animationId = 3
     if Player.magicPoints < 10 then return end
     Player.healthPoints = Player.healthPoints + 20
     Player.magicPoints = Player.magicPoints - 10

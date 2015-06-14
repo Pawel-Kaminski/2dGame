@@ -27,6 +27,20 @@ function loadAnimationLayer()
             y = 0,
             r = 0,
             active = false
+        },
+        heal = {
+            image = love.graphics.newImage("assets/sprites/heal.png"),
+            x = 195,
+            y = 180,
+            r = 0,
+            active = false
+        },
+        healingBall = {
+            image = love.graphics.newImage("assets/sprites/healingBall.png"),
+            x = 285,
+            y = 0,
+            r = 0,
+            active = false
         }
     }
 end

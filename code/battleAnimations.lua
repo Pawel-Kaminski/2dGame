@@ -1,4 +1,4 @@
-function startAnimation(layer)
+function startAttackAnimation(layer)
     if animationId == 1 then
         mainSprite = layer.sprites.arrow_0
         secondSprite = layer.sprites.blood
@@ -26,6 +26,26 @@ function startAnimation(layer)
         secondSprite.active = true
         mainSprite.x = 310
         mainSprite.y = 330
+        counting = 0
+    end
+end
+
+function startDefensiveAnimation(layer)
+    if animationId == 3 then
+        mainSprite = layer.sprites.healingBall
+        secondSprite = layer.sprites.heal
+        speed = 1.5
+    end
+    mainSprite.active = true
+    dtotal = 0
+    if mainSprite.y < 310 then
+        mainSprite.y = mainSprite.y + 1.5
+    else
+        displayAnimation = false
+        mainSprite.active = false
+        secondSprite.active = true
+        mainSprite.x = 285
+        mainSprite.y = 0
         counting = 0
     end
 end
