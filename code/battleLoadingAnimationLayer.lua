@@ -41,6 +41,20 @@ function loadAnimationLayer()
             y = 0,
             r = 0,
             active = false
+        },
+        defend = {
+            image = love.graphics.newImage("assets/sprites/defend.png"),
+            x = 195,
+            y = 180,
+            r = 0,
+            active = false
+        },
+        defenceBall = {
+            image = love.graphics.newImage("assets/sprites/defenceBall.png"),
+            x = 285,
+            y = 0,
+            r = 0,
+            active = false
         }
     }
 end

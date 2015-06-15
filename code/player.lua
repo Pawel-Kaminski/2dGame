@@ -62,6 +62,8 @@ end
 
 --Player's defence attribute increases by 10 points
 function defend()
+    displayAnimation = true
+    animationId = 4
     Player.defence = Player.defence + 10
 end
 

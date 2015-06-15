@@ -42,7 +42,7 @@ function battleState:enter()
     function battleAnimationLayer:update(dt)
         if displayAnimation and (animationId == 1 or animationId == 2) then
             startAttackAnimation(self)
-        elseif displayAnimation and animationId == 3 then
+        elseif displayAnimation and (animationId == 3 or animationId == 4) then
             startDefensiveAnimation(self)
         end
         if secondSprite ~= null and secondSprite.active then
