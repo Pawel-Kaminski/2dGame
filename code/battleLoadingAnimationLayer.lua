@@ -28,6 +28,20 @@ function loadAnimationLayer()
             r = 0,
             active = false
         },
+        test1 = {
+            image = love.graphics.newImage("assets/sprites/Arrow_0.png"),
+            x = 0,
+            y = 0,
+            r = 90,
+            active = false
+        },
+        test2 = {
+            image = love.graphics.newImage("assets/sprites/blood.png"),
+            x = 0,
+            y = 0,
+            r = 0,
+            active = false
+        },
         heal = {
             image = love.graphics.newImage("assets/sprites/heal.png"),
             x = 195,

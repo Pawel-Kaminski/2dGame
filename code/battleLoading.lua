@@ -44,6 +44,8 @@ function battleState:enter()
             startAttackAnimation(self)
         elseif displayAnimation and (animationId == 3 or animationId == 4) then
             startDefensiveAnimation(self)
+        elseif displayAnimation and animationId == 5 then
+            startAttackOfEnemyAnimation(self)
         end
         if secondSprite ~= null and secondSprite.active then
             counting = counting + dt

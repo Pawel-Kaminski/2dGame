@@ -30,6 +30,17 @@ function startAttackAnimation(layer)
     end
 end
 
+function startAttackOfEnemyAnimation(layer)
+    if animationId == 5 then
+        mainSprite = layer.sprites.test1
+        secondSprite = layer.sprite.test2
+        speed = 0.5
+    end
+    mainSprite.active = true
+    dtotal = 0
+    
+end
+
 function startDefensiveAnimation(layer)
     if animationId == 3 then
         mainSprite = layer.sprites.healingBall

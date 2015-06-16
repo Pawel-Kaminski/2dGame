@@ -40,7 +40,10 @@ EnemyDorver_Third = {
     maxMagic
 }
 
-function Dorver_attack()
+function Dorver_attack(attackingEnemy)
+    displayAnimation = true
+    animationId = 5
+    animationAttackingEnemy = attackingEnemy
     Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
@@ -79,6 +82,6 @@ function DorverAI(instance)
     if instance.defence == 0 then Dorver_defend(instance)
     elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then Dorver_heal(instance)
     elseif instance.magicPoints >= 5 then Dorver_magicAttack(instance)
-    else Dorver_attack()
+    else Dorver_attack(instance)
     end
 end
