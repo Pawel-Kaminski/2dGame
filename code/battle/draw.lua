@@ -1,5 +1,5 @@
 battleState = {}
-require "battleLoading"
+require "battle.loading.loading"
 function battleState:draw()
     battleArena:draw()
     love.graphics.setColor(0, 0, 0)

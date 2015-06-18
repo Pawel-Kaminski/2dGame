@@ -1,7 +1,7 @@
 require "TLfres"
 sti = require "sti"
 Gamestate = require "hump.gamestate"
-require "map"
+require "map.map"
 
 function love.load() --this function is called only once
     playerPositionX = 60

@@ -1,6 +1,6 @@
-require "battleDraw"
+require "battle.draw"
 mapState = {} --STI: creates new state called "mapState"
-require "mapEnterState"
+require "map.enterState"
 
 --"active" variables describe if we should display certain enemy or not
 active1 = true

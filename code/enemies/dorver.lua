@@ -73,6 +73,9 @@ function Dorver_heal(castingEnemy)
 end
 
 function Dorver_defend(castingEnemy)
+    displayAnimation = true
+    animationId = 6
+    enemyId = castingEnemy.id
     castingEnemy.defence = castingEnemy.defence + 2
 end
 
