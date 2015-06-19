@@ -609,5 +609,31 @@ Plik playerActionFlags.lua nie zawiera żadnych funkcji.
  czy można obecnie wykonać akcję.
 \end_layout
 
+\begin_layout Section
+Planowana struktura katalogów
+\end_layout
+
+\begin_layout Itemize
+mainMenu
+\end_layout
+
+\begin_layout Itemize
+maps: worldMap, levels: level1, level2, level3
+\end_layout
+
+\begin_layout Itemize
+music
+\end_layout
+
+\begin_layout Itemize
+enemies
+\end_layout
+
+\begin_layout Itemize
+battle: animations, battle, draw, player, playerActionFlags, backend: backend,
+ makeAction, turns, winning, controls: controls, moveArrow, loading: animationLa
+yer, backgroundLayer, loading, spriteLayer
+\end_layout
+
 \end_body
 \end_document
