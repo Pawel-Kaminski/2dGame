@@ -635,5 +635,209 @@ battle: animations, battle, draw, player, playerActionFlags, backend: backend,
 yer, backgroundLayer, loading, spriteLayer
 \end_layout
 
+\begin_layout Section
+Założenia dotyczące fabuły
+\end_layout
+
+\begin_layout Standard
+Główna bohaterka ma na imię Julia.
+ Każdy poziom składa się z 3-5 zadań.
+\end_layout
+
+\begin_layout Subsection
+Etapy projektowania fabuły
+\end_layout
+
+\begin_layout Itemize
+wykreowanie bohatera
+\end_layout
+
+\begin_layout Itemize
+opracowanie typowego dnia z życia tego bohatera
+\end_layout
+
+\begin_layout Itemize
+stworzenie planu ramowego fabuły
+\end_layout
+
+\begin_layout Itemize
+stworzenie planu szczegółowego fabuły
+\end_layout
+
+\begin_layout Section
+Fabuła zadań w grze
+\end_layout
+
+\begin_layout Subsection
+Level 1 - miejsce: wioska Lipinki
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 1 - Przyjacielska pomoc
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Usunąć szkodniki z ogrodu Afedii
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Afedia prosi Julię o pozbycie się szkodników jej ogrodu.
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Aby ukończyć zadanie, należy pokonać wszystkie szkodniki
+ z ogrodu (prosta walka) i przekazać informację o ukończeniu zadania do
+ Afedii.
+\end_layout
+
+\begin_layout Standard
+Koniec zadania: Po zameldowaniu zabicia szkodników u Afedii.
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 2 - Lekarstwo dla Osigolda
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Przynieść lekarstwo Osigoldowi
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po rozpoczęciu rozmowy z Osigoldem.
+ Do rozpoczęcia zadania niezbędne jest ukończenie zadania przyjacielska
+ pomoc.
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Osigold jest poważnie chory.
+ Opowiada historię o magicznej roślinie, Kwitaryksonie, która leczy wszystkie
+ ludzkie choroby.
+ Należy pokonać potwory (nieco trudniejsza walka) i przynieść lekarstwo.
+\end_layout
+
+\begin_layout Standard
+Koniec zadania: Po przekazaniu lekarstwa.
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 3 - Tajemnicza epidemia
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Osigold spożywa roślinę, ale nic się dzieje.
+ Co gorsze, podobne problemy dotknęły jego żonę Deatlanę.
+ Osigold opowiada legendę o czarnoksiężniku Neilu Merzenantarze, który kiedyś
+ zaprowadził terror nad światem, a potem został wygnany w zaświaty.
+ Według legendy, gdy Neil Marzenantar powróci z zaświatów, Kwitarykson przestani
+e uleczać ludzkie choroby, a ludzie mieszkający w wiosce, jedna osoba po
+ drugiej, zaczną chorować.
+ Jeśli legenda jest prawdziwa, nie pozostało wiele czasu.
+ Afedia może znać sposób na rozwiązanie tych problemów.
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy porozmawiać z Afedią, która opowie o istniejącym
+ w jej rodzinie magicznym Artefakcie Ziemi, który był przekazywany w jej
+ rodzinie i według relacji babci Afedii miał mieć związek z tajemniczą legendą
+ o Neilu Merzenantarze.
+ Afedia przekazuje swój artefakt i radzi, aby udać się z nim do wiedźmy
+ Tinaldiny mieszkającej w Mrocznym Lesie, która może wiedzieć coś więcej.
+\end_layout
+
+\begin_layout Standard
+Koniec zadania: Natychmiast po rozmowie z Afedią.
+\end_layout
+
+\begin_layout Subsection
+Level 2 - miejsce: Mroczny Las
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 4 - Rozmowa z Tinaldiną
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Należy porozmawiać z Tinaldiną
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po wejściu do Mrocznego Lasu
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy pokonać potwory zagradzające drogę i porozmawiać
+ z Tinaldiną.
+ Tinaldina powie o swoich podejrzeniach, że Artefakt Ziemi może mieć z tą
+ sprawą coś wspólnego.
+ Mówi też, że prawdopodobnie istnieją jeszcze inne podobne artefakty.
+ Ich odnalezienie może być kluczem do ocalenia wioski.
+ Przy okazji Tinaldina mówi o problemie z pojawiającym się i znikającym
+ potworem w okolicy.
+ Tinaldina prosi o zabicie potwora, a w zamian obiecuje poszukać więcej
+ informacji w swoich księgach.
+\end_layout
+
+\begin_layout Standard
+Koniec zadania: Po rozmowie z Tinaldiną
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 5 - Potężny stwór
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po rozmowie z Tinaldiną pojawia się wspomniany przez nią
+ potwór.
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy pokonać potwora i zameldować Tinaldinie.
+ Po zdobyciu potwora Julia zdobywa Artefakt Powietrza.
+\end_layout
+
+\begin_layout Standard
+Koniec zadania: Po zameldowaniu zabicia potwora.
+\end_layout
+
+\begin_layout Subsection
+Level 3
+\end_layout
+
+\begin_layout Subsection
+Boss
+\end_layout
+
+\begin_layout Section
+Rzeczy do zrobienia
+\end_layout
+
+\begin_layout Itemize
+zaprojektowanie przeciwników
+\end_layout
+
+\begin_layout Itemize
+zaprojektowanie przedmiotów
+\end_layout
+
+\begin_layout Itemize
+zaprojektowanie rozwoju postaci
+\end_layout
+
+\begin_layout Itemize
+znalezienie ścieżki dźwiękowej do każdego z miejsc
+\end_layout
+
+\begin_layout Itemize
+wymyślenie fabuły
+\end_layout
+
+\begin_layout Itemize
+zaprojektowanie map lokalnych
+\end_layout
+
+\begin_layout Itemize
+zaprojektowanie głównego menu
+\end_layout
+
 \end_body
 \end_document
