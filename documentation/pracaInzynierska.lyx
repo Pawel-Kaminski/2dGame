@@ -664,6 +664,39 @@ stworzenie planu ramowego fabuły
 stworzenie planu szczegółowego fabuły
 \end_layout
 
+\begin_layout Subsection
+Plan ramowy fabuły
+\end_layout
+
+\begin_layout Subsubsection
+Jest sobie wioska, jakieś wprowadzające zadanie na początek
+\end_layout
+
+\begin_layout Subsubsection
+Zawiązanie akcji, ludzie chorują, opowiedzenie legendy o Neilu Merzentanatze
+\end_layout
+
+\begin_layout Subsubsection
+Julia zdobywa Artefakt Ziemi
+\end_layout
+
+\begin_layout Subsubsection
+Julia zdobywa Artefakt Powietrza
+\end_layout
+
+\begin_layout Subsubsection
+Okazuje się, że należy zebrać cztery magiczne artefakty: Artefakt Ziemi,
+ Artefakt Powietrza, Artefakt Lodu, Artefakt Ognia
+\end_layout
+
+\begin_layout Subsubsection
+Julia zdobywa Artefakt Lodu
+\end_layout
+
+\begin_layout Subsubsection
+Julia zdobywa Artefakt Ognia
+\end_layout
+
 \begin_layout Section
 Fabuła zadań w grze
 \end_layout
@@ -710,7 +743,7 @@ Początek zadania: Po rozpoczęciu rozmowy z Osigoldem.
 
 \begin_layout Standard
 Przebieg zadania: Osigold jest poważnie chory.
- Opowiada historię o magicznej roślinie, Kwitaryksonie, która leczy wszystkie
+ Opowiada historię o magicznej roślinie, kwitaryksonie, która leczy wszystkie
  ludzkie choroby.
  Należy pokonać potwory (nieco trudniejsza walka) i przynieść lekarstwo.
 \end_layout
@@ -728,7 +761,7 @@ Początek zadania: Osigold spożywa roślinę, ale nic się dzieje.
  Co gorsze, podobne problemy dotknęły jego żonę Deatlanę.
  Osigold opowiada legendę o czarnoksiężniku Neilu Merzenantarze, który kiedyś
  zaprowadził terror nad światem, a potem został wygnany w zaświaty.
- Według legendy, gdy Neil Marzenantar powróci z zaświatów, Kwitarykson przestani
+ Według legendy, gdy Neil Merzenantar powróci z zaświatów, Kwitarykson przestani
 e uleczać ludzkie choroby, a ludzie mieszkający w wiosce, jedna osoba po
  drugiej, zaczną chorować.
  Jeśli legenda jest prawdziwa, nie pozostało wiele czasu.
@@ -771,10 +804,10 @@ Przebieg zadania: Należy pokonać potwory zagradzające drogę i porozmawiać
  sprawą coś wspólnego.
  Mówi też, że prawdopodobnie istnieją jeszcze inne podobne artefakty.
  Ich odnalezienie może być kluczem do ocalenia wioski.
- Przy okazji Tinaldina mówi o problemie z pojawiającym się i znikającym
- potworem w okolicy.
+ W czasie rozmowy zjawia się stwór.
  Tinaldina prosi o zabicie potwora, a w zamian obiecuje poszukać więcej
  informacji w swoich księgach.
+ Po zabiciu potwora okazuje się, że miał on przy sobie Artefakt Powietrza.
 \end_layout
 
 \begin_layout Standard
@@ -782,25 +815,27 @@ Koniec zadania: Po rozmowie z Tinaldiną
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 5 - Potężny stwór
+Zadanie 5 - 
 \end_layout
 
-\begin_layout Standard
-Początek zadania: Po rozmowie z Tinaldiną pojawia się wspomniany przez nią
- potwór.
-\end_layout
-
-\begin_layout Standard
-Przebieg zadania: Należy pokonać potwora i zameldować Tinaldinie.
- Po zdobyciu potwora Julia zdobywa Artefakt Powietrza.
-\end_layout
-
-\begin_layout Standard
-Koniec zadania: Po zameldowaniu zabicia potwora.
+\begin_layout Subsubsection
+Zadanie 6 - 
 \end_layout
 
 \begin_layout Subsection
-Level 3
+Level 3 - miejsce: Kraina Równowagi
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 7
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 8
+\end_layout
+
+\begin_layout Subsubsection
+Zadanie 9
 \end_layout
 
 \begin_layout Subsection
