@@ -805,9 +805,9 @@ Przebieg zadania: Należy pokonać potwory zagradzające drogę i porozmawiać
  Mówi też, że prawdopodobnie istnieją jeszcze inne podobne artefakty.
  Ich odnalezienie może być kluczem do ocalenia wioski.
  W czasie rozmowy zjawia się stwór.
- Tinaldina prosi o zabicie potwora, a w zamian obiecuje poszukać więcej
- informacji w swoich księgach.
- Po zabiciu potwora okazuje się, że miał on przy sobie Artefakt Powietrza.
+ Tinaldina prosi o zabicie potwora.
+ Po zabiciu potwora Tinalida informuje o istnieniu zwoju z przepowiednią,
+ który powinien zawierać dalsze wskazówki.
 \end_layout
 
 \begin_layout Standard
@@ -815,11 +815,53 @@ Koniec zadania: Po rozmowie z Tinaldiną
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 5 - 
+Zadanie 5 - Zwój z przepowiednią
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Znaleźć zwój z przepowiednią
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po rozmowie z Tinaldiną
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy odnaleźć zwój z przepowiednią napisaną w starożytnym
+ języku i zanieść Tinaldinie
+\end_layout
+
+\begin_layout Standard
+Zakończenie zadania: Po znalezieniu zwoju i rozmowie z Tinaldiną
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 6 - 
+Zadanie 6 - Strażnicy Powietrza
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Zdobyć Artefakt Powietrza
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po ukończeniu zadania 
+\begin_inset Quotes pld
+\end_inset
+
+Zwój z przepowiednią
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy pokonać strażników powietrza i zdobyć Artefakt
+ Powietrza
+\end_layout
+
+\begin_layout Standard
+Zakończenie zadania: Po rozmowie z Tinaldiną
 \end_layout
 
 \begin_layout Subsection
@@ -827,19 +869,121 @@ Level 3 - miejsce: Kraina Równowagi
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 7
+Zadanie 7 - Rozmowa z Lidenonem
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Uzyskać wskazówki dotyczące taktyki od Lidenona
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po ukończeniu zadania 
+\begin_inset Quotes pld
+\end_inset
+
+Strażnicy Powietrza
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Lidenon przekazuje wskazówki dotyczące walk ze strażnikami
+ ognia i lodu
+\end_layout
+
+\begin_layout Standard
+Zakończenie zadania: Po rozmowie z Lidenonem
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 8
+Zadanie 8 - Strażnicy Ognia
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Zdobyć Artefakt Ognia
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po ukończeniu zadania 
+\begin_inset Quotes pld
+\end_inset
+
+Rozmowa z Lidenonem
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy pokonać strażników ognia i zdobyć Artefakt Ognia
+\end_layout
+
+\begin_layout Standard
+Zakończenie zadania: Po rozmowie z Lidenonem
 \end_layout
 
 \begin_layout Subsubsection
-Zadanie 9
+Zadanie 9 - Strażnicy Lodu
+\end_layout
+
+\begin_layout Standard
+Cel zadania: Zdobyć Arfekt Lodu
+\end_layout
+
+\begin_layout Standard
+Początek zadania: Po ukończeniu zadania 
+\begin_inset Quotes pld
+\end_inset
+
+Strażnicy Ognia
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Przebieg zadania: Należy pokonać strażników lodu i zdobyć Artefakt Lodu
+\end_layout
+
+\begin_layout Standard
+Zakończenie zadania: Po rozmowie z Lidenonem
 \end_layout
 
 \begin_layout Subsection
 Boss
+\end_layout
+
+\begin_layout Subsubsection
+Faza 1
+\end_layout
+
+\begin_layout Standard
+W miarę standardowa walka, tylko ze zwiększonym poziomem trudności.
+\end_layout
+
+\begin_layout Subsubsection
+Faza 2
+\end_layout
+
+\begin_layout Standard
+Przeciwnik raz na jakiś czas zadaje potężne ciosy pozostawiające tylko 1
+ HP, po czym daje graczowi szansę na zregenerowanie się.
+\end_layout
+
+\begin_layout Subsubsection
+Faza 3
+\end_layout
+
+\begin_layout Standard
+Julia jest bliska śmierci, ale ratuje ją Afedia.
+\end_layout
+
+\begin_layout Subsection
+Zakończenie i napisy końcowe
 \end_layout
 
 \begin_layout Section

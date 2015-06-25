@@ -745,7 +745,7 @@ Początek zadania: Po rozpoczęciu rozmowy z Osigoldem.
 Przebieg zadania: Osigold jest poważnie chory.
  Opowiada historię o magicznej roślinie, kwitaryksonie, która leczy wszystkie
  ludzkie choroby.
- Należy pokonać potwory (nieco trudniejsza walka) i przynieść lekarstwo.
+ Należy pokonać Stwory (nieco trudniejsza walka) i przynieść lekarstwo.
 \end_layout
 
 \begin_layout Standard
@@ -984,6 +984,41 @@ Julia jest bliska śmierci, ale ratuje ją Afedia.
 
 \begin_layout Subsection
 Zakończenie i napisy końcowe
+\end_layout
+
+\begin_layout Section
+Ścieżka dźwiękowa
+\end_layout
+
+\begin_layout Standard
+Potrzebuję plików:
+\end_layout
+
+\begin_layout Itemize
+do chodzenia po mapach: wioska Lipinki (już jest), Mroczny Las, Kraina Równowagi
+\end_layout
+
+\begin_layout Itemize
+do walki z każdym z przeciwników: Szkodnik, Stwór (Dorver) (już jest), Potwory
+ zagradzające drogę do Tinaldiny (3 rodzaje), Potwór atakujący w czasie
+ rozmowy z Tinaldiną, Strażnicy Powietrza, Strażnicy Ognia, Strażnicy Lodu,
+ Neil Merzentanar - ogółem 10 plików
+\end_layout
+
+\begin_layout Itemize
+menu
+\end_layout
+
+\begin_layout Itemize
+napisy końcowe
+\end_layout
+
+\begin_layout Itemize
+zwycięstwo (już jest)
+\end_layout
+
+\begin_layout Itemize
+porażka (już jest)
 \end_layout
 
 \begin_layout Section
