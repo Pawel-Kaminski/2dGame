@@ -23,7 +23,7 @@ function battleState:enter()
     displayTurnInfo = true
     countingActive = true
     actions = listOfAllActions()
-    sound2 = love.audio.newSource("music/battleThemeA.mp3")
+    sound2 = love.audio.newSource("music/fight_themes/5-Battle_of_the_Void.mp3")
     love.audio.play(sound2)
     sound2:setLooping(true)
 

@@ -19,7 +19,7 @@ function mapState:enter()
     
     map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]
-    dorver = love.graphics.newImage("assets/sprites/dorver/used.png")
+    dorver = love.graphics.newImage("assets/sprites/enemies/2-creature/creature.png")
     enemies.sprites = {
         enemy = {
             image = dorver,
