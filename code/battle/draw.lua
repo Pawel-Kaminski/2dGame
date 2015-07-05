@@ -83,4 +83,14 @@ function battleState:draw()
             lastPositionY = lastPositionY + 30
         end
     end
+
+    if displayItems then
+        --TODO: Implement displaying items
+    end
+
+    if escapeBattle then
+        love.audio.stop()
+        escapeBattle = false
+        Gamestate.switch(mapState)
+    end
 end

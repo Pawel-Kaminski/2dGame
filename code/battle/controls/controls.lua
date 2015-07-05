@@ -44,9 +44,11 @@ function battleState:keypressed(key)
                 displayActions = true
                 return
             elseif arrowY == 930 then
-                --TODO: Display items
+                displayItems = true
+                return
             elseif arrowY == 960 then
-                --TODO: Escape battle
+                escapeBattle = true
+                return
             end
         end
     elseif displayActions then
