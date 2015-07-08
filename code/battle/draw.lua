@@ -95,5 +95,6 @@ function battleState:draw()
         if playerPositionX >= 120 then
             playerPositionX = playerPositionX - 120
         else playerPositionX = 0
+        end
     end
 end

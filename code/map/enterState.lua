@@ -63,6 +63,22 @@ function mapState:enter()
             dialog = "Proszę, pomóż nam! Groźne bestie terroryzują naszą wioskę. Tylko ty możesz nam pomóc. Jestem postacią, która daje ci zadanie do zrobienia. Jeśli je zrobisz i wrócisz do mnie, powiem ci coś innego niż teraz.",
             important = true,
             quest = "Właśnie otrzymałeś zadanie. Pozbądź się wszystkich bestii znajdujących się na mapie! Po wykonaniu zadania poinformuj o jego wykonaniu zleceniodawcę."
+        },
+        Afedia = {
+            image = love.graphics.newImage("assets/sprites/npc/1-Afedia/Base2.png"),
+            x = 600,
+            y = 900,
+            r = 0,
+            dialog = "Witaj, jestem Afedia.",
+            important = false
+        },
+        Osigold = {
+            image = love.graphics.newImage("assets/sprites/npc/2-Osigold/118053.png"),
+            x = 1020,
+            y = 600,
+            r = 0,
+            dialog = "Witaj, jestem Osigold.",
+            important = false
         }
     }
 
