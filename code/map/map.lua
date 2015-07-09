@@ -14,6 +14,7 @@ function mapState:update(dt)
         if spriteLayer.sprites.player.x == sprite.x then
             if spriteLayer.sprites.player.y == sprite.y and sprite.active then
                 --when player is in the same position as one of enemies
+                --code here determines what kind of enemy attacks the player
                 firstEnemy = EnemyDorver_First
                 secondEnemy = EnemyDorver_Second
                 thirdEnemy = EnemyDorver_Third

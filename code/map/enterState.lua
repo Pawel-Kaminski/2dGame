@@ -20,6 +20,7 @@ function mapState:enter()
     map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]
     dorver = love.graphics.newImage("assets/sprites/enemies/2-creature/creature.png")
+    thornbush = love.graphics.newImage("assets/sprites/enemies/1-thornbush/thornbush_used.png")
     enemies.sprites = {
         enemy = {
             image = dorver,
@@ -36,12 +37,12 @@ function mapState:enter()
             active = active2
         },
         enemy3 = {
-            image = dorver,
+            image = thornbush,
             x = 600,
             y = 360,
             r = 0,
             active = active3
-        }
+        },
     }
 
     map:addCustomLayer("NPCs", 5) --Layer created for displaying non-player characters
@@ -65,7 +66,7 @@ function mapState:enter()
             quest = "Właśnie otrzymałeś zadanie. Pozbądź się wszystkich bestii znajdujących się na mapie! Po wykonaniu zadania poinformuj o jego wykonaniu zleceniodawcę."
         },
         Afedia = {
-            image = love.graphics.newImage("assets/sprites/npc/1-Afedia/Base2.png"),
+            image = love.graphics.newImage("assets/sprites/npc/1-Afedia/Base2_used.png"),
             x = 600,
             y = 900,
             r = 0,
@@ -78,6 +79,14 @@ function mapState:enter()
             y = 600,
             r = 0,
             dialog = "Witaj, jestem Osigold.",
+            important = false
+        },
+        Deatlana = {
+            image = love.graphics.newImage("assets/sprites/npc/3-Deatlana/Deatlana.png"),
+            x = 900,
+            y = 600,
+            r = 0,
+            dialog = "Witaj, jestem Deatlana.",
             important = false
         }
     }
