@@ -38,8 +38,8 @@ function mapState:enter()
         },
         enemy3 = {
             image = thornbush,
-            x = 600,
-            y = 360,
+            x = 300,
+            y = 660,
             r = 0,
             active = active3
         },
@@ -67,11 +67,12 @@ function mapState:enter()
         },
         Afedia = {
             image = love.graphics.newImage("assets/sprites/npc/1-Afedia/Base2_used.png"),
-            x = 600,
-            y = 900,
+            x = 300,
+            y = 540,
             r = 0,
-            dialog = "Witaj, jestem Afedia.",
-            important = false
+            dialog = "Witaj, jestem Afedia. Proszę, pomóż mi pozbyć się szkodników z mojego ogrodu.",
+            important = true,
+            quest = "Usuń szkodniki z ogrodu Afedii!"
         },
         Osigold = {
             image = love.graphics.newImage("assets/sprites/npc/2-Osigold/118053.png"),
