@@ -45,3 +45,14 @@ EnemyThornbush_Third = {
 }
 
 --TODO:Implement attacks
+function Thornbush_attack(attackingEnemy)
+    Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence) / 100)
+    if Player.healthPoints < 0 then
+        Player.healthPoints = 0
+    end
+end
+
+--TODO:Create AI
+function ThornbushAI(instance)
+    Thornbush_attack(instance)
+end

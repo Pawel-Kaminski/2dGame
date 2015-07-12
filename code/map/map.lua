@@ -15,10 +15,17 @@ function mapState:update(dt)
             if spriteLayer.sprites.player.y == sprite.y and sprite.active then
                 --when player is in the same position as one of enemies
                 --code here determines what kind of enemy attacks the player
-                firstEnemy = EnemyDorver_First
-                secondEnemy = EnemyDorver_Second
-                thirdEnemy = EnemyDorver_Third
-                stats = EnemyDorverStatistics
+                if sprite.x == 300 and sprite.y == 660 then
+                    firstEnemy = EnemyThornbush_First
+                    secondEnemy = EnemyThornbush_Second
+                    thirdEnemy = EnemyThornbush_Third
+                    stats = EnemyDorverStatistics
+                else
+                    firstEnemy = EnemyDorver_First
+                    secondEnemy = EnemyDorver_Second
+                    thirdEnemy = EnemyDorver_Third
+                    stats = EnemyThornbushStatistics
+                end
                 love.audio.stop()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore

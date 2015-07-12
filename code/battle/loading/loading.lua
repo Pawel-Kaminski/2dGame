@@ -2,6 +2,7 @@ require "battle.battle"
 require "battle.playerActionFlags"
 require "battle.player"
 require "enemies.dorver"
+require "enemies.thornbush"
 require "battle.backend.backend"
 require "battle.backend.makeAction"
 require "battle.backend.turns"
@@ -17,7 +18,7 @@ function battleState:enter()
     setInitialValues(firstEnemy, stats)
     setInitialValues(secondEnemy, stats)
     setInitialValues(thirdEnemy, stats)
-    selectedEnemy = Enemy1
+    --selectedEnemy = Enemy1
     victory = false
     defeat = false
     displayTurnInfo = true
