@@ -9,7 +9,7 @@ EnemyThornbushStatistics = {
 
 EnemyThornbush_First = {
     id = 1,
-    name = "Thornbush",
+    name = "Szkodnik",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -22,7 +22,7 @@ EnemyThornbush_First = {
 --this will let me create multiple instances of enemy
 EnemyThornbush_Second = {
     id = 2,
-    name = "Thornbush 2",
+    name = "Szkodnik 2",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -34,7 +34,7 @@ EnemyThornbush_Second = {
 
 EnemyThornbush_Third = {
     id = 3,
-    name = "Thornbush 3",
+    name = "Szkodnik 3",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -46,7 +46,7 @@ EnemyThornbush_Third = {
 
 --TODO:Implement attacks
 function Thornbush_attack(attackingEnemy)
-    Player.healthPoints = Player.healthPoints - (1 * (100 - Player.defence) / 100)
+    Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end

@@ -36,5 +36,7 @@ end
 function AI(o1)
     if o1.name == "Dorver" or o1.name == "Dorver 2" or o1.name == "Dorver 3" then
         DorverAI(o1)
+    elseif o1.name == "Szkodnik" or o1.name == "Szkodnik 2" or o1.name == "Szkodnik 3" then
+        ThornbushAI(o1)
     end
 end

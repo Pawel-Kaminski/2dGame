@@ -29,9 +29,9 @@ function mapState:update(dt)
                 love.audio.stop()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore
-                if sprite.y == 120 then active1 = false end
-                if sprite.y == 300 then active2 = false end
-                if sprite.y == 360 then active3 = false end
+                if sprite.y == enemies.sprites.enemy.y then active1 = false end
+                if sprite.y == enemies.sprites.enemy2.y then active2 = false end
+                if sprite.y == enemies.sprites.enemy3.y then active3 = false end
                 Gamestate.switch(battleState)
             end
         end
