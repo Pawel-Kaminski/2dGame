@@ -1,7 +1,7 @@
 PlayerStatistics = {
     --PlayerStatistics table contains attributes which should be loaded before the fight
-    health = 50,
-    magic = 20,
+    health = 200,
+    magic = 0,
     waitingTime = 50,
     --remainingWaitingTime = 15,
     defence = 0

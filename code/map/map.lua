@@ -15,16 +15,17 @@ function mapState:update(dt)
             if spriteLayer.sprites.player.y == sprite.y and sprite.active then
                 --when player is in the same position as one of enemies
                 --code here determines what kind of enemy attacks the player
+                --TODO:create function
                 if sprite.x == 300 and sprite.y == 660 then
                     firstEnemy = EnemyThornbush_First
                     secondEnemy = EnemyThornbush_Second
                     thirdEnemy = EnemyThornbush_Third
-                    stats = EnemyDorverStatistics
+                    stats = EnemyThornbushStatistics
                 else
                     firstEnemy = EnemyDorver_First
                     secondEnemy = EnemyDorver_Second
                     thirdEnemy = EnemyDorver_Third
-                    stats = EnemyThornbushStatistics
+                    stats = EnemyDorverStatistics
                 end
                 love.audio.stop()
                 activeEnemySprite = sprite
