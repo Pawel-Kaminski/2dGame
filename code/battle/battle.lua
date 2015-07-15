@@ -1,6 +1,4 @@
 --All code to draw enemies is in battleDraw.lua
-dtotal = 0 --time after calling fight(enemy) function
-dtotalPause = 0
 function battleState:update(dt)
     battleArena:update(dt)
     if countingActive then
