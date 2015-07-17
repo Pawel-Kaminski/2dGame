@@ -2,7 +2,7 @@ require "TLfres"
 sti = require "sti"
 Gamestate = require "hump.gamestate"
 require "config"
-require "map.map"
+require "map"
 
 function love.load() --this function is called only once
     love.graphics.setFont(mainFont)
