@@ -1,4 +1,6 @@
 function loadBackgroundLayer()
+    battleArena:addCustomLayer("Background Layer", 2)
+    battleBackgroundLayer = battleArena.layers["Background Layer"]
     battleBackgroundLayer.sprites = {
         background = {
             image = love.graphics.newImage("assets/sprites/bg2.png"),
@@ -19,4 +21,13 @@ function loadBackgroundLayer()
             r = 0
         }
     }
+
+    function battleBackgroundLayer:draw()
+        for _, sprite in pairs(self.sprites) do
+            local x = math.floor(sprite.x)
+            local y = math.floor(sprite.y)
+            local r = sprite.r
+            love.graphics.draw(sprite.image, x, y, r)
+        end
+    end
 end

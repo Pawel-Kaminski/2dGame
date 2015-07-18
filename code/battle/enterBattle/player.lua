@@ -1,3 +1,5 @@
+require "battle.enterBattle.player.playerActionFlags"
+
 PlayerStatistics = {
     --PlayerStatistics table contains attributes which should be loaded before the fight
     health = 200,

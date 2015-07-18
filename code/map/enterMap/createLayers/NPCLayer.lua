@@ -1,7 +1,7 @@
-function createNPCsLayer()
-    map:addCustomLayer("NPCs", 5) --Layer created for displaying non-player characters
-    NPCs = map.layers["NPCs"]
-    NPCs.sprites = {
+function createNPCLayer()
+    map:addCustomLayer("NPC", 5) --Layer created for displaying non-player characters
+    NPC = map.layers["NPC"]
+    NPC.sprites = {
         npc1 = {
             image = love.graphics.newImage("assets/sprites/man2.png"),
             x = 600,
@@ -46,10 +46,10 @@ function createNPCsLayer()
         }
     }
 
-    function NPCs:update(dt)
+    function NPC:update(dt)
     end
 
-    function NPCs:draw()
+    function NPC:draw()
         for _, sprite in pairs(self.sprites) do
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)

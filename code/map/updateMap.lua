@@ -1,3 +1,6 @@
+require "map.updateMap.enemies.dorver"
+require "map.updateMap.enemies.thornbush"
+
 function updateMap()
     map:update(dt)
     for _, sprite in pairs(enemies.sprites) do
@@ -28,7 +31,7 @@ function updateMap()
     end
     playerIsTalking = false
     Talking.sprites.dialogBackground.active = false
-    for _, sprite in pairs(NPCs.sprites) do
+    for _, sprite in pairs(NPC.sprites) do
         if spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
         and spriteLayer.sprites.player.y >= sprite.y - 60

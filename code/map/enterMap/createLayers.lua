@@ -1,11 +1,11 @@
-require "map.enterMap.createLayers.createSpriteLayer"
-require "map.enterMap.createLayers.createEnemiesLayer"
-require "map.enterMap.createLayers.createNPCsLayer"
-require "map.enterMap.createLayers.createTalkingLayer"
+require "map.enterMap.createLayers.spriteLayer"
+require "map.enterMap.createLayers.enemiesLayer"
+require "map.enterMap.createLayers.NPCLayer"
+require "map.enterMap.createLayers.talkingLayer"
 function createLayers()
     map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
     createSpriteLayer()
     createEnemiesLayer()
-    createNPCsLayer()
+    createNPCLayer()
     createTalkingLayer()
 end

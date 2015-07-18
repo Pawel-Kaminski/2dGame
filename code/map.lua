@@ -1,4 +1,4 @@
-require "battle.draw"
+require "battle"
 mapState = {} --STI: creates new state called "mapState"
 require "map.enterMap"
 require "map.updateMap"

@@ -1,4 +1,8 @@
+require "battle.enterBattle.animationLayer.updateAnimationLayer"
+
 function loadAnimationLayer()
+    battleArena:addCustomLayer("Animation Layer", 4)
+    battleAnimationLayer = battleArena.layers["Animation Layer"]
     battleAnimationLayer.sprites = {
         fireball = {
             image = love.graphics.newImage("assets/sprites/fireball.png"),
@@ -71,4 +75,19 @@ function loadAnimationLayer()
             active = false
         }
     }
+
+    function battleAnimationLayer:update(dt)
+        updateAnimationLayer()
+    end
+
+    function battleAnimationLayer:draw()
+        for _, sprite in pairs(self.sprites) do
+            if sprite.active ~= false then
+                local x = math.floor(sprite.x)
+                local y = math.floor(sprite.y)
+                local r = sprite.r
+                love.graphics.draw(sprite.image, x, y, r)
+            end
+        end
+    end
 end
