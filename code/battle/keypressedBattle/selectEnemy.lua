@@ -23,7 +23,7 @@ function selectEnemy(key)
             return
         end
         countingActive = true
-        displayActions = false
+        displayingActions = false
         Player.remainingWaitingTime = Player.waitingTime
     end
 end

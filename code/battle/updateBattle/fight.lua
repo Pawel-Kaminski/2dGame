@@ -2,7 +2,7 @@ require "battle.updateBattle.fight.enemyTurn"
 
 function playerTurn()
     selectedAction = 1
-    displayMenu = true
+    displayingMenu = true --!!!
 end
 
 function isDead(o1)

@@ -1,5 +1,7 @@
 function showTurnInfo()
-    love.graphics.printf("Tura gracza za: "..Player.remainingWaitingTime, 150, 715, 500, "left", 0)
+    love.graphics.printf(
+    "Tura gracza za: "..Player.remainingWaitingTime,
+    150, 715, 500, "left", 0)
     if battleSpriteLayer.sprites.enemy1.active then
         love.graphics.printf(
         "Tura przeciwnika - "..firstEnemy.name.." za: "..firstEnemy.remainingWaitingTime,

@@ -44,7 +44,7 @@ function drawBattle()
         love.graphics.printf("Wyjdź z gry", 150, 835, 1000, "left", 0)
     end
     
-    if displayMenu then
+    if displayingMenu then
         color(900)
         love.graphics.printf("Akcja", 150, 915, 500, "left", 0)
         color(930)
@@ -58,7 +58,7 @@ function drawBattle()
     end
 
     countActions = 0
-    if displayActions then
+    if displayingActions then
         showActions()
     end
 

@@ -1,7 +1,8 @@
 function showActions()
     --TODO: selectedAction is null - and it shouldn't be
+    selectedAction = 1 --temporarily
     love.graphics.printf(actions[selectedAction][4], 1000, 915, 900, "left", 0)
-    displayMenu = false
+    displayingMenu = false
     lastPositionY = 915
     for _, action in pairs(actions) do
         countActions = countActions + 1

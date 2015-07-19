@@ -28,7 +28,7 @@ function makeAction(selectedAction)
     else
         if not selectingEnemy then
             countingActive = true
-            displayActions = false
+            displayingActions = false
             arrowY = 900
         end
     end

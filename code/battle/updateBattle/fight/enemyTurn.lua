@@ -18,8 +18,8 @@ function enemyTurn(o1)
     if isDead(Player) then
         --Enemy's victory
         love.audio.stop()
-        displayActions = false
-        displayMenu = false
+        displayingActions = false
+        displayingMenu = false
         displayTurnInfo = false
         defeat = true
         arrowY = 790

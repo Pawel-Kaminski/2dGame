@@ -1,7 +1,7 @@
 function winning()
    love.audio.stop()
-   displayActions = false
-   displayMenu = false
+   displayingActions = false
+   displayingMenu = false
    displayTurnInfo = false
    victory = true
    sound3 = love.audio.newSource("music/VictoryTheme.mp3")

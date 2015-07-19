@@ -13,7 +13,7 @@ function displayMenu(key)
         end
     elseif key == "return" then
         if arrowY == 900 then
-            displayActions = true
+            displayingActions = true
             return
         elseif arrowY == 930 then
             displayItems = true

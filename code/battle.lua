@@ -1,7 +1,7 @@
-require "battle.drawBattle"
 require "battle.enterBattle"
-require "battle.keypressedBattle"
 require "battle.updateBattle"
+require "battle.drawBattle"
+require "battle.keypressedBattle"
 
 battleState = {}
 function battleState:enter()
