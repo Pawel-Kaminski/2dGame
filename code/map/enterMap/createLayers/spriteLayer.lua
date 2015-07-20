@@ -5,8 +5,7 @@ function createSpriteLayer()
         player = {
             image = love.graphics.newImage("assets/sprites/ViviM.png"),
             x = playerPositionX,
-            y = playerPositionY,
-            r = 0       
+            y = playerPositionY,    
         }
     }
     -- Update callback for Custom Layer
@@ -19,10 +18,10 @@ function createSpriteLayer()
     function spriteLayer:draw()
         --pairs function iterates over all elements in a table
         for _, sprite in pairs(self.sprites) do
-                local x = math.floor(sprite.x)
-                local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
+            local x = math.floor(sprite.x)
+            local y = math.floor(sprite.y)
+            local r = sprite.r
+            love.graphics.draw(sprite.image, x, y, r)
         end
     end
 end

@@ -16,11 +16,12 @@ function mapState:enter()
 end
 
 function mapState:update()
+    playerIsTalking = false
     updateMap()
 end
 
 function mapState:draw()
-    drawMap()
+    drawMap(playerIsTalking)
 end
 
 function mapState:keypressed(key)

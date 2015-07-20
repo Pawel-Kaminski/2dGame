@@ -6,14 +6,12 @@ function createTalkingLayer()
             image = love.graphics.newImage("assets/sprites/dialogBackground.png"),
             x = 480,
             y = 100,
-            r = 0,
             active = false
         },
         quest = {
             image = love.graphics.newImage("assets/sprites/quest.png"),
             x = 480,
             y = 200,
-            r = 0,
             active = false
         }
     }

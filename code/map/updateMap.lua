@@ -29,19 +29,18 @@ function updateMap()
             end
         end
     end
-    playerIsTalking = false
     Talking.sprites.dialogBackground.active = false
     for _, sprite in pairs(NPC.sprites) do
         if spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
         and spriteLayer.sprites.player.y >= sprite.y - 60
         and spriteLayer.sprites.player.y <= sprite.y + 60 then
-                selectedNPC = sprite
-                playerIsTalking = true
-                Talking.sprites.dialogBackground.active = true
+            selectedNPC = sprite
+            playerIsTalking = true
+            Talking.sprites.dialogBackground.active = true
         end
     end
-    if selectedNPC ~= null and selectedNPC.important and not playerIsTalking and not doNotDisplay then
+    if selectedNPC ~= null and selectedNPC.quest and not playerIsTalking and not doNotDisplay then
         Talking.sprites.quest.active = true
     end
 end

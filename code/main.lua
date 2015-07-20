@@ -5,7 +5,7 @@ require "config"
 require "map"
 
 function love.load() --this function is called only once
-    love.graphics.setFont(mainFont)
+    love.graphics.setFont(love.graphics.newFont("assets/DroidSansMono.ttf", 20))
     Gamestate.registerEvents() --this makes callbacks Gamestate.update(), Gamestate.draw(), etc. work
     love.keyboard.setKeyRepeat(true)
     love.mouse.setVisible(false)
