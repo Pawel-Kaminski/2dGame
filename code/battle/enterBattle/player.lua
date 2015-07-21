@@ -70,7 +70,7 @@ function defend()
 end
 
 --This function returns list of all available actions
-function listOfAllActions()
+function listOfAllActions(number)
     --create empty list of actions
     actions = {}
 
@@ -80,7 +80,7 @@ function listOfAllActions()
             --add to list of actions: name of action, number of function, index
         --index = index + 1
     --end
-    for i = 1, 5 do
+    for i = 1, number do
         local action = playerActionFlags[i]
         if action[2] then
             table.insert(actions, {action[1], action[3], index, action[4], action[5], action[6]})

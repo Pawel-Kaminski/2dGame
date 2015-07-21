@@ -13,7 +13,7 @@ function battleState:update(dt)
 end
 
 function battleState:draw()
-    drawBattle()
+    drawBattle(selectedAction)
 end
 
 function battleState:keypressed(key)

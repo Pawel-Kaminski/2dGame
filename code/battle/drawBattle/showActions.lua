@@ -1,7 +1,5 @@
-function showActions()
-    --TODO: selectedAction is null - and it shouldn't be
-    selectedAction = 1 --temporarily
-    love.graphics.printf(actions[selectedAction][4], 1000, 915, 900, "left", 0)
+function showActions(selected)
+    love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
     displayingMenu = false
     lastPositionY = 915
     for _, action in pairs(actions) do

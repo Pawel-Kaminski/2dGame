@@ -33,7 +33,7 @@ function fight(o1, o2, o3)
     elseif displayAnimation then
         enemyDestinedToDie = battleSpriteLayer.sprites.enemy1
         hideBar = battleSpriteLayer.sprites.lifebarEnemy
-    else
+    else --if enemy is dead
         --do not display first enemy and his lifebar
         battleSpriteLayer.sprites.enemy1.active = false
         battleSpriteLayer.sprites.lifebarEnemy.active = false

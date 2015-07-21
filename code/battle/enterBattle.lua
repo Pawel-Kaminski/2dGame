@@ -22,7 +22,8 @@ function enterBattle()
     defeat = false
     displayTurnInfo = true
     countingActive = true
-    actions = listOfAllActions()
+    local numberOfActions = 5 --!!!!!
+    actions = listOfAllActions(numberOfActions)
     sound2 = love.audio.newSource("music/fight_themes/5-Battle_of_the_Void.mp3")
     love.audio.play(sound2)
     sound2:setLooping(true)
@@ -32,5 +33,5 @@ function enterBattle()
     loadAnimationLayer()
     loadSpriteLayer()
     loadBackgroundLayer()
-    twenty = love.graphics.newFont(20)
+    --twenty = love.graphics.newFont(20)
 end
