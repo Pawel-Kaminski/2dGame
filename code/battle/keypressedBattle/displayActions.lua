@@ -1,6 +1,10 @@
 require "battle.keypressedBattle.displayActions.makeAction"
 
 function displayActions(key)
+    local countActions = 0
+    for _, action in pairs(actions) do
+        countActions = countActions + 1
+    end
     tmp = selectedAction
     selectedAction = (arrowY - 900)/30 + 1
     indexOnTheList = selectedAction

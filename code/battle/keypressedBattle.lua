@@ -10,7 +10,7 @@ function keypressedBattle(key)
     elseif displayingMenu then
         displayMenu(key)
     elseif displayingActions then
-        displayActions(key)
+        displayActions(key, countActions)
     elseif victory then
         if key == "return" then
         love.audio.stop()

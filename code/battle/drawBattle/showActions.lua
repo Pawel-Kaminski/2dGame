@@ -2,6 +2,7 @@ function showActions(selected)
     love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
     displayingMenu = false
     lastPositionY = 915
+    local countActions = 0
     for _, action in pairs(actions) do
         countActions = countActions + 1
     end

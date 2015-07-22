@@ -20,20 +20,20 @@ function drawBattle(selected)
         showTurnInfo()
     elseif victory then
         love.graphics.printf(
-        "Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej",
-        150, 745, 1000, "left", 0)
+            "Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej",
+            150, 745, 1000, "left", 0)
     elseif defeat then
         love.graphics.printf(
-        "Porażka...",
-        150, 745, 500, "left", 0)
+            "Porażka...",
+            150, 745, 500, "left", 0)
         color(790)
         love.graphics.printf(
-        "Spróbuj ponownie",
-        150, 805, 1000, "left", 0)
+            "Spróbuj ponownie",
+            150, 805, 1000, "left", 0)
         color(820)
         love.graphics.printf(
-        "Wyjdź z gry",
-        150, 835, 1000, "left", 0)
+            "Wyjdź z gry",
+            150, 835, 1000, "left", 0)
     end
     
     if displayingMenu then
@@ -57,7 +57,7 @@ function drawBattle(selected)
             150, actionPositionY, 500, "left", 0)
     end
 
-    countActions = 0
+    --countActions = 0
     if displayingActions then
         showActions(selected)
     end
