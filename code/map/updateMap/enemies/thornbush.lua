@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables: EnemyThornbushStatistics,
+--EnemyThornbush_First, EnemyThornbush_Second, EnemyThornbush_Third
+
 --TODO:implement thornbush
 EnemyThornbushStatistics = {
     --Table contains attributes which should be loaded before the fight

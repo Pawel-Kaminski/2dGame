@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--battleArena, displayTurnInfo, victory, defeat, displayingMenu,
+--displayingActions, displayItems, escapeBattle
+
 require "battle.drawBattle.showTurnInfo"
 require "battle.drawBattle.showActions"
 require "battle.drawBattle.showHP"
@@ -57,7 +61,6 @@ function drawBattle(selected)
             150, actionPositionY, 500, "left", 0)
     end
 
-    --countActions = 0
     if displayingActions then
         showActions(selected)
     end

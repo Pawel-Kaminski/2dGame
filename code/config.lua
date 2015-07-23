@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: playerPositionX, playerPositionY, dtotal, dtotalPause
+
 ---Variables from main.lua and battle.lua
 
 ---Set position of a player on x axis

@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: map, enemies
+
 function createEnemiesLayer()
     map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]

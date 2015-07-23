@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--active1, active2, active3, doNotDisplay, playerIsTalking, selectedNPC
+
 require "battle"
 mapState = {} --STI: creates new state called "mapState"
 require "map.enterMap"
@@ -21,7 +24,7 @@ function mapState:update()
 end
 
 function mapState:draw()
-    drawMap(playerIsTalking)
+    drawMap(playerIsTalking, selectedNPC)
 end
 
 function mapState:keypressed(key)

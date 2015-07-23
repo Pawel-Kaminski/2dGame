@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--countingActive, dtotal, pause, dtotalPause 
+
 require "battle.updateBattle.fight"
 
 function resetCounter(o1, o2, o3)

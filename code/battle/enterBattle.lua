@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--victory, defeat, displayTurnInfo,
+--countingActive, actions, sound2, battleArena, arrowX, arrowY 
+
 require "battle.enterBattle.animationLayer"
 require "battle.enterBattle.backgroundLayer"
 require "battle.enterBattle.spriteLayer"
@@ -12,11 +16,13 @@ function setInitialValues(tmpValues, initialValues)
     tmpValues.maxMagic = tmpValues.magicPoints
 end
 
-function enterBattle()
+--first argument describes first enemy, second - second enemy
+--and third - third enemy
+function enterBattle(first, second, third)
     setInitialValues(Player, PlayerStatistics)
-    setInitialValues(firstEnemy, stats)
-    setInitialValues(secondEnemy, stats)
-    setInitialValues(thirdEnemy, stats)
+    setInitialValues(first, stats)
+    setInitialValues(second, stats)
+    setInitialValues(third, stats)
 
     victory = false
     defeat = false
@@ -33,5 +39,4 @@ function enterBattle()
     loadAnimationLayer()
     loadSpriteLayer()
     loadBackgroundLayer()
-    --twenty = love.graphics.newFont(20)
 end

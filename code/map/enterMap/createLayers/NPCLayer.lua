@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: map, NPC
+
 function createNPCLayer()
     map:addCustomLayer("NPC", 5) --Layer created for displaying non-player characters
     NPC = map.layers["NPC"]

@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--playerPositionX, playerPositionY, doNotDisplay, Talking
+
 function keypressedMap(key)
     if key == "right" then
         --player should not be able to go beyond the end of the screen

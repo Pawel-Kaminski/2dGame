@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--Player, battleSpriteLayer
+
 function showHP()
     love.graphics.printf(
         Player.healthPoints.."/"..Player.maxHealth,

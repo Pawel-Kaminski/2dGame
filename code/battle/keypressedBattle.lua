@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--selectingEnemy, displayingMenu, displayingActions, victory, defeat
+
 require "battle.keypressedBattle.displayActions"
 require "battle.keypressedBattle.displayMenu"
 require "battle.keypressedBattle.lose"
@@ -10,7 +13,7 @@ function keypressedBattle(key)
     elseif displayingMenu then
         displayMenu(key)
     elseif displayingActions then
-        displayActions(key, countActions)
+        displayActions(key)
     elseif victory then
         if key == "return" then
         love.audio.stop()

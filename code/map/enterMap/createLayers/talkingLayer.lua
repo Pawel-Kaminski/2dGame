@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: map, Talking
+
 function createTalkingLayer()
     map:addCustomLayer("Talking", 7)
     Talking = map.layers["Talking"]

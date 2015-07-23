@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables:
+--displayingMenu, lastPositionY, actions
 function showActions(selected)
     love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
     displayingMenu = false

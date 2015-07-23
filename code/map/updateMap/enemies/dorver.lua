@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--EnemyDorverStatistics, EnemyDorver_First, EnemyDorver_Second,
+--EnemyDorver_Third
+
 EnemyDorverStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 40,

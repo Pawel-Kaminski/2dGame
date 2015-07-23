@@ -1,3 +1,9 @@
+--TODO: remove firstEnemy, ... variables
+
+--WARNING: This file uses global variables:
+--spriteLayer, stats, activeEnemySprite, firstEnemy, secondEnemy, thirdEnemy
+--enemies, Talking, selectedNPC, playerIsTalking, doNotDisplay
+
 require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
 
@@ -40,7 +46,8 @@ function updateMap()
             Talking.sprites.dialogBackground.active = true
         end
     end
-    if selectedNPC ~= null and selectedNPC.quest and not playerIsTalking and not doNotDisplay then
+    if selectedNPC ~= null and selectedNPC.quest
+    and not playerIsTalking and not doNotDisplay then
         Talking.sprites.quest.active = true
     end
 end

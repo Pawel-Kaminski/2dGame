@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables: selectedAction,
+--firstEnemy, secondEnemy, thirdEnemy
+
 require "battle.enterBattle"
 require "battle.updateBattle"
 require "battle.drawBattle"
@@ -5,7 +8,7 @@ require "battle.keypressedBattle"
 
 battleState = {}
 function battleState:enter()
-    enterBattle()
+    enterBattle(firstEnemy, secondEnemy, thirdEnemy)
 end
 
 function battleState:update(dt)
