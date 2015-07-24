@@ -1,3 +1,5 @@
+--Does not use global variables
+
 require "TLfres"
 sti = require "sti"
 Gamestate = require "hump.gamestate"

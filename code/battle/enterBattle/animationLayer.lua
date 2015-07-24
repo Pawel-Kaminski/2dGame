@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: battleArena, battleAnimationLayer
+
 require "battle.enterBattle.animationLayer.updateAnimationLayer"
 
 function loadAnimationLayer()

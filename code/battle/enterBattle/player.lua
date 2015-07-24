@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables: PlayerStatistics, Player
+
 require "battle.enterBattle.player.playerActionFlags"
 
 PlayerStatistics = {

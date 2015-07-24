@@ -1,4 +1,11 @@
-require "battle.enterBattle.animationLayer.updateAnimationLayer.animations"
+--WARNING: This file uses global variables:
+--displayAnimation, animationId, secondSprite, counting, dtotal, speed,
+--enemyDestinedToDie, hidebar
+
+require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackAnimation"
+require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackOfEnemyAnimation"
+require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefendingOfEnemyAnimation"
+require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAnimation"
 
 function updateAnimationLayer()
     if displayAnimation and (animationId == 1 or animationId == 2) then
