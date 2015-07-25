@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--actions, tmp, selectedAction, indexOnTheList, playerActionFlags, displayActions,
+--displayMenu, arrowY, countActions
+
 require "battle.keypressedBattle.displayActions.makeAction"
 
 function displayActions(key)

@@ -9,11 +9,11 @@ require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAn
 
 function updateAnimationLayer()
     if displayAnimation and (animationId == 1 or animationId == 2) then
-        startAttackAnimation(self)
+        startAttackAnimation(self, animationId)
     elseif displayAnimation and (animationId == 3 or animationId == 4) then
-        startDefensiveAnimation(self)
+        startDefensiveAnimation(self, animationId)
     elseif displayAnimation and animationId == 5 then
-        startAttackOfEnemyAnimation(self)
+        startAttackOfEnemyAnimation(self, animationId)
     end
     if secondSprite ~= null and secondSprite.active then
         counting = counting + dt

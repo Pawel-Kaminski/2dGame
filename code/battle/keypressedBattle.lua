@@ -20,6 +20,6 @@ function keypressedBattle(key)
         Gamestate.switch(mapState)
     end
     elseif defeat then
-        lose(key)
+        lose(key, arrowY)
     end
 end

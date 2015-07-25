@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--arrowY, selectedEnemy, firstEnemy, secondEnemy, thirdEnemy, selectingEnemy,
+--arrowX, selectedAction, countingActive, displayingActions, Player
+
 require "battle.keypressedBattle.selectEnemy.moveArrow"
 
 function selectEnemy(key)

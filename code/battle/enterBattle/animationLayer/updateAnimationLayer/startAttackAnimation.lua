@@ -1,9 +1,13 @@
-function startAttackAnimation(layer)
-    if animationId == 1 then
+--WARNING: This file uses global variables:
+--animationId, mainSprite, secondSprite, speed, dtotal, selectedEnemy,
+--firstEnemy, secondEnemy, thirdEnemy, displayAnimation, counting
+
+function startAttackAnimation(layer, id)
+    if id == 1 then
         mainSprite = layer.sprites.arrow_0
         secondSprite = layer.sprites.blood
         speed = 0.5
-    elseif animationId == 2 then
+    elseif id == 2 then
         mainSprite = layer.sprites.fireball
         secondSprite = layer.sprites.fire
         speed = 1

@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--selectedAction, selectingEnemy, countingActive, displayingActions, arrowY
+
 require "battle.keypressedBattle.displayActions.makeAction.setArrow"
 require "battle.keypressedBattle.displayActions.makeAction.winning"
 

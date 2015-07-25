@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--selectedAction, displayingMenu, Player, countingActive, displayAnimation,
+--enemyDestinedToDie, hideBar, battleSpriteLayer, 
+
 require "battle.updateBattle.fight.enemyTurn"
 
 function playerTurn()

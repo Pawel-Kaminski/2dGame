@@ -1,3 +1,7 @@
+--WARNING: This file uses global variables:
+--Player, displayingActions, displayingMenu, displayTurnInfo, defeat, arrowY,
+--sound3, pause
+
 function AI(o1)
     if o1.name == "Dorver" or o1.name == "Dorver 2" or o1.name == "Dorver 3" then
         DorverAI(o1)

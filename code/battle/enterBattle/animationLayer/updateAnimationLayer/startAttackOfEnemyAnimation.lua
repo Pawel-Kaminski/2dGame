@@ -1,5 +1,9 @@
-function startAttackOfEnemyAnimation(layer)
-    if animationId == 5 then
+--WARNING: This file uses global variables:
+--animationId, mainSprite, secondSprite, speed, startPositionIsSet, enemyId,
+--displayAnimation, startPositionIsSet, counting
+
+function startAttackOfEnemyAnimation(layer, id)
+    if id == 5 then
         mainSprite = layer.sprites.test1
         secondSprite = layer.sprites.test2
         speed = 0.5

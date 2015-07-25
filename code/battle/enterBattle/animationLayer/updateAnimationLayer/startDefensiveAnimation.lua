@@ -1,9 +1,12 @@
-function startDefensiveAnimation(layer)
-    if animationId == 3 then
+--WARNING: This file uses global variables:
+--mainSprite, secondSprite, speed, dtotal, displayAnimation, counting
+
+function startDefensiveAnimation(layer, id)
+    if id == 3 then
         mainSprite = layer.sprites.healingBall
         secondSprite = layer.sprites.heal
         speed = 1.5
-    elseif animationId == 4 then
+    elseif id == 4 then
         mainSprite = layer.sprites.defenceBall
         secondSprite = layer.sprites.defend
         speed = 1

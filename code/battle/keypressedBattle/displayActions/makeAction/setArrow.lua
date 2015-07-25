@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--arrowX, arrowY
+
 function setArrow()
     if not isDead(firstEnemy) then
         arrowX = 1270

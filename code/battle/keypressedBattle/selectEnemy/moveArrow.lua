@@ -1,3 +1,6 @@
+--WARNING: This file uses global variables:
+--arrowY, arrowX
+
 --Position 1: x = 1270, y = 300
 --Position 2: x = 1480, y = 360
 --Position 3: x = 1270, y = 480

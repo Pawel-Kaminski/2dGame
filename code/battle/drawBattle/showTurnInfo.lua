@@ -1,3 +1,5 @@
+--WARNING: This file uses global variables:
+--Player, battleSpriteLayer, firstEnemy, secondEnemy, thirdEnemy
 function showTurnInfo()
     love.graphics.printf(
         "Tura gracza za: "..Player.remainingWaitingTime,
