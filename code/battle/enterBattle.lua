@@ -36,7 +36,7 @@ function enterBattle(first, second, third)
     battleArena = sti.new("assets/maps/battle_map")
     arrowX = 90
     arrowY = 900
-    loadAnimationLayer()
-    loadSpriteLayer()
     loadBackgroundLayer()
+    loadSpriteLayer()
+    loadAnimationLayer()
 end

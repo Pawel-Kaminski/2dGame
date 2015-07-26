@@ -79,10 +79,10 @@ function loadAnimationLayer()
     }
 
     function battleAnimationLayer:update(dt)
-        updateAnimationLayer()
+        updateAnimationLayer(dt)
     end
 
-    function battleAnimationLayer:draw()
+    function battleAnimationLayer:draw()    
         for _, sprite in pairs(self.sprites) do
             if sprite.active ~= false then
                 local x = math.floor(sprite.x)

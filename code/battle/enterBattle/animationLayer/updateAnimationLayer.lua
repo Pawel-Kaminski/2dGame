@@ -7,16 +7,16 @@ require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackOfEne
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefendingOfEnemyAnimation"
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAnimation"
 
-function updateAnimationLayer()
+function updateAnimationLayer(time)
     if displayAnimation and (animationId == 1 or animationId == 2) then
-        startAttackAnimation(self, animationId)
+        startAttackAnimation(battleAnimationLayer, animationId)
     elseif displayAnimation and (animationId == 3 or animationId == 4) then
-        startDefensiveAnimation(self, animationId)
+        startDefensiveAnimation(battleAnimationLayer, animationId)
     elseif displayAnimation and animationId == 5 then
-        startAttackOfEnemyAnimation(self, animationId)
+        startAttackOfEnemyAnimation(battleAnimationLayer, animationId)
     end
     if secondSprite ~= null and secondSprite.active then
-        counting = counting + dt
+        counting = counting + time
         dtotal = 0
         if counting > speed then
             secondSprite.active = false
