@@ -1,6 +1,9 @@
 --WARNING: This file uses global variables:
 --selectedAction, selectingEnemy, countingActive, displayingActions, arrowY
 
+--files: makeAction.lua, setArrow.lua, selectEnemy.lua are connected via
+--selectingEnemy and selectedAction variables
+
 require "battle.keypressedBattle.displayActions.makeAction.setArrow"
 require "battle.keypressedBattle.displayActions.makeAction.winning"
 
@@ -12,13 +15,13 @@ function makeAction(selectedAction)
         selectingEnemy = true
         setArrow()
     elseif selectedAction == 2 then
+        defend()
+    elseif selectedAction == 3 then
         --Player should be able to select enemy
         selectingEnemy = true
         setArrow()
     elseif selectedAction == 4 then
         heal()
-    elseif selectedAction == 5 then
-        defend()
     end
 
     if not selectingEnemy then

@@ -46,11 +46,6 @@ function magicAttack(o1)
     Player.magicPoints = Player.magicPoints - 5
 end
 
---This action is locked and should not be visible for player
---This is here only for testing purposes
-function lockedAction(o1)
-end
-
 --Healing spell which restores up to 20 health points,
 --but costs 10 magic points
 function heal()

@@ -28,7 +28,7 @@ function enterBattle(first, second, third)
     defeat = false
     displayTurnInfo = true
     countingActive = true
-    local numberOfActions = 5 --!!!!!
+    local numberOfActions = 4 --!!!!!
     actions = listOfAllActions(numberOfActions)
     sound2 = love.audio.newSource("music/fight_themes/5-Battle_of_the_Void.mp3")
     love.audio.play(sound2)

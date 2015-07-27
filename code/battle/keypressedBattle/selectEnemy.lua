@@ -2,6 +2,9 @@
 --arrowY, selectedEnemy, firstEnemy, secondEnemy, thirdEnemy, selectingEnemy,
 --arrowX, selectedAction, countingActive, displayingActions, Player
 
+--files: makeAction.lua, setArrow.lua, selectEnemy.lua are connected via
+--selectingEnemy and selectedAction variables
+
 require "battle.keypressedBattle.selectEnemy.moveArrow"
 
 function selectEnemy(key)
@@ -18,7 +21,7 @@ function selectEnemy(key)
         arrowY = 900
         if selectedAction == 1 then
             attack(selectedEnemy)
-        elseif selectedAction == 2 then
+        elseif selectedAction == 3 then
             magicAttack(selectedEnemy)
         end
         if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then

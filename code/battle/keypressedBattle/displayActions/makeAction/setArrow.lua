@@ -1,6 +1,9 @@
 --WARNING: This file uses global variables:
 --arrowX, arrowY
 
+--files: makeAction.lua, setArrow.lua, selectEnemy.lua are connected via
+--selectingEnemy and selectedAction variables
+
 function setArrow()
     if not isDead(firstEnemy) then
         arrowX = 1270

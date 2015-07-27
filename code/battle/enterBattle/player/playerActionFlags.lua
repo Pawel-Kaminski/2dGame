@@ -14,16 +14,13 @@ playerActionFlags = {
     {"Zwykły atak", true, 1, 
 "Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
 0, true},
-    {"Atak magiczny", true, 2, 
+    {"Broń się", true, 2,
+"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych.",
+0, true},
+    {"Atak magiczny", true, 3, 
 "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
 5, true},
-    {"Akcja zablokowana", false, 3,
-"BŁĄD",
-0, false},
     {"Ulecz się", true, 4,
 "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
-10, true},
-    {"Broń się", true, 5,
-"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych.",
-0, true}
+10, true}
 }
