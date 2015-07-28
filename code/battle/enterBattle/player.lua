@@ -5,7 +5,7 @@ require "battle.enterBattle.player.playerActionFlags"
 PlayerStatistics = {
     --PlayerStatistics table contains attributes which should be loaded before the fight
     health = 200,
-    magic = 0,
+    magic = 40,
     waitingTime = 50,
     --remainingWaitingTime = 15,
     defence = 0

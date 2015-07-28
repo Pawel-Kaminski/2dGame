@@ -7,6 +7,10 @@ function startAttackOfEnemyAnimation(layer, id)
         mainSprite = layer.sprites.test1
         secondSprite = layer.sprites.test2
         speed = 0.5
+    elseif id == 6 then
+        mainSprite = layer.sprites.poison
+        secondSprite = layer.sprites.poison2
+        speed = 0.5
     end
     if startPositionIsSet ~= true then
         if enemyId == 1 then
@@ -34,8 +38,13 @@ function startAttackOfEnemyAnimation(layer, id)
     else
         displayAnimation = false
         mainSprite.active = false
-        secondSprite.x = 300
-        secondSprite.y = 300
+        if id == 5 then
+            secondSprite.x = 300
+            secondSprite.y = 300
+        elseif id == 6 then
+            secondSprite.x = 200
+            secondSprite.y = 200
+        end
         secondSprite.active = true
         startPositionIsSet = false
         counting = 0

@@ -12,7 +12,7 @@ function updateAnimationLayer(time)
         startAttackAnimation(battleAnimationLayer, animationId)
     elseif displayAnimation and (animationId == 3 or animationId == 4) then
         startDefensiveAnimation(battleAnimationLayer, animationId)
-    elseif displayAnimation and animationId == 5 then
+    elseif displayAnimation and (animationId == 5 or animationId == 6) then
         startAttackOfEnemyAnimation(battleAnimationLayer, animationId)
     end
     if secondSprite ~= null and secondSprite.active then
