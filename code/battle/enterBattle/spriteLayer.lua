@@ -5,6 +5,8 @@ require "battle.enterBattle.spriteLayer.drawSpriteLayer"
 function loadSpriteLayer()
     battleArena:addCustomLayer("Sprite Layer", 3)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]
+    local lifebarSprite = love.graphics.newImage("assets/sprites/lifebar2.png")
+    local platformSprite = love.graphics.newImage("assets/sprites/platform2.png")
     battleSpriteLayer.sprites = {
         player = {
             image = love.graphics.newImage("assets/sprites/ViviM.png"),
@@ -30,24 +32,24 @@ function loadSpriteLayer()
             active = true
         },
         lifebarPlayer = {
-            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            image = lifebarSprite,
             x = 10,
             y = 10,
         },
         lifebarEnemy = {
-            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            image = lifebarSprite,
             x = 1070,
             y = 10,
             active = true
         },
         lifebarEnemy2 = {
-            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            image = lifebarSprite,
             x = 1370,
             y = 10,
             active = true
         },
         lifebarEnemy3 = {
-            image = love.graphics.newImage("assets/sprites/lifebar.png"),
+            image = lifebarSprite,
             x = 1670,
             y = 10,
             active = true
@@ -59,22 +61,22 @@ function loadSpriteLayer()
             r = 0
         },
         platform1 = {
-            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            image = platformSprite,
             x = 230,
             y = 360,
         },
         platform2 = {
-            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            image = platformSprite,
             x = 1260,
             y = 360,
         },
         platform3 = {
-            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            image = platformSprite,
             x = 1260,
             y = 540,
         },
         platform4 = {
-            image = love.graphics.newImage("assets/sprites/platform2.png"),
+            image = platformSprite,
             x = 1500,
             y = 420,
         }
