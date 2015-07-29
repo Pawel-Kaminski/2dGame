@@ -1,4 +1,4 @@
---WARNING: This file uses global variables: playerActionFlags
+--WARNING: This file creates global variable: playerActionFlags
 
 --playerActionFlags describes which actions are unlocked for the player.
 --Similar table for enemy is not required,
@@ -11,16 +11,16 @@
 --5. How many magic points you need to use action?
 --6. Is action available to use now?
 playerActionFlags = {
-    {"Zwykły atak", true, 1, 
+    {"Rzut strzałą", true, 1, 
 "Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
 0, true},
-    {"Broń się", true, 2,
+    {"Magiczna bariera", true, 2,
 "Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych.",
-0, true},
-    {"Atak magiczny", true, 3, 
+10, true},
+    {"Atak magiczny", false, 3, 
 "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
 5, true},
-    {"Ulecz się", true, 4,
+    {"Ulecz się", false, 4,
 "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
 10, true}
 }

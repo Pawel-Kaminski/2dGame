@@ -3,18 +3,18 @@
 
 function showHP()
     love.graphics.printf(
-        Player.healthPoints.."/"..Player.maxHealth,
+        math.ceil(Player.healthPoints).."/"..Player.maxHealth,
         153, 23, 200, "left", 0)
     love.graphics.printf(
-        Player.magicPoints.."/"..Player.maxMagic,
+        math.floor(Player.magicPoints).."/"..Player.maxMagic,
         173, 58, 200, "left", 0)
 
     if battleSpriteLayer.sprites.enemy1.active then
         love.graphics.printf(
-            firstEnemy.healthPoints.."/"..firstEnemy.maxHealth,
+            math.ceil(firstEnemy.healthPoints).."/"..firstEnemy.maxHealth,
             1213, 23, 200, "left", 0)
         love.graphics.printf(
-            firstEnemy.magicPoints.."/"..firstEnemy.maxMagic,
+            math.ceil(firstEnemy.magicPoints).."/"..firstEnemy.maxMagic,
             1233, 58, 200, "left", 0)
         love.graphics.printf(
             firstEnemy.name,
@@ -22,10 +22,10 @@ function showHP()
     end
     if battleSpriteLayer.sprites.enemy2.active then
         love.graphics.printf(
-            secondEnemy.healthPoints.."/"..secondEnemy.maxHealth,
+            math.ceil(secondEnemy.healthPoints).."/"..secondEnemy.maxHealth,
             1513, 23, 200, "left", 0)
         love.graphics.printf(
-            secondEnemy.magicPoints.."/"..secondEnemy.maxMagic,
+            math.ceil(secondEnemy.magicPoints).."/"..secondEnemy.maxMagic,
             1533, 58, 200, "left", 0)
         love.graphics.printf(
             secondEnemy.name,
@@ -33,10 +33,10 @@ function showHP()
     end
     if battleSpriteLayer.sprites.enemy3.active then
         love.graphics.printf(
-            thirdEnemy.healthPoints.."/"..thirdEnemy.maxHealth,
+            math.ceil(thirdEnemy.healthPoints).."/"..thirdEnemy.maxHealth,
             1813, 23, 200, "left", 0)
         love.graphics.printf(
-            thirdEnemy.magicPoints.."/"..thirdEnemy.maxMagic,
+            math.ceil(thirdEnemy.magicPoints).."/"..thirdEnemy.maxMagic,
             1833, 58, 200, "left", 0)
         love.graphics.printf(
             thirdEnemy.name,
