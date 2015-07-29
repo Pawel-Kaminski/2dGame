@@ -14,7 +14,12 @@ function showHP()
     love.graphics.printf(
         math.floor(Player.magicPoints).."/"..Player.maxMagic,
         173, 58, 200, "left", 0)
-
+    love.graphics.printf(
+        "Obrona",
+        53, 93, 1000, "left", 0)
+    love.graphics.printf(
+        math.floor(Player.defence).."%",
+        173, 93, 1000, "left", 0)
     if battleSpriteLayer.sprites.enemy1.active then
         love.graphics.printf(
             "HP",
@@ -29,8 +34,14 @@ function showHP()
             math.ceil(firstEnemy.magicPoints).."/"..firstEnemy.maxMagic,
             1233, 58, 200, "left", 0)
         love.graphics.printf(
+            "Obrona",
+            1113, 93, 1000, "left", 0)
+        love.graphics.printf(
+            math.floor(firstEnemy.defence).."%",
+            1233, 93, 1000, "left", 0)
+        love.graphics.printf(
             firstEnemy.name,
-            1090, 80, 1000, "left", 0)
+            1090, 125, 1000, "left", 0)
     end
     if battleSpriteLayer.sprites.enemy2.active then
         love.graphics.printf(
@@ -46,8 +57,14 @@ function showHP()
             math.ceil(secondEnemy.magicPoints).."/"..secondEnemy.maxMagic,
             1533, 58, 200, "left", 0)
         love.graphics.printf(
+            "Obrona",
+            1413, 93, 1000, "left", 0)
+        love.graphics.printf(
+            math.floor(secondEnemy.defence).."%",
+            1533, 93, 1000, "left", 0)
+        love.graphics.printf(
             secondEnemy.name,
-            1390, 80, 1000, "left", 0)
+            1390, 125, 1000, "left", 0)
     end
     if battleSpriteLayer.sprites.enemy3.active then
         love.graphics.printf(
@@ -63,7 +80,13 @@ function showHP()
             math.ceil(thirdEnemy.magicPoints).."/"..thirdEnemy.maxMagic,
             1833, 58, 200, "left", 0)
         love.graphics.printf(
+            "Obrona",
+            1713, 93, 1000, "left", 0)
+        love.graphics.printf(
+            math.floor(thirdEnemy.defence).."%",
+            1833, 93, 1000, "left", 0)
+        love.graphics.printf(
             thirdEnemy.name,
-            1690, 80, 1000, "left", 0)
+            1690, 125, 1000, "left", 0)
     end
 end

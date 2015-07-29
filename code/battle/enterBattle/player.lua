@@ -63,7 +63,9 @@ end
 function defend()
     displayAnimation = true
     animationId = 4
+    if Player.magicPoints < 10 then return end
     Player.defence = Player.defence + 10
+    Player.magicPoints = Player.magicPoints - 10
 end
 
 --This function returns list of all available actions
