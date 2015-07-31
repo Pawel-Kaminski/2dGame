@@ -1,5 +1,7 @@
 --WARNING: This file uses global variables:
 --Player, battleSpriteLayer
+require "battle.drawBattle.showHP.showEnemiesHP"
+require "battle.drawBattle.showHP.showPlayerHP"
 
 function showHP()
     love.graphics.printf(
@@ -11,9 +13,15 @@ function showHP()
     love.graphics.printf(
         "MP",
         53, 58, 1000, "left", 0)
-    love.graphics.printf(
-        math.floor(Player.magicPoints).."/"..Player.maxMagic,
-        173, 58, 200, "left", 0)
+    if Player.maxMagic ~= 0 then
+        love.graphics.printf(
+            math.floor(Player.magicPoints).."/"..Player.maxMagic,
+            173, 58, 200, "left", 0)
+    else
+        love.graphics.printf(
+            "brak",
+            173, 58, 200, "left", 0)
+    end
     love.graphics.printf(
         "Obrona",
         53, 93, 1000, "left", 0)
@@ -30,9 +38,15 @@ function showHP()
         love.graphics.printf(
             "MP",
             1113, 58, 1000, "left", 0)
-        love.graphics.printf(
-            math.ceil(firstEnemy.magicPoints).."/"..firstEnemy.maxMagic,
-            1233, 58, 200, "left", 0)
+        if firstEnemy.maxMagic ~= 0 then
+            love.graphics.printf(
+                math.ceil(firstEnemy.magicPoints).."/"..firstEnemy.maxMagic,
+                1233, 58, 200, "left", 0)
+        else
+            love.graphics.printf(
+                "brak",
+                1233, 58, 200, "left", 0)
+        end
         love.graphics.printf(
             "Obrona",
             1113, 93, 1000, "left", 0)
@@ -53,9 +67,15 @@ function showHP()
         love.graphics.printf(
             "MP",
             1413, 58, 1000, "left", 0)
-        love.graphics.printf(
-            math.ceil(secondEnemy.magicPoints).."/"..secondEnemy.maxMagic,
-            1533, 58, 200, "left", 0)
+        if secondEnemy.maxMagic ~= 0 then
+            love.graphics.printf(
+                math.ceil(secondEnemy.magicPoints).."/"..secondEnemy.maxMagic,
+                1533, 58, 200, "left", 0)
+        else
+            love.graphics.printf(
+                "brak",
+                1533, 58, 200, "left", 0)
+        end
         love.graphics.printf(
             "Obrona",
             1413, 93, 1000, "left", 0)
@@ -76,9 +96,15 @@ function showHP()
         love.graphics.printf(
             "MP",
             1713, 58, 1000, "left", 0)
-        love.graphics.printf(
-            math.ceil(thirdEnemy.magicPoints).."/"..thirdEnemy.maxMagic,
-            1833, 58, 200, "left", 0)
+        if thirdEnemy.maxMagic ~= 0 then
+            love.graphics.printf(
+                math.ceil(thirdEnemy.magicPoints).."/"..thirdEnemy.maxMagic,
+                1833, 58, 200, "left", 0)
+        else
+            love.graphics.printf(
+                "brak",
+                1833, 58, 200, "left", 0)
+        end
         love.graphics.printf(
             "Obrona",
             1713, 93, 1000, "left", 0)
