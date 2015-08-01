@@ -26,13 +26,7 @@ function makeAction(selectedAction)
 
     if not selectingEnemy then
         Player.remainingWaitingTime = Player.waitingTime
-    end
-
-    if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then
-        --Player's victory
-        winning()
-    else
-        if not selectingEnemy then
+        if not victory then
             countingActive = true
             displayingActions = false
             arrowY = 900

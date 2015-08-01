@@ -31,6 +31,7 @@ function enterBattle(first, second, third)
     local numberOfActions = 4 --!!!!!
     actions = listOfAllActions(numberOfActions)
     sound2 = love.audio.newSource("music/fight_themes/5-Battle_of_the_Void.mp3")
+    sound3 = love.audio.newSource("music/VictoryTheme.mp3")
     love.audio.play(sound2)
     sound2:setLooping(true)
     battleArena = sti.new("assets/maps/battle_map")

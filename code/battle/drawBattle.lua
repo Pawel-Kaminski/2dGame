@@ -41,6 +41,9 @@ function drawBattle(selected)
     end
     
     if displayingMenu then
+        if victory then
+            displayingMenu = false
+        end
         color(900)
         love.graphics.printf(
             "Akcja",

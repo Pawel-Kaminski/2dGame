@@ -12,10 +12,10 @@
 --6. Is action available to use now?
 playerActionFlags = {
     {"Rzut strzałą", true, 1, 
-"Zwykły atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
+"Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
 0, true},
     {"Magiczna bariera", true, 2,
-"Akcja ochronna, która zwiększa odporność na ataki wrogów o 10 punktów procentowych.",
+"Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
 10, true},
     {"Atak magiczny", false, 3, 
 "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",

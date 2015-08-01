@@ -9,6 +9,7 @@ function resetCounter(o1, o2, o3)
     if o3.remainingWaitingTime == 0 then o3.remainingWaitingTime = o3.waitingTime end
 end
 
+local isAlreadyRunning = false
 function updateBattle(dt)
     battleArena:update(dt)
     if countingActive then
@@ -25,5 +26,11 @@ function updateBattle(dt)
             resetCounter(firstEnemy, secondEnemy, thirdEnemy)
             countingActive = true
         end
+    end
+    if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) 
+        and not displayAnimation and not isAlreadyRunning and not secondSprite.active then
+        --Player's victory
+        isAlreadyRunning = true
+        winning()
     end
 end

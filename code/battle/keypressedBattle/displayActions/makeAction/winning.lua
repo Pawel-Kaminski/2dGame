@@ -8,7 +8,6 @@ function winning()
    displayingMenu = false
    displayTurnInfo = false
    victory = true
-   sound3 = love.audio.newSource("music/VictoryTheme.mp3")
    love.audio.play(sound3)
 
    --do not display first enemy and his lifebar
