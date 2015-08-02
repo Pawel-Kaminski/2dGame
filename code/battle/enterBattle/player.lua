@@ -1,13 +1,14 @@
---WARNING: This file uses global variables: PlayerStatistics, Player
+--WARNING: This file creates global variables:
+--PlayerStatistics, Player, displayAnimation, animationId
 
 require "battle.enterBattle.player.playerActionFlags"
 
 PlayerStatistics = {
-    --PlayerStatistics table contains attributes which should be loaded before the fight
+    --PlayerStatistics table contains attributes which should be loaded 
+    --before the fight
     health = 200,
     magic = 40,
     waitingTime = 50,
-    --remainingWaitingTime = 15,
     defence = 0
 }
 
@@ -26,7 +27,7 @@ Player = {
 function attack(o1)
     displayAnimation = true
     animationId = 1
-    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence)/100)
+    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
@@ -38,8 +39,7 @@ function magicAttack(o1)
     displayAnimation = true
     animationId = 2
     if Player.magicPoints < 5 then return end
-    --o1.healthPoints = o1.healthPoints - 20
-    o1.healthPoints = o1.healthPoints - (20 * (100 - o1.defence)/100)
+    o1.healthPoints = o1.healthPoints - (20 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
@@ -75,14 +75,15 @@ function listOfAllActions(number)
 
     local index = 1;
     --foreach action in playerActionFlags
-        --if second attribute is true
+        --if second attribute is true (if action is unlocked)
             --add to list of actions: name of action, number of function, index
         --index = index + 1
     --end
     for i = 1, number do
         local action = playerActionFlags[i]
         if action[2] then
-            table.insert(actions, {action[1], action[3], index, action[4], action[5], action[6]})
+            table.insert(actions, {action[1], action[3], index, action[4],
+                action[5], action[6]})
         end
         index = index + 1
     end

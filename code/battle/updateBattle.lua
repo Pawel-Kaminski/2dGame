@@ -4,9 +4,12 @@
 require "battle.updateBattle.fight"
 
 function resetCounter(o1, o2, o3)
-    if o1.remainingWaitingTime == 0 then o1.remainingWaitingTime = o1.waitingTime end
-    if o2.remainingWaitingTime == 0 then o2.remainingWaitingTime = o2.waitingTime end
-    if o3.remainingWaitingTime == 0 then o3.remainingWaitingTime = o3.waitingTime end
+    if o1.remainingWaitingTime == 0 then 
+        o1.remainingWaitingTime = o1.waitingTime end
+    if o2.remainingWaitingTime == 0 then
+        o2.remainingWaitingTime = o2.waitingTime end
+    if o3.remainingWaitingTime == 0 then
+        o3.remainingWaitingTime = o3.waitingTime end
 end
 
 local isAlreadyRunning = false
