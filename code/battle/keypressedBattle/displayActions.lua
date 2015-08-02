@@ -1,16 +1,19 @@
 --WARNING: This file uses global variables:
---actions, tmp, selectedAction, indexOnTheList, playerActionFlags, displayActions,
---displayMenu, arrowY, countActions
+--actions, tmp, selectedAction, indexOnTheList, playerActionFlags,
+--displayActions, displayMenu, arrowY, countActions
 
 require "battle.keypressedBattle.displayActions.makeAction"
 
-function displayActions(key)
-    local countActions = 0
+function countActions(actions)
+    local howManyActions = 0
     for _, action in pairs(actions) do
-        countActions = countActions + 1
+        howManyActions = howManyActions + 1
     end
-    tmp = selectedAction
-    selectedAction = (arrowY - 900)/30 + 1
+    return howManyActions
+end
+
+function displayActions(key)
+    selectedAction = (arrowY - 900) / 30 + 1
     indexOnTheList = selectedAction
     for i=1, selectedAction do
         local action = playerActionFlags[i]
@@ -19,11 +22,12 @@ function displayActions(key)
             selectedAction = selectedAction + 1
         end
     end
+    local numberOfActions = countActions(actions)
     if key == "backspace" then
         displayActions = false
         displayMenu = true
     elseif key == "down" then
-        if arrowY < 900 + 30 * (countActions - 1) then
+        if arrowY < 900 + 30 * (numberOfActions - 1) then
             arrowY = arrowY + 30
         else
             arrowY = 900
@@ -33,7 +37,7 @@ function displayActions(key)
         if arrowY > 900 then
             arrowY = arrowY - 30
         else
-            arrowY = 900 + 30 * (countActions - 1)
+            arrowY = 900 + 30 * (numberOfActions - 1)
         end
         selectedAction = (arrowY - 900)/30 + 1
     elseif key == "return" then

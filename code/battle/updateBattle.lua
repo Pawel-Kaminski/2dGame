@@ -1,5 +1,6 @@
 --WARNING: This file uses global variables:
---countingActive, dtotal, pause, dtotalPause 
+--countingActive, dtotal, pause, dtotalPause, firstEnemy, secondEnemy,
+--thirdEnemy, displayAnimation, isAlreadyRunning, secondSprite
 
 require "battle.updateBattle.fight"
 
@@ -13,9 +14,10 @@ function resetCounter(o1, o2, o3)
 end
 
 local isAlreadyRunning = false
-function updateBattle(dt)
+
+function updateBattle(dt, countingIsActive)
     battleArena:update(dt)
-    if countingActive then
+    if countingIsActive then
         dtotal = dtotal + dt
         if dtotal >= 0.1 then
             fight(firstEnemy, secondEnemy, thirdEnemy)
@@ -31,9 +33,10 @@ function updateBattle(dt)
         end
     end
     if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) 
-        and not displayAnimation and not isAlreadyRunning and not secondSprite.active then
-        --Player's victory
-        isAlreadyRunning = true
-        winning()
+        and not displayAnimation and not isAlreadyRunning
+        and not secondSprite.active then
+            --Player's victory
+            isAlreadyRunning = true
+            winning()
     end
 end

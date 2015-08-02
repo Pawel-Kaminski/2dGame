@@ -24,11 +24,6 @@ function selectEnemy(key)
         elseif selectedAction == 3 then
             magicAttack(selectedEnemy)
         end
-        --if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then
-            --Player's victory
-            --winning()
-            --return
-        --end
         countingActive = true
         displayingActions = false
         Player.remainingWaitingTime = Player.waitingTime

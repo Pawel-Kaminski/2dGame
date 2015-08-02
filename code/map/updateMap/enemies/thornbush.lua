@@ -1,5 +1,6 @@
---WARNING: This file uses global variables: EnemyThornbushStatistics,
---EnemyThornbush_First, EnemyThornbush_Second, EnemyThornbush_Third
+--WARNING: This file creates global variables: EnemyThornbushStatistics,
+--EnemyThornbush_First, EnemyThornbush_Second, EnemyThornbush_Third,
+--displayAnimation, enemyId
 
 --TODO:implement thornbush
 EnemyThornbushStatistics = {
@@ -47,18 +48,17 @@ EnemyThornbush_Third = {
     maxMagic
 }
 
---TODO:Implement attacks
 function Thornbush_attack(attackingEnemy)
     displayAnimation = true
     animationId = 6
     enemyId = attackingEnemy.id
-    Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
+    Player.healthPoints = 
+        Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
 end
 
---TODO:Create AI
 function ThornbushAI(instance)
     Thornbush_attack(instance)
 end

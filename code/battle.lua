@@ -12,7 +12,7 @@ function battleState:enter()
 end
 
 function battleState:update(dt)
-    updateBattle(dt)
+    updateBattle(dt, countingActive)
 end
 
 function battleState:draw()
