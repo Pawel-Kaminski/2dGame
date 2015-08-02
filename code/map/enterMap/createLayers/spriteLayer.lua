@@ -1,4 +1,5 @@
---WARNING: This file uses global variables: map, spriteLayer
+--WARNING: This file uses global variables: map, spriteLayer, playerPositionX,
+--playerPositionY
 
 function createSpriteLayer()
     map:addCustomLayer("Sprite Layer", 3) -- Create a Custom Layer
