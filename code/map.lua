@@ -2,6 +2,7 @@
 --active1, active2, active3, doNotDisplay, playerIsTalking, selectedNPC
 
 require "battle"
+require "quests"
 mapState = {} --STI: creates new state called "mapState"
 require "map.enterMap"
 require "map.updateMap"

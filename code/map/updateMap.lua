@@ -8,7 +8,7 @@ require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
 
 function updateMap()
-    map:update(dt)
+    map:update()
     for _, sprite in pairs(enemies.sprites) do
         if spriteLayer.sprites.player.x == sprite.x then
             if spriteLayer.sprites.player.y == sprite.y and sprite.active then

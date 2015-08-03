@@ -5,6 +5,7 @@ sti = require "libraries.sti"
 Gamestate = require "libraries.hump.gamestate"
 require "config"
 require "map"
+require "quests"
 
 function love.load() --this function is called only once
     love.graphics.setFont(love.graphics.newFont("assets/DroidSansMono.ttf", 20))
