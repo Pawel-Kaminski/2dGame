@@ -1,4 +1,4 @@
---Does not use global variables
+--Uses global variables talking, Talking
 
 --argument talking describes if player is talking (true or false)
 --argument npc describes selected non-player character
