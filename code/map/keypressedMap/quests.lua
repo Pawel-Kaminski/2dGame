@@ -2,7 +2,7 @@
 --2. description of quest
 --3. should it be displayed?
 --4. is it finished?
-quests = {
+local quests = {
     {"Przyjacielska pomoc", "Usuń szkodniki z ogrodu Afedii", false, false},
     {"Lekarstwo dla Osigolda", "Osigold jest poważnie chory. Zdobądź dla niego kwitarykson - magiczną roślinę leczniczą",
     false, false},
@@ -23,3 +23,20 @@ quests = {
     {"Ołtarz Przeznaczenia", "Złóż zdobyte artefakty na Ołtarzu Przeznaczenia",
     false, false}
 }
+
+questsState = {}
+
+function questsState:enter()
+    local map2 = sti.new("assets/maps/new_map")
+    map2:addCustomLayer("Background", 2)
+    local background = map2.layers["Background"]
+end
+
+function questsState:update()
+end
+
+function questsState:draw()
+end
+
+function questsState:keypressed(key)
+end

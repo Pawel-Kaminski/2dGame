@@ -1,6 +1,8 @@
 --WARNING: This file uses global variables:
 --playerPositionX, playerPositionY, doNotDisplay, Talking
 
+require "map.keypressedMap.quests"
+
 function keypressedMap(key)
     if key == "right" then
         --player should not be able to go beyond the end of the screen
@@ -19,6 +21,8 @@ function keypressedMap(key)
         if playerPositionY > 0 then
             playerPositionY = playerPositionY - 60
         end
+    elseif key == 'l' then
+        Gamestate.switch(questsState)
     end
     if Talking.sprites.quest.active then
         doNotDisplay = true
