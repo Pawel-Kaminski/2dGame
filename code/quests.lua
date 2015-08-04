@@ -34,6 +34,7 @@ local items = {
     {"trucizna", 0},
     {"eliksir magiczny", 0}
 }
+local numberOfItems = 5
 
 questsState = {}
 
@@ -71,15 +72,27 @@ end
 
 function questsState:draw()
     map2:draw()
+    local yPosition = 100
     if displayItems then
+        love.graphics.printf(
+            "Ekwipunek",
+            100, 50, 2000, "left", 0)
+        if items[1][2] == 0 and items[2][2] == 0 and items[3][2] == 0
+            and items[4][2] == 0 and items[5][2] == 0 then
+                love.graphics.printf(
+                    "Nie masz jeszcze żadnych przedmiotów",
+                    100, 100, 2000, "left", 0)
+        end
+        for i=1, numberOfItems do
+        end
     else
         love.graphics.printf(
             "Lista zadań - aktywne zadania są oznaczane kolorem żółtym",
             100, 50, 2000, "left", 0)
-        local yPosition = 100
         if not quests[1][3] then
             love.graphics.printf(
-                "Nie otrzymałeś jeszcze żadnych zadań", 100, 100, 2000, "left", 0)
+                "Nie otrzymałeś jeszcze żadnych zadań",
+                100, 100, 2000, "left", 0)
         end
         for i=1, numberOfQuests do
             if quests[i][3] then
@@ -88,7 +101,8 @@ function questsState:draw()
                 else
                     love.graphics.setColor(255, 255, 0)
                 end
-                love.graphics.printf(quests[i][1], 100, yPosition, 2000, "left", 0)
+                love.graphics.printf(
+                    quests[i][1], 100, yPosition, 2000, "left", 0)
                 love.graphics.printf(
                     quests[i][2], 120, yPosition + 40, 2000, "left", 0)
                 yPosition = yPosition + 100
