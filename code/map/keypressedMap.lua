@@ -20,6 +20,10 @@ function keypressedMap(key)
             playerPositionY = playerPositionY - 60
         end
     elseif key == 'l' then
+        displayItems = false
+        Gamestate.switch(questsState)
+    elseif key == 'q' then
+        displayItems = true
         Gamestate.switch(questsState)
     end
     if Talking.sprites.quest.active then

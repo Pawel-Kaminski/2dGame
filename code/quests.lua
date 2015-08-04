@@ -25,6 +25,16 @@ local quests = {
 }
 local numberOfQuests = 10
 
+--1. name of item
+--2. how many are present in the inventory?
+local items = {
+    {"mikstura lecznicza", 0},
+    {"eliksir leczniczy", 0},
+    {"antidotum", 0},
+    {"trucizna", 0},
+    {"eliksir magiczny", 0}
+}
+
 questsState = {}
 
 function questsState:enter()
@@ -61,31 +71,34 @@ end
 
 function questsState:draw()
     map2:draw()
-    love.graphics.printf(
-        "Lista zadań - aktywne zadania są oznaczane kolorem żółtym",
-        100, 50, 2000, "left", 0)
-    local yPosition = 100
-    if not quests[1][3] then
+    if displayItems then
+    else
         love.graphics.printf(
-            "Nie otrzymałeś jeszcze żadnych zadań", 100, 100, 2000, "left", 0)
-    end
-    for i=1, numberOfQuests do
-        if quests[i][3] then
-            if quests[i][4] then
-                love.graphics.setColor(0, 255, 0)
-            else
-                love.graphics.setColor(255, 255, 0)
-            end
-            love.graphics.printf(quests[i][1], 100, yPosition, 2000, "left", 0)
+            "Lista zadań - aktywne zadania są oznaczane kolorem żółtym",
+            100, 50, 2000, "left", 0)
+        local yPosition = 100
+        if not quests[1][3] then
             love.graphics.printf(
-                quests[i][2], 120, yPosition + 40, 2000, "left", 0)
-            yPosition = yPosition + 100
+                "Nie otrzymałeś jeszcze żadnych zadań", 100, 100, 2000, "left", 0)
+        end
+        for i=1, numberOfQuests do
+            if quests[i][3] then
+                if quests[i][4] then
+                    love.graphics.setColor(0, 255, 0)
+                else
+                    love.graphics.setColor(255, 255, 0)
+                end
+                love.graphics.printf(quests[i][1], 100, yPosition, 2000, "left", 0)
+                love.graphics.printf(
+                    quests[i][2], 120, yPosition + 40, 2000, "left", 0)
+                yPosition = yPosition + 100
+            end
         end
     end
 end
 
 function questsState:keypressed(key)
-    if key == 'l' then
+    if (key == 'l' and not displayItems) or (key == 'q' and displayItems) then
         Gamestate.switch(mapState)
     end
 end
