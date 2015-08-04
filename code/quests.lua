@@ -23,10 +23,14 @@ local quests = {
     {"Ołtarz Przeznaczenia", "Złóż zdobyte artefakty na Ołtarzu Przeznaczenia",
     false, false}
 }
+local numberOfQuests = 10
 
 questsState = {}
 
 function questsState:enter()
+    menusMusic = love.audio.newSource("music/03_Unleashed.mp3")
+    love.audio.stop()
+    love.audio.play(menusMusic)
     map2 = sti.new("assets/maps/old_map")
     map2:addCustomLayer("Background", 2)
     background = map2.layers["Background"]
@@ -57,7 +61,16 @@ end
 
 function questsState:draw()
     map2:draw()
+    --love.graphics.printf("test", 100, 100, 1000, "left", 0)
+    local yPosition = 100
+    for i=1, numberOfQuests do
+        love.graphics.printf("test", 100, yPosition, 1000, "left", 0)
+        yPosition = yPosition + 100
+    end
 end
 
 function questsState:keypressed(key)
+    if key == 'l' then
+        Gamestate.switch(mapState)
+    end
 end
