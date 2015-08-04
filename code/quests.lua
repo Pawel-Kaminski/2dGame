@@ -3,24 +3,24 @@
 --3. should it be displayed?
 --4. is it finished?
 local quests = {
-    {"Przyjacielska pomoc", "Usuń szkodniki z ogrodu Afedii", false, false},
-    {"Lekarstwo dla Osigolda", "Osigold jest poważnie chory. Zdobądź dla niego kwitarykson - magiczną roślinę leczniczą",
+    {"Przyjacielska pomoc", "Usuń szkodniki z ogrodu Afedii.", true, true},
+    {"Lekarstwo dla Osigolda", "Osigold jest poważnie chory. Zdobądź dla niego kwitarykson - magiczną roślinę leczniczą.",
+    true, true},
+    {"Tajemnicza epidemia", "Osoby mieszkające w wiosce zaczynają chorować. Porozmawiaj z Afedią, być może ona zna sposób na rozwiązanie tych problemów.",
+    true, false},
+    {"Rozmowa z Tinaldiną", "Wiedźma Tinaldina mieszkająca w Mrocznym Lesie może wiedzieć coś więcej. Udaj się do Mrocznego Lasu i porozmawiaj z nią.",
     false, false},
-    {"Tajemnicza epidemia", "Osoby mieszkające w wiosce zaczynają chorować. Porozmawiaj z Afedią, być może ona zna sposób na rozwiązanie tych problemów",
+    {"Zwój z przepowiednią", "Znajdź zwój z przepowiednią napisaną w starożytnym języku i zanieś Tinaldinie.",
     false, false},
-    {"Rozmowa z Tinaldiną", "Wiedźma Tinaldina mieszkająca w Mrocznym Lesie może wiedzieć coś więcej. Udaj się do Mrocznego Lasu i porozmawiaj z nią",
+    {"Strażnicy Powietrza", "Pokonaj stażników powietrza i zdobądź Artefakt Powietrza.",
     false, false},
-    {"Zwój z przepowiednią", "Znajdź zwój z przepowiednią napisaną w starożytnym języku i zanieś Tinaldinie",
+    {"Rozmowa z Lidenonem", "Uzyskaj wskazówki dotyczące taktyki od Lidenona.",
     false, false},
-    {"Strażnicy Powietrza", "Pokonaj stażników powietrza i zdobądź Artefakt Powietrza",
+    {"Strażnicy ognia", "Pokonaj strażników ognia i zdobądź Artefakt Ognia.",
     false, false},
-    {"Rozmowa z Lidenonem", "Uzyskaj wskazówki dotyczące taktyki od Lidenona",
+    {"Strażnicy Lodu", "Pokonaj strażników lodu i zdobądź Artefakt Lodu.",
     false, false},
-    {"Strażnicy ognia", "Pokonaj strażników ognia i zdobądź Artefakt Ognia",
-    false, false},
-    {"Strażnicy Lodu", "Pokonaj strażników lodu i zdobądź Artefakt Lodu",
-    false, false},
-    {"Ołtarz Przeznaczenia", "Złóż zdobyte artefakty na Ołtarzu Przeznaczenia",
+    {"Ołtarz Przeznaczenia", "Złóż zdobyte artefakty na Ołtarzu Przeznaczenia.",
     false, false}
 }
 local numberOfQuests = 10
@@ -61,11 +61,22 @@ end
 
 function questsState:draw()
     map2:draw()
-    --love.graphics.printf("test", 100, 100, 1000, "left", 0)
+    love.graphics.printf(
+        "Lista zadań - aktywne zadanie zostało oznaczone kolorem żółtym",
+        100, 50, 2000, "left", 0)
     local yPosition = 100
     for i=1, numberOfQuests do
-        love.graphics.printf("test", 100, yPosition, 1000, "left", 0)
-        yPosition = yPosition + 100
+        if quests[i][3] then
+            if quests[i][4] then
+                love.graphics.setColor(0, 255, 0)
+            else
+                love.graphics.setColor(255, 255, 0)
+            end
+            love.graphics.printf(quests[i][1], 100, yPosition, 2000, "left", 0)
+            love.graphics.printf(
+                quests[i][2], 120, yPosition + 40, 2000, "left", 0)
+            yPosition = yPosition + 100
+        end
     end
 end
 
