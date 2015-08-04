@@ -3,11 +3,11 @@
 --3. should it be displayed?
 --4. is it finished?
 local quests = {
-    {"Przyjacielska pomoc", "Usuń szkodniki z ogrodu Afedii.", true, true},
+    {"Przyjacielska pomoc", "Usuń szkodniki z ogrodu Afedii.", false, false},
     {"Lekarstwo dla Osigolda", "Osigold jest poważnie chory. Zdobądź dla niego kwitarykson - magiczną roślinę leczniczą.",
-    true, true},
+    false, false},
     {"Tajemnicza epidemia", "Osoby mieszkające w wiosce zaczynają chorować. Porozmawiaj z Afedią, być może ona zna sposób na rozwiązanie tych problemów.",
-    true, false},
+    false, false},
     {"Rozmowa z Tinaldiną", "Wiedźma Tinaldina mieszkająca w Mrocznym Lesie może wiedzieć coś więcej. Udaj się do Mrocznego Lasu i porozmawiaj z nią.",
     false, false},
     {"Zwój z przepowiednią", "Znajdź zwój z przepowiednią napisaną w starożytnym języku i zanieś Tinaldinie.",
@@ -62,9 +62,13 @@ end
 function questsState:draw()
     map2:draw()
     love.graphics.printf(
-        "Lista zadań - aktywne zadanie zostało oznaczone kolorem żółtym",
+        "Lista zadań - aktywne zadania są oznaczane kolorem żółtym",
         100, 50, 2000, "left", 0)
     local yPosition = 100
+    if not quests[1][3] then
+        love.graphics.printf(
+            "Nie otrzymałeś jeszcze żadnych zadań", 100, 100, 2000, "left", 0)
+    end
     for i=1, numberOfQuests do
         if quests[i][3] then
             if quests[i][4] then
@@ -84,4 +88,12 @@ function questsState:keypressed(key)
     if key == 'l' then
         Gamestate.switch(mapState)
     end
+end
+
+function activateQuest(number)
+    quests[number][3] = true
+end
+
+function finishQuest(number)
+    quests[number][4] = true
 end

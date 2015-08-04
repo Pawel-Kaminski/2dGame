@@ -30,7 +30,10 @@ function updateMap()
                 --this enemy should not be displayed anymore
                 if sprite.y == enemies.sprites.enemy.y then active1 = false end
                 if sprite.y == enemies.sprites.enemy2.y then active2 = false end
-                if sprite.y == enemies.sprites.enemy3.y then active3 = false end
+                if sprite.y == enemies.sprites.enemy3.y then
+                    active3 = false
+                    finishQuest(1)
+                end
                 Gamestate.switch(battleState)
             end
         end
@@ -49,5 +52,6 @@ function updateMap()
     if selectedNPC ~= null and selectedNPC.quest
     and not playerIsTalking and not doNotDisplay then
         Talking.sprites.quest.active = true
+        activateQuest(1)
     end
 end
