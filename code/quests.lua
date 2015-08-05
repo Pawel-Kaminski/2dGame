@@ -28,11 +28,11 @@ local numberOfQuests = 10
 --1. name of item
 --2. how many are present in the inventory?
 local items = {
-    {"mikstura lecznicza", 0},
-    {"eliksir leczniczy", 0},
-    {"antidotum", 0},
+    {"mikstura lecznicza", 1},
+    {"eliksir leczniczy", 2},
+    {"antidotum", 3},
     {"trucizna", 0},
-    {"eliksir magiczny", 0}
+    {"eliksir magiczny", 4}
 }
 local numberOfItems = 5
 
@@ -74,6 +74,7 @@ function questsState:draw()
     map2:draw()
     local yPosition = 100
     if displayItems then
+        love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
             "Ekwipunek",
             100, 50, 2000, "left", 0)
@@ -84,6 +85,13 @@ function questsState:draw()
                     100, 100, 2000, "left", 0)
         end
         for i=1, numberOfItems do
+            if items[i][2] ~= 0 then
+                love.graphics.printf(
+                    items[i][1], 100, yPosition, 2000, "left", 0)
+                love.graphics.printf(
+                    items[i][2], 800, yPosition, 2000, "left", 0)
+                yPosition = yPosition + 60
+            end            
         end
     else
         love.graphics.printf(
