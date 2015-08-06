@@ -78,7 +78,8 @@ end
 
 function Dorver_defend(castingEnemy)
     displayAnimation = true
-    animationId = 6
+    --animationId = 6
+    animationId = 7
     enemyId = castingEnemy.id
     castingEnemy.defence = castingEnemy.defence + 2
 end
