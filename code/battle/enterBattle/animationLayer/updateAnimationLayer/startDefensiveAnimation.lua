@@ -13,18 +13,26 @@ function startDefensiveAnimation(layer, id, enemy)
     end
     if enemy == null then
         mainSprite.x = 285
+        secondSprite.x = 195
+        secondSprite.y = 180
     else
         if enemy == 1 then
-            mainSprite.x = 1350
+            mainSprite.x = 1320
+            secondSprite.x = 1230
+            secondSprite.y = 190
         elseif enemy == 2 then
             mainSprite.x = 1530
+            secondSprite.x = 1440
+            secondSprite.y = 250
         elseif enemy == 3 then
-            mainSprite.x = 1350
+            mainSprite.x = 1320
+            secondSprite.x = 1230
+            secondSprite.y = 370
         end
     end
     mainSprite.active = true
     dtotal = 0
-    if mainSprite.y < 310 then
+    if mainSprite.y < secondSprite.y + 130 then
         mainSprite.y = mainSprite.y + speed
     else
         displayAnimation = false
