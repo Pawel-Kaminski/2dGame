@@ -2,7 +2,7 @@
 --mainSprite, secondSprite, speed, dtotal, displayAnimation, counting
 
 function startDefensiveAnimation(layer, id, enemy)
-    if id == 3 then
+    if id == 3 or id == 8 then
         mainSprite = layer.sprites.healingBall
         secondSprite = layer.sprites.heal
         speed = 1.5

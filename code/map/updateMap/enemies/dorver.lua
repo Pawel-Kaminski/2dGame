@@ -5,7 +5,7 @@
 EnemyDorverStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 40,
-    magic = 10,
+    magic = 40,
     waitingTime = 61,
     defence = 0
 }
@@ -68,8 +68,10 @@ end
 
 --Enemy is able to heal only himself
 function Dorver_heal(castingEnemy)
+    displayAnimation = true
+    animationId = 8
     if castingEnemy.magicPoints < 10 then return end
-    castingEnemy.healthPoints = castingEnemy.healthPoints + 5
+    castingEnemy.healthPoints = castingEnemy.healthPoints + 20
     castingEnemy.magicPoints = castingEnemy.magicPoints - 10
     if castingEnemy.healthPoints > castingEnemy.maxHealth then
         castingEnemy.healthPoints = castingEnemy.maxHealth    
@@ -78,10 +80,10 @@ end
 
 function Dorver_defend(castingEnemy)
     displayAnimation = true
-    --animationId = 6
     animationId = 7
     enemyId = castingEnemy.id
-    castingEnemy.defence = castingEnemy.defence + 2
+    castingEnemy.magicPoints = castingEnemy.magicPoints - 10
+    castingEnemy.defence = castingEnemy.defence + 10
 end
 
 function DorverAI(instance)
