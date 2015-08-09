@@ -12,7 +12,7 @@ EnemyDorverStatistics = {
 
 EnemyDorver_First = {
     id = 1,
-    name = "Dorver",
+    name = "Stwór",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -25,7 +25,7 @@ EnemyDorver_First = {
 --this will let me create multiple instances of enemy
 EnemyDorver_Second = {
     id = 2,
-    name = "Dorver 2",
+    name = "Stwór 2",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -37,7 +37,7 @@ EnemyDorver_Second = {
 
 EnemyDorver_Third = {
     id = 3,
-    name = "Dorver 3",
+    name = "Stwór 3",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -49,7 +49,7 @@ EnemyDorver_Third = {
 
 function Dorver_attack(attackingEnemy)
     displayAnimation = true
-    animationId = 5
+    animationId = 5 --nie 6
     enemyId = attackingEnemy.id
     Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
@@ -58,6 +58,8 @@ function Dorver_attack(attackingEnemy)
 end
 
 function Dorver_magicAttack(attackingEnemy)
+    --displayAnimation = true
+    --animationId = 5
     if attackingEnemy.magicPoints < 5 then return end
     Player.healthPoints = Player.healthPoints - (5 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then

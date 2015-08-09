@@ -1,10 +1,12 @@
 --WARNING: This file uses global variables:
 --Player, displayingActions, displayingMenu, displayTurnInfo, defeat, arrowY,
 --sound3, pause
+--Problem to solve: Creatures name shouldn't be defined here, because they are
+--already defined in specific files
 
 function AI(o1)
-    if o1.name == "Dorver" or o1.name == "Dorver 2"
-        or o1.name == "Dorver 3" then
+    if o1.name == "Stwór" or o1.name == "Stwór 2"
+        or o1.name == "Stwór 3" then
             DorverAI(o1)
     elseif o1.name == "Szkodnik" or o1.name == "Szkodnik 2" 
         or o1.name == "Szkodnik 3" then
