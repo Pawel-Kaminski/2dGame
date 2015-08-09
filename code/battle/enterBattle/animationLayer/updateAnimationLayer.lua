@@ -4,7 +4,6 @@
 
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackAnimation"
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackOfEnemyAnimation"
-require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefendingOfEnemyAnimation"
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAnimation"
 
 function updateAnimationLayer(time)

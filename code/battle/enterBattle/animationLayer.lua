@@ -31,14 +31,14 @@ function loadAnimationLayer()
             y = 0,
             active = false
         },
-        test1 = {
+        bullet = {
             image = love.graphics.newImage("assets/sprites/bullet.png"),
             x = 0,
             y = 0,
             r = 0,
             active = false
         },
-        test2 = {
+        explosion = {
             image = love.graphics.newImage("assets/sprites/explosion.png"),
             x = 0,
             y = 0,
