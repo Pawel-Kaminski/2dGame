@@ -70,6 +70,7 @@ end
 function Dorver_heal(castingEnemy)
     displayAnimation = true
     animationId = 8
+    enemyId = castingEnemy.id
     if castingEnemy.magicPoints < 10 then return end
     castingEnemy.healthPoints = castingEnemy.healthPoints + 20
     castingEnemy.magicPoints = castingEnemy.magicPoints - 10

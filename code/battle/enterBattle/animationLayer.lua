@@ -32,14 +32,14 @@ function loadAnimationLayer()
             active = false
         },
         test1 = {
-            image = love.graphics.newImage("assets/sprites/Arrow_0.png"),
+            image = love.graphics.newImage("assets/sprites/bullet.png"),
             x = 0,
             y = 0,
-            r = 90,
+            r = 0,
             active = false
         },
         test2 = {
-            image = love.graphics.newImage("assets/sprites/blood.png"),
+            image = love.graphics.newImage("assets/sprites/explosion.png"),
             x = 0,
             y = 0,
             active = false
