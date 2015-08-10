@@ -23,6 +23,7 @@ function enterBattle(first, second, third)
     setInitialValues(first, stats)
     setInitialValues(second, stats)
     setInitialValues(third, stats)
+    Player.remainingWaitingTime = 15
 
     victory = false
     defeat = false
