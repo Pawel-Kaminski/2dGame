@@ -24,6 +24,12 @@ function selectEnemy(key)
         elseif selectedAction == 3 then
             magicAttack(selectedEnemy)
         end
+-- MOD
+        --if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) then
+            --winning()
+            --return
+        --end
+--END OF MOD
         countingActive = true
         displayingActions = false
         Player.remainingWaitingTime = Player.waitingTime

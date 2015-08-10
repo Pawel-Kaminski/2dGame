@@ -19,6 +19,7 @@ end
 --first argument describes first enemy, second - second enemy
 --and third - third enemy
 function enterBattle(first, second, third)
+    isAlreadyRunning = false
     setInitialValues(Player, PlayerStatistics)
     setInitialValues(first, stats)
     setInitialValues(second, stats)
