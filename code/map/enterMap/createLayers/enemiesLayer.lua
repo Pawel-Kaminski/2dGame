@@ -23,7 +23,7 @@ function createEnemiesLayer()
             x = 300,
             y = 660,
             active = active3
-        },
+        }
     }
 
     -- Update callback for Enemies
