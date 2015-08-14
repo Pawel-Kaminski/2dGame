@@ -1,7 +1,10 @@
+--PROBLEM TO SOLVE:
+--second loading of a map should not create new items
+
 function createItemsLayer()
     map:addCustomLayer("Items", 8)
-    items = map.layers["Items"]
-    items.sprites = {
+    itemsLayer = map.layers["Items"]
+    itemsLayer.sprites = {
         healthPotion = {
             image = love.graphics.newImage(
                 "assets/sprites/items/1-health_potion/pt1_scaled.png"),
@@ -18,15 +21,23 @@ function createItemsLayer()
         }
     }
     
-    function items:update(dt)
+    function itemsLayer:update(dt)
     end
 
-    function items:draw()
+    function itemsLayer:draw()
         for _, sprite in pairs(self.sprites) do
             if sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
                 local r = sprite.r
+                if playerPositionX == x and playerPositionY == y then
+                    sprite.active = false
+                    if x == itemsLayer.sprites.healthPotion.x then
+                        items[1][2] = items[1][2] + 1
+                    elseif x == itemsLayer.sprites.poison.x then
+                        items[4][2] = items[4][2] + 1
+                    end
+                end
                 love.graphics.draw(sprite.image, x, y, r)
             end
         end

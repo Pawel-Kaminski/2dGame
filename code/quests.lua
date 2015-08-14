@@ -27,12 +27,12 @@ local numberOfQuests = 10
 
 --1. name of item
 --2. how many are present in the inventory?
-local items = {
-    {"mikstura lecznicza", 1},
-    {"eliksir leczniczy", 2},
-    {"antidotum", 3},
+items = {
+    {"mikstura lecznicza", 0},
+    {"eliksir leczniczy", 0},
+    {"antidotum", 0},
     {"trucizna", 0},
-    {"eliksir magiczny", 4}
+    {"eliksir magiczny", 0}
 }
 local numberOfItems = 5
 
