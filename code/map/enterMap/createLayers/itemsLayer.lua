@@ -10,14 +10,14 @@ function createItemsLayer()
                 "assets/sprites/items/1-health_potion/pt1_scaled.png"),
             x = 540,
             y = 900,
-            active = true
+            active = active4
         },
         poison = {
             image = love.graphics.newImage(
                 "assets/sprites/items/4-poison/pt3_scaled.png"),
             x = 660,
             y = 900,
-            active = true
+            active = active5
         }
     }
     
@@ -34,8 +34,10 @@ function createItemsLayer()
                     sprite.active = false
                     if x == itemsLayer.sprites.healthPotion.x then
                         items[1][2] = items[1][2] + 1
+                        active4 = false
                     elseif x == itemsLayer.sprites.poison.x then
                         items[4][2] = items[4][2] + 1
+                        active5 = false
                     end
                 end
                 love.graphics.draw(sprite.image, x, y, r)
