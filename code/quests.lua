@@ -132,3 +132,9 @@ end
 function finishQuest(number)
     quests[number][4] = true
 end
+
+function isQuestFinished(number)
+    if quests[number][4] then return true
+    else return false
+    end
+end

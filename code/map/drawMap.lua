@@ -5,9 +5,13 @@
 function drawMap(talking, npc)
     map:draw()
     if talking then
+        text = npc.dialog
+        if isQuestFinished(1) then
+            text = npc.dialog2
+        end
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
-            npc.dialog,
+            text,
             510, 130, 900, "left", 0)
     elseif Talking.sprites.quest.active then
         love.graphics.setColor(0, 0, 0)

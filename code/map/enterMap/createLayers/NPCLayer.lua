@@ -9,6 +9,7 @@ function createNPCLayer()
             x = 300,
             y = 540,
             dialog = "Witaj, jestem Afedia. Proszę, pomóż mi pozbyć się szkodników z mojego ogrodu.",
+            dialog2 = "Bardzo dziękuję ci za pomoc!",
             quest = "Usuń szkodniki z ogrodu Afedii!"
         },
         Osigold = {
@@ -16,12 +17,14 @@ function createNPCLayer()
             x = 1020,
             y = 600,
             dialog = "Witaj, jestem Osigold.",
+            dialog2 = "Witaj, jestem Osigold. Bardzo źle się czuję. Czy mogę liczyć na twoją pomoc? Gdzieś w naszej wiosce powinna rosnąć roślina lecząca zwana kwitaryksonem. Roślina ta ma magiczne właściwości, a jej spożycie potrafi uleczyć wszystkie choroby. Proszę, odnajdź ją, a następnie przynieść ją do mnie. Lecz uważaj na potwory!"
         },
         Deatlana = {
             image = love.graphics.newImage("assets/sprites/npc/3-Deatlana/Deatlana.png"),
-            x = 900,
+            x = 840,
             y = 600,
             dialog = "Witaj, jestem Deatlana.",
+            dialog2 = "Witaj, jestem Deatlana. Martwię się o Osigolda. Ostatnio nie czuje się najlepiej."
         }
     }
 
