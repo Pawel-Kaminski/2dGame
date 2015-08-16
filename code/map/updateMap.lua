@@ -9,6 +9,8 @@ require "map.updateMap.enemies.thornbush"
 
 function updateMap()
     map:update()
+
+--This part is responsible for launching battle state when necessary
     for _, sprite in pairs(enemies.sprites) do
         if spriteLayer.sprites.player.x == sprite.x then
             if spriteLayer.sprites.player.y == sprite.y and sprite.active then
@@ -33,11 +35,14 @@ function updateMap()
                 if sprite.y == enemies.sprites.enemy3.y then
                     active3 = false
                     finishQuest(1)
+                    --doNotDisplay = false
                 end
                 Gamestate.switch(battleState)
             end
         end
     end
+
+--This part is responsible for displaying dialog background
     Talking.sprites.dialogBackground.active = false
     for _, sprite in pairs(NPC.sprites) do
         if spriteLayer.sprites.player.x >= sprite.x - 60
@@ -47,11 +52,18 @@ function updateMap()
             selectedNPC = sprite
             playerIsTalking = true
             Talking.sprites.dialogBackground.active = true
+            doNotDisplay = false        
         end
     end
+
+--This part is responsible for displaying quest pop-up
     if selectedNPC ~= null and selectedNPC.quest
     and not playerIsTalking and not doNotDisplay then
         Talking.sprites.quest.active = true
-        activateQuest(1)
+        if selectedNPC == NPC.sprites.Afedia then
+            activateQuest(1)
+        elseif selectedNPC == NPC.sprites.Osigold then
+            activateQuest(2)
+        end
     end
 end

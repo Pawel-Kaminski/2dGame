@@ -17,7 +17,8 @@ function createNPCLayer()
             x = 1020,
             y = 600,
             dialog = "Witaj, jestem Osigold.",
-            dialog2 = "Witaj, jestem Osigold. Bardzo źle się czuję. Czy mogę liczyć na twoją pomoc? Gdzieś w naszej wiosce powinna rosnąć roślina lecząca zwana kwitaryksonem. Roślina ta ma magiczne właściwości, a jej spożycie potrafi uleczyć wszystkie choroby. Proszę, odnajdź ją, a następnie przynieść ją do mnie. Lecz uważaj na potwory!"
+            dialog2 = "Witaj, jestem Osigold. Bardzo źle się czuję. Czy mogę liczyć na twoją pomoc? Gdzieś w naszej wiosce powinna rosnąć roślina lecząca zwana kwitaryksonem. Roślina ta ma magiczne właściwości, a jej spożycie potrafi uleczyć wszystkie choroby. Proszę, odnajdź ją, a następnie przynieść ją do mnie. Lecz uważaj na potwory!",
+            quest = "Osigold jest poważnie chory. Zdobądź dla niego kwitarykson - magiczną roślinę leczniczą."
         },
         Deatlana = {
             image = love.graphics.newImage("assets/sprites/npc/3-Deatlana/Deatlana.png"),
