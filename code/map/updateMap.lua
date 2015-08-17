@@ -45,10 +45,12 @@ function updateMap()
 --This part is responsible for displaying dialog background
     Talking.sprites.dialogBackground.active = false
     for _, sprite in pairs(NPC.sprites) do
-        if spriteLayer.sprites.player.x >= sprite.x - 60
+        if (spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
-        and spriteLayer.sprites.player.y >= sprite.y - 60
-        and spriteLayer.sprites.player.y <= sprite.y + 60 then
+        and spriteLayer.sprites.player.y == sprite.y) or
+        (spriteLayer.sprites.player.y >= sprite.y - 60
+        and spriteLayer.sprites.player.y <= sprite.y + 60
+        and spriteLayer.sprites.player.x == sprite.x) then
             selectedNPC = sprite
             playerIsTalking = true
             Talking.sprites.dialogBackground.active = true
@@ -59,10 +61,12 @@ function updateMap()
 --This part is responsible for displaying quest pop-up
     if selectedNPC ~= null and selectedNPC.quest
     and not playerIsTalking and not doNotDisplay then
-        Talking.sprites.quest.active = true
-        if selectedNPC == NPC.sprites.Afedia then
+        if selectedNPC == NPC.sprites.Afedia and not isQuestDisplayed(1) then
+            Talking.sprites.quest.active = true
             activateQuest(1)
-        elseif selectedNPC == NPC.sprites.Osigold then
+        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1)
+        and not isQuestDisplayed(2) then
+            Talking.sprites.quest.active = true
             activateQuest(2)
         end
     end

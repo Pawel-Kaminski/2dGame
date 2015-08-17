@@ -138,3 +138,9 @@ function isQuestFinished(number)
     else return false
     end
 end
+
+function isQuestDisplayed(number)
+    if quests[number][3] then return true
+    else return false
+    end
+end
