@@ -32,9 +32,10 @@ items = {
     {"eliksir leczniczy", 0},
     {"antidotum", 0},
     {"trucizna", 0},
-    {"eliksir magiczny", 0}
+    {"eliksir magiczny", 0},
+    {"tajemnicza roślina", 0}
 }
-local numberOfItems = 5
+local numberOfItems = 6
 
 questsState = {}
 

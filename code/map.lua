@@ -16,6 +16,7 @@ active3 = true
 --"active" variables for items
 active4 = true
 active5 = true
+active6 = true
 doNotDisplay = false
 
 function mapState:enter()

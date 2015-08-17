@@ -18,6 +18,13 @@ function createItemsLayer()
             x = 660,
             y = 900,
             active = active5
+        },
+        misteriousPlant = {
+            image = love.graphics.newImage(
+                "assets/sprites/items/6-misterious_plant/mais_scaled.png"),
+            x = 1680,
+            y = 900,
+            active = active6
         }
     }
     
@@ -38,6 +45,9 @@ function createItemsLayer()
                     elseif x == itemsLayer.sprites.poison.x then
                         items[4][2] = items[4][2] + 1
                         active5 = false
+                    elseif x == itemsLayer.sprites.misteriousPlant.x then
+                        items[6][2] = items[6][2] + 1
+                        active6 = false
                     end
                 end
                 love.graphics.draw(sprite.image, x, y, r)
