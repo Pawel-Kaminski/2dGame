@@ -80,7 +80,7 @@ function questsState:draw()
             "Ekwipunek",
             100, 50, 2000, "left", 0)
         if items[1][2] == 0 and items[2][2] == 0 and items[3][2] == 0
-            and items[4][2] == 0 and items[5][2] == 0 then
+            and items[4][2] == 0 and items[5][2] == 0 and items[6][2] == 0 then
                 love.graphics.printf(
                     "Nie masz jeszcze żadnych przedmiotów",
                     100, 100, 2000, "left", 0)
