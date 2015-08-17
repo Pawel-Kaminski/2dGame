@@ -6,8 +6,13 @@ function drawMap(talking, npc)
     map:draw()
     if talking then
         text = npc.dialog
+        --If first quest is finished, change dialogues
         if isQuestFinished(1) then
             text = npc.dialog2
+        end
+        --If player has found a misterious plant, change dialogues
+        if isQuestDisplayed(2) and items[6][2] == 1 and npc.dialog3 ~= null then
+            text = npc.dialog3
         end
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
