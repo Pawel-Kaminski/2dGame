@@ -12,11 +12,11 @@ function drawMap(talking, npc)
         if isQuestDisplayed(2) and items[6][2] == 1 and npc.dialog3 ~= null then
             text = npc.dialog3
             finishQuest(2)
+            --if not isQuestDisplayed(3) then
+                doNotDisplay = false
+            --end
             activateQuest(3)
             mission = npc.quest2
-            if not isQuestDisplayed(3) then
-                doNotDisplay = false
-            end
         --If first quest is finished, change dialogues
         elseif isQuestFinished(1) then
             text = npc.dialog2

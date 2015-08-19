@@ -7,6 +7,7 @@
 require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
 
+--Function that updates state of the map
 function updateMap()
     map:update()
 
@@ -27,6 +28,7 @@ function updateMap()
                     thirdEnemy = EnemyDorver_Third
                     stats = EnemyDorverStatistics
                 end
+                --prepare for leaving map state
                 love.audio.stop()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore
@@ -35,7 +37,7 @@ function updateMap()
                 if sprite.y == enemies.sprites.enemy3.y then
                     active3 = false
                     finishQuest(1)
-                    --doNotDisplay = false
+                    --doNotDisplay = false ???
                 end
                 Gamestate.switch(battleState)
             end
@@ -45,29 +47,42 @@ function updateMap()
 --This part is responsible for displaying dialog background
     Talking.sprites.dialogBackground.active = false
     for _, sprite in pairs(NPC.sprites) do
+        --If player is close to NPC
         if (spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
         and spriteLayer.sprites.player.y == sprite.y) or
         (spriteLayer.sprites.player.y >= sprite.y - 60
         and spriteLayer.sprites.player.y <= sprite.y + 60
         and spriteLayer.sprites.player.x == sprite.x) then
-            selectedNPC = sprite
-            playerIsTalking = true
+            selectedNPC = sprite    --Save sprite in global variable
+            playerIsTalking = true  --Activate talking mode
+            --Display background for dialogues
             Talking.sprites.dialogBackground.active = true
+            --Set doNotDisplay to false ???
+            --If this is not present here,
+            --player is unable to receive second quest
             doNotDisplay = false        
         end
     end
 
 --This part is responsible for displaying quest pop-up
+--1. selectedNPC ~= null prevents game from crushing
+-----if variable selectedNPC is null while checking 2
+--2. selectedNPC.quest - quest pop-up should be display only when NPC has a quest
+--3. not playerIsTalking - pop-up shouldn't collide with NPC's dialogues
+--4. not doNotDisplay - this lets me hide pop-up when it's not needed anymore
+--THIS FUNCTION MUST BE UPDATED AFTER CREATING NEW QUESTS
     if selectedNPC ~= null and selectedNPC.quest
     and not playerIsTalking and not doNotDisplay then
         if selectedNPC == NPC.sprites.Afedia and not isQuestDisplayed(1) then
             Talking.sprites.quest.active = true
             activateQuest(1)
-        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1)
-        and not isQuestDisplayed(2) then
+        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1) then
+        --and not isQuestDisplayed(2) then
             Talking.sprites.quest.active = true
-            activateQuest(2)
+            if not isQuestDisplayed(2) then
+                activateQuest(2)
+            end
         end
     end
 end
