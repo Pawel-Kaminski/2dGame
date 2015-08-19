@@ -4,8 +4,7 @@ require "libraries.TLfres"
 sti = require "libraries.sti"
 Gamestate = require "libraries.hump.gamestate"
 require "config"
-require "map"
-require "quests"
+require "menu"
 
 function love.load() --this function is called only once
     love.graphics.setFont(love.graphics.newFont("assets/DroidSansMono.ttf", 20))
@@ -16,7 +15,7 @@ function love.load() --this function is called only once
     love.keyboard.setKeyRepeat(true)
     love.mouse.setVisible(false)
     TLfres.setScreen({w=0, h=0, full=true, vsync=false, aa=16}, 1920)
-    Gamestate.switch(mapState)
+    Gamestate.switch(menuState)
 end
 
 function love.keypressed(key)
