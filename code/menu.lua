@@ -1,9 +1,8 @@
-require "map"
-require "quests"
+require "mapSelection"
 menuState = {}
 
 function menuState:enter()
-    love.graphics.setBackgroundColor(175, 202, 175)
+    --love.graphics.setBackgroundColor(175, 202, 175)
     local mainMenuMusic = love.audio.newSource("music/ElPostre_0.ogg")
     love.audio.play(mainMenuMusic)
     map3 = sti.new("assets/maps/old_map")
@@ -84,7 +83,7 @@ function menuState:keypressed(key)
     end
     if key == "return" then
         if elements.sprites.newGameOn.active then
-            Gamestate.switch(mapState)
+            Gamestate.switch(mapSelectionState)
         elseif elements.sprites.exitGameOn.active then
             love.event.quit()
         end
