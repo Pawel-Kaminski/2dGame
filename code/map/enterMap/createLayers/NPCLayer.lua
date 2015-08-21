@@ -10,6 +10,7 @@ function createNPCLayer()
             y = 540,
             dialog = "Witaj, jestem Afedia. Proszę, pomóż mi pozbyć się szkodników z mojego ogrodu.",
             dialog2 = "Bardzo dziękuję ci za pomoc!",
+            dialog4 = "Kwitarykson nie wyleczył Osigolda? Nie mogę w to uwierzyć... Boję się... Proszę, przyjmij ten artefakt. To magiczny Artefakt Ziemi. Otrzymałam go od mojej babci. Był on przekazywany w mojej rodzinie z pokolenia na pokolenie. Według legendy miał on pomóc ludności wioski, gdy nadejdą trudne chwile. Niestety nie wiem, jak może ci się przydać. Udaj się do Mrocznego Lasu i porozmawiaj z wiedźmą Tinaldiną. Ona może wiedzieć coś więcej.",
             quest = "Usuń szkodniki z ogrodu Afedii!"
         },
         Osigold = {
@@ -27,7 +28,8 @@ function createNPCLayer()
             x = 840,
             y = 600,
             dialog = "Witaj, jestem Deatlana.",
-            dialog2 = "Witaj, jestem Deatlana. Martwię się o Osigolda. Ostatnio nie czuje się najlepiej."
+            dialog2 = "Witaj, jestem Deatlana. Martwię się o Osigolda. Ostatnio nie czuje się najlepiej.",
+            dialog3 = "Czuję się bardzo źle. Proszę spróbuj pomóc mi i Osigoldowi."
         }
     }
 

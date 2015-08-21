@@ -8,8 +8,10 @@ function drawMap(talking, npc)
         text = npc.dialog
         mission = npc.quest
 
+        if isQuestDisplayed(3) and npc.dialog4 ~= null then
+            text = npc.dialog4
         --If player has found a misterious plant, change dialogues
-        if isQuestDisplayed(2) and items[6][2] == 1 and npc.dialog3 ~= null then
+        elseif isQuestDisplayed(2) and items[6][2] == 1 and npc.dialog3 ~= null then
             text = npc.dialog3
             finishQuest(2)
             --if not isQuestDisplayed(3) then
