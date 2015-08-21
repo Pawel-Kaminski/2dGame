@@ -1,6 +1,7 @@
 require "map"
 require "quests"
 mapSelectionState = {}
+selectedMap = 0
 
 function mapSelectionState:enter()
     map4 = sti.new("assets/maps/old_map")
@@ -147,7 +148,14 @@ function mapSelectionState:keypressed(key)
     end
     if key == "return" then
         if elements.sprites.wioskaLipinkiOn.active then
-            Gamestate.switch(mapState)
+            selectedMap = 1
+        elseif elements.sprites.mrocznyLasOn.active then
+            selectedMap = 2
+        elseif elements.sprites.krainaRownowagiOn.active then
+            selectedMap = 3
+        elseif elements.sprites.oltarzPrzeznaczeniaOn.active then
+            selectedMap = 4
         end
+        Gamestate.switch(mapState)
     end
 end
