@@ -3,7 +3,12 @@
 require "libraries.TLfres"
 sti = require "libraries.sti"
 Gamestate = require "libraries.hump.gamestate"
-require "config"
+playerPositionX = 60 ---Set position of a player on x axis
+playerPositionY = 120 ---Set position of a player on y axis
+--=================COUNTERS==========================--
+dtotal = 0 --time after calling fight(enemy) function
+dtotalPause = 0
+--===================================================--
 require "menu"
 
 function love.load() --this function is called only once

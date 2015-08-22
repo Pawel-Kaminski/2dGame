@@ -1,5 +1,6 @@
 --WARNING: This file uses global variables:
---active1, active2, active3, doNotDisplay, playerIsTalking, selectedNPC
+--active1, active2, active3, doNotDisplay, playerIsTalking, selectedNPC,
+--selectedMap
 
 require "battle"
 require "quests"
@@ -20,7 +21,7 @@ active6 = true
 doNotDisplay = false
 
 function mapState:enter()
-    enterMap()
+    enterMap(selectedMap)
 end
 
 function mapState:update()
