@@ -5,14 +5,14 @@ require "map.enterMap.createLayers.enemiesLayer"
 require "map.enterMap.createLayers.NPCLayer"
 require "map.enterMap.createLayers.talkingLayer"
 require "map.enterMap.createLayers.itemsLayer"
-function createLayers()
-    if selectedMap == 1 then
+function createLayers(mapId)
+    if mapId == 1 then
         map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
-    elseif selectedMap == 2 then
+    elseif mapId == 2 then
         map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
-    elseif selectedMap == 3 then
+    elseif mapId == 3 then
         map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
-    elseif selectedMap == 4 then
+    elseif mapId == 4 then
         map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
     end
     createSpriteLayer()

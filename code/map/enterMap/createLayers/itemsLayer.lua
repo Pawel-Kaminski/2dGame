@@ -1,6 +1,3 @@
---PROBLEM TO SOLVE:
---second loading of a map should not create new items
-
 function createItemsLayer()
     map:addCustomLayer("Items", 8)
     itemsLayer = map.layers["Items"]
@@ -36,7 +33,7 @@ function createItemsLayer()
             if sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
-                local r = sprite.r
+                --local r = sprite.r
                 if playerPositionX == x and playerPositionY == y then
                     sprite.active = false
                     if x == itemsLayer.sprites.healthPotion.x then
@@ -50,7 +47,8 @@ function createItemsLayer()
                         active6 = false
                     end
                 end
-                love.graphics.draw(sprite.image, x, y, r)
+                --love.graphics.draw(sprite.image, x, y, r)
+                love.graphics.draw(sprite.image, x, y)
             end
         end
     end

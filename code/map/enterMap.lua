@@ -16,5 +16,5 @@ function enterMap(mapId)
     love.audio.stop()
     love.audio.play(sound)
     sound:setLooping(true)
-    createLayers()
+    createLayers(mapId)
 end
