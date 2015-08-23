@@ -5,7 +5,8 @@ function createTalkingLayer()
     Talking = map.layers["Talking"]
     Talking.sprites = {
         dialogBackground = { 
-            image = love.graphics.newImage("assets/sprites/dialogBackground.png"),
+            image = love.graphics.newImage(
+                "assets/sprites/dialogBackground.png"),
             x = 480,
             y = 100,
             active = false
@@ -26,8 +27,7 @@ function createTalkingLayer()
             if sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
+                love.graphics.draw(sprite.image, x, y)
             end
         end
     end

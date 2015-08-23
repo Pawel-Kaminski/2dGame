@@ -3,8 +3,10 @@
 function createEnemiesLayer()
     map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
     enemies = map.layers["Enemies"]
-    local dorver = love.graphics.newImage("assets/sprites/enemies/2-creature/creature.png")
-    local thornbush = love.graphics.newImage("assets/sprites/enemies/1-thornbush/thornbush_used.png")
+    local dorver = love.graphics.newImage(
+        "assets/sprites/enemies/2-creature/creature.png")
+    local thornbush = love.graphics.newImage(
+        "assets/sprites/enemies/1-thornbush/thornbush_used.png")
     enemies.sprites = {
         enemy = {
             image = dorver,
@@ -37,8 +39,7 @@ function createEnemiesLayer()
             if sprite.active ~= false then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
+                love.graphics.draw(sprite.image, x, y)
             end
         end
     end

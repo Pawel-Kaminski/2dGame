@@ -47,7 +47,6 @@ function createItemsLayer()
                         active6 = false
                     end
                 end
-                --love.graphics.draw(sprite.image, x, y, r)
                 love.graphics.draw(sprite.image, x, y)
             end
         end
