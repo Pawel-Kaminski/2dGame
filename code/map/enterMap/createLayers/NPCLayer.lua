@@ -22,7 +22,10 @@ function createNPCLayer()
                 "jak może ci się przydać. Udaj się do Mrocznego Lasu "..
                 "i porozmawiaj z wiedźmą Tinaldiną. "..
                 "Ona może wiedzieć coś więcej.",
-            quest = "Usuń szkodniki z ogrodu Afedii!"
+            quest = "Usuń szkodniki z ogrodu Afedii!",
+            quest2 = "Wiedźma Tinaldina mieszkająca w Mrocznym Lesie może "..
+                "wiedzieć coś więcej. Udaj się do Mrocznego Lasu "..
+                "i porozmawiaj z nią."
         },
         Osigold = {
             image = love.graphics.newImage(
