@@ -36,5 +36,8 @@ function drawMap(talking, npc)
         love.graphics.printf(
             mission,
             620, 440, 600, "left", 0)
+        love.graphics.printf(
+            "Naciśnij ENTER, aby zamknąć to okno",
+            620, 840, 600, "left", 0)
     end
 end
