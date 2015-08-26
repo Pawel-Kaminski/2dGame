@@ -6,7 +6,7 @@ require "battle.updateBattle.fight.enemyTurn"
 
 function playerTurn()
     selectedAction = 1
-    displayingMenu = true --!!!
+    displayingMenu = true
 end
 
 function isDead(o1)
@@ -18,6 +18,7 @@ function isDead(o1)
 end
 
 function fight(o1, o2, o3)
+    if victory then return end
     if Player.remainingWaitingTime > 0 then
         Player.remainingWaitingTime = Player.remainingWaitingTime - 1
     else

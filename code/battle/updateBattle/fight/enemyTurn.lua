@@ -1,7 +1,7 @@
 --WARNING: This file uses global variables:
 --Player, displayingActions, displayingMenu, displayTurnInfo, defeat, arrowY,
 --sound3, pause
---Problem to solve: Creatures name shouldn't be defined here, because they are
+--Problem to solve: Creatures' names shouldn't be defined here, because they are
 --already defined in specific files
 
 function AI(o1)
