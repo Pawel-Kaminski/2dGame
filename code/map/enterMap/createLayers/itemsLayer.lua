@@ -1,5 +1,9 @@
-function createItemsLayer()
-    map:addCustomLayer("Items", 8)
+function createItemsLayer(mapId)
+    if mapId == 1 then
+        map:addCustomLayer("Items", 8)
+    else
+        map:addCustomLayer("Items", 6)
+    end
     itemsLayer = map.layers["Items"]
     itemsLayer.sprites = {
         healthPotion = {

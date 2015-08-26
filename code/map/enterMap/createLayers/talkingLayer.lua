@@ -1,7 +1,12 @@
 --WARNING: This file uses global variables: map, Talking
 
-function createTalkingLayer()
-    map:addCustomLayer("Talking", 7)
+function createTalkingLayer(mapId)
+    if mapId == 1 then
+        map:addCustomLayer("Talking", 7)
+    else
+        map:addCustomLayer("Talking", 5)
+    end
+
     Talking = map.layers["Talking"]
     Talking.sprites = {
         dialogBackground = { 

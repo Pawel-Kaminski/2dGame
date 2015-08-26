@@ -15,9 +15,14 @@ function createLayers(mapId)
     elseif mapId == 4 then
         map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
     end
-    createSpriteLayer()
-    createEnemiesLayer()
-    createNPCLayer()
-    createTalkingLayer()
-    createItemsLayer()
+    --createSpriteLayer(mapId)
+    --createEnemiesLayer(mapId)
+    --createNPCLayer(mapId)
+    --createTalkingLayer(mapId)
+    --createItemsLayer(mapId)
+    createEnemiesLayer(mapId)
+    createNPCLayer(mapId)
+    createSpriteLayer(mapId)
+    createTalkingLayer(mapId)
+    createItemsLayer(mapId)
 end

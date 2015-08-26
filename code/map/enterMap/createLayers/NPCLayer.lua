@@ -1,9 +1,15 @@
 --WARNING: This file uses global variables: map, NPC
 
-function createNPCLayer()
+function createNPCLayer(mapId)
     --Layer created for displaying non-player characters
-    map:addCustomLayer("NPC", 3)
+    if mapId == 1 then
+        map:addCustomLayer("NPC", 3)
+    else
+        map:addCustomLayer("NPC", 2)
+    end
     NPC = map.layers["NPC"]
+
+    if mapId == 1 then
     NPC.sprites = {
         teleport = {
             image = love.graphics.newImage(
@@ -79,6 +85,16 @@ function createNPCLayer()
                 "i Osigoldowi."
         }
     }
+    elseif mapId == 2 then
+        NPC.sprites = {
+            teleport = {
+                image = love.graphics.newImage(
+                    "assets/sprites/teleporter_active_scaled.gif"),
+                    x = 0,
+                    y = 0
+                }
+        }
+    end
 
     function NPC:update(dt)
     end

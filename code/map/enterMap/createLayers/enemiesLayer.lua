@@ -1,7 +1,11 @@
 --WARNING: This file uses global variables: map, enemies
 
-function createEnemiesLayer()
-    map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
+function createEnemiesLayer(mapId)
+    if mapId == 1 then
+        map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
+    else
+        map:addCustomLayer("Enemies", 3)
+    end
     enemies = map.layers["Enemies"]
     local dorver = love.graphics.newImage(
         "assets/sprites/enemies/2-creature/creature.png")

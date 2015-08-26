@@ -1,8 +1,13 @@
 --WARNING: This file uses global variables: map, spriteLayer, playerPositionX,
 --playerPositionY
 
-function createSpriteLayer()
-    map:addCustomLayer("Sprite Layer", 5) -- Create a Custom Layer
+function createSpriteLayer(mapId)
+    if mapId == 1 then
+        map:addCustomLayer("Sprite Layer", 5) -- Create a Custom Layer
+    else
+        map:addCustomLayer("Sprite Layer", 4) -- Create a Custom Layer
+    end
+
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
     spriteLayer.sprites = {
         player = {
