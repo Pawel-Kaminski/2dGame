@@ -86,6 +86,14 @@ function updateMap()
         and not isQuestDisplayed(3) then
                 Talking.sprites.quest.active = true
                 activateQuest(3)
+        elseif selectedNPC == NPC.sprites.Afedia and isQuestFinished(3)
+        and not isQuestDisplayed(4) then
+                Talking.sprites.quest.active = true
+                activateQuest(4)
+        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(4)
+        and not isQuestDisplayed(5) then
+                Talking.sprites.quest.active = true
+                activateQuest(5)
         end
     end
 end
