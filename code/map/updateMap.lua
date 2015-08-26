@@ -37,7 +37,8 @@ function updateMap()
                 if sprite.y == enemies.sprites.enemy3.y then
                     active3 = false
                     finishQuest(1)
-                    --doNotDisplay = false ???
+                    --to prevent from displaying quest pop-up more than once
+                    doNotDisplay = true
                 end
                 Gamestate.switch(battleState)
             end
@@ -66,7 +67,7 @@ function updateMap()
     end
 
 --This part is responsible for displaying quest pop-up
---1. selectedNPC ~= null prevents game from crushing
+--1. selectedNPC ~= null prevents game from crashing
 -----if variable selectedNPC is null while checking 2
 --2. selectedNPC.quest - quest pop-up should be display only when NPC has a quest
 --3. not playerIsTalking - pop-up shouldn't collide with NPC's dialogues
@@ -77,12 +78,14 @@ function updateMap()
         if selectedNPC == NPC.sprites.Afedia and not isQuestDisplayed(1) then
             Talking.sprites.quest.active = true
             activateQuest(1)
-        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1) then
-        --and not isQuestDisplayed(2) then
-            Talking.sprites.quest.active = true
-            if not isQuestDisplayed(2) then
+        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1) --then
+            and not isQuestDisplayed(2) then
+                Talking.sprites.quest.active = true
                 activateQuest(2)
-            end
+        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(2)
+        and not isQuestDisplayed(3) then
+                Talking.sprites.quest.active = true
+                activateQuest(3)
         end
     end
 end
