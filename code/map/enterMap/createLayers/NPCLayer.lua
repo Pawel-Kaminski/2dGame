@@ -2,9 +2,15 @@
 
 function createNPCLayer()
     --Layer created for displaying non-player characters
-    map:addCustomLayer("NPC", 5)
+    map:addCustomLayer("NPC", 3)
     NPC = map.layers["NPC"]
     NPC.sprites = {
+        teleport = {
+            image = love.graphics.newImage(
+                "assets/sprites/teleporter_active_scaled.gif"),
+            x = 0,
+            y = 0
+        },
         Afedia = {
             image = love.graphics.newImage(
                 "assets/sprites/npc/1-Afedia/Base2_used.png"),

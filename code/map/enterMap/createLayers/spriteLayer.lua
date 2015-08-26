@@ -2,7 +2,7 @@
 --playerPositionY
 
 function createSpriteLayer()
-    map:addCustomLayer("Sprite Layer", 3) -- Create a Custom Layer
+    map:addCustomLayer("Sprite Layer", 5) -- Create a Custom Layer
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer
     spriteLayer.sprites = {
         player = {

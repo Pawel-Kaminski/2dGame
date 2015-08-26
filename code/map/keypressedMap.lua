@@ -2,6 +2,13 @@
 --playerPositionX, playerPositionY, doNotDisplay, Talking
 
 function keypressedMap(key)
+    if teleportIsActive and key == "return" then
+        teleportIsActive = false
+        playerIsTalking = false
+        playerPositionX = 60 ---Set position of a player on x axis
+        playerPositionY = 120 ---Set position of a player on y axis
+        Gamestate.switch(mapSelectionState)
+    end
     if not Talking.sprites.quest.active then
         if key == "right" then
             --player should not be able to go beyond the end of the screen

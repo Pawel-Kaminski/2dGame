@@ -28,6 +28,12 @@ function drawMap(talking, npc)
         elseif isQuestFinished(1) then
             text = npc.dialog2
         end
+        --In order to add teleport to NPCLayer
+        if text == null then
+            text = "To jest teleport, który pozwoli ci opuścić mapę. "..
+                "Naciśnij ENTER, aby użyć."
+            teleportIsActive = true
+        end
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
             text,
@@ -40,5 +46,7 @@ function drawMap(talking, npc)
         love.graphics.printf(
             "Naciśnij ENTER, aby zamknąć to okno",
             620, 840, 600, "left", 0)
+    else
+        teleportIsActive = false
     end
 end
