@@ -33,9 +33,14 @@ items = {
     {"antidotum", 0},
     {"trucizna", 0},
     {"eliksir magiczny", 0},
-    {"tajemnicza roślina", 0}
+    {"tajemnicza roślina", 0},
+    {"zwój zapisany w obcym języku", 0},
+    {"Artefakt Ziemi", 0},
+    {"Artefakt Powietrza", 0},
+    {"Artefakt Ognia", 0},
+    {"Artefakt Lodu", 0}
 }
-local numberOfItems = 6
+local numberOfItems = 11
 
 questsState = {}
 
