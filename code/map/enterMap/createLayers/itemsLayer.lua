@@ -5,29 +5,42 @@ function createItemsLayer(mapId)
         map:addCustomLayer("Items", 6)
     end
     itemsLayer = map.layers["Items"]
-    itemsLayer.sprites = {
-        healthPotion = {
-            image = love.graphics.newImage(
-                "assets/sprites/items/1-health_potion/pt1_scaled.png"),
-            x = 540,
-            y = 900,
-            active = active4
-        },
-        poison = {
-            image = love.graphics.newImage(
-                "assets/sprites/items/4-poison/pt3_scaled.png"),
-            x = 660,
-            y = 900,
-            active = active5
-        },
-        misteriousPlant = {
-            image = love.graphics.newImage(
-                "assets/sprites/items/6-misterious_plant/mais_scaled.png"),
-            x = 1680,
-            y = 900,
-            active = active6
+
+    if mapId == 1 then
+        itemsLayer.sprites = {
+            healthPotion = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
+                x = 540,
+                y = 900,
+                active = active4
+            },
+            poison = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/4-poison/pt3_scaled.png"),
+                x = 660,
+                y = 900,
+                active = active5
+            },
+            misteriousPlant = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/6-misterious_plant/mais_scaled.png"),
+                x = 1680,
+                y = 900,
+                active = active6
+            }
         }
-    }
+    elseif mapId == 2 then
+        itemsLayer.sprites = {
+            scroll = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/7-scroll/scroll_scaled.png"),
+                x = 1620,
+                y = 840,
+                active = active7
+            }
+        }
+    end
     
     function itemsLayer:update(dt)
     end
@@ -40,15 +53,26 @@ function createItemsLayer(mapId)
                 --local r = sprite.r
                 if playerPositionX == x and playerPositionY == y then
                     sprite.active = false
-                    if x == itemsLayer.sprites.healthPotion.x then
-                        items[1][2] = items[1][2] + 1
-                        active4 = false
-                    elseif x == itemsLayer.sprites.poison.x then
-                        items[4][2] = items[4][2] + 1
-                        active5 = false
-                    elseif x == itemsLayer.sprites.misteriousPlant.x then
-                        items[6][2] = items[6][2] + 1
-                        active6 = false
+                    if itemsLayer.sprites.healthPotion ~= null and
+                        x == itemsLayer.sprites.healthPotion.x and
+                        y == itemsLayer.sprites.healthPotion.y then
+                            items[1][2] = items[1][2] + 1
+                            active4 = false
+                    elseif itemsLayer.sprites.poison ~= null and
+                        x == itemsLayer.sprites.poison.x and
+                        y == itemsLayer.sprites.poison.y then
+                            items[4][2] = items[4][2] + 1
+                            active5 = false
+                    elseif itemsLayer.sprites.misteriousPlant ~= null and
+                        x == itemsLayer.sprites.misteriousPlant.x and
+                        y == itemsLayer.sprites.misteriousPlant.y then
+                            items[6][2] = items[6][2] + 1
+                            active6 = false
+                    elseif itemsLayer.sprites.scroll ~= null and
+                        x == itemsLayer.sprites.scroll.x and
+                        y == itemsLayer.sprites.scroll.y then
+                            items[7][2] = items[7][2] + 1
+                            active7 = false
                     end
                 end
                 love.graphics.draw(sprite.image, x, y)
