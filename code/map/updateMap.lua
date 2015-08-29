@@ -83,18 +83,22 @@ function updateMap()
                 Talking.sprites.quest.active = true
                 activateQuest(2)
         elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(2)
-        and not isQuestDisplayed(3) then
+            and not isQuestDisplayed(3) then
                 Talking.sprites.quest.active = true
                 activateQuest(3)
         elseif selectedNPC == NPC.sprites.Afedia and isQuestFinished(3)
-        and not isQuestDisplayed(4) then
+            and not isQuestDisplayed(4) then
                 Talking.sprites.quest.active = true
                 activateQuest(4)
                 if items[8][2] == 0 then items[8][2] = 1 end
         elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(4)
-        and not isQuestDisplayed(5) then
+            and not isQuestDisplayed(5) then
                 Talking.sprites.quest.active = true
                 activateQuest(5)
+        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(5)
+            and not isQuestDisplayed(6) then
+                Talking.sprites.quest.active = true
+                activateQuest(6)
         end
     end
 end

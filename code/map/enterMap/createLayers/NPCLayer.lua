@@ -119,7 +119,9 @@ function createNPCLayer(mapId)
                     "Gdy moce cztery złączy Ołtarz Przeznaczenia\n"..
                     "Dojdzie do wielkiej bitwy, odwrotu już nie ma\n",
                 quest = "Znajdź zwój z przepowiednią napisaną w starożytnym "..
-                    "języku i zanieś Tinaldinie."
+                    "języku i zanieś Tinaldinie.",
+                quest2 = "Pokonaj stażników powietrza "..
+                    "i zdobądź Artefakt Powietrza."
             },
         }
     end
