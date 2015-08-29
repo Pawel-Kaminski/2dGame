@@ -2,7 +2,7 @@
 
 require "libraries.TLfres"
 sti = require "libraries.sti"
-Gamestate = require "libraries.hump.gamestate"
+Gamestate = require "libraries.humpGamestate"
 playerPositionX = 60 ---Set position of a player on x axis
 playerPositionY = 120 ---Set position of a player on y axis
 --=================COUNTERS==========================--
