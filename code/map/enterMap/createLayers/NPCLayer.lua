@@ -111,6 +111,13 @@ function createNPCLayer(mapId)
                     "o tajemnicznym zwoju z przepowiednią związaną z "..
                     "artefaktami. Ale to tylko legenda... Dla twojej wioski "..
                     "nie ma już nadziei.",
+                dialog6 = "Udało ci się znaleźć zwój?! "..
+                    "Z pomocą mojej magii uda się go odczytać! "..
+                    "Oto treść przepowiedni:\n"..
+                    "Gdy powstanie już z martwych czarnoksiężnik wrogi\n"..
+                    "Niech cztery artefakty będą kluczem drogi\n"..
+                    "Gdy moce cztery złączy Ołtarz Przeznaczenia\n"..
+                    "Dojdzie do wielkiej bitwy, odwrotu już nie ma\n",
                 quest = "Znajdź zwój z przepowiednią napisaną w starożytnym "..
                     "języku i zanieś Tinaldinie."
             },
