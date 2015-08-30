@@ -4,13 +4,6 @@
 --argument npc describes selected non-player character
 function drawMap(talking, npc)
     map:draw()
----------------------FOR TESTING PURPOSES
-    --if text ~= null then
-        --love.graphics.printf(
-            --text,
-            --510, 130, 900, "left", 0)
-    --end
----------------------------------------------
     if talking then
         text = npc.dialog
         mission = npc.quest
@@ -37,13 +30,14 @@ function drawMap(talking, npc)
             --activateQuest(4)
             mission = npc.quest2
         --If player has found a misterious plant, change dialogues
-        elseif isQuestDisplayed(2) and items[6][2] == 1 and npc.dialog3 ~= null then
-            text = npc.dialog3
-            finishQuest(2)
-            if not isQuestDisplayed(3) then
-                doNotDisplay = false
-            end
-            mission = npc.quest2
+        elseif isQuestDisplayed(2) and items[6][2] == 1 
+            and npc.dialog3 ~= null then
+                text = npc.dialog3
+                finishQuest(2)
+                if not isQuestDisplayed(3) then
+                    doNotDisplay = false
+                end
+                mission = npc.quest2
         --If first quest is finished, change dialogues
         elseif isQuestFinished(1) and npc.dialog2 ~= null then
             text = npc.dialog2

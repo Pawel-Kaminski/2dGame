@@ -7,19 +7,15 @@ require "map.enterMap.createLayers.talkingLayer"
 require "map.enterMap.createLayers.itemsLayer"
 function createLayers(mapId)
     if mapId == 1 then
-        map = sti.new("assets/maps/new_map") --Load a map exported to Lua from Tiled
+        --Load a map exported to Lua from Tiled
+        map = sti.new("assets/maps/new_map")
     elseif mapId == 2 then
-        map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
+        map = sti.new("assets/maps/old_map")
     elseif mapId == 3 then
-        map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
+        map = sti.new("assets/maps/old_map")
     elseif mapId == 4 then
-        map = sti.new("assets/maps/old_map") --Load a map exported to Lua from Tiled
+        map = sti.new("assets/maps/old_map")
     end
-    --createSpriteLayer(mapId)
-    --createEnemiesLayer(mapId)
-    --createNPCLayer(mapId)
-    --createTalkingLayer(mapId)
-    --createItemsLayer(mapId)
     createEnemiesLayer(mapId)
     createNPCLayer(mapId)
     createSpriteLayer(mapId)

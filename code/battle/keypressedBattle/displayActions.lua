@@ -24,8 +24,8 @@ function displayActions(key)
     end
     local numberOfActions = countActions(actions)
     if key == "backspace" then
-        displayActions = false
-        displayMenu = true
+        displayingActions = false
+        displayingMenu = true
     elseif key == "down" then
         if arrowY < 900 + 30 * (numberOfActions - 1) then
             arrowY = arrowY + 30
