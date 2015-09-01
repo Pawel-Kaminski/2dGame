@@ -19,6 +19,7 @@ active4 = true
 active5 = true
 active6 = true
 active7 = true
+active8 = true
 doNotDisplay = false
 
 function mapState:enter()

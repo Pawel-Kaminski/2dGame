@@ -38,6 +38,13 @@ function createItemsLayer(mapId)
                 x = 1620,
                 y = 840,
                 active = active7
+            },
+            windArtefact = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/8-artefacts/fire.png"),
+                x = 1620,
+                y = 0,
+                active = active8
             }
         }
     end
@@ -66,13 +73,18 @@ function createItemsLayer(mapId)
                     elseif itemsLayer.sprites.misteriousPlant ~= null and
                         x == itemsLayer.sprites.misteriousPlant.x and
                         y == itemsLayer.sprites.misteriousPlant.y then
-                            items[6][2] = items[6][2] + 1
+                            items[6][2] = 1
                             active6 = false
                     elseif itemsLayer.sprites.scroll ~= null and
                         x == itemsLayer.sprites.scroll.x and
                         y == itemsLayer.sprites.scroll.y then
-                            items[7][2] = items[7][2] + 1
+                            items[7][2] = 1
                             active7 = false
+                    elseif itemsLayer.sprites.windArtefact ~= null and
+                        x == itemsLayer.sprites.windArtefact.x and
+                        y == itemsLayer.sprites.windArtefact.y then
+                            items[10][2] = 1
+                            active8 = false
                     end
                 end
                 love.graphics.draw(sprite.image, x, y)
