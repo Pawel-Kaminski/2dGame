@@ -16,6 +16,10 @@ function createNPCLayer(mapId)
         firstMapNPC()
     elseif mapId == 2 then
         secondMapNPC()
+    elseif mapId == 3 then
+        thirdMapNPC()
+    elseif mapId == 4 then
+        fourthMapNPC()
     end
 
     function NPC:update(dt)

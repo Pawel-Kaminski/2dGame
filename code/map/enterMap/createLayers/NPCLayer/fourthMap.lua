@@ -1,4 +1,4 @@
-function thirdMapNPC()
+function fourthMapNPC()
     NPC.sprites = {
         teleport = {
             image = love.graphics.newImage(
