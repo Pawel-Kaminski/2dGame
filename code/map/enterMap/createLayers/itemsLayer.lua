@@ -49,6 +49,20 @@ function createItemsLayer(mapId)
         }
     elseif mapId == 3 then
         itemsLayer.sprites = {
+            fireArtefact = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/8-artefacts/fire.png"),
+                x = 1440,
+                y = 420,
+                active = active9
+            },
+            iceArtefact = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/8-artefacts/ice.png"),
+                x = 240,
+                y = 180,
+                active = active10
+            }
         }
     elseif mapId == 4 then
         itemsLayer.sprites = {
@@ -91,6 +105,16 @@ function createItemsLayer(mapId)
                         y == itemsLayer.sprites.windArtefact.y then
                             items[9][2] = 1
                             active8 = false
+                    elseif itemsLayer.sprites.fireArtefact ~= null and
+                        x == itemsLayer.sprites.fireArtefact.x and
+                        y == itemsLayer.sprites.fireArtefact.y then
+                            items[10][2] = 1
+                            active9 = false
+                    elseif itemsLayer.sprites.iceArtefact ~= null and
+                        x == itemsLayer.sprites.iceArtefact.x and
+                        y == itemsLayer.sprites.iceArtefact.y then
+                            items[11][2] = 1
+                            active10 = false
                     end
                 end
                 love.graphics.draw(sprite.image, x, y)
