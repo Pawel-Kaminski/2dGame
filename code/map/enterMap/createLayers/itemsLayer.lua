@@ -53,14 +53,14 @@ function createItemsLayer(mapId)
                 image = love.graphics.newImage(
                     "assets/sprites/items/8-artefacts/fire.png"),
                 x = 1440,
-                y = 420,
+                y = 180,
                 active = active9
             },
             iceArtefact = {
                 image = love.graphics.newImage(
                     "assets/sprites/items/8-artefacts/ice.png"),
-                x = 240,
-                y = 180,
+                x = 1440,
+                y = 900,
                 active = active10
             }
         }
