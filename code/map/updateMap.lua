@@ -91,6 +91,7 @@ function updateMap()
                 Talking.sprites.quest.active = true
                 activateQuest(4)
                 if items[8][2] == 0 then items[8][2] = 1 end
+                map2locked = false
         elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(4)
             and not isQuestDisplayed(5) then
                 Talking.sprites.quest.active = true

@@ -9,6 +9,9 @@ playerPositionY = 120 ---Set position of a player on y axis
 dtotal = 0 --time after calling fight(enemy) function
 dtotalPause = 0
 --===================================================--
+map2locked = true
+map3locked = true
+map4locked = true
 require "menu"
 
 function love.load() --this function is called only once

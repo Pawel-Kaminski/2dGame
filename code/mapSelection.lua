@@ -7,6 +7,13 @@ function mapSelectionState:enter()
     map4 = sti.new("assets/maps/old_map")
     map4:addCustomLayer("Background", 2)
     map4:addCustomLayer("Elements", 3)
+    map4:addCustomLayer("Locked", 4)
+    locked = map4.layers["Locked"]
+    locked.sprites = {
+        locked = {
+            image = love.graphics.newImage("assets/sprites/menu/locked.png")
+        }
+    }
     background = map4.layers["Background"]
     background.sprites = {
         background = {
@@ -73,8 +80,7 @@ function mapSelectionState:enter()
             if sprite.active then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
+                love.graphics.draw(sprite.image, x, y)
             end
         end
     end
@@ -84,9 +90,20 @@ function mapSelectionState:enter()
             if sprite.active then
                 local x = math.floor(sprite.x)
                 local y = math.floor(sprite.y)
-                local r = sprite.r
-                love.graphics.draw(sprite.image, x, y, r)
+                love.graphics.draw(sprite.image, x, y)
             end
+        end
+    end
+
+    function locked:draw()
+        if map2locked then
+            love.graphics.draw(self.sprites.locked.image, 704, 400)
+        end
+        if map3locked then
+            love.graphics.draw(self.sprites.locked.image, 704, 500)
+        end
+        if map4locked then
+            love.graphics.draw(self.sprites.locked.image, 704, 600)
         end
     end
 end
