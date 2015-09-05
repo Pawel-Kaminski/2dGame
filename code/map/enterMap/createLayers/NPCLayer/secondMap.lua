@@ -26,15 +26,25 @@ function secondMapNPC()
                     "nie ma już nadziei.",
                 dialog6 = "Udało ci się znaleźć zwój?! "..
                     "Z pomocą mojej magii uda się go odczytać! "..
-                    "Oto treść przepowiedni:\n"..
+                    "Oto treść przepowiedni:\n\n"..
                     "Gdy powstanie już z martwych czarnoksiężnik wrogi\n"..
                     "Niech cztery artefakty będą kluczem drogi\n"..
                     "Gdy moce cztery złączy Ołtarz Przeznaczenia\n"..
                     "Dojdzie do wielkiej bitwy, odwrotu już nie ma\n",
+                dialog7 = "Podejrzewam, "..
+                    "że tutaj już nic nie uda się odnaleźć. "..
+                    "Udaj się do Krainy Równowagi. "..
+                    "Tam mogą znajdować się pozostałe artefakty. "..
+                    "Jednak wiedz, "..
+                    "że ich zdobycie będzie trudne i niebezpieczne."..
+                    "Znajdź człowieka o imieniu Lidenon. "..
+                    "Bez jego wskazówek ciężko będzie ci walczyć "..
+                    "ze strażnikami artefaktów.",
                 quest = "Znajdź zwój z przepowiednią napisaną w starożytnym "..
                     "języku i zanieś Tinaldinie.",
                 quest2 = "Pokonaj stażników powietrza "..
-                    "i zdobądź Artefakt Powietrza."
+                    "i zdobądź Artefakt Powietrza.",
+                quest3 = "Uzyskaj wskazówki dotyczące taktyki od Lidenona."
             }
         }
 end

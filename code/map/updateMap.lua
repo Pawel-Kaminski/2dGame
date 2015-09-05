@@ -100,6 +100,10 @@ function updateMap()
             and not isQuestDisplayed(6) then
                 Talking.sprites.quest.active = true
                 activateQuest(6)
+        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(6)
+            and not isQuestDisplayed(7) then
+                Talking.sprites.quest.active = true
+                activateQuest(7)
         end
     end
 end
