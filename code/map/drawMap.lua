@@ -14,8 +14,7 @@ function drawMap(talking, npc)
                 doNotDisplay = false
             end
             mission = npc.quest3
-        end
-        if isQuestDisplayed(5) and npc.dialog6 ~= null and items[7][2] == 1 then
+        elseif isQuestDisplayed(5) and npc.dialog6 ~= null and items[7][2] == 1 then
             text = npc.dialog6
             finishQuest(5)
             if not isQuestDisplayed(6) then
