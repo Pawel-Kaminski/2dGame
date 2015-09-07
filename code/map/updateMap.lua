@@ -104,6 +104,7 @@ function updateMap()
             and not isQuestDisplayed(7) then
                 Talking.sprites.quest.active = true
                 activateQuest(7)
+                map3locked = false
         end
     end
 end

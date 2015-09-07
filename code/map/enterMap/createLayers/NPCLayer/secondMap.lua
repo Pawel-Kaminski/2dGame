@@ -36,7 +36,7 @@ function secondMapNPC()
                     "Udaj się do Krainy Równowagi. "..
                     "Tam mogą znajdować się pozostałe artefakty. "..
                     "Jednak wiedz, "..
-                    "że ich zdobycie będzie trudne i niebezpieczne."..
+                    "że ich zdobycie będzie trudne i niebezpieczne. "..
                     "Znajdź człowieka o imieniu Lidenon. "..
                     "Bez jego wskazówek ciężko będzie ci walczyć "..
                     "ze strażnikami artefaktów.",
