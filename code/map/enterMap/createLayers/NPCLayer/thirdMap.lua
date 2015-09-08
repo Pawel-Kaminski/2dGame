@@ -21,7 +21,7 @@ function thirdMapNPC()
                 "Ogniste bestie są wrażliwe jedynie na lodowe ataki. "..
                 "Aby zadać obrażenia lodowym bestiom, użyj ogniowych ataków. "..
                 "Strażnicy lodu to silniejsze bestie, "..
-                "więc radzę ci udać się najpierw na północny zachód "..
+                "więc radzę ci udać się najpierw na północny wschód "..
                 "i zmierzyć się ze strażnikiem ognia.",
             dialog9 = "Udało ci się pokonać strażników ognia? Świetnie! "..
                 "Jeśli chcesz, możesz udać się "..
