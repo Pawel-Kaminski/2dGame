@@ -105,6 +105,18 @@ function updateMap()
                 Talking.sprites.quest.active = true
                 activateQuest(7)
                 map3locked = false
+        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(7)
+            and not isQuestDisplayed(8) then
+                Talking.sprites.quest.active = true
+                activateQuest(8)
+        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(8)
+            and not isQuestDisplayed(9) then
+                Talking.sprites.quest.active = true
+                activateQuest(9)
+        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(9)
+            and not isQuestDisplayed(10) then
+                Talking.sprites.quest.active = true
+                activateQuest(10)
         end
     end
 end

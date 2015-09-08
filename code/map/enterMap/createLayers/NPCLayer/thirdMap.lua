@@ -11,7 +11,7 @@ function thirdMapNPC()
                 "assets/sprites/npc/5-Lidenon/Lidenon.png"),
                 x = 240,
                 y = 240,
-            dialog7 = "Witaj! Jestem Lidenon. "..
+            dialog8 = "Witaj! Jestem Lidenon. "..
                 "To miejsce nazywane jest Krainą Równowagi. "..
                 "Możesz tu spotkać potężne bestie żywiołów ognia i lodu. "..
                 "Legenda głosi, że są one strażnikami pradawnych artefaktów. "..
@@ -23,12 +23,12 @@ function thirdMapNPC()
                 "Strażnicy lodu to silniejsze bestie, "..
                 "więc radzę ci udać się najpierw na północny zachód "..
                 "i zmierzyć się ze strażnikiem ognia.",
-            dialog8 = "Udało ci się pokonać strażników ognia? Świetnie! "..
+            dialog9 = "Udało ci się pokonać strażników ognia? Świetnie! "..
                 "Jeśli chcesz, możesz udać się "..
                 "na pojedynek z lodowymi bestami. "..
                 "Pamiętaj, możesz zadać im obrażenia wyłącznie korzystając z "..
                 "ogniowych ataków. Powodzenia!",
-            dialog9 = "Udało ci się pokonać zarówno ogniste, "..
+            dialog10 = "Udało ci się pokonać zarówno ogniste, "..
                 "jak i lodowe bestie. Jesteś znakomitą wojowniczką! "..
                 "Udało ci się również zdobyć artefakty! "..
                 "Mam nadzieję, że zrobisz z nich dobry użytek. ",
