@@ -11,7 +11,7 @@ function enterMap(mapId)
     elseif mapId == 3 then
         sound = love.audio.newSource("music/03_Unleashed.mp3")
     elseif mapId == 4 then
-        sound = love.audio.newSource("music/BlackmoorColossusLoop.wav")
+        sound = love.audio.newSource("music/03_Unleashed.mp3")
     end
     love.audio.stop()
     love.audio.play(sound)
