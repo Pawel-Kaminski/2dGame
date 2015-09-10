@@ -2,6 +2,7 @@
 require "map.enterMap.createLayers.NPCLayer.firstMap"
 require "map.enterMap.createLayers.NPCLayer.secondMap"
 require "map.enterMap.createLayers.NPCLayer.thirdMap"
+require "map.enterMap.createLayers.NPCLayer.fourthMap"
 
 function createNPCLayer(mapId)
     --Layer created for displaying non-player characters
