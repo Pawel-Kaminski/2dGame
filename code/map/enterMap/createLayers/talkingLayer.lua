@@ -3,6 +3,8 @@
 function createTalkingLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Talking", 7)
+    elseif mapId == 2 then
+        map:addCustomLayer("Talking", 6)
     else
         map:addCustomLayer("Talking", 5)
     end

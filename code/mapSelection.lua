@@ -4,6 +4,7 @@ mapSelectionState = {}
 selectedMap = 0
 
 function mapSelectionState:enter()
+    DEBUG_MODE = true
     map4 = sti.new("assets/maps/old_map")
     map4:addCustomLayer("Background", 2)
     map4:addCustomLayer("Elements", 3)
@@ -109,6 +110,11 @@ function mapSelectionState:enter()
 end
 
 function mapSelectionState:update()
+    if DEBUG_MODE then
+        map2locked = false
+        map3locked = false
+        map4locked = false
+    end
 end
 
 function mapSelectionState:draw()
@@ -147,7 +153,7 @@ function mapSelectionState:keypressed(key)
                 elements.sprites.wioskaLipinkiOn.active = true
                 elements.sprites.wioskaLipinkiOff.active = false
                 elements.sprites.krainaRownowagiOn.active = false
-                elements.sprites.mrocznyLasOff.active = true
+                elements.sprites.krainaRownowagiOff.active = true
             end
         end
         if key == "up" then

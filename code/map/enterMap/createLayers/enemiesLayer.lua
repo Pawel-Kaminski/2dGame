@@ -3,6 +3,8 @@
 function createEnemiesLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Enemies", 4) --Layer created for displaying enemies
+    elseif mapId == 2 then
+        map:addCustomLayer("Enemies", 3)
     else
         map:addCustomLayer("Enemies", 3)
     end

@@ -1,6 +1,8 @@
 function createItemsLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Items", 8)
+    elseif mapId == 2 then
+        map:addCustomLayer("Items", 7)
     else
         map:addCustomLayer("Items", 6)
     end

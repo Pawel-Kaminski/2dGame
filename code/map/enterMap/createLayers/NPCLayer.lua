@@ -8,6 +8,8 @@ function createNPCLayer(mapId)
     --Layer created for displaying non-player characters
     if mapId == 1 then
         map:addCustomLayer("NPC", 3)
+    elseif mapId == 2 then
+        map:addCustomLayer("NPC", 4)
     else
         map:addCustomLayer("NPC", 2)
     end
