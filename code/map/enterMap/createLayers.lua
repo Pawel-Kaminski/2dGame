@@ -12,7 +12,7 @@ function createLayers(mapId)
     elseif mapId == 2 then
         map = sti.new("assets/maps/map2")
     elseif mapId == 3 then
-        map = sti.new("assets/maps/old_map")
+        map = sti.new("assets/maps/map3")
     elseif mapId == 4 then
         map = sti.new("assets/maps/old_map")
     end
