@@ -5,6 +5,7 @@
 require "battle.drawBattle.showTurnInfo"
 require "battle.drawBattle.showActions"
 require "battle.drawBattle.showHP"
+require "battle.drawBattle.showItems"
 
 function color(expectedValue)
     if arrowY == expectedValue then
@@ -68,8 +69,8 @@ function drawBattle(selected)
         showActions(selected)
     end
 
-    if displayItems then
-        --TODO: Implement displaying items
+    if displayingItems then
+        showItems()
     end
 
     if escapeBattle then
