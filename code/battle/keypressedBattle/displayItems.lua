@@ -1,5 +1,8 @@
 function displayItems(key)
-    if key == "down" then
+    if key == "backspace" then
+        displayingItems = false
+        displayingMenu = true
+    elseif key == "down" then
         if arrowY < 1020 then
             arrowY = arrowY + 30
         else
