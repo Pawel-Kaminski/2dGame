@@ -19,6 +19,7 @@ function displayMenu(key)
             displayingActions = true
             return
         elseif arrowY == 930 then
+            arrowY = 900
             displayingItems = true
             return
         elseif arrowY == 960 then
