@@ -11,4 +11,17 @@ function showItems()
     love.graphics.printf(
         "Ilość przedmiotów tego typu w ekwipunku: ",
         1000, 915, 1000, "left", 0)
+    local iloscPrzedmiotow = -1
+    if arrowY == 900 then
+        local iloscPrzedmiotow = 1
+    elseif arrowY == 930 then
+        local iloscPrzedmiotow = 2
+    elseif arrowY == 960 then
+        local iloscPrzedmiotow = 3
+    elseif arrowY == 990 then
+        local iloscPrzedmiotow = 4
+    elseif arrowY == 1020 then
+        local iloscPrzedmiotow = 5
+    end
+    love.graphics.printf(iloscPrzedmiotow, 1500, 915, 1000, "left", 0)
 end
