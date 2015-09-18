@@ -1,4 +1,4 @@
-function displayItems(key)
+function displayBattleItems(key)
     if key == "backspace" then
         displayingItems = false
         displayingMenu = true
