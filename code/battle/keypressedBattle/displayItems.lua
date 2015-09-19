@@ -1,5 +1,6 @@
 function displayBattleItems(key)
     if key == "backspace" then
+        arrowY = 900
         displayingItems = false
         displayingMenu = true
     elseif key == "down" then
