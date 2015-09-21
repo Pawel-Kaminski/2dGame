@@ -1,4 +1,7 @@
+require "battle.keypressedBattle.displayItems.useItem"
+
 function displayBattleItems(key)
+    selectedItem = (arrowY - 900) / 30 + 1
     if key == "backspace" then
         arrowY = 900
         displayingItems = false
@@ -16,6 +19,6 @@ function displayBattleItems(key)
             arrowY = 1020
         end
     elseif key == "return" then
-        --TODO: use of items
+        useItem(selectedItem)
     end
 end

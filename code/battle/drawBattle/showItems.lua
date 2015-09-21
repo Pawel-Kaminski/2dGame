@@ -3,6 +3,13 @@
 --if item is available and isn't selected, name should be displayed in white
 --if it is selected, name should be displayed in red
 
+--how items should work?
+--health potion: restore a little part of health points
+--health elixir: restore all health points
+--antidotum: remove poison status
+--poison: take 20% of max health points every turn
+--magic elixir: restore all magic points
+
 function showItems()
     displayingMenu = false
     if items[1][2] == 0 then
