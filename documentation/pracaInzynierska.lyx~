@@ -1134,27 +1134,27 @@ Przedmioty do używania przez gracza
 
 \begin_layout Itemize
 mikstura lecznicza (przywraca niewielką część utraconych punktów życia)
- - na każdej z map
+ - na każdej z map (mapy 1 - 3)
 \end_layout
 
 \begin_layout Itemize
 eliksir leczniczy (przywraca całość utraconych punktów życia, przedmiot
- rzadki) - w Mrocznym Lesie
+ rzadki) - w Mrocznym Lesie (mapa 2)
 \end_layout
 
 \begin_layout Itemize
 antidotum (usuwa efekty trucizny rzuconej przez wroga, trucizna będzie zabierać
- co turę 1/3 maksymalnych punktów życia) - w Krainie Równowagi
+ co turę 1/5 maksymalnych punktów życia) - w Krainie Równowagi (mapa 3)
 \end_layout
 
 \begin_layout Itemize
-trucizna (zabiera co turę 1/3 maksymalnych punktów życia wrogowi) - w Wiosce
- Lipinki
+trucizna (zabiera co turę 1/5 maksymalnych punktów życia wrogowi) - w Wiosce
+ Lipinki (mapa 1)
 \end_layout
 
 \begin_layout Itemize
 eliksir magiczny (przywraca całość wykorzystanych punktów magicznych, przedmiot
- rzadki) - w Krainie Równowagi
+ rzadki) - w Krainie Równowagi (mapa 3)
 \end_layout
 
 \begin_layout Section
