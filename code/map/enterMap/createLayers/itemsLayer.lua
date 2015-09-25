@@ -47,7 +47,22 @@ function createItemsLayer(mapId)
                 x = 1620,
                 y = 0,
                 active = active8
-            }
+            },
+            healthPotion = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
+                x = 480,
+                y = 960,
+                active = active11
+            },
+            healthElixir = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/2-health_elixir/"..
+                    "health_potion_scaled.png"),
+                x = 720,
+                y = 120,
+                active = active12
+            },
         }
     elseif mapId == 3 then
         itemsLayer.sprites = {
@@ -64,7 +79,28 @@ function createItemsLayer(mapId)
                 x = 1440,
                 y = 900,
                 active = active10
-            }
+            },
+            healthPotion = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
+                x = 360,
+                y = 600,
+                active = active13
+            },
+            antidote = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/3-antidote/pt4_scaled.png"),
+                x = 600,
+                y = 120,
+                active = active14
+            },
+            manaElixir = {
+                image = love.graphics.newImage(
+                    "assets/sprites/items/5-mana_elixir/mana_potion_scaled.png"),
+                x = 180,
+                y = 720,
+                active = active15
+            },
         }
     elseif mapId == 4 then
         itemsLayer.sprites = {
