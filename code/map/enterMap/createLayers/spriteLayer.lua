@@ -4,7 +4,7 @@
 function createSpriteLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Sprite Layer", 5) -- Create a Custom Layer
-    elseif mapId == 2 then
+    elseif mapId == 2 or mapId == 3 then
         map:addCustomLayer("Sprite Layer", 5)
     else
         map:addCustomLayer("Sprite Layer", 4) -- Create a Custom Layer
