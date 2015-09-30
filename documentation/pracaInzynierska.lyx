@@ -1174,35 +1174,23 @@ mapa 3: mikstura lecznicza, antidotum, eliksir magiczny
 \end_layout
 
 \begin_layout Section
-Rzeczy do zrobienia
+Lista przeciwników w zależności od mapy
 \end_layout
 
 \begin_layout Itemize
-zaprojektowanie przeciwników
+mapa 1: thornbush, creature
 \end_layout
 
 \begin_layout Itemize
-zaprojektowanie przedmiotów
+mapa 2: forest guardian, cactus, forest creature, dragon, air guardian
 \end_layout
 
 \begin_layout Itemize
-zaprojektowanie rozwoju postaci
+mapa 3: fire guardian, ice guardian
 \end_layout
 
 \begin_layout Itemize
-znalezienie ścieżki dźwiękowej do każdego z miejsc
-\end_layout
-
-\begin_layout Itemize
-wymyślenie fabuły
-\end_layout
-
-\begin_layout Itemize
-zaprojektowanie map lokalnych
-\end_layout
-
-\begin_layout Itemize
-zaprojektowanie głównego menu
+mapa 4: Neil Merzenantar
 \end_layout
 
 \end_body
