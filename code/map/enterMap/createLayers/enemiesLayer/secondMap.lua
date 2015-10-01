@@ -1,0 +1,2 @@
+function secondMapEnemies()
+end
