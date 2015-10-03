@@ -1,17 +1,17 @@
 function firstMapEnemies()
-    local dorver = love.graphics.newImage(
+    local creature = love.graphics.newImage(
         "assets/sprites/enemies/2-creature/creature.png")
     local thornbush = love.graphics.newImage(
         "assets/sprites/enemies/1-thornbush/thornbush_used.png")
     enemies.sprites = {
         enemy = {
-            image = dorver,
+            image = creature,
             x = 1200,
             y = 120,
             active = active1
         },
         enemy2 = {
-            image = dorver,
+            image = creature,
             x = 1200,
             y = 300,
             active = active2
