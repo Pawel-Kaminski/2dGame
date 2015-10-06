@@ -6,6 +6,13 @@
 
 require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
+require "map.updateMap.enemies.airGuardian"
+require "map.updateMap.enemies.cactus"
+require "map.updateMap.enemies.dragon"
+require "map.updateMap.enemies.fireGuardian"
+require "map.updateMap.enemies.forestCreature"
+require "map.updateMap.enemies.forestGuardian"
+require "map.updateMap.enemies.iceGuardian"
 
 --Function that updates state of the map
 function updateMap()
