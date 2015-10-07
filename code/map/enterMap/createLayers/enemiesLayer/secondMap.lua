@@ -14,31 +14,36 @@ function secondMapEnemies()
             image = forestGuardian,
             x = 240,
             y = 780,
-            active = active16
+            active = active16,
+            name = "forestGuardian"
         },
         enemy2 = {
             image = cactus,
             x = 180,
             y = 420,
-            active = active17
+            active = active17,
+            name = "cactus"
         },
         enemy3 = {
             image = forestCreature,
             x = 480,
             y = 900,
-            active = active18
+            active = active18,
+            name = "forestCreature"
         },
         enemy4 = {
             image = dragon,
             x = 300,
             y = 300,
-            active = active19
+            active = active19,
+            name = "dragon"
         },
         enemy5 = {
             image = airGuardian,
             x = 780,
             y = 540,
-            active = active20
+            active = active20,
+            name = "airGuardian"
         }
     }
 end
