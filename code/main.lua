@@ -24,6 +24,7 @@ function love.load() --this function is called only once
     love.mouse.setVisible(false)
     TLfres.setScreen({w=0, h=0, full=true, vsync=false, aa=16}, 1920)
     Gamestate.switch(menuState)
+    changeMusic = true
 end
 
 function love.keypressed(key)

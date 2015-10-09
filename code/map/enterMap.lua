@@ -5,16 +5,38 @@ function enterMap(mapId)
     --activeEnemySprite contains sprite of enemy on which player entered
     activeEnemySprite = null
     if mapId == 1 then
-        sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
+        if changeMusic then
+            sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")
+            love.audio.stop()
+            love.audio.play(sound)
+        else
+            changeMusic = true
+        end
     elseif mapId == 2 then
-        sound = love.audio.newSource("music/06Flicker.mp3")
+        if changeMusic then
+            sound = love.audio.newSource("music/06Flicker.mp3")
+            love.audio.stop()
+            love.audio.play(sound)
+        else
+            changeMusic = true
+        end
     elseif mapId == 3 then
-        sound = love.audio.newSource("music/03_Unleashed.mp3")
+        if sound ~= love.audio.newSource("music/03_Unleashed.mp3") then
+            sound = love.audio.newSource("music/03_Unleashed.mp3")
+            love.audio.stop()
+            love.audio.play(sound)
+        else
+            changeMusic = true
+        end
     elseif mapId == 4 then
-        sound = love.audio.newSource("music/03_Unleashed.mp3")
+        if sound ~= love.audio.newSource("music/03_Unleashed.mp3") then
+            sound = love.audio.newSource("music/03_Unleashed.mp3")
+            love.audio.stop()
+            love.audio.play(sound)
+        else
+            changeMusic = true
+        end
     end
-    love.audio.stop()
-    love.audio.play(sound)
     sound:setLooping(true)
     createLayers(mapId)
 end

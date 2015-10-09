@@ -4,7 +4,7 @@ mapSelectionState = {}
 selectedMap = 0
 
 function mapSelectionState:enter()
-    DEBUG_MODE = true
+    DEBUG_MODE = false
     map4 = sti.new("assets/maps/old_map")
     map4:addCustomLayer("Background", 2)
     map4:addCustomLayer("Elements", 3)

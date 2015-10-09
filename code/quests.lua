@@ -45,9 +45,10 @@ local numberOfItems = 11
 questsState = {}
 
 function questsState:enter()
-    menusMusic = love.audio.newSource("music/03_Unleashed.mp3")
-    love.audio.stop()
-    love.audio.play(menusMusic)
+    --menusMusic = love.audio.newSource("music/03_Unleashed.mp3")
+    --love.audio.stop()
+    --love.audio.play(menusMusic)
+    changeMusic = false
     map2 = sti.new("assets/maps/old_map")
     map2:addCustomLayer("Background", 2)
     background = map2.layers["Background"]
