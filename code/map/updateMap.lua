@@ -72,6 +72,7 @@ function updateMap()
                 if sprite.y == enemies.sprites.enemy3.y then
                     active3 = false
                     finishQuest(1)
+                    --unlock magic attack (action number 3)
                     --to prevent from displaying quest pop-up more than once
                     doNotDisplay = true
                 end

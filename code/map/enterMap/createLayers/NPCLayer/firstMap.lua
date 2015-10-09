@@ -10,7 +10,7 @@ function firstMapNPC()
             image = love.graphics.newImage(
                 "assets/sprites/npc/1-Afedia/Base2_used.png"),
             x = 300,
-            y = 540,
+            y = 420,
             dialog = "Witaj, jestem Afedia. Proszę, pomóż mi pozbyć się "..
                 "szkodników z mojego ogrodu.",
             dialog2 = "Bardzo dziękuję ci za pomoc!",
