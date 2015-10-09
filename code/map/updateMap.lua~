@@ -20,13 +20,11 @@ function updateMap()
 
 --This part is responsible for launching battle state when necessary
     for _, sprite in pairs(enemies.sprites) do
-        if spriteLayer.sprites.player.x >= sprite.x - 60
-        and spriteLayer.sprites.player.x <= sprite.x + 60
-        and spriteLayer.sprites.player.y >= sprite.y - 60
-        and spriteLayer.sprites.player.y <= sprite.y + 60
-        and sprite.active then
-                --when player is close to enemy
+        if spriteLayer.sprites.player.x == sprite.x then
+            if spriteLayer.sprites.player.y == sprite.y and sprite.active then
+                --when player is in the same position as one of enemies
                 --code here determines what kind of enemy attacks the player
+                --if sprite.x == 300 and sprite.y == 660 then
                 if sprite.name == "thornbush" then
                     firstEnemy = EnemyThornbush_First
                     secondEnemy = EnemyThornbush_Second
@@ -76,7 +74,7 @@ function updateMap()
                     doNotDisplay = true
                 end
                 Gamestate.switch(battleState)
-            --end
+            end
         end
     end
 
