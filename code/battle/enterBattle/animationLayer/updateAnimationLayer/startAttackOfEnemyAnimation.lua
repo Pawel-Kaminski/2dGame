@@ -39,8 +39,8 @@ function startAttackOfEnemyAnimation(layer, id)
         displayAnimation = false
         mainSprite.active = false
         if id == 5 then
-            secondSprite.x = 120
-            secondSprite.y = 100
+            secondSprite.x = 180 --120
+            secondSprite.y = 200 --100
         elseif id == 6 then
             secondSprite.x = 200
             secondSprite.y = 200

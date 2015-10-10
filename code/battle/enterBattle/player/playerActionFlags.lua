@@ -18,7 +18,7 @@ playerActionFlags = {
     {"Magiczna bariera", true, 2,
 "Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
 10, true},
-    {"Atak magiczny", false, 3, 
+    {"Atak magiczny", true, 3, 
 "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
 5, true},
     {"Ulecz się", false, 4,
