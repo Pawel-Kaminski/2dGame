@@ -1,5 +1,5 @@
 --WARNING: This file uses global variables:
---animationId, mainSprite, secondSprite, speed, dtotal, selectedEnemy,
+--animationId, mainSprite, secondSprite, duration, dtotal, selectedEnemy,
 --firstEnemy, secondEnemy, thirdEnemy, displayAnimation, counting
 
 function startAttackAnimation(layer, id)

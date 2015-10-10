@@ -24,12 +24,14 @@ function updateAnimationLayer(time)
     if secondSprite ~= null and secondSprite.active then
         counting = counting + time
         dtotal = 0
-        if counting > duration then
-            secondSprite.active = false
-            if enemyDestinedToDie ~= null then
-                enemyDestinedToDie.active = false
-                hideBar.active = false
-                enemyDestinedToDie = null
+        if counting ~= null and duration ~= null then
+            if counting > duration then
+                secondSprite.active = false
+                if enemyDestinedToDie ~= null then
+                    enemyDestinedToDie.active = false
+                    hideBar.active = false
+                    enemyDestinedToDie = null
+                end
             end
         end
     end

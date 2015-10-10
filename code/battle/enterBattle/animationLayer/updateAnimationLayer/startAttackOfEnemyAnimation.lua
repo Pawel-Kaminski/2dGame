@@ -1,16 +1,16 @@
 --WARNING: This file uses global variables:
---animationId, mainSprite, secondSprite, speed, startPositionIsSet, enemyId,
+--animationId, mainSprite, secondSprite, duration, startPositionIsSet, enemyId,
 --displayAnimation, startPositionIsSet, counting
 
 function startAttackOfEnemyAnimation(layer, id)
     if id == 5 then
         mainSprite = layer.sprites.bullet
         secondSprite = layer.sprites.explosion
-        speed = 0.5
+        duration = 0.5
     elseif id == 6 then
         mainSprite = layer.sprites.poison
         secondSprite = layer.sprites.poison2
-        speed = 0.5
+        duration = 0.5
     end
     if startPositionIsSet ~= true then
         if enemyId == 1 then
