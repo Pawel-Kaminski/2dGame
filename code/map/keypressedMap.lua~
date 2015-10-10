@@ -28,15 +28,10 @@ function keypressedMap(key)
                 playerPositionY = playerPositionY - 60
             end
         elseif key == 'l' then
-            --displayItems = false
-            screenId = 1
+            displayItems = false
             Gamestate.switch(questsState)
         elseif key == 'q' then
-            --displayItems = true
-            screenId = 2
-            Gamestate.switch(questsState)
-        elseif key == 's' then
-            screenId = 3
+            displayItems = true
             Gamestate.switch(questsState)
         end
     end

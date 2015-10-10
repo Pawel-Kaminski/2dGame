@@ -10,7 +10,6 @@
 --4. Description of action
 --5. How many magic points you need to use action?
 --6. Is action available to use now?
-numberOfFlags = 5
 playerActionFlags = {
     {"Zwykły atak", true, 1, 
 "Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
