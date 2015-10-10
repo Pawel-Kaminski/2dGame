@@ -39,11 +39,13 @@ function drawBattle(selected)
     elseif animationId == 8 then
         description = playerActionFlags[4][1]
     end
+    love.graphics.setFont(secondFont)
     if displayAnimation then
         love.graphics.printf(
             description,
-            500, 100, 1000, "left", 0)
+            600, 50, 1000, "left", 0)
     end
+    love.graphics.setFont(defaultFont)
     if displayTurnInfo then
         showTurnInfo()
     elseif victory then
