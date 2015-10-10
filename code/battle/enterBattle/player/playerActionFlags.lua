@@ -11,7 +11,7 @@
 --5. How many magic points you need to use action?
 --6. Is action available to use now?
 playerActionFlags = {
-    {"Rzut strzałą", true, 1, 
+    {"Zwykły atak", true, 1, 
 "Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
 0, true},
     {"Magiczna bariera", true, 2,
@@ -22,5 +22,9 @@ playerActionFlags = {
 5, true},
     {"Ulecz się", false, 4,
 "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
+10, true},
+    {"Magiczna strzała", false, 5,
+"Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę do olbrzymich rozmiarów i "..
+"zadać potężne obrażenia.",
 10, true}
 }

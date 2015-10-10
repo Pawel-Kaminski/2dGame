@@ -67,8 +67,9 @@ function updateMap()
                 love.audio.stop()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore
+                --TODO: hide enemies from maps 2-4
                 if sprite.y == enemies.sprites.enemy.y then active1 = false end
-                if sprite.y == enemies.sprites.enemy2.y then active2 = false end
+                --if sprite.y == enemies.sprites.enemy2.y then active2 = false end
                 if sprite.y == enemies.sprites.enemy3.y then
                     active3 = false
                     finishQuest(1)

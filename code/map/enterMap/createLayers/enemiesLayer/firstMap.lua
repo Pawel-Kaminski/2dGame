@@ -6,18 +6,18 @@ function firstMapEnemies()
     enemies.sprites = {
         enemy = {
             image = creature,
-            x = 1200,
-            y = 120,
+            x = 1620,
+            y = 900,
             active = active1,
             name = "creature"
         },
-        enemy2 = {
-            image = creature,
-            x = 1200,
-            y = 300,
-            active = active2,
-            name = "creature"
-        },
+        --enemy2 = {
+            --image = creature,
+            --x = 1200,
+            --y = 300,
+            --active = active2,
+            --name = "creature"
+        --},
         enemy3 = {
             image = thornbush,
             x = 300,

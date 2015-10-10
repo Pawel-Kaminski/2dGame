@@ -7,6 +7,15 @@ function startAttackAnimation(layer, id)
         mainSprite = layer.sprites.arrow_0
         secondSprite = layer.sprites.blood
         speed = 0.5
+        --rotation in radians
+        --360 degrees ~= 6.28
+        if selectedEnemy == firstEnemy then
+            mainSprite.r = 1.57
+        elseif selectedEnemy == secondEnemy then
+            mainSprite.r = 1.83
+        elseif selectedEnemy == thirdEnemy then
+            mainSprite.r = 2.07
+        end
     elseif id == 2 then
         mainSprite = layer.sprites.fireball
         secondSprite = layer.sprites.fire

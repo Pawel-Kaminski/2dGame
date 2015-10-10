@@ -6,6 +6,11 @@ require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackAnima
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startAttackOfEnemyAnimation"
 require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAnimation"
 
+--animationId = 1 - attack
+--= 2 - magic attack
+--= 3 - heal
+--= 4 - defend
+
 function updateAnimationLayer(time)
     if displayAnimation and (animationId == 1 or animationId == 2) then
         startAttackAnimation(battleAnimationLayer, animationId)
