@@ -3,8 +3,7 @@
 --firstEnemy, secondEnemy, thirdEnemy, displayAnimation, counting
 
 function startAttackAnimation(layer, id)
-    local axisXmodifier = 0
-    local linearFunctionModifier = 0
+    local modifier = 0
     if id == 1 then
         mainSprite = layer.sprites.arrow_0
         secondSprite = layer.sprites.blood
@@ -18,38 +17,31 @@ function startAttackAnimation(layer, id)
         elseif selectedEnemy == thirdEnemy then
             mainSprite.r = 2.07
         end
-        axisXmodifier = 0
-        linearFunctionModifier = 0
+        modifier = 0
     elseif id == 2 then
         mainSprite = layer.sprites.fireball
         secondSprite = layer.sprites.fire
         duration = 1
-        axisXmodifier = -50
-        linearFunctionModifier = -30
+        modifier = 30
     end
     mainSprite.active = true
     dtotal = 0
-    if selectedEnemy == firstEnemy and mainSprite.x < 1350 + axisXmodifier then
+    if selectedEnemy == firstEnemy and mainSprite.x < 1350 + modifier then
         mainSprite.x = mainSprite.x + 3
-    elseif selectedEnemy == secondEnemy and mainSprite.x < 1530 + axisXmodifier then
+    elseif selectedEnemy == secondEnemy and mainSprite.x < 1530 + modifier then
         mainSprite.x = mainSprite.x + 3
-        mainSprite.y = 0.04878 * mainSprite.x + 285.36585 + linearFunctionModifier
-    elseif selectedEnemy == thirdEnemy and mainSprite.x < 1350 + axisXmodifier then
+        mainSprite.y = 0.04878 * mainSprite.x + 285.36585
+    elseif selectedEnemy == thirdEnemy and mainSprite.x < 1350 + modifier then
         mainSprite.x = mainSprite.x + 3
-        mainSprite.y = 0.17647 * mainSprite.x + 247.059 + linearFunctionModifier
+        mainSprite.y = 0.17647 * mainSprite.x + 247.059
     else
         displayAnimation = false
         mainSprite.active = false
         secondSprite.x = mainSprite.x - 15
         secondSprite.y = mainSprite.y - 15
         secondSprite.active = true
-        if id == 1 then
-            mainSprite.x = 310
-            mainSprite.y = 330
-        elseif id == 2 then
-            mainSprite.x = 310
-            mainSprite.y = 270
-        end
+        mainSprite.x = 310
+        mainSprite.y = 330
         counting = 0
     end
 end

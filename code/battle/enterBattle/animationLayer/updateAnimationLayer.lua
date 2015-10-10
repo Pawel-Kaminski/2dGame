@@ -24,7 +24,7 @@ function updateAnimationLayer(time)
     if secondSprite ~= null and secondSprite.active then
         counting = counting + time
         dtotal = 0
-        if counting > speed then
+        if counting > duration then
             secondSprite.active = false
             if enemyDestinedToDie ~= null then
                 enemyDestinedToDie.active = false
