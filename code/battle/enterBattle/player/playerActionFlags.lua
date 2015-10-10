@@ -21,7 +21,7 @@ playerActionFlags = {
     {"Atak magiczny", true, 3, 
 "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
 5, true},
-    {"Ulecz się", false, 4,
+    {"Runa lecznicza", false, 4,
 "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
 10, true},
     {"Magiczna strzała", false, 5,
