@@ -32,7 +32,13 @@ function enterBattle(first, second, third)
     countingActive = true
     local numberOfActions = 4 --!!!!!
     actions = listOfAllActions(numberOfActions)
-    sound2 = love.audio.newSource("music/fight_themes/5-Battle_of_the_Void.mp3")
+    if activeEnemySprite.name == "thornbush" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/2-battleThemeA.mp3")
+    else
+        sound2 = love.audio.newSource(
+            "music/fight_themes/5-Battle_of_the_Void.mp3")
+    end
     sound3 = love.audio.newSource("music/VictoryTheme.mp3")
     love.audio.play(sound2)
     sound2:setLooping(true)

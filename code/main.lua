@@ -16,7 +16,7 @@ require "menu"
 
 function love.load() --this function is called only once
     defaultFont = love.graphics.newFont("assets/DroidSansMono.ttf", 20)
-    secondFont = love.graphics.newFont("assets/CenturySchoolbookL.ttf", 35)
+    secondFont = love.graphics.newFont("assets/ILoveAGinger.ttf", 35)
     love.graphics.setFont(defaultFont)
 
     --this makes callbacks Gamestate.update(), Gamestate.draw(), etc. work
