@@ -68,14 +68,20 @@ function updateMap()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore
                 --TODO: hide enemies from maps 2-4
-                if sprite.y == enemies.sprites.enemy.y then active1 = false end
-                --if sprite.y == enemies.sprites.enemy2.y then active2 = false end
-                if sprite.y == enemies.sprites.enemy3.y then
-                    active3 = false
-                    finishQuest(1)
-                    --unlock magic attack (action number 3)
-                    --to prevent from displaying quest pop-up more than once
-                    doNotDisplay = true
+                if selectedMap == 1 then
+                    if sprite.y == enemies.sprites.enemy.y then active1 = false end
+                    if sprite.y == enemies.sprites.enemy3.y then
+                        active3 = false
+                        finishQuest(1)
+                        --unlock magic attack (action number 3)
+                        --to prevent from displaying quest pop-up more than once
+                        doNotDisplay = true
+                    end
+                elseif selectedMap == 2 then
+                    --TODO: set variables for map 2
+                elseif selectedMap == 3 then
+                    --TODO: set variables for map 3
+                elseif selectedMap == 4 then
                 end
                 Gamestate.switch(battleState)
             --end

@@ -3,7 +3,7 @@ function useItem(number)
         --use health potion
         --recover small amount of HP
         items[1][2] = items[1][2] - 1
-        Player.healthPoints = Player.healthPoints + 100
+        Player.healthPoints = Player.healthPoints + 50
         if Player.healthPoints > Player.maxHealth then
             Player.healthPoints = Player.maxHealth
         end
