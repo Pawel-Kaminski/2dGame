@@ -12,7 +12,7 @@ function secondMapEnemies()
     enemies.sprites = {
         enemy = {
             image = forestGuardian,
-            x = 240,
+            x = 1620,
             y = 780,
             active = active16,
             name = "forestGuardian"
@@ -33,15 +33,15 @@ function secondMapEnemies()
         },
         enemy4 = {
             image = dragon,
-            x = 300,
-            y = 300,
+            x = 840,
+            y = 600,
             active = active19,
             name = "dragon"
         },
         enemy5 = {
             image = airGuardian,
-            x = 780,
-            y = 540,
+            x = 1620,
+            y = 60,
             active = active20,
             name = "airGuardian"
         }
