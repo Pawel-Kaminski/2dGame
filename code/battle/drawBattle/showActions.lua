@@ -2,7 +2,9 @@
 --displayingMenu, lastPositionY, actions
 
 function showActions(selected)
-    love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
+    if selected ~= null then
+        love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
+    end
     displayingMenu = false
     lastPositionY = 915
     local countActions = 0
