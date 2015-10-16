@@ -13,12 +13,14 @@ require "map.updateMap.enemies.fireGuardian"
 require "map.updateMap.enemies.forestCreature"
 require "map.updateMap.enemies.forestGuardian"
 require "map.updateMap.enemies.iceGuardian"
+require "map.updateMap.setVariablesBeforeFight"
+require "map.updateMap.removeEnemyFromMap"
+require "map.updateMap.newQuestMessage"
 
 --Function that updates state of the map
 function updateMap()
     map:update()
-
---This part is responsible for launching battle state when necessary
+    --This part is responsible for launching battle state when necessary
     for _, sprite in pairs(enemies.sprites) do
         if spriteLayer.sprites.player.x >= sprite.x - 60
         and spriteLayer.sprites.player.x <= sprite.x + 60
@@ -27,82 +29,12 @@ function updateMap()
         and sprite.active then
                 --when player is close to enemy
                 --code here determines what kind of enemy attacks the player
-                if sprite.name == "thornbush" then
-                    firstEnemy = EnemyThornbush_First
-                    secondEnemy = EnemyThornbush_Second
-                    thirdEnemy = EnemyThornbush_Third
-                    stats = EnemyThornbushStatistics
-                elseif sprite.name == "creature" then
-                    firstEnemy = EnemyDorver_First
-                    secondEnemy = EnemyDorver_Second
-                    thirdEnemy = EnemyDorver_Third
-                    stats = EnemyDorverStatistics
-                elseif sprite.name == "forestGuardian" then
-                    firstEnemy = EnemyForestGuardian_First
-                    secondEnemy = EnemyForestGuardian_Second
-                    thirdEnemy = EnemyForestGuardian_Third
-                    stats = EnemyForestGuardianStatistics
-                elseif sprite.name == "cactus" then
-                    firstEnemy = EnemyCactus_First
-                    secondEnemy = EnemyCactus_Second
-                    thirdEnemy = EnemyCactus_Third
-                    stats = EnemyCactusStatistics
-                elseif sprite.name == "forestCreature" then
-                    firstEnemy = EnemyForestCreature_First
-                    secondEnemy = EnemyForestCreature_Second
-                    thirdEnemy = EnemyForestCreature_Third
-                    stats = EnemyForestCreatureStatistics
-                elseif sprite.name == "dragon" then
-                    firstEnemy = EnemyDragon_First
-                    secondEnemy = EnemyDragon_Second
-                    thirdEnemy = EnemyDragon_Third
-                    stats = EnemyDragonStatistics
-                elseif sprite.name == "airGuardian" then
-                    firstEnemy = EnemyAirGuardian_First
-                    secondEnemy = EnemyAirGuardian_Second
-                    thirdEnemy = EnemyAirGuardian_Third
-                    stats = EnemyAirGuardianStatistics
-                end
+                setVariablesBeforeFight(sprite)
                 --prepare for leaving map state
                 love.audio.stop()
                 activeEnemySprite = sprite
                 --this enemy should not be displayed anymore
-                --TODO: hide enemies from maps 2-4
-                if selectedMap == 1 then
-                    if sprite.y == enemies.sprites.enemy.y then active1 = false end
-                    if sprite.y == enemies.sprites.enemy3.y then
-                        active3 = false
-                        finishQuest(1)
-                        --unlock magic attack (action number 3)
-                        --to prevent from displaying quest pop-up more than once
-                        doNotDisplay = true
-                    end
-                elseif selectedMap == 2 then
-                    --TODO: set variables for map 2
-                    if sprite.x == enemies.sprites.enemy.x
-                    and sprite.y == enemies.sprites.enemy.y then
-                        active16 = false
-                    end
-                    if sprite.x == enemies.sprites.enemy2.x
-                    and sprite.y == enemies.sprites.enemy2.y then
-                        active17 = false
-                    end
-                    if sprite.x == enemies.sprites.enemy3.x
-                    and sprite.y == enemies.sprites.enemy3.y then
-                        active18 = false
-                    end
-                    if sprite.x == enemies.sprites.enemy4.x
-                    and sprite.y == enemies.sprites.enemy4.y then
-                        active19 = false
-                    end
-                    if sprite.x == enemies.sprites.enemy5.x
-                    and sprite.y == enemies.sprites.enemy5.y then
-                        active20 = false
-                    end
-                elseif selectedMap == 3 then
-                    --TODO: set variables for map 3
-                elseif selectedMap == 4 then
-                end
+                removeEnemyFromMap(sprite)
                 Gamestate.switch(battleState)
             --end
         end
@@ -129,58 +61,6 @@ function updateMap()
         end
     end
 
---This part is responsible for displaying quest pop-up
---1. selectedNPC ~= null prevents game from crashing
------if variable selectedNPC is null while checking 2
---2. selectedNPC.quest - quest pop-up should be display only when NPC has a quest
---3. not playerIsTalking - pop-up shouldn't collide with NPC's dialogues
---4. not doNotDisplay - this lets me hide pop-up when it's not needed anymore
---THIS FUNCTION MUST BE UPDATED AFTER CREATING NEW QUESTS
-    if selectedNPC ~= null and selectedNPC.quest
-    and not playerIsTalking and not doNotDisplay then
-        if selectedNPC == NPC.sprites.Afedia and not isQuestDisplayed(1) then
-            Talking.sprites.quest.active = true
-            activateQuest(1)
-        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(1) --then
-            and not isQuestDisplayed(2) then
-                Talking.sprites.quest.active = true
-                activateQuest(2)
-        elseif selectedNPC == NPC.sprites.Osigold and isQuestFinished(2)
-            and not isQuestDisplayed(3) then
-                Talking.sprites.quest.active = true
-                activateQuest(3)
-        elseif selectedNPC == NPC.sprites.Afedia and isQuestFinished(3)
-            and not isQuestDisplayed(4) then
-                Talking.sprites.quest.active = true
-                activateQuest(4)
-                if items[8][2] == 0 then items[8][2] = 1 end
-                map2locked = false
-        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(4)
-            and not isQuestDisplayed(5) then
-                Talking.sprites.quest.active = true
-                activateQuest(5)
-        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(5)
-            and not isQuestDisplayed(6) then
-                Talking.sprites.quest.active = true
-                activateQuest(6)
-        elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(6)
-            and not isQuestDisplayed(7) then
-                Talking.sprites.quest.active = true
-                activateQuest(7)
-                map3locked = false
-        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(7)
-            and not isQuestDisplayed(8) then
-                Talking.sprites.quest.active = true
-                activateQuest(8)
-        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(8)
-            and not isQuestDisplayed(9) then
-                Talking.sprites.quest.active = true
-                activateQuest(9)
-        elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(9)
-            and not isQuestDisplayed(10) then
-                Talking.sprites.quest.active = true
-                activateQuest(10)
-                map4locked = false
-        end
-    end
+    --This part is responsible for displaying quest pop-up
+    newQuestMessage()
 end

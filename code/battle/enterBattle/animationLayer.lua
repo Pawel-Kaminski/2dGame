@@ -8,8 +8,6 @@ function loadAnimationLayer()
     battleAnimationLayer.sprites = {
         fireball = {
             image = love.graphics.newImage("assets/sprites/fireball.png"),
-            --x = 310,
-            --y = 330,
             x = 310,
             y = 270,
             active = false

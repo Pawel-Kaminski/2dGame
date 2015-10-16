@@ -1,3 +1,9 @@
+require "map.enterMap.createLayers.itemsLayer.firstMapItems"
+require "map.enterMap.createLayers.itemsLayer.secondMapItems"
+require "map.enterMap.createLayers.itemsLayer.thirdMapItems"
+require "map.enterMap.createLayers.itemsLayer.fourthMapItems"
+require "map.enterMap.createLayers.itemsLayer.itemsLayerDraw"
+
 function createItemsLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Items", 8)
@@ -12,180 +18,19 @@ function createItemsLayer(mapId)
     itemsLayer = map.layers["Items"]
 
     if mapId == 1 then
-        itemsLayer.sprites = {
-            healthPotion = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
-                x = 540,
-                y = 900,
-                active = active4
-            },
-            poison = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/4-poison/pt3_scaled.png"),
-                x = 660,
-                y = 900,
-                active = active5
-            },
-            misteriousPlant = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/6-misterious_plant/mais_scaled.png"),
-                x = 1680,
-                y = 900,
-                active = active6
-            }
-        }
+        firstMapItems()   
     elseif mapId == 2 then
-        itemsLayer.sprites = {
-            scroll = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/7-scroll/scroll_scaled.png"),
-                x = 1620,
-                y = 840,
-                active = active7
-            },
-            windArtefact = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/8-artefacts/wind.png"),
-                x = 1620,
-                y = 0,
-                active = active8
-            },
-            healthPotion2 = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
-                x = 480,
-                y = 960,
-                active = active11
-            },
-            healthElixir = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/2-health_elixir/"..
-                    "health_potion_scaled.png"),
-                x = 720,
-                y = 120,
-                active = active12
-            },
-        }
+        secondMapItems()
     elseif mapId == 3 then
-        itemsLayer.sprites = {
-            fireArtefact = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/8-artefacts/fire.png"),
-                x = 1440,
-                y = 180,
-                active = active9
-            },
-            iceArtefact = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/8-artefacts/ice.png"),
-                x = 1440,
-                y = 900,
-                active = active10
-            },
-            healthPotion3 = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/1-health_potion/pt1_scaled.png"),
-                x = 360,
-                y = 600,
-                active = active13
-            },
-            antidote = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/3-antidote/pt4_scaled.png"),
-                x = 600,
-                y = 120,
-                active = active14
-            },
-            manaElixir = {
-                image = love.graphics.newImage(
-                    "assets/sprites/items/5-mana_elixir/mana_potion_scaled.png"),
-                x = 180,
-                y = 720,
-                active = active15
-            },
-        }
+        thirdMapItems()
     elseif mapId == 4 then
-        itemsLayer.sprites = {
-        }
+        fourthMapItems()
     end
     
     function itemsLayer:update(dt)
     end
 
     function itemsLayer:draw()
-        for _, sprite in pairs(self.sprites) do
-            if sprite.active ~= false then
-                local x = math.floor(sprite.x)
-                local y = math.floor(sprite.y)
-                --local r = sprite.r
-                if playerPositionX == x and playerPositionY == y then
-                    sprite.active = false
-                    --If sprite is null, it doesn't exist on this particular map
-                    if itemsLayer.sprites.healthPotion ~= null and
-                        x == itemsLayer.sprites.healthPotion.x and
-                        y == itemsLayer.sprites.healthPotion.y then
-                            items[1][2] = items[1][2] + 1
-                            active4 = false
-                    elseif itemsLayer.sprites.poison ~= null and
-                        x == itemsLayer.sprites.poison.x and
-                        y == itemsLayer.sprites.poison.y then
-                            items[4][2] = items[4][2] + 1
-                            active5 = false
-                    elseif itemsLayer.sprites.misteriousPlant ~= null and
-                        x == itemsLayer.sprites.misteriousPlant.x and
-                        y == itemsLayer.sprites.misteriousPlant.y then
-                            items[6][2] = 1
-                            active6 = false
-                    elseif itemsLayer.sprites.scroll ~= null and
-                        x == itemsLayer.sprites.scroll.x and
-                        y == itemsLayer.sprites.scroll.y then
-                            items[7][2] = 1
-                            active7 = false
-                    elseif itemsLayer.sprites.windArtefact ~= null and
-                        x == itemsLayer.sprites.windArtefact.x and
-                        y == itemsLayer.sprites.windArtefact.y then
-                            items[9][2] = 1
-                            active8 = false
-                    elseif itemsLayer.sprites.fireArtefact ~= null and
-                        x == itemsLayer.sprites.fireArtefact.x and
-                        y == itemsLayer.sprites.fireArtefact.y then
-                            items[10][2] = 1
-                            active9 = false
-                    elseif itemsLayer.sprites.iceArtefact ~= null and
-                        x == itemsLayer.sprites.iceArtefact.x and
-                        y == itemsLayer.sprites.iceArtefact.y then
-                            items[11][2] = 1
-                            active10 = false
-                    elseif itemsLayer.sprites.healthPotion2 ~= null and
-                        x == itemsLayer.sprites.healthPotion2.x and
-                        y == itemsLayer.sprites.healthPotion2.y then
-                            items[1][2] = items[1][2] + 1
-                            active11 = false
-                    elseif itemsLayer.sprites.healthElixir ~= null and
-                        x == itemsLayer.sprites.healthElixir.x and
-                        y == itemsLayer.sprites.healthElixir.y then
-                            items[2][2] = items[2][2] + 1
-                            active12 = false
-                    elseif itemsLayer.sprites.healthPotion3 ~= null and
-                        x == itemsLayer.sprites.healthPotion3.x and
-                        y == itemsLayer.sprites.healthPotion3.y then
-                            items[1][2] = items[1][2] + 1
-                            active13 = false
-                    elseif itemsLayer.sprites.antidote ~= null and
-                        x == itemsLayer.sprites.antidote.x and
-                        y == itemsLayer.sprites.antidote.y then
-                            items[3][2] = items[3][2] + 1
-                            active14 = false
-                    elseif itemsLayer.sprites.manaElixir ~= null and
-                        x == itemsLayer.sprites.manaElixir.x and
-                        y == itemsLayer.sprites.manaElixir.y then
-                            items[5][2] = items[5][2] + 1
-                            active15 = false
-                    end
-                end
-                love.graphics.draw(sprite.image, x, y)
-            end
-        end
+        itemsLayerDraw()
     end
 end

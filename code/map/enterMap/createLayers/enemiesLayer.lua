@@ -1,8 +1,8 @@
 --WARNING: This file uses global variables: map, enemies
-require "map.enterMap.createLayers.enemiesLayer.firstMap"
-require "map.enterMap.createLayers.enemiesLayer.secondMap"
-require "map.enterMap.createLayers.enemiesLayer.thirdMap"
-require "map.enterMap.createLayers.enemiesLayer.fourthMap"
+require "map.enterMap.createLayers.enemiesLayer.firstMapEnemies"
+require "map.enterMap.createLayers.enemiesLayer.secondMapEnemies"
+require "map.enterMap.createLayers.enemiesLayer.thirdMapEnemies"
+require "map.enterMap.createLayers.enemiesLayer.fourthMapEnemies"
 
 function createEnemiesLayer(mapId)
     if mapId == 1 then

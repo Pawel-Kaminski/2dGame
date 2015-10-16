@@ -6,6 +6,10 @@ require "battle.drawBattle.showTurnInfo"
 require "battle.drawBattle.showActions"
 require "battle.drawBattle.showHP"
 require "battle.drawBattle.showItems"
+require "battle.drawBattle.showDescription"
+require "battle.drawBattle.showVictoryMessage"
+require "battle.drawBattle.showDefeatMessage"
+require "battle.drawBattle.showBattleMenu"
 
 function color(expectedValue)
     if arrowY == expectedValue then
@@ -19,80 +23,17 @@ function drawBattle(selected)
     battleArena:draw()
     love.graphics.setColor(0, 0, 0)
     showHP()
-
-    love.graphics.setColor(255,255,255)
-    local description = ""
-    if animationId == 1 then
-        description = playerActionFlags[1][1]
-    elseif animationId == 2 then
-        description = playerActionFlags[3][1]
-    elseif animationId == 3 then
-        description = playerActionFlags[4][1]
-    elseif animationId == 4 then
-        description = playerActionFlags[2][1]
-    elseif animationId == 5 then
-        description = "Magiczna eksplozja"
-    elseif animationId == 6 then
-        description = "Szkodliwy gaz"
-    elseif animationId == 7 then
-        description = playerActionFlags[2][1]
-    elseif animationId == 8 then
-        description = playerActionFlags[4][1]
-    end
-    love.graphics.setFont(secondFont)
-    if displayAnimation then
-        love.graphics.printf(
-            description,
-            600, 50, 1000, "left", 0)
-    end
-    love.graphics.setFont(defaultFont)
+    showDescription()
     if displayTurnInfo then
         showTurnInfo()
     elseif victory then
-        love.graphics.printf(
-            "Zwycięstwo!!! Naciśnij ENTER, aby przejść dalej",
-            150, 745, 1000, "left", 0)
-        if activeEnemySprite.name == "thornbush" then
-            love.graphics.printf(
-                "Odblokowujesz atak magiczny!",
-                150, 845, 1000, "left", 0)
-            playerActionFlags[3][2] = true
-        elseif activeEnemySprite.name == "creature" then
-            love.graphics.printf(
-                "Odblokowujesz możliwość uleczania się!",
-                150, 845, 1000, "left", 0)
-            playerActionFlags[4][2] = true
-        end
+        showVictoryMessage()
     elseif defeat then
-        love.graphics.printf(
-            "Porażka...",
-            150, 745, 500, "left", 0)
-        color(790)
-        love.graphics.printf(
-            "Spróbuj ponownie",
-            150, 805, 1000, "left", 0)
-        color(820)
-        love.graphics.printf(
-            "Wyjdź z gry",
-            150, 835, 1000, "left", 0)
+        showDefeatMessage()
     end
     
     if displayingMenu then
-        if victory then
-            displayingMenu = false
-        end
-        color(900)
-        love.graphics.printf(
-            "Akcja",
-            150, 915, 500, "left", 0)
-        color(930)
-        love.graphics.printf(
-            "Przedmiot",
-            150, 945, 500, "left", 0)
-        color(960)
-        love.graphics.printf(
-            "Ucieczka",
-            150, 975, 500, "left", 0)
+        showBattleMenu()
     end    
     
     function displayAction(actionName, actionPositionY)
@@ -103,13 +44,9 @@ function drawBattle(selected)
 
     if displayingActions then
         showActions(selected)
-    end
-
-    if displayingItems then
+    elseif displayingItems then
         showItems()
-    end
-
-    if escapeBattle then
+    elseif escapeBattle then
         love.audio.stop()
         escapeBattle = false
         Gamestate.switch(mapState)

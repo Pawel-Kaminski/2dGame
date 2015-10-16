@@ -1,8 +1,8 @@
 --WARNING: This file uses global variables: map, NPC
-require "map.enterMap.createLayers.NPCLayer.firstMap"
-require "map.enterMap.createLayers.NPCLayer.secondMap"
-require "map.enterMap.createLayers.NPCLayer.thirdMap"
-require "map.enterMap.createLayers.NPCLayer.fourthMap"
+require "map.enterMap.createLayers.NPCLayer.firstMapNPC"
+require "map.enterMap.createLayers.NPCLayer.secondMapNPC"
+require "map.enterMap.createLayers.NPCLayer.thirdMapNPC"
+require "map.enterMap.createLayers.NPCLayer.fourthMapNPC"
 
 function createNPCLayer(mapId)
     --Layer created for displaying non-player characters
