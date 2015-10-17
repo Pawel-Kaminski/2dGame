@@ -13,19 +13,21 @@
 numberOfFlags = 5
 playerActionFlags = {
     {"Zwykły atak", true, 1, 
-"Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
-0, true},
+        "Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
+        0, true},
     {"Magiczna bariera", true, 2,
-"Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
-10, true},
+        "Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa "..
+        "współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
+        10, true},
     {"Atak magiczny", false, 3, 
-"Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń jednemu wrogowi.",
-5, true},
+        "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń "..
+        "jednemu wrogowi.",
+        5, true},
     {"Runa lecznicza", false, 4,
-"Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
-10, true},
+        "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
+        10, true},
     {"Magiczna strzała", false, 5,
-"Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę do olbrzymich rozmiarów i "..
-"zadać potężne obrażenia.",
-10, true}
+        "Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę "..
+        "do olbrzymich rozmiarów i zadać potężne obrażenia.",
+        10, true}
 }

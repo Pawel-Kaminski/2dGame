@@ -27,16 +27,15 @@ function updateMap()
         and spriteLayer.sprites.player.y >= sprite.y - 60
         and spriteLayer.sprites.player.y <= sprite.y + 60
         and sprite.active then
-                --when player is close to enemy
-                --code here determines what kind of enemy attacks the player
-                setVariablesBeforeFight(sprite)
-                --prepare for leaving map state
-                love.audio.stop()
-                activeEnemySprite = sprite
-                --this enemy should not be displayed anymore
-                removeEnemyFromMap(sprite)
-                Gamestate.switch(battleState)
-            --end
+            --when player is close to enemy
+            --code here determines what kind of enemy attacks the player
+            setVariablesBeforeFight(sprite)
+            --prepare for leaving map state
+            love.audio.stop()
+            activeEnemySprite = sprite
+            --this enemy should not be displayed anymore
+            removeEnemyFromMap(sprite)
+            Gamestate.switch(battleState)
         end
     end
 

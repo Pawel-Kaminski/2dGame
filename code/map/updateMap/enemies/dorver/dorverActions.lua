@@ -2,7 +2,8 @@ function Dorver_attack(attackingEnemy)
     displayAnimation = true
     animationId = 6
     enemyId = attackingEnemy.id
-    Player.healthPoints = Player.healthPoints - (3 * (100 - Player.defence) / 100)
+    Player.healthPoints = 
+        Player.healthPoints - (3 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
@@ -13,7 +14,8 @@ function Dorver_magicAttack(attackingEnemy)
     animationId = 5
     enemyId = attackingEnemy.id
     if attackingEnemy.magicPoints < 5 then return end
-    Player.healthPoints = Player.healthPoints - (5 * (100 - Player.defence) / 100)
+    Player.healthPoints = 
+        Player.healthPoints - (5 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end

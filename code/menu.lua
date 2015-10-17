@@ -11,7 +11,8 @@ function menuState:enter()
     background = map3.layers["Background"]
     background.sprites = {
         background = {
-            image = love.graphics.newImage("assets/sprites/menu/background.jpg"),
+            image = love.graphics.newImage(
+                "assets/sprites/menu/background.jpg"),
             x = 0,
             y = 0,
             active = true
@@ -20,25 +21,29 @@ function menuState:enter()
     elements = map3.layers["Elements"]
     elements.sprites = {
         newGameOn = {
-            image = love.graphics.newImage("assets/sprites/menu/newGameOn.png"),
+            image = love.graphics.newImage(
+                "assets/sprites/menu/newGameOn.png"),
             x = 704,
             y = 300,
             active = true
         },
         newGameOff = {
-            image = love.graphics.newImage("assets/sprites/menu/newGameOff.png"),
+            image = love.graphics.newImage(
+                "assets/sprites/menu/newGameOff.png"),
             x = 704,
             y = 300,
             active = false
         },
         exitGameOn = {
-            image = love.graphics.newImage("assets/sprites/menu/exitGameOn.png"),
+            image = love.graphics.newImage(
+                "assets/sprites/menu/exitGameOn.png"),
             x = 704,
             y = 400,
             active = false
         },
         exitGameOff = {
-            image = love.graphics.newImage("assets/sprites/menu/exitGameOff.png"),
+            image = love.graphics.newImage(
+                "assets/sprites/menu/exitGameOff.png"),
             x = 704,
             y = 400,
             active = true

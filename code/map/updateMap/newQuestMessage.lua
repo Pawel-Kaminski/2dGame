@@ -1,7 +1,8 @@
 function newQuestMessage()
 --1. selectedNPC ~= null prevents game from crashing
 -----if variable selectedNPC is null while checking 2
---2. selectedNPC.quest - quest pop-up should be display only when NPC has a quest
+--2. selectedNPC.quest - 
+-----quest pop-up should be display only when NPC has a quest
 --3. not playerIsTalking - pop-up shouldn't collide with NPC's dialogues
 --4. not doNotDisplay - this lets me hide pop-up when it's not needed anymore
 --THIS FUNCTION MUST BE UPDATED AFTER CREATING NEW QUESTS

@@ -24,7 +24,8 @@ function drawQuests(numberOfItems)
         end
     elseif screenId == 1 then
         love.graphics.printf(
-            "Lista zadań - aktywne zadania są oznaczane kolorem żółtym, zadania ukończone - kolorem zielonym",
+            "Lista zadań - aktywne zadania są oznaczane kolorem żółtym, "..
+            "zadania ukończone - kolorem zielonym",
             100, 50, 2000, "left", 0)
         if not quests[1][3] and not quests[2][3] then
             love.graphics.printf(
