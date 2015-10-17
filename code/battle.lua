@@ -8,10 +8,20 @@ require "battle.keypressedBattle"
 
 battleState = {}
 function battleState:enter()
+    --firstEnemy, secondEnemy, thirdEnemy are global variables
+    --defined in mapState
+    --countingActive is true, when counter is active
+    --(it's active at the beginning of the fight)
+    countingActive = true
+    --victory or defeat variable will be set true if player wins or loses
+    victory = false
+    defeat = false
+    --if displayTurnInfo is true, counters of remaining time are displayed
+    displayTurnInfo = true
     enterBattle(firstEnemy, secondEnemy, thirdEnemy)
 end
 
-function battleState:update(dt)
+function battleState:update(dt) 
     updateBattle(dt, countingActive)
 end
 

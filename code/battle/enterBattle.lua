@@ -1,6 +1,5 @@
 --WARNING: This file uses global variables:
---victory, defeat, displayTurnInfo,
---countingActive, actions, sound2, battleArena, arrowX, arrowY 
+--victory, countingActive, actions, sound2, battleArena, arrowX, arrowY 
 
 require "battle.enterBattle.animationLayer"
 require "battle.enterBattle.backgroundLayer"
@@ -19,17 +18,11 @@ end
 --first argument describes first enemy, second - second enemy
 --and third - third enemy
 function enterBattle(first, second, third)
-    isAlreadyRunning = false
     setInitialValues(Player, PlayerStatistics)
     setInitialValues(first, stats)
     setInitialValues(second, stats)
     setInitialValues(third, stats)
     Player.remainingWaitingTime = 15
-
-    victory = false
-    defeat = false
-    displayTurnInfo = true
-    countingActive = true
     local numberOfActions = 4 --!!!!!
     actions = listOfAllActions(numberOfActions)
     if activeEnemySprite.name == "thornbush" then

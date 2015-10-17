@@ -13,8 +13,6 @@ function resetCounter(o1, o2, o3)
         o3.remainingWaitingTime = o3.waitingTime end
 end
 
-isAlreadyRunning = false
-
 function updateBattle(dt, countingIsActive)
     battleArena:update(dt)
     if countingIsActive then
