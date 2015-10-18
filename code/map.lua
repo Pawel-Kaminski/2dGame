@@ -33,6 +33,9 @@ active17 = true
 active18 = true
 active19 = true
 active20 = true
+active21 = true
+active22 = true
+active23 = true
 doNotDisplay = false
 
 function mapState:enter()

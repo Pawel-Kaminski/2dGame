@@ -1,7 +1,7 @@
 require "mapSelection.enterMapSelection.createLayersMapSelection"
 
 function enterMapSelection()
-    DEBUG_MODE = false
+    DEBUG_MODE = true
     map4 = sti.new("assets/maps/old_map")
     createLayersMapSelection()
 
