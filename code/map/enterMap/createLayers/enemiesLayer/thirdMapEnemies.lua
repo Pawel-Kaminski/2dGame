@@ -6,15 +6,15 @@ function thirdMapEnemies()
     enemies.sprites = {
         enemy = {
             image = fireGuardian,
-            x = 1620,
-            y = 780,
+            x = 1380,
+            y = 180,
             active = active21,
             name = "forestGuardian"
         },
         enemy2 = {
             image = iceGuardian,
-            x = 180,
-            y = 420,
+            x = 1380,
+            y = 900,
             active = active22,
             name = "cactus"
         }
