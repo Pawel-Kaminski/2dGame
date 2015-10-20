@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="128" height="72" tilewidth="15" tileheight="15" nextobjectid="1">
+ <tileset firstgid="1" name="grass" tilewidth="15" tileheight="15">
+  <image source="../../sprites/grass.bmp" width="256" height="256"/>
+ </tileset>
+ <layer name="Trawa" width="128" height="72">
+  <data encoding="base64" compression="zlib">
+   eJzt2tW2EFQYhdFz6O5uMBCxMFBUFAs7wQS7RbBQbFQEkzAIAwwswMYCuwNbQVEUbAULG5PJG+DlHmONseft9wD/XpUVFRVVqEo1qlODmtSiNnWoSz3q04CGNKIxlWkU22hCU5rRnBa0pBWtaUNb2tGeDnSkE53pkkbRjVVYldVYna6sQTfWpDtrsTbrsC7r0YP12SCNohsbshE92ZhN6MWmbMbm9GYLtqQPW7E127BtGkU3tqMv27MDO7ITO7MLu7Ibu7MHe7IX/ejP3mkU3diHfdmP/TmAAQzkQA7iYA7hUA7jcI7gSI5Ko+jG0RzDsRzHII5nMEM4gRM5iZM5haGcymkMS6PoxumcwZmcxdmcw7kM5zzO5wJGcCEjGcVFXJxG0Y1LuJTLuJzRjGEs47iCK7mKqxnPBCYyiWvSKLpxLddxPZOZwg3cyE3czFRu4VZu43buYBrT0yi6MYM7uYu7uYd7uY/7mckDPMhDPMwjzGI2j6ZRdOMxHucJnuQpnuYZnuU5nucFXuQlXuYV5vBqGkU3XuN13uBN3uJt3uFd5jKP93if+XzAhyzgozSKbnzMQhbxCZ/yGZ/zBV/yFV/zDYtZwrd8x/dpFN34gR9Zyk/8zC/8ym/8zh8s40/+4m/+4V/+S6PoxopPwkqqUJVqVKcGNalFbepQl3rUpwENaVSZRsmNxjShKc1oTgta0orWtKEt7WhPBzrSic5pFN3witkqpJH9RxrZf6SR/Uca2X+kkf1HGtl/pJH9RxrZf6SR/Uca2X+kkf1HGtl/pJH9RxrZf6SR/Uca2X+kkf1HGtl/pJH9RxrZf6RR1lYhjew/0sj+I43sP9LI/iON7D/SyP4jjew/0sj+I43sP9LI/iON7D/SWLlGSVuFNLL/SCP7jzSy/0gj+480sv9II/uPNLL/SCP7jzSy/0gj+480sv9IY+UaJd0q08j9N43cf9PI/TeN3H/TyP03jdx/08j9N43cf9PI/TeN/9dYDmVrG8I=
+  </data>
+ </layer>
+</map>
