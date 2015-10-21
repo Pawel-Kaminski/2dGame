@@ -10,7 +10,7 @@ function createEnemiesLayer(mapId)
     elseif mapId == 2 or mapId == 3 then
         map:addCustomLayer("Enemies", 3)
     else
-        map:addCustomLayer("Enemies", 3)
+        map:addCustomLayer("Enemies", 5)
     end
     enemies = map.layers["Enemies"]
 

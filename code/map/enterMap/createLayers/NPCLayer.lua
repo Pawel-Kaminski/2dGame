@@ -11,7 +11,7 @@ function createNPCLayer(mapId)
     elseif mapId == 2 or mapId == 3 then
         map:addCustomLayer("NPC", 4)
     else
-        map:addCustomLayer("NPC", 2)
+        map:addCustomLayer("NPC", 4)
     end
     NPC = map.layers["NPC"]
 

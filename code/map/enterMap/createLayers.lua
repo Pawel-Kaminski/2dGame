@@ -14,7 +14,7 @@ function createLayers(mapId)
     elseif mapId == 3 then
         map = sti.new("assets/maps/map3")
     elseif mapId == 4 then
-        map = sti.new("assets/maps/old_map")
+        map = sti.new("assets/maps/map4")
     end
     createEnemiesLayer(mapId)
     createNPCLayer(mapId)

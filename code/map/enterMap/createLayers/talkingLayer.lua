@@ -9,7 +9,7 @@ function createTalkingLayer(mapId)
         map:addCustomLayer("Talking", 7)
     else
         --map:addCustomLayer("Talking", 5)
-        map:addCustomLayer("Talking", 6)
+        map:addCustomLayer("Talking", 7)
     end
 
     Talking = map.layers["Talking"]
