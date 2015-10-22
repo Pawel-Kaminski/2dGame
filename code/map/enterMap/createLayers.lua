@@ -16,9 +16,17 @@ function createLayers(mapId)
     elseif mapId == 4 then
         map = sti.new("assets/maps/map4")
     end
-    createEnemiesLayer(mapId)
-    createNPCLayer(mapId)
-    createSpriteLayer(mapId)
-    createTalkingLayer(mapId)
-    createItemsLayer(mapId)
+    if mapId == 1 or mapId == 2 or mapId == 3 then
+        createEnemiesLayer(mapId)
+        createNPCLayer(mapId)
+        createSpriteLayer(mapId)
+        createTalkingLayer(mapId)
+        createItemsLayer(mapId)
+    else
+        createEnemiesLayer(mapId)
+        createNPCLayer(mapId)
+        createItemsLayer(mapId)
+        createSpriteLayer(mapId)
+        createTalkingLayer(mapId)
+    end
 end

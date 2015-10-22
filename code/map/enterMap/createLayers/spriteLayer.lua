@@ -7,7 +7,7 @@ function createSpriteLayer(mapId)
     elseif mapId == 2 or mapId == 3 then
         map:addCustomLayer("Sprite Layer", 5)
     else
-        map:addCustomLayer("Sprite Layer", 6) -- Create a Custom Layer
+        map:addCustomLayer("Sprite Layer", 7) -- Create a Custom Layer
     end
 
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer

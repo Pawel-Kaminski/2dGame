@@ -12,8 +12,7 @@ function createItemsLayer(mapId)
         --map:addCustomLayer("Items", 7)
         map:addCustomLayer("Items", 6)
     else
-        --map:addCustomLayer("Items", 6)
-        map:addCustomLayer("Items", 8)
+        map:addCustomLayer("Items", 6)
     end
     itemsLayer = map.layers["Items"]
 

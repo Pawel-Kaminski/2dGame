@@ -28,6 +28,7 @@ active13 = true
 active14 = true
 active15 = true
 
+--for enemies on maps 2-4
 active16 = true
 active17 = true
 active18 = true
@@ -36,6 +37,13 @@ active20 = true
 active21 = true
 active22 = true
 active23 = true
+
+--for items on map 4
+active24 = true
+active25 = true
+active26 = true
+active27 = true
+
 doNotDisplay = false
 
 function mapState:enter()
