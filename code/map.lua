@@ -39,10 +39,10 @@ active22 = true
 active23 = true
 
 --for items on map 4
-active24 = false
-active25 = false
-active26 = false
-active27 = false
+--active24 = false
+--active25 = false
+--active26 = false
+--active27 = false
 
 doNotDisplay = false
 
