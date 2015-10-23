@@ -27,6 +27,27 @@ function createItemsLayer(mapId)
     end
     
     function itemsLayer:update(dt)
+        if mapId == 4 then
+            if spriteLayer.sprites.player.x >= 360 and 
+                spriteLayer.sprites.player.x <= 480 then
+                    if spriteLayer.sprites.player.y >= 360 and
+                        spriteLayer.sprites.player.y <= 480 then
+                            itemsLayer.sprites.earthArtefact.active = true
+                    elseif spriteLayer.sprites.player.y >= 660 and
+                        spriteLayer.sprites.player.y <= 780 then
+                            itemsLayer.sprites.fireArtefact.active = true
+                    end
+            elseif spriteLayer.sprites.player.x >= 1440 and
+                spriteLayer.sprites.player.x <= 1560 then
+                    if spriteLayer.sprites.player.y >= 360 and
+                        spriteLayer.sprites.player.y <= 480 then
+                            itemsLayer.sprites.windArtefact.active = true
+                    elseif spriteLayer.sprites.player.y >= 660 and
+                        spriteLayer.sprites.player.y <= 780 then
+                            itemsLayer.sprites.iceArtefact.active = true
+                    end
+            end
+        end
     end
 
     function itemsLayer:draw()
