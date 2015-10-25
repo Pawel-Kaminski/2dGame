@@ -5,28 +5,28 @@ function fourthMapItems()
                 "assets/sprites/items/8-artefacts/earth.png"),
             x = 405,
             y = 405,
-            active = active24
+            active = false
         },
         windArtefact = {
             image = love.graphics.newImage(
                 "assets/sprites/items/8-artefacts/wind.png"),
             x = 1455,
             y = 405,
-            active = active25
+            active = false
         },
         fireArtefact = {
             image = love.graphics.newImage(
                 "assets/sprites/items/8-artefacts/fire.png"),
             x = 405,
             y = 750,
-            active = active26
+            active = false
         },
         iceArtefact = {
             image = love.graphics.newImage(
                 "assets/sprites/items/8-artefacts/ice.png"),
             x = 1455,
             y = 750,
-            active = active27
+            active = false
         }
     }
 end

@@ -47,6 +47,12 @@ function createItemsLayer(mapId)
                             itemsLayer.sprites.iceArtefact.active = true
                     end
             end
+            if itemsLayer.sprites.earthArtefact.active and
+                itemsLayer.sprites.fireArtefact.active and
+                itemsLayer.sprites.windArtefact.active and
+                itemsLayer.sprites.iceArtefact.active then
+                    enemies.sprites.boss.active = true
+            end
         end
     end
 
