@@ -34,5 +34,15 @@ function setVariablesBeforeFight(sprite)
         secondEnemy = EnemyAirGuardian_Second
         thirdEnemy = EnemyAirGuardian_Third
         stats = EnemyAirGuardianStatistics
+    elseif sprite.name == "fireGuardian" then
+        firstEnemy = EnemyFireGuardian_First
+        secondEnemy = EnemyFireGuardian_Second
+        thirdEnemy = EnemyFireGuardian_Third
+        stats = EnemyFireGuardianStatistics
+    elseif sprite.name == "iceGuardian" then
+        firstEnemy = EnemyIceGuardian_First
+        secondEnemy = EnemyIceGuardian_Second
+        thirdEnemy = EnemyIceGuardian_Third
+        stats = EnemyIceGuardianStatistics
     end
 end

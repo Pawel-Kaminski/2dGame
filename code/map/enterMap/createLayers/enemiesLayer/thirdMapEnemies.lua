@@ -9,14 +9,14 @@ function thirdMapEnemies()
             x = 1380,
             y = 180,
             active = active21,
-            name = "forestGuardian"
+            name = "fireGuardian"
         },
         enemy2 = {
             image = iceGuardian,
             x = 1380,
             y = 900,
             active = active22,
-            name = "cactus"
+            name = "iceGuardian"
         }
     }
 end
