@@ -44,5 +44,10 @@ function setVariablesBeforeFight(sprite)
         secondEnemy = EnemyIceGuardian_Second
         thirdEnemy = EnemyIceGuardian_Third
         stats = EnemyIceGuardianStatistics
+    elseif sprite.name == "boss" then
+        firstEnemy = EnemyBoss_First
+        secondEnemy = EnemyBoss_Second
+        thirdEnemy = EnemyBoss_Third
+        stats = EnemyBossStatistics
     end
 end

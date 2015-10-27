@@ -8,7 +8,7 @@ EnemyBossStatistics = {
 
 EnemyBoss_First = {
     id = 1,
-    name = "Smok",
+    name = "Neil Merzenantar",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -21,7 +21,7 @@ EnemyBoss_First = {
 --this will let me create multiple instances of enemy
 EnemyBoss_Second = {
     id = 2,
-    name = "Smok 2",
+    name = "Neil Merzenantar 2",
     healthPoints,
     magicPoints,
     waitingTime,
@@ -33,7 +33,7 @@ EnemyBoss_Second = {
 
 EnemyBoss_Third = {
     id = 3,
-    name = "Smok 3",
+    name = "Neil Merzenantar 3",
     healthPoints,
     magicPoints,
     waitingTime,
