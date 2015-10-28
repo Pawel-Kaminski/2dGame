@@ -21,8 +21,10 @@ function enterBattle(first, second, third)
     isAlreadyRunning = false
     setInitialValues(Player, PlayerStatistics)
     setInitialValues(first, stats)
-    setInitialValues(second, stats)
-    setInitialValues(third, stats)
+    if selectedMap ~= 4 then
+        setInitialValues(second, stats)
+        setInitialValues(third, stats)
+    end
     Player.remainingWaitingTime = 15
     local numberOfActions = 4 --!!!!!
     actions = listOfAllActions(numberOfActions)
@@ -42,4 +44,8 @@ function enterBattle(first, second, third)
     loadBackgroundLayer()
     loadSpriteLayer()
     loadAnimationLayer()
+    if selectedMap == 4 then
+        battleSpriteLayer.sprites.enemy2.active = false
+        battleSpriteLayer.sprites.enemy3.active = false
+    end
 end

@@ -18,7 +18,11 @@ function battleState:enter()
     defeat = false
     --if displayTurnInfo is true, counters of remaining time are displayed
     displayTurnInfo = true
-    enterBattle(firstEnemy, secondEnemy, thirdEnemy)
+    if selectedMap ~= 4 then
+        enterBattle(firstEnemy, secondEnemy, thirdEnemy)
+    else
+        enterBattle(firstEnemy)
+    end
 end
 
 function battleState:update(dt) 

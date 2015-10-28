@@ -44,35 +44,37 @@ function fight(o1, o2, o3)
         battleSpriteLayer.sprites.lifebarEnemy.active = false
     end
 
-    if not isDead(o2) then
-        if o2.remainingWaitingTime > 0 then
-            o2.remainingWaitingTime = o2.remainingWaitingTime - 1
+    if selectedMap ~= 4 then
+        if not isDead(o2) then
+            if o2.remainingWaitingTime > 0 then
+                o2.remainingWaitingTime = o2.remainingWaitingTime - 1
+            else
+                countingActive = false
+                enemyTurn(o2)
+                return
+            end
+        elseif displayAnimation then
+            enemyDestinedToDie = battleSpriteLayer.sprites.enemy2
+            hideBar = battleSpriteLayer.sprites.lifebarEnemy2
         else
-            countingActive = false
-            enemyTurn(o2)
-            return
+            battleSpriteLayer.sprites.enemy2.active = false
+            battleSpriteLayer.sprites.lifebarEnemy2.active = false
         end
-    elseif displayAnimation then
-        enemyDestinedToDie = battleSpriteLayer.sprites.enemy2
-        hideBar = battleSpriteLayer.sprites.lifebarEnemy2
-    else
-        battleSpriteLayer.sprites.enemy2.active = false
-        battleSpriteLayer.sprites.lifebarEnemy2.active = false
-    end
 
-    if not isDead(o3) then
-        if o3.remainingWaitingTime > 0 then
-            o3.remainingWaitingTime = o3.remainingWaitingTime - 1
+        if not isDead(o3) then
+            if o3.remainingWaitingTime > 0 then
+                o3.remainingWaitingTime = o3.remainingWaitingTime - 1
+            else
+                countingActive = false
+                enemyTurn(o3)
+                return
+            end
+        elseif displayAnimation then
+            enemyDestinedToDie = battleSpriteLayer.sprites.enemy3
+            hideBar = battleSpriteLayer.sprites.lifebarEnemy
         else
-            countingActive = false
-            enemyTurn(o3)
-            return
+            battleSpriteLayer.sprites.enemy3.active = false
+            battleSpriteLayer.sprites.lifebarEnemy3.active = false
         end
-    elseif displayAnimation then
-        enemyDestinedToDie = battleSpriteLayer.sprites.enemy3
-        hideBar = battleSpriteLayer.sprites.lifebarEnemy
-    else
-        battleSpriteLayer.sprites.enemy3.active = false
-        battleSpriteLayer.sprites.lifebarEnemy3.active = false
     end
 end
