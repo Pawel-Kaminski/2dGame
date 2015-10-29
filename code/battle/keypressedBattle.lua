@@ -20,7 +20,11 @@ function keypressedBattle(key)
     elseif victory then
         if key == "return" then
             love.audio.stop()
-            Gamestate.switch(mapState)
+            if isQuestFinished(10) then
+                Gamestate.switch(questsState)
+            else
+                Gamestate.switch(mapState)
+            end
         end
     elseif defeat then
         lose(key, arrowY)
