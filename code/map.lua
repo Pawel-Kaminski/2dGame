@@ -13,7 +13,7 @@ require "map.keypressedMap"
 --"active" variables describe if we should display certain enemy or not
 active1 = true
 active2 = true
-active3 = true
+--active3 = true
 --"active" variables for items
 active4 = true
 active5 = true

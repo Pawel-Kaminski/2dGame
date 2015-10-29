@@ -82,6 +82,11 @@ function loadSpriteLayer()
         }
     }
 
+    if selectedMap == 4 then
+        battleSpriteLayer.sprites.lifebarEnemy2.active = false
+        battleSpriteLayer.sprites.lifebarEnemy3.active = false
+    end
+
     function battleSpriteLayer:update(dt)
         self.sprites.arrow.x = arrowX
         self.sprites.arrow.y = arrowY

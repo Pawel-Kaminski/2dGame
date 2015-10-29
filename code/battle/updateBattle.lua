@@ -30,7 +30,8 @@ function updateBattle(dt, countingIsActive)
             countingActive = true
         end
     end
-    if isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy) 
+    if ((isDead(firstEnemy) and isDead(secondEnemy) and isDead(thirdEnemy))
+        or (isDead(firstEnemy) and selectedMap == 4))
         and not displayAnimation and not isAlreadyRunning
         and not secondSprite.active then
             --Player's victory
