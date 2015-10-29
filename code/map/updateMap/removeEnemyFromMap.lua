@@ -33,7 +33,18 @@ function removeEnemyFromMap(sprite)
             active20 = false
         end
     elseif selectedMap == 3 then
-        --TODO: set variables for map 3
+        if sprite.x == enemies.sprites.enemy.x
+        and sprite.y == enemies.sprites.enemy.y then
+            active21 = false
+        end
+        if sprite.x == enemies.sprites.enemy2.x
+        and sprite.y == enemies.sprites.enemy2.y then
+            active22 = false
+        end
     elseif selectedMap == 4 then
+        if sprite.x == enemies.sprites.boss.x
+        and sprite.y == enemies.sprites.boss.y then
+            finishQuest(10)
+        end
     end
 end
