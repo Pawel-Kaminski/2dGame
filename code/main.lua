@@ -31,7 +31,11 @@ end
 
 function love.keypressed(key)
     if key == "escape" then
-        love.event.quit()
+        if isQuestFinished(10) then
+            Gamestate.switch(menuState)
+        else
+            love.event.quit()
+        end
     end
 end
 

@@ -5,7 +5,6 @@
 --selectingEnemy and selectedAction variables
 
 require "battle.keypressedBattle.displayActions.makeAction.setArrow"
-require "battle.keypressedBattle.displayActions.makeAction.winning"
 
 --makeAction() function is started when list of actions is displayed
 --and user pressed enter key

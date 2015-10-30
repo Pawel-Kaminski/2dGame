@@ -3,6 +3,7 @@
 --thirdEnemy, displayAnimation, isAlreadyRunning, secondSprite
 
 require "battle.updateBattle.fight"
+require "battle.updateBattle.winning"
 
 function resetCounter(o1, o2, o3)
     if o1.remainingWaitingTime == 0 then 
