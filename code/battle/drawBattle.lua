@@ -37,9 +37,19 @@ function drawBattle(selected)
     end    
     
     function displayAction(actionName, actionPositionY)
+        local x = 150
+        local y = actionPositionY
+        if y == 1065 then
+            x = 400
+            y = 915
+        end
+        if y == 1095 then
+            x = 400
+            y = 945
+        end
         love.graphics.printf(
             actionName,
-            150, actionPositionY, 500, "left", 0)
+            x, y, 500, "left", 0)
     end
 
     if displayingActions then

@@ -26,7 +26,7 @@ function enterBattle(first, second, third)
         setInitialValues(third, stats)
     end
     Player.remainingWaitingTime = 15
-    local numberOfActions = 4 --!!!!!
+    local numberOfActions = 7 --!!!!!
     actions = listOfAllActions(numberOfActions)
     if activeEnemySprite.name == "thornbush" then
         sound2 = love.audio.newSource(

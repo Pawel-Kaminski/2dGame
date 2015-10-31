@@ -28,8 +28,20 @@ function displayActions(key)
         displayingActions = false
         displayingMenu = true
     elseif key == "down" then
-        if arrowY < 900 + 30 * (numberOfActions - 1) then
-            arrowY = arrowY + 30
+        if arrowX == 90 then
+            if arrowY < 900 + 30 * (numberOfActions - 1) and arrowY < 1020 then
+                arrowY = arrowY + 30
+            elseif arrowY == 1020 then
+                arrowX = 340
+                arrowY = 900
+            end
+        elseif arrowX == 340 then
+            if arrowY < 900 + 30 * (numberOfActions - 6) then
+                arrowY = 930
+            else
+                arrowX = 90
+                arrowY = 900
+            end
         else
             arrowY = 900
         end
