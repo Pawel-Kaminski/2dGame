@@ -10,7 +10,7 @@
 --4. Description of action
 --5. How many magic points you need to use action?
 --6. Is action available to use now?
-numberOfFlags = 5
+numberOfFlags = 7
 playerActionFlags = {
     {"Zwykły atak", true, 1, 
         "Atak, który zadaje 10 punktów obrażeń jednemu wrogowi.",
@@ -29,5 +29,13 @@ playerActionFlags = {
     {"Magiczna strzała", false, 5,
         "Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę "..
         "do olbrzymich rozmiarów i zadać potężne obrażenia.",
-        10, true}
+        10, true},
+    {"Potężny atak lodowy", false, 6,
+        "Koszt: 20 PM. Użyj potężnego magicznego ataku lodowego, "..
+        "który zada olbrzymie obrażenia ogniowym istotom.",
+        20, true},
+    {"Potężny atak ogniowy", false, 7,
+        "Koszt: 20 PM. Użyj potężnego magicznego ataku ogniowego, "..
+        "który zada olbrzymie obrażenia lodowym istotom.",
+        20, true},
 }
