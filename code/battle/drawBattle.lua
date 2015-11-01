@@ -11,14 +11,6 @@ require "battle.drawBattle.showVictoryMessage"
 require "battle.drawBattle.showDefeatMessage"
 require "battle.drawBattle.showBattleMenu"
 
-function color(expectedValue)
-    if arrowY == expectedValue then
-        love.graphics.setColor(255, 0, 0) --red colour
-    else
-        love.graphics.setColor(255, 255, 255) --white colour
-    end
-end
-
 function drawBattle(selected)
     battleArena:draw()
     love.graphics.setColor(0, 0, 0)
@@ -36,17 +28,18 @@ function drawBattle(selected)
         showBattleMenu()
     end    
     
-    function displayAction(actionName, actionPositionY)
-        local x = 150
+    function displayAction(actionName, actionPositionX, actionPositionY)
+        --local x = 150
+        local x = actionPositionX
         local y = actionPositionY
-        if y == 1065 then
-            x = 400
-            y = 915
-        end
-        if y == 1095 then
-            x = 400
-            y = 945
-        end
+        --if y == 1065 then
+            --x = 400
+            --y = 915
+        --end
+        --if y == 1095 then
+            --x = 400
+            --y = 945
+        --end
         love.graphics.printf(
             actionName,
             x, y, 500, "left", 0)
