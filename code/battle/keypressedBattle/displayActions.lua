@@ -49,9 +49,23 @@ function displayActions(key)
     elseif key == "up" then
         if arrowY > 900 then
             arrowY = arrowY - 30
-        else
-            arrowY = 900 + 30 * (numberOfActions - 1)
+        elseif arrowX == 90 then
+            --first column
+            if numberOfActions <= 5 then
+                arrowY = 900 + 30 * (numberOfActions - 1)
+            else
+                arrowX = 340
+                arrowY = 900 + 30 * (numberOfActions - 6)
+            end
+        elseif arrowX == 340 then
+            arrowX = 90
+            arrowY = 1020
         end
+        --if arrowY > 900 then
+            --arrowY = arrowY - 30
+        --else
+            --arrowY = 900 + 30 * (numberOfActions - 1)
+        --end
         selectedAction = (arrowY - 900)/30 + 1
     elseif key == "return" then
         if actions[indexOnTheList][6] then
