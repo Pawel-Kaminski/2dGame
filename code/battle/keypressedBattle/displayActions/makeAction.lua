@@ -21,6 +21,15 @@ function makeAction(selectedAction)
         setArrow()
     elseif selectedAction == 4 then
         heal()
+    elseif selectedAction == 5 then
+        selectingEnemy = true
+        setArrow()
+    elseif selectedAction == 6 then
+        selectingEnemy = true
+        setArrow()
+    elseif selectedAction == 7 then
+        selectingEnemy = true
+        setArrow()
     end
 
     if not selectingEnemy then

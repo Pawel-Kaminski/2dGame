@@ -68,6 +68,33 @@ function defend()
     Player.magicPoints = Player.magicPoints - 10
 end
 
+function magicalArrow(o1)
+    displayAnimation = true
+    animationId = 1
+    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if o1.healthPoints < 0 then
+        o1.healthPoints = 0
+    end
+end
+
+function iceAttack(o1)
+    displayAnimation = true
+    animationId = 1
+    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if o1.healthPoints < 0 then
+        o1.healthPoints = 0
+    end
+end
+
+function fireAttack(o1)
+    displayAnimation = true
+    animationId = 1
+    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if o1.healthPoints < 0 then
+        o1.healthPoints = 0
+    end
+end
+
 --This function returns list of all available actions
 function listOfAllActions(number)
     --create empty list of actions

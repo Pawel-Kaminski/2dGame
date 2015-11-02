@@ -23,6 +23,12 @@ function selectEnemy(key)
             attack(selectedEnemy)
         elseif selectedAction == 3 then
             magicAttack(selectedEnemy)
+        elseif selectedAction == 5 then
+            magicalArrow(selectedEnemy)
+        elseif selectedAction == 6 then
+            iceAttack(selectedEnemy)
+        elseif selectedAction == 7 then
+            fireAttack(selectedEnemy)
         end
         countingActive = true
         displayingActions = false
