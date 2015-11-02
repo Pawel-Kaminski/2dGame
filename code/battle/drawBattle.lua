@@ -29,17 +29,8 @@ function drawBattle(selected)
     end    
     
     function displayAction(actionName, actionPositionX, actionPositionY)
-        --local x = 150
         local x = actionPositionX
         local y = actionPositionY
-        --if y == 1065 then
-            --x = 400
-            --y = 915
-        --end
-        --if y == 1095 then
-            --x = 400
-            --y = 945
-        --end
         love.graphics.printf(
             actionName,
             x, y, 500, "left", 0)
@@ -53,8 +44,8 @@ function drawBattle(selected)
         love.audio.stop()
         escapeBattle = false
         Gamestate.switch(mapState)
-        if playerPositionX >= 120 then
-            playerPositionX = playerPositionX - 120
+        if playerPositionX >= 180 then
+            playerPositionX = playerPositionX - 180
         else playerPositionX = 0
         end
     end

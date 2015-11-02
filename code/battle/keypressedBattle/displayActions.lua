@@ -12,8 +12,16 @@ function countActions(actions)
     return howManyActions
 end
 
+function setSelectedAction()
+    if arrowX == 90 then
+        selectedAction = (arrowY - 900) / 30 + 1
+    else
+        selectedAction = (arrowY - 900) / 30 + 6
+    end
+end
+
 function displayActions(key)
-    selectedAction = (arrowY - 900) / 30 + 1
+    setSelectedAction()
     indexOnTheList = selectedAction
     for i=1, selectedAction do
         local action = playerActionFlags[i]
@@ -45,7 +53,7 @@ function displayActions(key)
         else
             arrowY = 900
         end
-        selectedAction = (arrowY - 900)/30 + 1
+        setSelectedAction()
     elseif key == "up" then
         if arrowY > 900 then
             arrowY = arrowY - 30
@@ -61,12 +69,7 @@ function displayActions(key)
             arrowX = 90
             arrowY = 1020
         end
-        --if arrowY > 900 then
-            --arrowY = arrowY - 30
-        --else
-            --arrowY = 900 + 30 * (numberOfActions - 1)
-        --end
-        selectedAction = (arrowY - 900)/30 + 1
+        setSelectedAction()
     elseif key == "return" then
         if actions[indexOnTheList][6] then
             makeAction(selectedAction)
