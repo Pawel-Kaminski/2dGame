@@ -70,7 +70,7 @@ end
 
 function magicalArrow(o1)
     displayAnimation = true
-    animationId = 1
+    animationId = 9
     o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
@@ -79,7 +79,7 @@ end
 
 function iceAttack(o1)
     displayAnimation = true
-    animationId = 1
+    animationId = 10
     o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
@@ -88,7 +88,7 @@ end
 
 function fireAttack(o1)
     displayAnimation = true
-    animationId = 1
+    animationId = 11
     o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0

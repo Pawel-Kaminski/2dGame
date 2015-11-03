@@ -79,6 +79,13 @@ function loadAnimationLayer()
             x = 0,
             y = 0,
             active = false
+        },
+        bigArrow = {
+            image = love.graphics.newImage("assets/sprites/Arrow_0_large.png"),
+            x = 310,
+            y = 330,
+            r = 90,
+            active = false
         }
     }
 

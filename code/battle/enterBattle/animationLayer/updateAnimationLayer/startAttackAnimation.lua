@@ -5,8 +5,12 @@
 function startAttackAnimation(layer, id)
     local axisXmodifier = 0
     local linearFunctionModifier = 0
-    if id == 1 then
-        mainSprite = layer.sprites.arrow_0
+    if id == 1 or id == 9 then
+        if id == 1 then
+            mainSprite = layer.sprites.arrow_0
+        else
+            mainSprite = layer.sprites.bigArrow
+        end
         secondSprite = layer.sprites.blood
         duration = 0.5
         --rotation in radians
@@ -43,7 +47,7 @@ function startAttackAnimation(layer, id)
         secondSprite.x = mainSprite.x - 15
         secondSprite.y = mainSprite.y - 15
         secondSprite.active = true
-        if id == 1 then
+        if id == 1 or id == 9 then
             mainSprite.x = 310
             mainSprite.y = 330
         elseif id == 2 then
