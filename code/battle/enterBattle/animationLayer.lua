@@ -86,7 +86,33 @@ function loadAnimationLayer()
             y = 330,
             r = 90,
             active = false
-        }
+        },
+        firestream = {
+            image = love.graphics.newImage("assets/sprites/firestream.png"),
+            x = 310,
+            y = 330,
+            r = 90,
+            active = false
+        },
+        icearrow = {
+            image = love.graphics.newImage("assets/sprites/icearrow.png"),
+            x = 310,
+            y = 330,
+            r = 90,
+            active = false
+        },
+        hellfire = {
+            image = love.graphics.newImage("assets/sprites/hellfire.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        icecircle = {
+            image = love.graphics.newImage("assets/sprites/icecircle.png"),
+            x = 0,
+            y = 0,
+            active = false
+        }        
     }
 
     function battleAnimationLayer:update(dt)

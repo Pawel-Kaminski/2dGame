@@ -24,7 +24,8 @@ require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAn
 
 function updateAnimationLayer(time)
     if displayAnimation and 
-    (animationId == 1 or animationId == 2 or animationId == 9) then
+    (animationId == 1 or animationId == 2 or animationId == 9
+    or animationId == 10 or animationId == 11) then
         startAttackAnimation(battleAnimationLayer, animationId)
     elseif displayAnimation and (animationId == 3 or animationId == 4) then
         startDefensiveAnimation(battleAnimationLayer, animationId)
