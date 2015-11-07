@@ -91,14 +91,14 @@ function loadAnimationLayer()
             image = love.graphics.newImage("assets/sprites/firestream.png"),
             x = 310,
             y = 330,
-            r = 90,
+            r = 0,
             active = false
         },
         icearrow = {
             image = love.graphics.newImage("assets/sprites/icearrow.png"),
             x = 310,
             y = 330,
-            r = 90,
+            r = 0,
             active = false
         },
         hellfire = {
@@ -109,6 +109,30 @@ function loadAnimationLayer()
         },
         icecircle = {
             image = love.graphics.newImage("assets/sprites/icecircle.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        firestreamE = {
+            image = love.graphics.newImage("assets/sprites/firestreamE.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        icearrowE = {
+            image = love.graphics.newImage("assets/sprites/icearrowE.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        hellfireE = {
+            image = love.graphics.newImage("assets/sprites/hellfireE.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        icecircleE = {
+            image = love.graphics.newImage("assets/sprites/icecircleE.png"),
             x = 0,
             y = 0,
             active = false

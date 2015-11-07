@@ -11,6 +11,14 @@ function startAttackOfEnemyAnimation(layer, id)
         mainSprite = layer.sprites.poison
         secondSprite = layer.sprites.poison2
         duration = 0.5
+    elseif id == 12 then
+        mainSprite = layer.sprites.firestreamE
+        secondSprite = layer.sprites.hellfireE
+        duration = 0.5
+    elseif id == 13 then
+        mainSprite = layer.sprites.icearrowE
+        secondSprite = layer.sprites.icecircleE
+        duration = 0.5
     end
     if startPositionIsSet ~= true then
         if enemyId == 1 then
@@ -43,6 +51,12 @@ function startAttackOfEnemyAnimation(layer, id)
             secondSprite.y = 200 --100
         elseif id == 6 then
             secondSprite.x = 200
+            secondSprite.y = 200
+        elseif id == 12 then
+            secondSprite.x = 180
+            secondSprite.y = 200
+        elseif id == 13 then
+            secondSprite.x = 180
             secondSprite.y = 200
         end
         secondSprite.active = true
