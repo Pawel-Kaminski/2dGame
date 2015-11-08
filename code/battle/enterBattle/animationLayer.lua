@@ -136,6 +136,18 @@ function loadAnimationLayer()
             x = 0,
             y = 0,
             active = false
+        },
+        magicMissile = {
+            image = love.graphics.newImage("assets/sprites/magicMissile.png"),
+            x = 0,
+            y = 0,
+            active = false
+        },
+        electrostatics = {
+            image = love.graphics.newImage("assets/sprites/electrostatics.png"),
+            x = 0,
+            y = 0,
+            active = false
         }        
     }
 

@@ -19,6 +19,10 @@ function startAttackOfEnemyAnimation(layer, id)
         mainSprite = layer.sprites.icearrowE
         secondSprite = layer.sprites.icecircleE
         duration = 0.5
+    elseif id == 14 then
+        mainSprite = layer.sprites.magicMissile
+        secondSprite = layer.sprites.electrostatics
+        duration = 0.5
     end
     if startPositionIsSet ~= true then
         if enemyId == 1 then
@@ -56,6 +60,9 @@ function startAttackOfEnemyAnimation(layer, id)
             secondSprite.x = 180
             secondSprite.y = 200
         elseif id == 13 then
+            secondSprite.x = 180
+            secondSprite.y = 200
+        elseif id == 14 then
             secondSprite.x = 180
             secondSprite.y = 200
         end
