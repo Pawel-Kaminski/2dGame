@@ -43,17 +43,17 @@ EnemyAirGuardian_Third = {
     maxMagic
 }
 
-function AirGuardian_attack(attackingEnemy)
-    displayAnimation = true
-    animationId = 6
-    enemyId = attackingEnemy.id
-    Player.healthPoints = 
-        Player.healthPoints - (3 * (100 - Player.defence) / 100)
-    if Player.healthPoints < 0 then
-        Player.healthPoints = 0
-    end
-end
+--function AirGuardian_attack(attackingEnemy)
+    --displayAnimation = true
+    --animationId = 6
+    --enemyId = attackingEnemy.id
+    --Player.healthPoints = 
+        --Player.healthPoints - (3 * (100 - Player.defence) / 100)
+    --if Player.healthPoints < 0 then
+        --Player.healthPoints = 0
+    --end
+--end
 
 function AirGuardianAI(instance)
-    AirGuardian_attack(instance)
+    harmfulGas(instance)
 end

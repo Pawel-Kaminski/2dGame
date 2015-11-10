@@ -4,6 +4,7 @@
 --spriteLayer, stats, activeEnemySprite, firstEnemy, secondEnemy, thirdEnemy
 --enemies, Talking, selectedNPC, playerIsTalking, doNotDisplay
 
+require "map.updateMap.enemies.actionsOfEnemies"
 require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
 require "map.updateMap.enemies.airGuardian"

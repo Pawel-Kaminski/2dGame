@@ -5,6 +5,7 @@
 --already defined in specific files
 
 function AI(o1)
+    --TODO: implement AI function
     if o1.name == "Stwór" or o1.name == "Stwór 2"
         or o1.name == "Stwór 3" then
             DorverAI(o1)

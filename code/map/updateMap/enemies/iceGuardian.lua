@@ -43,17 +43,17 @@ EnemyIceGuardian_Third = {
     maxMagic
 }
 
-function IceGuardian_attack(attackingEnemy)
-    displayAnimation = true
-    animationId = 6
-    enemyId = attackingEnemy.id
-    Player.healthPoints = 
-        Player.healthPoints - (3 * (100 - Player.defence) / 100)
-    if Player.healthPoints < 0 then
-        Player.healthPoints = 0
-    end
-end
+--function IceGuardian_attack(attackingEnemy)
+    --displayAnimation = true
+    --animationId = 6
+    --enemyId = attackingEnemy.id
+    --Player.healthPoints = 
+        --Player.healthPoints - (3 * (100 - Player.defence) / 100)
+    --if Player.healthPoints < 0 then
+        --Player.healthPoints = 0
+    --end
+--end
 
 function IceGuardianAI(instance)
-    IceGuardian_attack(instance)
+    harmfulGas(instance)
 end
