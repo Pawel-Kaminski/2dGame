@@ -6,7 +6,7 @@
 
 EnemyDorverStatistics = {
     --Table contains attributes which should be loaded before the fight
-    health = 20,
+    health = 30,
     magic = 40,
     waitingTime = 61,
     defence = 0

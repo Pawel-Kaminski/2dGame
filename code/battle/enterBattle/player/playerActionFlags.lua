@@ -19,23 +19,23 @@ playerActionFlags = {
         "Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa "..
         "współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
         10, true},
-    {"Atak magiczny", true, 3, 
+    {"Atak magiczny", false, 3, 
         "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń "..
         "jednemu wrogowi.",
-        5, true},
-    {"Runa lecznicza", true, 4,
+        5, false},
+    {"Runa lecznicza", false, 4,
         "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
-        10, true},
-    {"Magiczna strzała", true, 5,
+        10, false},
+    {"Magiczna strzała", false, 5,
         "Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę "..
         "do olbrzymich rozmiarów i zadać potężne obrażenia.",
-        10, true},
-    {"Potężny atak lodowy", true, 6,
+        10, false},
+    {"Potężny atak lodowy", false, 6,
         "Koszt: 20 PM. Użyj potężnego magicznego ataku lodowego, "..
         "który zada olbrzymie obrażenia ogniowym istotom.",
-        20, true},
-    {"Potężny atak ogniowy", true, 7,
+        20, false},
+    {"Potężny atak ogniowy", false, 7,
         "Koszt: 20 PM. Użyj potężnego magicznego ataku ogniowego, "..
         "który zada olbrzymie obrażenia lodowym istotom.",
-        20, true},
+        20, false},
 }

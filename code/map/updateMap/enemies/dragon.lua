@@ -1,6 +1,6 @@
 EnemyDragonStatistics = {
     --Table contains attributes which should be loaded before the fight
-    health = 3,
+    health = 45,
     magic = 0,
     waitingTime = 45,
     defence = 0

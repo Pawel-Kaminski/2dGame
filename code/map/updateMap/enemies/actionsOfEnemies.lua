@@ -3,7 +3,7 @@ function harmfulGas(attackingEnemy)
     animationId = 6
     enemyId = attackingEnemy.id
     Player.healthPoints = 
-        Player.healthPoints - (3 * (100 - Player.defence) / 100)
+        Player.healthPoints - (6 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
@@ -15,7 +15,7 @@ function magicalExplosion(attackingEnemy)
     enemyId = attackingEnemy.id
     if attackingEnemy.magicPoints < 5 then return end
     Player.healthPoints = 
-        Player.healthPoints - (5 * (100 - Player.defence) / 100)
+        Player.healthPoints - (15 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end

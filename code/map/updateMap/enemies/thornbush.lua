@@ -5,7 +5,7 @@
 --TODO:implement thornbush
 EnemyThornbushStatistics = {
     --Table contains attributes which should be loaded before the fight
-    health = 20,
+    health = 15,
     magic = 0,
     waitingTime = 45,
     defence = 0
