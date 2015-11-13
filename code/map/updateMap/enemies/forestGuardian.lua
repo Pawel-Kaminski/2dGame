@@ -43,17 +43,6 @@ EnemyForestGuardian_Third = {
     maxMagic
 }
 
---function ForestGuardian_attack(attackingEnemy)
-    --displayAnimation = true
-    --animationId = 6
-    --enemyId = attackingEnemy.id
-    --Player.healthPoints = 
-        --Player.healthPoints - (3 * (100 - Player.defence) / 100)
-    --if Player.healthPoints < 0 then
-        --Player.healthPoints = 0
-    --end
---end
-
 function ForestGuardianAI(instance)
     harmfulGas(instance)
 end
