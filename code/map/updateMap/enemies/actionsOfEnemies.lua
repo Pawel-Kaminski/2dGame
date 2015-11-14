@@ -46,37 +46,37 @@ function fireAttack(attackingEnemy)
     displayAnimation = true
     animationId = 12
     enemyId = attackingEnemy.id
-    if attackingEnemy.magicPoints < 5 then return end
+    if attackingEnemy.magicPoints < 20 then return end
     Player.healthPoints = 
-        Player.healthPoints - (5 * (100 - Player.defence) / 100)
+        Player.healthPoints - (40 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
-    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 5
+    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 20
 end
 
 function iceAttack(attackingEnemy)
     displayAnimation = true
     animationId = 13
     enemyId = attackingEnemy.id
-    if attackingEnemy.magicPoints < 5 then return end
+    if attackingEnemy.magicPoints < 25 then return end
     Player.healthPoints = 
-        Player.healthPoints - (5 * (100 - Player.defence) / 100)
+        Player.healthPoints - (50 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
-    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 5
+    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 25
 end
 
 function powerOfElements(attackingEnemy)
     displayAnimation = true
     animationId = 14
     enemyId = attackingEnemy.id
-    if attackingEnemy.magicPoints < 5 then return end
+    if attackingEnemy.magicPoints < 100 then return end
     Player.healthPoints = 
-        Player.healthPoints - (5 * (100 - Player.defence) / 100)
+        Player.healthPoints - (249 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
-    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 5
+    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 100
 end

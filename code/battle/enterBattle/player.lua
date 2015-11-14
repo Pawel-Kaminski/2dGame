@@ -71,28 +71,34 @@ end
 function magicalArrow(o1)
     displayAnimation = true
     animationId = 9
-    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if Player.magicPoints < 10 then return end
+    o1.healthPoints = o1.healthPoints - (45 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
+    Player.magicPoints = Player.magicPoints - 10
 end
 
 function iceAttack(o1)
     displayAnimation = true
     animationId = 10
-    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if Player.magicPoints < 20 then return end
+    o1.healthPoints = o1.healthPoints - (100 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
+    Player.magicPoints = Player.magicPoints - 20
 end
 
 function fireAttack(o1)
     displayAnimation = true
     animationId = 11
-    o1.healthPoints = o1.healthPoints - (10 * (100 - o1.defence) / 100)
+    if Player.magicPoints < 25 then return end
+    o1.healthPoints = o1.healthPoints - (130 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
+    Player.magicPoints = Player.magicPoints - 25
 end
 
 --This function returns list of all available actions
