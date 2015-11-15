@@ -1,7 +1,7 @@
 EnemyDragonStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 45,
-    magic = 0,
+    magic = 50,
     waitingTime = 45,
     defence = 0
 }
@@ -44,5 +44,10 @@ EnemyDragon_Third = {
 }
 
 function DragonAI(instance)
-    harmfulGas(instance)
+    if instance.defence == 0 then magicalBarrier(instance)
+    elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
+        healingRune(instance)
+    elseif instance.magicPoints >= 5 then magicalExplosion(instance)
+    else harmfulGas(instance)
+    end
 end

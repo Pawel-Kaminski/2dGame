@@ -1,7 +1,7 @@
 EnemyBossStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 400,
-    magic = 0,
+    magic = 190,
     waitingTime = 45,
     defence = 0
 }
@@ -44,5 +44,13 @@ EnemyBoss_Third = {
 }
 
 function BossAI(instance)
-    harmfulGas(instance)
+    if instance.defence == 0 then magicalBarrier(instance)
+    elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
+        healingRune(instance)
+    elseif instance.magicPoints >= 100 then powerOfElements(instance)
+    elseif instance.magicPoints >= 25 then iceAttack(instance)
+    elseif instance.magicPoints >= 20 then fireAttack(instance)
+    elseif instance.magicPoints >= 5 then magicalExplosion(instance)
+    else harmfulGas(instance)
+    end
 end
