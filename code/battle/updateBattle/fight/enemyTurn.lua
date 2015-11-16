@@ -47,7 +47,7 @@ function enemyTurn(o1)
         Player.healthPoints = 0    
     end
 
-    if isDead(Player) then
+    if isDead(Player) and not displayAnimation then
         --Enemy's victory
         love.audio.stop()
         displayingActions = false
