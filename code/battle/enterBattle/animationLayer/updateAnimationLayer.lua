@@ -50,4 +50,15 @@ function updateAnimationLayer(time)
             end
         end
     end
+    if isDead(Player) and not displayAnimation and not defeat then
+        --Enemy's victory
+        love.audio.stop()
+        displayingActions = false
+        displayingMenu = false
+        displayTurnInfo = false
+        defeat = true
+        arrowY = 790
+        sound3 = love.audio.newSource("music/A_Singular_Perversion.mp3")
+        love.audio.play(sound3)
+    end
 end

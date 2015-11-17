@@ -47,17 +47,7 @@ function enemyTurn(o1)
         Player.healthPoints = 0    
     end
 
-    if isDead(Player) and not displayAnimation then
-        --Enemy's victory
-        love.audio.stop()
-        displayingActions = false
-        displayingMenu = false
-        displayTurnInfo = false
-        defeat = true
-        arrowY = 790
-        sound3 = love.audio.newSource("music/A_Singular_Perversion.mp3")
-        love.audio.play(sound3)
-    else
+    if not isDead(Player) then
         pause = true
     end
 

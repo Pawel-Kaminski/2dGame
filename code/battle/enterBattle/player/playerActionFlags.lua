@@ -17,14 +17,15 @@ playerActionFlags = {
         0, true},
     {"Magiczna bariera", true, 2,
         "Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa "..
-        "współczynnik odporności na ataki wrogów o 10 punktów procentowych.",
+        "współczynnik odporności na ataki wrogów. "..
+        "Wielokrotne rzucanie tego zaklęcia osłabia jego działanie.",
         10, true},
     {"Atak magiczny", false, 3, 
         "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń "..
         "jednemu wrogowi.",
         5, false},
     {"Runa lecznicza", false, 4,
-        "Koszt: 10 PM. Czar uleczający, który regeneruje do 20 punktów życia.",
+        "Koszt: 10 PM. Czar uleczający, który regeneruje do 100 punktów życia.",
         10, false},
     {"Magiczna strzała", false, 5,
         "Koszt: 10 PM. Użyj magii, aby zwiększyć strzałę "..

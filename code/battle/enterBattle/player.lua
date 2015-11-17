@@ -8,7 +8,7 @@ PlayerStatistics = {
     --before the fight
     health = 100,
     magic = 40,
-    waitingTime = 50,
+    waitingTime = 40,
     defence = 0
 }
 
@@ -46,25 +46,34 @@ function magicAttack(o1)
     Player.magicPoints = Player.magicPoints - 5
 end
 
---Healing spell which restores up to 20 health points,
+--Healing spell which restores up to 100 health points,
 --but costs 10 magic points
 function heal()
     displayAnimation = true
     animationId = 3
     if Player.magicPoints < 10 then return end
-    Player.healthPoints = Player.healthPoints + 20
+    Player.healthPoints = Player.healthPoints + 100
     Player.magicPoints = Player.magicPoints - 10
     if Player.healthPoints > Player.maxHealth then
         Player.healthPoints = Player.maxHealth
     end
 end
 
---Player's defence attribute increases by 10 points
+--Player's defence attribute
 function defend()
     displayAnimation = true
     animationId = 4
     if Player.magicPoints < 10 then return end
-    Player.defence = Player.defence + 10
+    if Player.defence < 20 then
+        Player.defence = Player.defence + 20
+    elseif Player.defence < 40 then
+        Player.defence = Player.defence + 10
+    else
+        Player.defence = Player.defence + 5
+    end
+    if Player.defence > 99 then
+        Player.defence = 99
+    end
     Player.magicPoints = Player.magicPoints - 10
 end
 

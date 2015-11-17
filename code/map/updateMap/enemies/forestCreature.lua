@@ -2,7 +2,7 @@ EnemyForestCreatureStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 40,
     magic = 90,
-    waitingTime = 45,
+    waitingTime = 90,
     defence = 0
 }
 
