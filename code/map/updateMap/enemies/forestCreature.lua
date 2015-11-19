@@ -1,8 +1,8 @@
 EnemyForestCreatureStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 40,
-    magic = 90,
-    waitingTime = 90,
+    magic = 75,
+    waitingTime = 80,
     defence = 0
 }
 
@@ -25,7 +25,7 @@ EnemyForestCreature_Second = {
     healthPoints,
     magicPoints,
     waitingTime,
-    remainingWaitingTime = 37,
+    remainingWaitingTime = 79,
     defence,
     maxHealth,
     maxMagic

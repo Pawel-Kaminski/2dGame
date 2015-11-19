@@ -45,7 +45,7 @@ EnemyCactus_Third = {
 
 function CactusAI(instance)
     if instance.defence == 0 then magicalBarrier(instance)
-    elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
+    elseif instance.healthPoints < 30 and instance.magicPoints >= 10 then 
         healingRune(instance)
     elseif instance.magicPoints >= 5 then magicalExplosion(instance)
     else harmfulGas(instance)
