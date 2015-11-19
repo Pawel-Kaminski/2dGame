@@ -42,7 +42,7 @@ function healingRune(castingEnemy)
     end
 end
 
-function fireAttack(attackingEnemy)
+function fireAttackOfEnemy(attackingEnemy)
     displayAnimation = true
     animationId = 12
     enemyId = attackingEnemy.id
@@ -55,7 +55,7 @@ function fireAttack(attackingEnemy)
     attackingEnemy.magicPoints = attackingEnemy.magicPoints - 20
 end
 
-function iceAttack(attackingEnemy)
+function iceAttackOfEnemy(attackingEnemy)
     displayAnimation = true
     animationId = 13
     enemyId = attackingEnemy.id

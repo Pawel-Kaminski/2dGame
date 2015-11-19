@@ -48,8 +48,8 @@ function BossAI(instance)
     elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
         healingRune(instance)
     elseif instance.magicPoints >= 100 then powerOfElements(instance)
-    elseif instance.magicPoints >= 25 then iceAttack(instance)
-    elseif instance.magicPoints >= 20 then fireAttack(instance)
+    elseif instance.magicPoints >= 25 then iceAttackOfEnemy(instance)
+    elseif instance.magicPoints >= 20 then fireAttackOfEnemy(instance)
     elseif instance.magicPoints >= 5 then magicalExplosion(instance)
     else harmfulGas(instance)
     end
