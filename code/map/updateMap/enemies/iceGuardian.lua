@@ -3,7 +3,7 @@ EnemyIceGuardianStatistics = {
     health = 100,
     magic = 150,
     waitingTime = 45,
-    defence = 0
+    defence = 10
 }
 
 EnemyIceGuardian_First = {

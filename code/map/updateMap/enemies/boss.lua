@@ -3,7 +3,7 @@ EnemyBossStatistics = {
     health = 400,
     magic = 190,
     waitingTime = 45,
-    defence = 0
+    defence = 20
 }
 
 EnemyBoss_First = {

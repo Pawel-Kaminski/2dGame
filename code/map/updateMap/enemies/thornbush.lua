@@ -8,7 +8,7 @@ EnemyThornbushStatistics = {
     health = 15,
     magic = 0,
     waitingTime = 45,
-    defence = 0
+    defence = 10
 }
 
 EnemyThornbush_First = {

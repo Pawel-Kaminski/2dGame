@@ -2,8 +2,8 @@ EnemyForestGuardianStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 35,
     magic = 30,
-    waitingTime = 45,
-    defence = 0
+    waitingTime = 38,
+    defence = 15
 }
 
 EnemyForestGuardian_First = {
@@ -37,7 +37,7 @@ EnemyForestGuardian_Third = {
     healthPoints,
     magicPoints,
     waitingTime,
-    remainingWaitingTime = 5,
+    remainingWaitingTime = 3,
     defence,
     maxHealth,
     maxMagic

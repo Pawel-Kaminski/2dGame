@@ -9,7 +9,7 @@ EnemyDorverStatistics = {
     health = 30,
     magic = 40,
     waitingTime = 61,
-    defence = 0
+    defence = 5
 }
 
 EnemyDorver_First = {
@@ -56,7 +56,7 @@ function DorverAI(instance)
     --Dorver tries to heal itself in the first place
     --Dorver uses magicAttack as long as there are available magicPoints
     --If it is not possible to use magicAttack, Dorver uses regular attacks
-    if instance.defence == 0 then magicalBarrier(instance)
+    if instance.defence < 10 then magicalBarrier(instance)
     elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
         healingRune(instance)
     elseif instance.magicPoints >= 5 then magicalExplosion(instance)
