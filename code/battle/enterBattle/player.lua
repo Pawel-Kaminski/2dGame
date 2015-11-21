@@ -102,12 +102,12 @@ end
 function fireAttack(o1)
     displayAnimation = true
     animationId = 11
-    if Player.magicPoints < 25 then return end
+    if Player.magicPoints < 20 then return end
     o1.healthPoints = o1.healthPoints - (130 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
-    Player.magicPoints = Player.magicPoints - 25
+    Player.magicPoints = Player.magicPoints - 20
 end
 
 --This function returns list of all available actions

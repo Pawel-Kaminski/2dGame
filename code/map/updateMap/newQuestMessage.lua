@@ -39,7 +39,7 @@ function newQuestMessage()
                 Talking.sprites.quest.active = true
                 activateQuest(7)
                 map3locked = false
-                PlayerStatistics.health = 225
+                PlayerStatistics.health = 250
         elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(7)
             and not isQuestDisplayed(8) then
                 Talking.sprites.quest.active = true

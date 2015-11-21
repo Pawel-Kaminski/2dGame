@@ -2,8 +2,8 @@ EnemyIceGuardianStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 100,
     magic = 150,
-    waitingTime = 45,
-    defence = 10
+    waitingTime = 75,
+    defence = 0
 }
 
 EnemyIceGuardian_First = {
@@ -25,7 +25,7 @@ EnemyIceGuardian_Second = {
     healthPoints,
     magicPoints,
     waitingTime,
-    remainingWaitingTime = 37,
+    remainingWaitingTime = 74,
     defence,
     maxHealth,
     maxMagic

@@ -3,7 +3,7 @@ EnemyForestGuardianStatistics = {
     health = 35,
     magic = 30,
     waitingTime = 38,
-    defence = 15
+    defence = 23
 }
 
 EnemyForestGuardian_First = {

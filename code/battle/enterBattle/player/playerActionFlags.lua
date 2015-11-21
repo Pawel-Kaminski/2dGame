@@ -36,7 +36,7 @@ playerActionFlags = {
         "który zada olbrzymie obrażenia ogniowym istotom.",
         20, false},
     {"Potężny atak ogniowy", false, 7,
-        "Koszt: 25 PM. Użyj potężnego magicznego ataku ogniowego, "..
+        "Koszt: 20 PM. Użyj potężnego magicznego ataku ogniowego, "..
         "który zada olbrzymie obrażenia lodowym istotom.",
         20, false},
 }
