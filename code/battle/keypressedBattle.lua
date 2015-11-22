@@ -8,6 +8,9 @@ require "battle.keypressedBattle.selectEnemy"
 require "battle.keypressedBattle.displayItems"
 
 function keypressedBattle(key)
+    if key == "p" then
+        winning()
+    end
     if selectingEnemy then
         selectEnemy(key)
         return

@@ -18,7 +18,8 @@ playerActionFlags = {
     {"Magiczna bariera", true, 2,
         "Koszt: 10 PM. Wytwarza barierę ochronną, która zwiększa "..
         "współczynnik odporności na ataki wrogów. "..
-        "Wielokrotne rzucanie tego zaklęcia osłabia jego działanie.",
+        "Zaklęcie działa najsilniej, gdy jest rzucone pierwszy raz podczas "..
+        "walki.",
         10, true},
     {"Atak magiczny", false, 3, 
         "Koszt: 5 PM. Potężny atak magiczny, który zadaje 20 punktów obrażeń "..
@@ -33,10 +34,12 @@ playerActionFlags = {
         10, false},
     {"Potężny atak lodowy", false, 6,
         "Koszt: 20 PM. Użyj potężnego magicznego ataku lodowego, "..
-        "który zada olbrzymie obrażenia ogniowym istotom.",
+        "który zada olbrzymie obrażenia ogniowym istotom. "..
+        "Strażnicy lodu są odporni na działanie tego zaklęcia.",
         20, false},
     {"Potężny atak ogniowy", false, 7,
         "Koszt: 20 PM. Użyj potężnego magicznego ataku ogniowego, "..
-        "który zada olbrzymie obrażenia lodowym istotom.",
+        "który zada olbrzymie obrażenia lodowym istotom. "..
+        "Stażnicy ognia są odporni na działanie tego zaklęcia.",
         20, false},
 }

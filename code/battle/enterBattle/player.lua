@@ -92,22 +92,30 @@ function iceAttack(o1)
     displayAnimation = true
     animationId = 10
     if Player.magicPoints < 20 then return end
+    Player.magicPoints = Player.magicPoints - 20
+    if o1.name == "Strażnik lodu" or o1.name == "Strażnik lodu 2" or
+    o1.name == "Strażnik lodu 3" then
+        return
+    end
     o1.healthPoints = o1.healthPoints - (100 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
-    Player.magicPoints = Player.magicPoints - 20
 end
 
 function fireAttack(o1)
     displayAnimation = true
     animationId = 11
     if Player.magicPoints < 20 then return end
+    Player.magicPoints = Player.magicPoints - 20
+    if o1.name == "Strażnik ognia" or o1.name == "Strażnik ognia 2" or
+    o1.name == "Strażnik ognia 3" then
+        return
+    end
     o1.healthPoints = o1.healthPoints - (130 * (100 - o1.defence) / 100)
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
-    Player.magicPoints = Player.magicPoints - 20
 end
 
 --This function returns list of all available actions
