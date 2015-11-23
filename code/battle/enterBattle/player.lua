@@ -8,7 +8,7 @@ PlayerStatistics = {
     --before the fight
     health = 100,
     magic = 40,
-    waitingTime = 40,
+    waitingTime = 50,
     defence = 0
 }
 
@@ -63,10 +63,12 @@ end
 function defend()
     displayAnimation = true
     animationId = 4
-    if Player.magicPoints < 10 then return end
-    if Player.defence < 20 then
+    if Player.magicPoints < 5 then return end
+    if Player.defence < 30 then
+        Player.defence = Player.defence + 30
+    elseif Player.defence < 50 then
         Player.defence = Player.defence + 20
-    elseif Player.defence < 40 then
+    elseif Player.defence < 60 then
         Player.defence = Player.defence + 10
     else
         Player.defence = Player.defence + 5
@@ -74,14 +76,20 @@ function defend()
     if Player.defence > 99 then
         Player.defence = 99
     end
-    Player.magicPoints = Player.magicPoints - 10
+    Player.magicPoints = Player.magicPoints - 5
 end
 
 function magicalArrow(o1)
     displayAnimation = true
     animationId = 9
     if Player.magicPoints < 10 then return end
-    o1.healthPoints = o1.healthPoints - (45 * (100 - o1.defence) / 100)
+    if o1.name == "Strażnik lodu" or o1.name == "Strażnik lodu 2" or
+    o1.name == "Strażnik lodu 3" or o1.name == "Strażnik ognia" or 
+    o1.name == "Strażnik ognia 2" or o1.name == "Strażnik ognia 3" then
+        o1.healthPoints = o1.healthPoints - (90 * (100 - o1.defence) / 100)
+    else
+        o1.healthPoints = o1.healthPoints - (45 * (100 - o1.defence) / 100)
+    end
     if o1.healthPoints < 0 then
         o1.healthPoints = 0
     end
@@ -91,8 +99,8 @@ end
 function iceAttack(o1)
     displayAnimation = true
     animationId = 10
-    if Player.magicPoints < 20 then return end
-    Player.magicPoints = Player.magicPoints - 20
+    if Player.magicPoints < 26 then return end
+    Player.magicPoints = Player.magicPoints - 26
     if o1.name == "Strażnik lodu" or o1.name == "Strażnik lodu 2" or
     o1.name == "Strażnik lodu 3" then
         return
@@ -106,8 +114,8 @@ end
 function fireAttack(o1)
     displayAnimation = true
     animationId = 11
-    if Player.magicPoints < 20 then return end
-    Player.magicPoints = Player.magicPoints - 20
+    if Player.magicPoints < 26 then return end
+    Player.magicPoints = Player.magicPoints - 26
     if o1.name == "Strażnik ognia" or o1.name == "Strażnik ognia 2" or
     o1.name == "Strażnik ognia 3" then
         return

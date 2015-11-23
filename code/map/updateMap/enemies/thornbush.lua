@@ -7,7 +7,7 @@ EnemyThornbushStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 15,
     magic = 0,
-    waitingTime = 45,
+    waitingTime = 32,
     defence = 10
 }
 

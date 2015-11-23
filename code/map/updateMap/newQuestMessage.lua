@@ -25,7 +25,7 @@ function newQuestMessage()
                 activateQuest(4)
                 if items[8][2] == 0 then items[8][2] = 1 end
                 map2locked = false
-                PlayerStatistics.health = 150
+                upgradeStats(2)
         elseif selectedNPC == NPC.sprites.Tinaldina and isQuestFinished(4)
             and not isQuestDisplayed(5) then
                 Talking.sprites.quest.active = true
@@ -39,7 +39,7 @@ function newQuestMessage()
                 Talking.sprites.quest.active = true
                 activateQuest(7)
                 map3locked = false
-                PlayerStatistics.health = 250
+                upgradeStats(3)
         elseif selectedNPC == NPC.sprites.Lidenon and isQuestFinished(7)
             and not isQuestDisplayed(8) then
                 Talking.sprites.quest.active = true
@@ -53,7 +53,23 @@ function newQuestMessage()
                 Talking.sprites.quest.active = true
                 activateQuest(10)
                 map4locked = false
-                PlayerStatistics.health = 300
+                upgradeStats(4)
         end
+    end
+end
+
+function upgradeStats(level)
+    if level == 2 then
+        PlayerStatistics.health = 150
+        PlayerStatistics.magic = 45
+        PlayerStatistics.waitingTime = 40
+    elseif level == 3 then
+        PlayerStatistics.health = 250
+        PlayerStatistics.magic = 50
+        PlayerStatistics.waitingTime = 38
+    elseif level == 4 then
+        PlayerStatistics.health = 300
+        PlayerStatistics.magic = 60
+        PlayerStatistics.waitingTime = 35
     end
 end
