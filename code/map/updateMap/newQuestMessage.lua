@@ -65,11 +65,11 @@ function upgradeStats(level)
         PlayerStatistics.waitingTime = 40
     elseif level == 3 then
         PlayerStatistics.health = 250
-        PlayerStatistics.magic = 50
+        PlayerStatistics.magic = 95
         PlayerStatistics.waitingTime = 38
     elseif level == 4 then
         PlayerStatistics.health = 300
-        PlayerStatistics.magic = 60
+        PlayerStatistics.magic = 145
         PlayerStatistics.waitingTime = 35
     end
 end

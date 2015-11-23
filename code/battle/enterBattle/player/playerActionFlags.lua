@@ -31,16 +31,16 @@ playerActionFlags = {
     {"Magiczna strzała", false, 5,
         "Koszt: 10 MP. Użyj magii, aby zwiększyć strzałę "..
         "do olbrzymich rozmiarów i zadać potężne obrażenia. "..
-        "Magiczna strzała zadaje podwójne obrażenia strażnikom ognia i lodu.",
+        "Magiczna strzała zadaje dodatkowe obrażenia strażnikom ognia i lodu.",
         10, false},
     {"Potężny atak lodowy", false, 6,
-        "Koszt: 26 MP. Użyj potężnego magicznego ataku lodowego, "..
+        "Koszt: 50 MP. Użyj potężnego magicznego ataku lodowego, "..
         "który natychmiast uśmierca ogniowe istoty. "..
         "Strażnicy lodu są odporni na działanie tego zaklęcia.",
-        26, false},
+        50, false},
     {"Potężny atak ogniowy", false, 7,
-        "Koszt: 26 MP. Użyj potężnego magicznego ataku ogniowego, "..
+        "Koszt: 50 MP. Użyj potężnego magicznego ataku ogniowego, "..
         "który natychmiast uśmierca lodowe istoty. "..
         "Stażnicy ognia są odporni na działanie tego zaklęcia.",
-        26, false},
+        50, false},
 }

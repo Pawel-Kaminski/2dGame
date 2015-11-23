@@ -45,7 +45,7 @@ EnemyFireGuardian_Third = {
 
 function FireGuardianAI(instance)
     if instance.defence < 20 then magicalBarrier(instance)
-    elseif instance.healthPoints < 40 and instance.magicPoints >= 10 then 
+    elseif instance.healthPoints < 20 and instance.magicPoints >= 10 then 
         healingRune(instance)
     elseif instance.magicPoints >= 20 then fireAttackOfEnemy(instance)
     elseif instance.magicPoints >= 5 then magicalExplosion(instance)

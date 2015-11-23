@@ -48,7 +48,7 @@ function fireAttackOfEnemy(attackingEnemy)
     enemyId = attackingEnemy.id
     if attackingEnemy.magicPoints < 20 then return end
     Player.healthPoints = 
-        Player.healthPoints - (40 * (100 - Player.defence) / 100)
+        Player.healthPoints - (60 * (100 - Player.defence) / 100)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
