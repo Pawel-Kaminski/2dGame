@@ -42,11 +42,10 @@ function drawBattle(selected)
         showItems()
     elseif escapeBattle then
         love.audio.stop()
-        escapeBattle = false
-        Gamestate.switch(mapState)
         if playerPositionX >= 180 then
             playerPositionX = playerPositionX - 180
         else playerPositionX = 0
         end
+        Gamestate.switch(mapState)
     end
 end

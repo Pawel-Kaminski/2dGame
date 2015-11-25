@@ -6,12 +6,10 @@ function removeEnemyFromMap(sprite)
         if sprite.y == enemies.sprites.thornbush.y then
             active2 = false
             finishQuest(1)
-            --unlock magic attack (action number 3)
             --to prevent from displaying quest pop-up more than once
             doNotDisplay = true
         end
     elseif selectedMap == 2 then
-        --TODO: set variables for map 2
         if sprite.x == enemies.sprites.enemy.x
         and sprite.y == enemies.sprites.enemy.y then
             active16 = false

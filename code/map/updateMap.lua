@@ -36,7 +36,6 @@ function updateMap()
             love.audio.stop()
             activeEnemySprite = sprite
             --this enemy should not be displayed anymore
-            removeEnemyFromMap(sprite)
             Gamestate.switch(battleState)
         end
     end
@@ -55,7 +54,6 @@ function updateMap()
             playerIsTalking = true  --Activate talking mode
             --Display background for dialogues
             Talking.sprites.dialogBackground.active = true
-            --Set doNotDisplay to false ???
             --If this is not present here,
             --player is unable to receive second quest
             doNotDisplay = false        

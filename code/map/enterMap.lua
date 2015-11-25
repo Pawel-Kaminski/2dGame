@@ -3,6 +3,10 @@
 require "map.enterMap.createLayers"
 function enterMap(mapId)
     --activeEnemySprite contains sprite of enemy on which player entered
+    if activeEnemySprite ~= null and not escapeBattle then
+        removeEnemyFromMap(activeEnemySprite)
+    end
+    escapeBattle = false
     activeEnemySprite = null
     if mapId == 1 then
         if changeMusic then
