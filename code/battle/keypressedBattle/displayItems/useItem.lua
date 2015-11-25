@@ -13,13 +13,21 @@ function useItem(number)
         items[2][2] = items[2][2] - 1
         Player.healthPoints = Player.maxHealth
     elseif number == 3 and items[3][2] > 0 then
-        --use antidotum
-        --remove poison effect
+        --use speed potion
         items[3][2] = items[3][2] - 1
+        if Player.waitingTime > 10 then
+            Player.waitingTime = Player.waitingTime - 10
+        else
+            Player.waitingTime = 1
+        end
     elseif number == 4 and items[4][2] > 0 then
-        --use poison
-        --inflict poison effect on enemy
+        --use defence potion
         items[4][2] = items[4][2] - 1
+        if Player.defence < 90 then
+            Player.defence = Player.defence + 10
+        else
+            Player.defence = 99
+        end
     elseif number == 5 and items[5][2] > 0 then
         --use magic elixir
         --fully recover MP

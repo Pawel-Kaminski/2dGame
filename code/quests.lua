@@ -9,8 +9,8 @@ defineQuests()
 items = {
     {"mikstura lecznicza", 0},
     {"eliksir leczniczy", 0},
-    {"antidotum", 0},
-    {"trucizna", 0},
+    {"mikstura szybkości", 0},
+    {"mikstura obronna", 0},
     {"eliksir magiczny", 0},
     {"tajemnicza roślina", 0},
     {"zwój zapisany w obcym języku", 0},

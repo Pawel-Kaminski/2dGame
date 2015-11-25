@@ -29,13 +29,13 @@ function showItems()
     else
         color(960)
     end
-    love.graphics.printf("antidotum", 150, 975, 1000, "left", 0)
+    love.graphics.printf("mikstura szybkości", 150, 975, 1000, "left", 0)
     if items[4][2] == 0 then
         love.graphics.setColor(139, 137, 137)
     else
         color(990)
     end
-    love.graphics.printf("trucizna", 150, 1005, 1000, "left", 0)
+    love.graphics.printf("mikstura obronna", 150, 1005, 1000, "left", 0)
     if items[5][2] == 0 then
         love.graphics.setColor(139, 137, 137)
     else
