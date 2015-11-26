@@ -2,7 +2,6 @@ require "mapSelection"
 menuState = {}
 
 function menuState:enter()
-    --love.graphics.setBackgroundColor(175, 202, 175)
     local mainMenuMusic = love.audio.newSource("music/ElPostre_0.ogg")
     love.audio.stop()
     love.audio.play(mainMenuMusic)

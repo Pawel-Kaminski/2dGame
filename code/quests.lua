@@ -35,9 +35,7 @@ function questsState:draw()
 end
 
 function questsState:keypressed(key, screenId)
-    --if (key == 'l' and screenId == 2) or (key == 'q' and screenId == 1)
-    --or (key == 's' and screenId == 3) then
-    if key == 'l' or key == 'q' or key == 's' then
+    if (key == 'l' or key == 'q' or key == 's') and not isQuestFinished(10) then
         Gamestate.switch(mapState)
     end
 

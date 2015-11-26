@@ -26,7 +26,7 @@ function defineQuests()
             "i zanieś Tinaldinie.",
             false, false},
         {"Strażnicy Powietrza",
-            "Pokonaj stażników powietrza i zdobądź Artefakt Powietrza.",
+            "Pokonaj stażników powietrza i zdobądź Artefakt Powietrza",
             false, false},
         {"Rozmowa z Lidenonem",
             "Uzyskaj wskazówki dotyczące taktyki od Lidenona.",

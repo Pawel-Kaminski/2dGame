@@ -1,10 +1,13 @@
 --WARNING: This file uses global variables: activeEnemySprite, sound
 
 require "map.enterMap.createLayers"
-function enterMap(mapId)
+function enterMap(mapId)  
     --activeEnemySprite contains sprite of enemy on which player entered
     if activeEnemySprite ~= null and not escapeBattle then
         removeEnemyFromMap(activeEnemySprite)
+        if isQuestFinished(10) then
+            Gamestate.switch(questsState)
+        end
     end
 
     escapeBattle = false

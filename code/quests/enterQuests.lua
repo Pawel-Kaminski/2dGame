@@ -10,10 +10,6 @@ function enterQuests()
             y = 0
         }
     }
-    
-    --function background:update(dt)
-        --do nothing
-    --end
 
     function background:draw()
         for _, sprite in pairs(self.sprites) do

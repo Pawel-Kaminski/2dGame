@@ -44,6 +44,7 @@ function removeEnemyFromMap(sprite)
         and sprite.y == enemies.sprites.boss.y then
             finishQuest(10)
             screenId = 4
+            active28 = false
         end
     end
 end
