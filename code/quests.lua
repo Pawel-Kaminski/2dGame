@@ -40,6 +40,14 @@ function questsState:keypressed(key, screenId)
     if key == 'l' or key == 'q' or key == 's' then
         Gamestate.switch(mapState)
     end
+
+    if screenId == 4 and (key == "return" or key == "escape") then
+        screenId = 5
+    end
+
+    if screenId == 5 and (key == "return" or key == "escape") then
+        love.event.quit()
+    end
 end
 
 function activateQuest(number)

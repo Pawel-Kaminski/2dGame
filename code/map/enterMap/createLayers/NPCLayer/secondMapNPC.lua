@@ -27,10 +27,13 @@ function secondMapNPC()
                 dialog6 = "Udało ci się znaleźć zwój?! "..
                     "Z pomocą mojej magii uda się go odczytać! "..
                     "Oto treść przepowiedni:\n\n"..
-                    "Gdy powstanie już z martwych czarnoksiężnik wrogi\n"..
+                    "Gdy już powstanie z martwych czarnoksiężnik wrogi\n"..
                     "Niech cztery artefakty będą kluczem drogi\n"..
                     "Gdy moce cztery złączy Ołtarz Przeznaczenia\n"..
-                    "Dojdzie do wielkiej bitwy, odwrotu już nie ma\n",
+                    "Dojdzie do wielkiej bitwy, odwrotu już nie ma\n\n"..
+                    "A więc twoim zadaniem będzie odnalezienie artefaktów. "..
+                    "Legenda głosi, że w tej okolicy znajduje się Artefakt "..
+                    "Powietrza. Spróbuj go odnaleźć.",
                 dialog7 = "Podejrzewam, "..
                     "że tutaj już nic nie uda się odnaleźć. "..
                     "Udaj się do Krainy Równowagi. "..

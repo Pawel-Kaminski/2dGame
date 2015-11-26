@@ -33,18 +33,22 @@ function createItemsLayer(mapId)
                     if spriteLayer.sprites.player.y >= 360 and
                         spriteLayer.sprites.player.y <= 480 then
                             itemsLayer.sprites.earthArtefact.active = true
+                            active24 = true
                     elseif spriteLayer.sprites.player.y >= 660 and
                         spriteLayer.sprites.player.y <= 780 then
                             itemsLayer.sprites.fireArtefact.active = true
+                            active26 = true
                     end
             elseif spriteLayer.sprites.player.x >= 1440 and
                 spriteLayer.sprites.player.x <= 1560 then
                     if spriteLayer.sprites.player.y >= 360 and
                         spriteLayer.sprites.player.y <= 480 then
                             itemsLayer.sprites.windArtefact.active = true
+                            active25 = true
                     elseif spriteLayer.sprites.player.y >= 660 and
                         spriteLayer.sprites.player.y <= 780 then
                             itemsLayer.sprites.iceArtefact.active = true
+                            active27 = true
                     end
             end
             if itemsLayer.sprites.earthArtefact.active and
@@ -52,6 +56,7 @@ function createItemsLayer(mapId)
                 itemsLayer.sprites.windArtefact.active and
                 itemsLayer.sprites.iceArtefact.active then
                     enemies.sprites.boss.active = true
+                    active28 = true
             end
         end
     end

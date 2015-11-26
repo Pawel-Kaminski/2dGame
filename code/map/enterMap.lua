@@ -6,8 +6,10 @@ function enterMap(mapId)
     if activeEnemySprite ~= null and not escapeBattle then
         removeEnemyFromMap(activeEnemySprite)
     end
+
     escapeBattle = false
     activeEnemySprite = null
+
     if mapId == 1 then
         if changeMusic then
             sound = love.audio.newSource("music/Otto_Halmen_Sylvan_Waltz_1.mp3")

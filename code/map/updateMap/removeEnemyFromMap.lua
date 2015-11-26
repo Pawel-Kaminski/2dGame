@@ -43,6 +43,7 @@ function removeEnemyFromMap(sprite)
         if sprite.x == enemies.sprites.boss.x
         and sprite.y == enemies.sprites.boss.y then
             finishQuest(10)
+            screenId = 4
         end
     end
 end

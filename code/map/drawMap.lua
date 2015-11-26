@@ -55,7 +55,6 @@ function drawMap(talking, npc)
             if not isQuestDisplayed(4) then
                 doNotDisplay = false
             end
-            --activateQuest(4)
             mission = npc.quest2
         --If player has found a misterious plant, change dialogues
         elseif isQuestDisplayed(2) and items[6][2] == 1 

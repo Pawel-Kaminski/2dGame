@@ -3,11 +3,17 @@ function drawQuests(numberOfItems)
     local yPosition = 100
     --screenId is defined in map/keypressedMap.lua
     if isQuestFinished(10) then
-        --credits
-        love.graphics.setColor(255, 255, 255)
-        love.graphics.printf(
-            "Napisy końcowe - placeholder",
-            100, 50, 2000, "left", 0)
+        if screenId == 4 then
+            love.graphics.setColor(255, 255, 255)
+            love.graphics.printf(
+                "Zakończenie - placeholder",
+                100, 50, 2000, "left", 0)
+        elseif screenId == 5 then
+            love.graphics.setColor(255, 255, 255)
+            love.graphics.printf(
+                "Napisy końcowe - placeholder",
+                100, 50, 2000, "left", 0)
+        end
     elseif screenId == 2 then
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(

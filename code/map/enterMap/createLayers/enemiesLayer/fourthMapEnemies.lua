@@ -6,7 +6,7 @@ function fourthMapEnemies()
             image = boss,
             x = 960,
             y = 540,
-            active = false,
+            active = active28,
             name = "boss"
         }
     }

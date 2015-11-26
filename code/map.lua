@@ -28,7 +28,7 @@ active13 = true
 active14 = true
 active15 = true
 
---for enemies on maps 2-4
+--for enemies on maps 2-3
 active16 = true
 active17 = true
 active18 = true
@@ -38,11 +38,12 @@ active21 = true
 active22 = true
 active23 = true
 
---for items on map 4
---active24 = false
---active25 = false
---active26 = false
---active27 = false
+--for artefacts on map 4
+active24 = false
+active25 = false
+active26 = false
+active27 = false
+active28 = false
 
 doNotDisplay = false
 
