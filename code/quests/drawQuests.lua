@@ -1,3 +1,5 @@
+require "quests.drawQuests.showCredits"
+
 function drawQuests(numberOfItems)
     map2:draw()
 
@@ -7,19 +9,13 @@ function drawQuests(numberOfItems)
         100, 1000, 2000, "left", 0)
 
     local yPosition = 100
-    --screenId is defined in map/keypressedMap.lua
-    --if isQuestFinished(10) then
-        if screenId == 4 then
-            love.graphics.setColor(255, 255, 255)
-            love.graphics.printf(
-                "Zakończenie - placeholder",
-                100, 50, 2000, "left", 0)
-        elseif screenId == 5 then
-            love.graphics.setColor(255, 255, 255)
-            love.graphics.printf(
-                "Napisy końcowe - placeholder",
-                100, 50, 2000, "left", 0)
-        --end
+    if screenId == 4 then
+        love.graphics.setColor(255, 255, 255)
+        love.graphics.printf(
+            "Zakończenie - placeholder",
+            100, 50, 2000, "left", 0)
+    elseif screenId == 5 then
+        showCredits()
     elseif screenId == 2 then
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
