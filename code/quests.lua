@@ -28,22 +28,22 @@ function questsState:enter()
 end
 
 function questsState:update(dt)
+    map2:update()
 end
 
 function questsState:draw()
+    map2:draw()
     drawQuests(numberOfItems)
 end
 
-function questsState:keypressed(key, screenId)
+function questsState:keypressed(key)
     if (key == 'l' or key == 'q' or key == 's') and not isQuestFinished(10) then
         Gamestate.switch(mapState)
     end
 
     if screenId == 4 and (key == "return" or key == "escape") then
         screenId = 5
-    end
-
-    if screenId == 5 and (key == "return" or key == "escape") then
+    elseif screenId == 5 and (key == "return" or key == "escape") then
         love.event.quit()
     end
 end
