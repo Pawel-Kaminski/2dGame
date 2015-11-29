@@ -21,6 +21,10 @@ function showActions(selected)
     --display long description of the action
     if selected ~= null then
         love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
+    else
+        love.graphics.printf(
+            "Nie masz wystarczającej ilość punktów magicznych!",
+            1000, 915, 900, "left", 0)
     end
     displayingMenu = false
     local lastPositionX = 150

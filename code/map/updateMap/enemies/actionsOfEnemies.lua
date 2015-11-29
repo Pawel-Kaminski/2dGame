@@ -78,5 +78,5 @@ function powerOfElements(attackingEnemy)
     if Player.healthPoints < 0 then
         Player.healthPoints = 0
     end
-    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 100
+    attackingEnemy.magicPoints = attackingEnemy.magicPoints - 110
 end

@@ -1,7 +1,7 @@
 EnemyBossStatistics = {
     --Table contains attributes which should be loaded before the fight
-    health = 400,
-    magic = 190,
+    health = 300,
+    magic = 200,
     waitingTime = 45,
     defence = 20
 }
