@@ -17,10 +17,27 @@ function color2(expectedValueX, expectedValueY)
     end
 end
 
+function writeDescription()
+    love.graphics.printf(
+        playerActionFlags[selectedAction][4],
+        1000, 915, 900, "left", 0)
+end
+
+--TODO: descriptions are incorrect
 function showActions(selected)
     --display long description of the action
-    if selected ~= null then
-        love.graphics.printf(actions[selected][4], 1000, 915, 900, "left", 0)
+    if selected ~= null and selected <= 7 then
+        --for i=1, selected do
+            --local action = playerActionFlags[i]
+            --if not action[2] then
+                --don't increment when action[2] is false
+                --selected = selected + 1
+            --end
+        --end
+        --if pcall(writeDescription) then
+            love.graphics.printf(
+            playerActionFlags[selectedAction][4],
+            1000, 915, 900, "left", 0) --else end
     else
         love.graphics.printf(
             "Nie masz wystarczającej ilość punktów magicznych!",
