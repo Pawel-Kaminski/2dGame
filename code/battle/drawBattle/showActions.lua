@@ -26,18 +26,20 @@ end
 --TODO: descriptions are incorrect
 function showActions(selected)
     --display long description of the action
-    if selected ~= null and selected <= 7 then
-        --for i=1, selected do
-            --local action = playerActionFlags[i]
-            --if not action[2] then
-                --don't increment when action[2] is false
-                --selected = selected + 1
-            --end
-        --end
+    if selected ~= null then
+        local tmp = selectedAction
+        for i=1, tmp do
+            local action = playerActionFlags[i]
+            if not action[2] then
+                tmp = tmp + 1
+            end
+        end
         --if pcall(writeDescription) then
+        if tmp <= 7 then
             love.graphics.printf(
-            playerActionFlags[selectedAction][4],
-            1000, 915, 900, "left", 0) --else end
+                playerActionFlags[tmp][4],
+                1000, 915, 900, "left", 0) --else end
+        end
     else
         love.graphics.printf(
             "Nie masz wystarczającej ilość punktów magicznych!",
