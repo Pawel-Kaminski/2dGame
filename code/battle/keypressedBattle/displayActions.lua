@@ -39,8 +39,10 @@ function displayActions(key)
         if arrowX == 90 then
             if arrowY < 900 + 30 * (numberOfActions - 1) and arrowY < 1020 then
                 arrowY = arrowY + 30
-            elseif arrowY == 1020 then
+            elseif arrowY == 1020 and numberOfActions >= 6 then
                 arrowX = 340
+                arrowY = 900
+            else --!!!
                 arrowY = 900
             end
         elseif arrowX == 340 then

@@ -34,15 +34,17 @@ function showActions(selected)
                 tmp = tmp + 1
             end
         end
-        --if pcall(writeDescription) then
-        if tmp <= 7 then
+
+        if tmp <= 7 and not selectingEnemy then
             love.graphics.printf(
                 playerActionFlags[tmp][4],
-                1000, 915, 900, "left", 0) --else end
+                1000, 915, 900, "left", 0)
+        else
+            writeDescription()
         end
     else
         love.graphics.printf(
-            "Nie masz wystarczającej ilość punktów magicznych!",
+            "Nie masz wystarczającej ilości punktów magicznych!",
             1000, 915, 900, "left", 0)
     end
     displayingMenu = false
