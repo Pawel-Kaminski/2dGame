@@ -35,13 +35,13 @@ function startAttackAnimation(layer, id)
         secondSprite = layer.sprites.icecircle
         duration = 1
         axisXmodifier = 0
-        linearFunctionModifier = 0
+        linearFunctionModifier = -30
     elseif id == 11 then
         mainSprite = layer.sprites.firestream
         secondSprite = layer.sprites.hellfire
         duration = 1
         axisXmodifier = 0
-        linearFunctionModifier = 0
+        linearFunctionModifier = -30
     end
     mainSprite.active = true
     dtotal = 0
@@ -56,8 +56,13 @@ function startAttackAnimation(layer, id)
     else
         displayAnimation = false
         mainSprite.active = false
-        secondSprite.x = mainSprite.x - 15
-        secondSprite.y = mainSprite.y - 15
+        if id == 10 then
+            secondSprite.x = mainSprite.x - 15
+            secondSprite.y = mainSprite.y - 15
+        else
+            secondSprite.x = mainSprite.x - 15
+            secondSprite.y = mainSprite.y - 15
+        end
         secondSprite.active = true
         if id == 1 or id == 9 then
             mainSprite.x = 310

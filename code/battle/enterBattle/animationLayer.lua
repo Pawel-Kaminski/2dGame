@@ -97,7 +97,7 @@ function loadAnimationLayer()
         icearrow = {
             image = love.graphics.newImage("assets/sprites/icearrow.png"),
             x = 310,
-            y = 330,
+            y = 320,
             r = 0,
             active = false
         },

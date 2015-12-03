@@ -57,14 +57,14 @@ function startAttackOfEnemyAnimation(layer, id)
             secondSprite.x = 200
             secondSprite.y = 200
         elseif id == 12 then
-            secondSprite.x = 180
-            secondSprite.y = 200
+            secondSprite.x = 210
+            secondSprite.y = 230
         elseif id == 13 then
-            secondSprite.x = 180
-            secondSprite.y = 200
+            secondSprite.x = 210
+            secondSprite.y = 230
         elseif id == 14 then
-            secondSprite.x = 180
-            secondSprite.y = 200
+            secondSprite.x = 210
+            secondSprite.y = 230
         end
         secondSprite.active = true
         startPositionIsSet = false
