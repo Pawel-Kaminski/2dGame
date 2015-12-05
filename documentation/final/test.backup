@@ -1,0 +1,32 @@
+%%\documentclass[a4paper,10pt]{article}
+\documentclass[wmii,inf,inz]{uwmthesis}
+\newcommand{\version}{0.03}
+
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage[dvips]{hyperref}
+
+
+\date{2015}
+\title{Wykorzystanie Klasy Dokumentu \texttt{uwmthesis} do Pisania Prac Dyplomowych. Wersja~\version}
+\author{Aleksander Denisiuk}
+\etitle{Using the \texttt{uwmthesis} Document Class for Theses. Version~\version}
+\wykonanaw{katedrze Multimediów i Grafiki Komputerowej}
+\ewykonanaw{the Department of Multimedia and Computer Graphics}
+
+\podkierunkiem{prof. zw. dr hab. Wiesławy Promotorskiej-Profesorskiej}
+\epodkierunkiem{prof. zw. dr hab. Wiesława Promotorska-Profesorska}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+ test
+ Zażółć gęślą jaźń
+\end{document}
