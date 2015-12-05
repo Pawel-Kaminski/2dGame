@@ -18,13 +18,24 @@
 \wykonanaw{katedrze Metod Matematycznych Informatyki}
 \ewykonanaw{the Department of Mathematical Methods of Informatics}
 
-\podkierunkiem{dra Krzysztofa Sopyły}
-\epodkierunkiem{dra Krzysztofa Sopyły}
+\podkierunkiem{dr. Krzysztofa Sopyły}
+\epodkierunkiem{dr Krzysztof Sopyła}
 
 
 \begin{document}
 \maketitle
 
 \tableofcontents
+
+\chapter*{Wstęp}
+aaa
+\chapter*{Abstract}
+aaa
+\chapter{Test}
+aaa
+\chapter{Test2}
+aaa
+\chapter{Test3}
+aaa
 
 \end{document}

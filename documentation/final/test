@@ -19,12 +19,31 @@
 \ewykonanaw{the Department of Mathematical Methods of Informatics}
 
 \podkierunkiem{dr. Krzysztofa Sopyły}
-\epodkierunkiem{dr. Krzysztofa Sopyły}
+\epodkierunkiem{dr Krzysztof Sopyła}
 
 
 \begin{document}
 \maketitle
 
 \tableofcontents
+
+\chapter*{Wstęp}
+aaa
+\chapter*{Abstract}
+aaa
+\chapter{Instrukcja instalacji środowiska uruchomieniowego LÖVE wymaganego do uruchomienia gry}
+aaa
+\chapter{Uruchomienie oraz obsługa gry}
+aaa
+\chapter{Omówienie elementów składowych gry}
+aaa
+\chapter{Technologie użyte do zrealizowania projektu}
+aaa
+\chapter{Mechanizm przełączania pomiędzy stanami gry}
+aaa
+\chapter{Logika gry}
+aaa
+\chapter{Podsumowanie}
+aaa
 
 \end{document}

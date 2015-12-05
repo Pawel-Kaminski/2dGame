@@ -1,6 +1,6 @@
 %%\documentclass[a4paper,10pt]{article}
 \documentclass[wmii,inf,inz]{uwmthesis}
-\newcommand{\version}{0.03}
+\newcommand{\version}{1.0}
 
 \usepackage{ucs}
 \usepackage[utf8]{inputenc}
@@ -12,14 +12,14 @@
 
 
 \date{2015}
-\title{Wykorzystanie Klasy Dokumentu \texttt{uwmthesis} do Pisania Prac Dyplomowych. Wersja~\version}
-\author{Aleksander Denisiuk}
-\etitle{Using the \texttt{uwmthesis} Document Class for Theses. Version~\version}
-\wykonanaw{katedrze Multimediów i Grafiki Komputerowej}
-\ewykonanaw{the Department of Multimedia and Computer Graphics}
+\title{Stworzenie gry RPG z wykorzystaniem grafiki 2D. Wersja~\version}
+\author{Paweł Kamiński}
+\etitle{Creation of an RPG game using 2D graphics. Version~\version}
+\wykonanaw{katedrze Metod Matematycznych Informatyki}
+\ewykonanaw{the Department of Mathematical Methods of Informatics}
 
-\podkierunkiem{prof. zw. dr hab. Wiesławy Promotorskiej-Profesorskiej}
-\epodkierunkiem{prof. zw. dr hab. Wiesława Promotorska-Profesorska}
+\podkierunkiem{dr. Krzysztofa Sopyły}
+\epodkierunkiem{dr Krzysztof Sopyła}
 
 
 \begin{document}
@@ -27,6 +27,10 @@
 
 \tableofcontents
 
- test
- Zażółć gęślą jaźń
+\chapter*{Wstęp}
+\chapter*{Abstract}
+\chapter{Test}
+\chapter{Test2}
+\chapter{Test3}
+
 \end{document}
