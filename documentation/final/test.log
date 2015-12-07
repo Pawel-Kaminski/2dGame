@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.25)  5 DEC 2015 20:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.25)  7 DEC 2015 01:50
 entering extended mode
  %&-line parsing enabled.
 **test
@@ -548,93 +548,93 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `test.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+ (./wstep.texpdfTeX warning (ext4): destination with the same identifier (name{
+page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \chapter*{Wstęp}
-                       [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.32 \chapter*{Abstract}
-                         [2
-
-] [3
+l.1 \chapter*{Wstęp}
+                      [1
 
 ]
 (/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
-)
+)) (./abstract.texpdfTeX warning (ext4): destination with the same identifier (
+name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter*{Abstract}
+                        [2
+
+]) (./chapter1.tex [3
+
+]
 Rozdzia\l  1.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 34.
+(hyperref)                replaced by space on input line 1.
 
-[4
+) (./chapter2.tex [4
 
 ]
 Rozdzia\l  2.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 36.
+(hyperref)                replaced by space on input line 1.
 
-[5
+) (./chapter3.tex [5
 
 ]
 Rozdzia\l  3.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 38.
+(hyperref)                replaced by space on input line 1.
 
-[6
+) (./chapter4.tex [6
 
 ]
 Rozdzia\l  4.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 40.
+(hyperref)                replaced by space on input line 1.
 
-[7
+) (./chapter5.tex [7
 
 ]
 Rozdzia\l  5.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 42.
+(hyperref)                replaced by space on input line 1.
 
-[8
+) (./chapter6.tex [8
 
 ]
 Rozdzia\l  6.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 44.
+(hyperref)                replaced by space on input line 1.
 
-[9
+) (./chapter7.tex [9
 
 ]
 Rozdzia\l  7.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
-(hyperref)                replaced by space on input line 46.
+(hyperref)                replaced by space on input line 1.
 
-[10
+) [10
 
 ] (./test.aux) ) 
 Here is how much of TeX's memory you used:
- 6462 strings out of 495061
- 86177 string characters out of 1182621
- 152121 words of memory out of 3000000
+ 6488 strings out of 495061
+ 86466 string characters out of 1182621
+ 155121 words of memory out of 3000000
  9527 multiletter control sequences out of 15000+50000
  15696 words of font info for 37 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -646,9 +646,9 @@ var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/pawe/.texmf-var/fonts/pk
 /ljfour/jknappen/ec/ecbx2074.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jkna
 ppen/ec/ecbx1728.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
 1440.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk>
-Output written on test.pdf (12 pages, 112427 bytes).
+Output written on test.pdf (12 pages, 125370 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
+ 409 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

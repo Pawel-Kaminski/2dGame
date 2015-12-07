@@ -31,11 +31,19 @@
 aaa
 \chapter*{Abstract}
 aaa
-\chapter{Test}
+\chapter{Instrukcja instalacji środowiska uruchomieniowego LÖVE wymaganego do uruchomienia gry}
 aaa
-\chapter{Test2}
+\chapter{Uruchomienie oraz obsługa gry}
 aaa
-\chapter{Test3}
+\chapter{Omówienie elementów składowych gry}
+aaa
+\chapter{Technologie użyte do zrealizowania projektu}
+aaa
+\chapter{Mechanizm przełączania pomiędzy stanami gry}
+aaa
+\chapter{Logika gry}
+aaa
+\chapter{Podsumowanie}
 aaa
 
 \end{document}
