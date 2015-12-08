@@ -3,15 +3,14 @@
 require "battle.enterBattle.spriteLayer.drawSpriteLayer"
 
 function loadSpriteLayer()
-    battleArena:addCustomLayer("Sprite Layer", 3)
+    battleArena:addCustomLayer("Sprite Layer", 4)
     battleSpriteLayer = battleArena.layers["Sprite Layer"]
     local lifebarSprite = love.graphics.newImage("assets/sprites/lifebar2.png")
-    local platformSprite = love.graphics.newImage("assets/sprites/platform2.png")
     battleSpriteLayer.sprites = {
         player = {
             image = love.graphics.newImage("assets/sprites/ViviM.png"),
             x = 300,
-            y = 300,
+            y = 300
         },
         enemy1 = {
             image = activeEnemySprite.image,
@@ -34,7 +33,7 @@ function loadSpriteLayer()
         lifebarPlayer = {
             image = lifebarSprite,
             x = 10,
-            y = 10,
+            y = 10
         },
         lifebarEnemy = {
             image = lifebarSprite,
@@ -59,26 +58,6 @@ function loadSpriteLayer()
             x = arrowX,
             y = arrowY,
             r = 0
-        },
-        platform1 = {
-            image = platformSprite,
-            x = 230,
-            y = 360,
-        },
-        platform2 = {
-            image = platformSprite,
-            x = 1260,
-            y = 360,
-        },
-        platform3 = {
-            image = platformSprite,
-            x = 1260,
-            y = 540,
-        },
-        platform4 = {
-            image = platformSprite,
-            x = 1500,
-            y = 420,
         }
     }
 

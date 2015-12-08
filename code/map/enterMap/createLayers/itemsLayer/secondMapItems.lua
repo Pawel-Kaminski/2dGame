@@ -3,8 +3,8 @@ function secondMapItems()
         scroll = {
             image = love.graphics.newImage(
                 "assets/sprites/items/7-scroll/scroll_scaled.png"),
-            x = 1620,
-            y = 840,
+            x = 1440,
+            y = 780,
             active = active7
         },
         windArtefact = {

@@ -3,6 +3,7 @@
 
 require "battle.enterBattle.animationLayer"
 require "battle.enterBattle.backgroundLayer"
+require "battle.enterBattle.platformsLayer"
 require "battle.enterBattle.spriteLayer"
 require "battle.enterBattle.player"
 
@@ -45,6 +46,7 @@ function enterBattle(first, second, third)
     arrowX = 90
     arrowY = 900
     loadBackgroundLayer()
+    loadPlatformsLayer()
     loadSpriteLayer()
     loadAnimationLayer()
     if selectedMap == 4 then

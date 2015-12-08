@@ -3,8 +3,10 @@
 require "battle.enterBattle.animationLayer.updateAnimationLayer"
 
 function loadAnimationLayer()
-    battleArena:addCustomLayer("Animation Layer", 4)
+    battleArena:addCustomLayer("Animation Layer", 5)
     battleAnimationLayer = battleArena.layers["Animation Layer"]
+    platformSprite = 
+        love.graphics.newImage("assets/sprites/platform2.png")
     battleAnimationLayer.sprites = {
         fireball = {
             image = love.graphics.newImage("assets/sprites/fireball.png"),
@@ -148,7 +150,7 @@ function loadAnimationLayer()
             x = 0,
             y = 0,
             active = false
-        }        
+        }     
     }
 
     function battleAnimationLayer:update(dt)

@@ -1,7 +1,7 @@
 --WARNING: This file uses global variables: battleArena, battleBackgroundLayer
 
 function loadBackgroundLayer()
-    battleArena:addCustomLayer("Background Layer", 2)
+    battleArena:addCustomLayer("Background Layer", 2) 
     battleBackgroundLayer = battleArena.layers["Background Layer"]
     battleBackgroundLayer.sprites = {
         background = {
