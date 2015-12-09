@@ -1,5 +1,5 @@
 --Does not use global variables
-
+--tst
 require "libraries.TLfres"
 sti = require "libraries.sti"
 Gamestate = require "libraries.humpGamestate"
