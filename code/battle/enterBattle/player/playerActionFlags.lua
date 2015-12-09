@@ -1,5 +1,3 @@
---WARNING: This file creates global variable: playerActionFlags
-
 --playerActionFlags describes which actions are unlocked for the player.
 --Similar table for enemy is not required,
 --because all actions of enemies will be always available

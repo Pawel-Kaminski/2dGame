@@ -1,8 +1,7 @@
---Does not use global variables
---tst
 require "libraries.TLfres"
 sti = require "libraries.sti"
 Gamestate = require "libraries.humpGamestate"
+DEBUG_MODE = false
 playerPositionX = 60 ---Set position of a player on x axis
 playerPositionY = 120 ---Set position of a player on y axis
 --=================COUNTERS==========================--
@@ -30,13 +29,6 @@ function love.load() --this function is called only once
 end
 
 function love.keypressed(key)
-    --if key == "escape" then
-        --if isQuestFinished(10) then
-            --Gamestate.switch(menuState)
-        --else
-            --love.event.quit()
-        --end
-    --end
 end
 
 function love.draw()

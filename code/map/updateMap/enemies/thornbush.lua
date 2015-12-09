@@ -1,8 +1,3 @@
---WARNING: This file creates global variables: EnemyThornbushStatistics,
---EnemyThornbush_First, EnemyThornbush_Second, EnemyThornbush_Third,
---displayAnimation, enemyId
-
---TODO:implement thornbush
 EnemyThornbushStatistics = {
     --Table contains attributes which should be loaded before the fight
     health = 15,

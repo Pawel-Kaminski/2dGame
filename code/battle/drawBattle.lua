@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---battleArena, displayTurnInfo, victory, defeat, displayingMenu,
---displayingActions, displayItems, escapeBattle
-
 require "battle.drawBattle.showTurnInfo"
 require "battle.drawBattle.showActions"
 require "battle.drawBattle.showHP"

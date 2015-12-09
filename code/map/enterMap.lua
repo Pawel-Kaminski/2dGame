@@ -1,5 +1,3 @@
---WARNING: This file uses global variables: activeEnemySprite, sound
-
 require "map.enterMap.createLayers"
 function enterMap(mapId)  
     --activeEnemySprite contains sprite of enemy on which player entered

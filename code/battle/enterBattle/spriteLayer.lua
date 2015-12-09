@@ -1,5 +1,3 @@
---WARNING: This file uses global variables: battleArena, battleSpriteLayer
-
 require "battle.enterBattle.spriteLayer.drawSpriteLayer"
 
 function loadSpriteLayer()

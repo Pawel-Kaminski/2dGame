@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---arrowY, displayingActions, displayItems, escapeBattle
-
 function displayMenu(key)
     if key == "down" then
         if arrowY < 960 then

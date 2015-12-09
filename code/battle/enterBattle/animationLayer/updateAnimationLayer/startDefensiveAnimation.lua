@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---mainSprite, secondSprite, duration, dtotal, displayAnimation, counting
-
 function startDefensiveAnimation(layer, id, enemy)
     if id == 3 or id == 8 then
         mainSprite = layer.sprites.healingBall
@@ -38,7 +35,6 @@ function startDefensiveAnimation(layer, id, enemy)
         displayAnimation = false
         mainSprite.active = false
         secondSprite.active = true
-        --mainSprite.x = 285
         mainSprite.y = 0
         counting = 0
     end

@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---displayingMenu, lastPositionY, actions
-
 function color(expectedValueY)
     if arrowY == expectedValueY then
         love.graphics.setColor(255, 0, 0) --red colour
@@ -23,7 +20,6 @@ function writeDescription()
         1000, 915, 900, "left", 0)
 end
 
---TODO: descriptions are incorrect
 function showActions(selected)
     --display long description of the action
     if selected ~= null then
@@ -49,7 +45,7 @@ function showActions(selected)
     end
     displayingMenu = false
     local lastPositionX = 150
-    local lastPositionY = 915 --do not change!
+    local lastPositionY = 915
     local countActions = 0
     for _, action in pairs(actions) do
         countActions = countActions + 1

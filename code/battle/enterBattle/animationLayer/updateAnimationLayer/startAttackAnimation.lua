@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---animationId, mainSprite, secondSprite, duration, dtotal, selectedEnemy,
---firstEnemy, secondEnemy, thirdEnemy, displayAnimation, counting
-
 function startAttackAnimation(layer, id)
     local axisXmodifier = 0
     local linearFunctionModifier = 0

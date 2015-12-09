@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---actions, tmp, selectedAction, indexOnTheList, playerActionFlags,
---displayActions, displayMenu, arrowY, countActions
-
 require "battle.keypressedBattle.displayActions.makeAction"
 
 function countActions(actions)
@@ -42,7 +38,7 @@ function displayActions(key)
             elseif arrowY == 1020 and numberOfActions >= 6 then
                 arrowX = 340
                 arrowY = 900
-            else --!!!
+            else
                 arrowY = 900
             end
         elseif arrowX == 340 then

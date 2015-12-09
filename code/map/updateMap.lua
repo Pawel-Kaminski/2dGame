@@ -1,9 +1,3 @@
---TODO: remove firstEnemy, ... variables
-
---WARNING: This file uses global variables:
---spriteLayer, stats, activeEnemySprite, firstEnemy, secondEnemy, thirdEnemy
---enemies, Talking, selectedNPC, playerIsTalking, doNotDisplay
-
 require "map.updateMap.enemies.actionsOfEnemies"
 require "map.updateMap.enemies.dorver"
 require "map.updateMap.enemies.thornbush"
@@ -54,8 +48,7 @@ function updateMap()
             playerIsTalking = true  --Activate talking mode
             --Display background for dialogues
             Talking.sprites.dialogBackground.active = true
-            --If this is not present here,
-            --player is unable to receive second quest
+            --It lets player receive other quests
             doNotDisplay = false        
         end
     end

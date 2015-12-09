@@ -3,12 +3,6 @@ require "quests.drawQuests.showEnding"
 
 function drawQuests(numberOfItems)
     map2:draw()
-
-    --love.graphics.setColor(255, 255, 255)
-    --love.graphics.printf(
-        --"screenId = "..screenId,
-        --100, 1000, 1820, "left", 0)
-
     local yPosition = 100
     if screenId == 4 then
         showEnding()

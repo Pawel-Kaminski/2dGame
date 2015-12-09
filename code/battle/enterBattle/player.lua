@@ -1,6 +1,3 @@
---WARNING: This file creates global variables:
---PlayerStatistics, Player, displayAnimation, animationId
-
 require "battle.enterBattle.player.playerActionFlags"
 
 PlayerStatistics = {

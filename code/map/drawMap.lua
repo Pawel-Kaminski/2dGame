@@ -1,5 +1,3 @@
---Uses global variables talking, Talking
-
 --argument talking describes if player is talking (true or false)
 --argument npc describes selected non-player character
 function drawMap(talking, npc)
@@ -69,7 +67,7 @@ function drawMap(talking, npc)
         elseif isQuestFinished(1) and npc.dialog2 ~= null then
             text = npc.dialog2
         end
-        --In order to add teleport to NPCLayer
+        --In order to add teleport to NPCLayer:
         if text == null then
             text = "To jest teleport, który pozwoli ci opuścić mapę. "..
                 "Naciśnij ENTER, aby użyć."

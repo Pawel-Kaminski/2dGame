@@ -1,5 +1,3 @@
---WARNING: This file uses global variables: map
-
 require "map.enterMap.createLayers.spriteLayer"
 require "map.enterMap.createLayers.enemiesLayer"
 require "map.enterMap.createLayers.NPCLayer"

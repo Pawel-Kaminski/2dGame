@@ -1,4 +1,3 @@
---WARNING: This file uses global variables: map, NPC
 require "map.enterMap.createLayers.NPCLayer.firstMapNPC"
 require "map.enterMap.createLayers.NPCLayer.secondMapNPC"
 require "map.enterMap.createLayers.NPCLayer.thirdMapNPC"

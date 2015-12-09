@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---countingActive, dtotal, pause, dtotalPause, firstEnemy, secondEnemy,
---thirdEnemy, displayAnimation, isAlreadyRunning, secondSprite
-
 require "battle.updateBattle.fight"
 require "battle.updateBattle.winning"
 

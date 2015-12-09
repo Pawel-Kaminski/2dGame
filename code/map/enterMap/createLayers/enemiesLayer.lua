@@ -1,4 +1,3 @@
---WARNING: This file uses global variables: map, enemies
 require "map.enterMap.createLayers.enemiesLayer.firstMapEnemies"
 require "map.enterMap.createLayers.enemiesLayer.secondMapEnemies"
 require "map.enterMap.createLayers.enemiesLayer.thirdMapEnemies"

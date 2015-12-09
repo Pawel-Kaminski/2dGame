@@ -1,9 +1,3 @@
---WARNING: This file uses global variables:
---selectedAction, selectingEnemy, countingActive, displayingActions, arrowY
-
---files: makeAction.lua, setArrow.lua, selectEnemy.lua are connected via
---selectingEnemy and selectedAction variables
-
 require "battle.keypressedBattle.displayActions.makeAction.setArrow"
 
 --makeAction() function is started when list of actions is displayed

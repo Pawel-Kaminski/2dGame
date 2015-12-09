@@ -1,14 +1,9 @@
---WARNING: This file uses global variables: map, Talking
-
 function createTalkingLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Talking", 7)
-        --map:addCustomLayer("Talking", 8)
     elseif mapId == 2 or mapId == 3 then
-        --map:addCustomLayer("Talking", 6)
         map:addCustomLayer("Talking", 7)
     else
-        --map:addCustomLayer("Talking", 5)
         map:addCustomLayer("Talking", 8)
     end
 

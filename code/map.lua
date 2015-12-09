@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---active1, active2, active3, doNotDisplay, playerIsTalking, selectedNPC,
---selectedMap
-
 require "battle"
 require "quests"
 mapState = {} --STI: creates new state called "mapState"

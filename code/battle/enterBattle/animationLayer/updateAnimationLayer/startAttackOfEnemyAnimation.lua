@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---animationId, mainSprite, secondSprite, duration, startPositionIsSet, enemyId,
---displayAnimation, startPositionIsSet, counting
-
 function startAttackOfEnemyAnimation(layer, id)
     if id == 5 then
         mainSprite = layer.sprites.bullet

@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---playerPositionX, playerPositionY, doNotDisplay, Talking
-
 function keypressedMap(key)
     if teleportIsActive and key == "return" then
         teleportIsActive = false

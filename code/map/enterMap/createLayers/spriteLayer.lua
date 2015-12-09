@@ -1,13 +1,10 @@
---WARNING: This file uses global variables: map, spriteLayer, playerPositionX,
---playerPositionY
-
 function createSpriteLayer(mapId)
     if mapId == 1 then
         map:addCustomLayer("Sprite Layer", 5) -- Create a Custom Layer
     elseif mapId == 2 or mapId == 3 then
         map:addCustomLayer("Sprite Layer", 5)
     else
-        map:addCustomLayer("Sprite Layer", 7) -- Create a Custom Layer
+        map:addCustomLayer("Sprite Layer", 7)
     end
 
     spriteLayer = map.layers["Sprite Layer"] -- Add data to Custom Layer

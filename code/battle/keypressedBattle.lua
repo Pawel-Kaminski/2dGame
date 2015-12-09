@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---selectingEnemy, displayingMenu, displayingActions, victory, defeat
-
 require "battle.keypressedBattle.displayActions"
 require "battle.keypressedBattle.displayMenu"
 require "battle.keypressedBattle.lose"
@@ -8,7 +5,7 @@ require "battle.keypressedBattle.selectEnemy"
 require "battle.keypressedBattle.displayItems"
 
 function keypressedBattle(key)
-    if key == "p" then
+    if DEBUG_MODE and key == "p" then
         winning()
     end
     if selectingEnemy then
@@ -22,12 +19,8 @@ function keypressedBattle(key)
         displayBattleItems(key)
     elseif victory then
         if key == "return" then
-            --if isQuestFinished(10) then
-                --Gamestate.switch(questsState)
-            --else
-                love.audio.stop()
-                Gamestate.switch(mapState)
-            --end
+            love.audio.stop()
+            Gamestate.switch(mapState)
         end
     elseif defeat then
         lose(key, arrowY)

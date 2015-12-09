@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---arrowY
-
 function lose(key, arrowPositionY)
     if key == "down" then
         if arrowPositionY < 820 then

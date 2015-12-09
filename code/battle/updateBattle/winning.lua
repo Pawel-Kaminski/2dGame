@@ -1,7 +1,3 @@
---WARNING: This file uses global variables:
---displayingActions, displayingMenu, displayTurnInfo, victory, sound3,
---battleSpriteLayer, Player
-
 function winning()
    love.audio.stop()
    displayingActions = false

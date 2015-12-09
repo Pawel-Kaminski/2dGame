@@ -1,6 +1,3 @@
---WARNING: This file uses global variables: selectedAction,
---firstEnemy, secondEnemy, thirdEnemy
-
 require "battle.enterBattle"
 require "battle.updateBattle"
 require "battle.drawBattle"

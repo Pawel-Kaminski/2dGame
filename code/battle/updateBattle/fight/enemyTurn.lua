@@ -1,11 +1,4 @@
---WARNING: This file uses global variables:
---Player, displayingActions, displayingMenu, displayTurnInfo, defeat, arrowY,
---sound3, pause
---Problem to solve: Creatures' names shouldn't be defined here, because they are
---already defined in specific files
-
 function AI(o1)
-    --TODO: implement AI function
     if o1.name == "Stwór" or o1.name == "Stwór 2"
         or o1.name == "Stwór 3" then
             DorverAI(o1)
@@ -40,7 +33,7 @@ function AI(o1)
 end
 
 function enemyTurn(o1)
-    --Here is a place for enemies' AI-------------------------------------------
+    --Here is enemies' AI-------------------------------------------------------
     AI(o1)
     ----------------------------------------------------------------------------
     if Player.healthPoints < 0 then

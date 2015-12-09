@@ -1,6 +1,3 @@
---WARNING: This file uses global variables:
---victory, countingActive, actions, sound2, battleArena, arrowX, arrowY 
-
 require "battle.enterBattle.animationLayer"
 require "battle.enterBattle.backgroundLayer"
 require "battle.enterBattle.platformsLayer"

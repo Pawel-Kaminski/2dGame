@@ -1,10 +1,3 @@
---WARNING: This file uses global variables:
---arrowY, selectedEnemy, firstEnemy, secondEnemy, thirdEnemy, selectingEnemy,
---arrowX, selectedAction, countingActive, displayingActions, Player
-
---files: makeAction.lua, setArrow.lua, selectEnemy.lua are connected via
---selectingEnemy and selectedAction variables
-
 require "battle.keypressedBattle.selectEnemy.moveArrow"
 
 function selectEnemy(key)
