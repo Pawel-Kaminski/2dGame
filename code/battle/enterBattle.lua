@@ -35,9 +35,33 @@ function enterBattle(first, second, third)
     if activeEnemySprite.name == "thornbush" then
         sound2 = love.audio.newSource(
             "music/fight_themes/2-battleThemeA.mp3")
-    else
+    elseif activeEnemySprite.name == "creature" then
         sound2 = love.audio.newSource(
             "music/fight_themes/5-Battle_of_the_Void.mp3")
+    elseif activeEnemySprite.name == "forestGuardian" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/12-An Adventure Awaits.mp3")
+    elseif activeEnemySprite.name == "cactus" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/5-Battle_of_the_Void.mp3")
+    elseif activeEnemySprite.name == "forestCreature" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/12-An Adventure Awaits.mp3")
+    elseif activeEnemySprite.name == "dragon" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/4-Flaming_Soul.mp3")
+    elseif activeEnemySprite.name == "airGuardian" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/7-Air_Boss-Small_Epic.mp3")
+    elseif activeEnemySprite.name == "fireGuardian" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/8-Fire_Boss-metal_ages.ogg")
+    elseif activeEnemySprite.name == "iceGuardian" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/11-The_Last_Encounter_Long_Loop.ogg")
+    elseif activeEnemySprite.name == "boss" then
+        sound2 = love.audio.newSource(
+            "music/fight_themes/10-Final_Boss-BlackmoorColossusLoop.ogg")
     end
     sound3 = love.audio.newSource("music/VictoryTheme.mp3")
     love.audio.play(sound2)
