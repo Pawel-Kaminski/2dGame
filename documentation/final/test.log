@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.25)  7 DEC 2015 01:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.7.25)  10 DEC 2015 02:54
 entering extended mode
  %&-line parsing enabled.
 **test
@@ -519,8 +519,8 @@ Underfull \hbox (badness 5924) in paragraph at lines 27--27
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 27--27
- []\T1/cmr/m/n/12 dr. Krzysztofa Sopyªy 
+Underfull \hbox (badness 3679) in paragraph at lines 27--27
+ []\T1/cmr/m/n/12 dra Krzysztofa Sopyªy 
  []
 
 [1
@@ -583,16 +583,26 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) (./chapter3.tex [5
 
-]
+Overfull \hbox (12.91621pt too wide) in paragraph at lines 2--4
+[]\T1/cmr/m/n/12 Do uru-chomienia gry niezb¦dna jest in-sta-lacja ±rodowiska ur
+u-chomieniowego LÖVE. Poprzedni
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
+
+])
+(./chapter3.tex [6]
 Rozdzia\l  3.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) (./chapter4.tex [6
+) (./chapter4.tex [7
 
 ]
 Rozdzia\l  4.
@@ -601,7 +611,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) (./chapter5.tex [7
+
+Overfull \hbox (8.32364pt too wide) in paragraph at lines 2--6
+[]\T1/cmr/m/n/12 Istotnym el-e-mentem pracy zwi¡zanej z pow-staniem gry byªo po
+z-nanie niez-nanych mi wcze±niej
+ []
+
+) (./chapter5.tex [8
 
 ]
 Rozdzia\l  5.
@@ -610,7 +626,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) (./chapter6.tex [8
+) (./chapter6.tex [9
 
 ]
 Rozdzia\l  6.
@@ -619,7 +635,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) (./chapter7.tex [9
+) (./chapter7.tex [10
 
 ]
 Rozdzia\l  7.
@@ -628,13 +644,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 5.87357pt
 (hyperref)                replaced by space on input line 1.
 
-) [10
+) [11
 
 ] (./test.aux) ) 
 Here is how much of TeX's memory you used:
- 6488 strings out of 495061
- 86466 string characters out of 1182621
- 155121 words of memory out of 3000000
+ 6489 strings out of 495061
+ 86473 string characters out of 1182621
+ 156121 words of memory out of 3000000
  9527 multiletter control sequences out of 15000+50000
  15696 words of font info for 37 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -646,9 +662,9 @@ var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/pawe/.texmf-var/fonts/pk
 /ljfour/jknappen/ec/ecbx2074.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jkna
 ppen/ec/ecbx1728.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
 1440.600pk> </home/pawe/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk>
-Output written on test.pdf (12 pages, 125370 bytes).
+Output written on test.pdf (13 pages, 137952 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
