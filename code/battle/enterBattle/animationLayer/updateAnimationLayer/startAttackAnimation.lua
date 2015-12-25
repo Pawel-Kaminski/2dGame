@@ -1,4 +1,4 @@
-function startAttackAnimation(layer, id)
+function startAttackAnimation(layer, id, dt)
     local axisXmodifier = 0
     local linearFunctionModifier = 0
     if id == 1 or id == 9 then
@@ -42,12 +42,12 @@ function startAttackAnimation(layer, id)
     mainSprite.active = true
     dtotal = 0
     if selectedEnemy == firstEnemy and mainSprite.x < 1350 + axisXmodifier then
-        mainSprite.x = mainSprite.x + 3
+        mainSprite.x = mainSprite.x + 800 * dt
     elseif selectedEnemy == secondEnemy and mainSprite.x < 1530 + axisXmodifier then
-        mainSprite.x = mainSprite.x + 3
+        mainSprite.x = mainSprite.x + 800 * dt
         mainSprite.y = 0.04878 * mainSprite.x + 285.36585 + linearFunctionModifier
     elseif selectedEnemy == thirdEnemy and mainSprite.x < 1350 + axisXmodifier then
-        mainSprite.x = mainSprite.x + 3
+        mainSprite.x = mainSprite.x + 800 * dt
         mainSprite.y = 0.17647 * mainSprite.x + 247.059 + linearFunctionModifier
     else
         displayAnimation = false

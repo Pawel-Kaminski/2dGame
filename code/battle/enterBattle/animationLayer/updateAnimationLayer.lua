@@ -22,15 +22,15 @@ function updateAnimationLayer(time)
     if displayAnimation and 
     (animationId == 1 or animationId == 2 or animationId == 9
     or animationId == 10 or animationId == 11) then
-        startAttackAnimation(battleAnimationLayer, animationId)
+        startAttackAnimation(battleAnimationLayer, animationId, time)
     elseif displayAnimation and (animationId == 3 or animationId == 4) then
-        startDefensiveAnimation(battleAnimationLayer, animationId)
+        startDefensiveAnimation(battleAnimationLayer, animationId, time)
     elseif displayAnimation and 
     (animationId == 5 or animationId == 6 or animationId == 12
     or animationId == 13 or animationId == 14) then
-        startAttackOfEnemyAnimation(battleAnimationLayer, animationId)
+        startAttackOfEnemyAnimation(battleAnimationLayer, animationId, time)
     elseif displayAnimation and (animationId == 7 or animationId == 8) then
-        startDefensiveAnimation(battleAnimationLayer, animationId, enemyId)
+        startDefensiveAnimation(battleAnimationLayer, animationId, time, enemyId)
     end
     if secondSprite ~= null and secondSprite.active then
         counting = counting + time

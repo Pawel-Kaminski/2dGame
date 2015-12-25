@@ -1,4 +1,4 @@
-function startAttackOfEnemyAnimation(layer, id)
+function startAttackOfEnemyAnimation(layer, id, dt)
     if id == 5 then
         mainSprite = layer.sprites.bullet
         secondSprite = layer.sprites.explosion
@@ -36,12 +36,12 @@ function startAttackOfEnemyAnimation(layer, id)
     mainSprite.active = true
     dtotal = 0
     if enemyId == 1 and mainSprite.x > 300 then
-        mainSprite.x = mainSprite.x - 3
+        mainSprite.x = mainSprite.x - 800 * dt
     elseif enemyId == 2 and mainSprite.x > 300 then
-        mainSprite.x = mainSprite.x - 3
+        mainSprite.x = mainSprite.x - 800 * dt
         mainSprite.y = 0.04878 * mainSprite.x + 285.36585
     elseif enemyId == 3 and mainSprite.x > 300 then
-        mainSprite.x = mainSprite.x - 3
+        mainSprite.x = mainSprite.x - 800 * dt
         mainSprite.y = 0.17647 * mainSprite.x + 247.059
     else
         displayAnimation = false

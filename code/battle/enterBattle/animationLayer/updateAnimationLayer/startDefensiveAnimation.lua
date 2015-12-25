@@ -1,4 +1,4 @@
-function startDefensiveAnimation(layer, id, enemy)
+function startDefensiveAnimation(layer, id, dt, enemy)
     if id == 3 or id == 8 then
         mainSprite = layer.sprites.healingBall
         secondSprite = layer.sprites.heal
@@ -30,7 +30,7 @@ function startDefensiveAnimation(layer, id, enemy)
     mainSprite.active = true
     dtotal = 0
     if mainSprite.y < secondSprite.y + 130 then
-        mainSprite.y = mainSprite.y + duration
+        mainSprite.y = mainSprite.y + 300 * dt
     else
         displayAnimation = false
         mainSprite.active = false
