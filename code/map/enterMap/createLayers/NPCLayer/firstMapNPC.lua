@@ -70,8 +70,8 @@ function firstMapNPC()
             dialog = "Witaj, jestem Deatlana.",
             dialog2 = "Witaj, jestem Deatlana. Martwię się o Osigolda. "..
                         "Ostatnio nie czuje się najlepiej.",
-            dialog3 = "Czuję się bardzo źle. Proszę spróbuj pomóc mi "..
-                "i Osigoldowi."
+            --dialog3 = "Czuję się bardzo źle. Proszę spróbuj pomóc mi "..
+                --"i Osigoldowi."
         }
     }
 end

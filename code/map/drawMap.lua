@@ -59,6 +59,7 @@ function drawMap(talking, npc)
             and npc.dialog3 ~= null then
                 text = npc.dialog3
                 finishQuest(2)
+		items[6][2] = 0
                 if not isQuestDisplayed(3) then
                     doNotDisplay = false
                 end
