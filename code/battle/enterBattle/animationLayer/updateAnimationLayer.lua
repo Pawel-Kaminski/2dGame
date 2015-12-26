@@ -17,13 +17,15 @@ require "battle.enterBattle.animationLayer.updateAnimationLayer.startDefensiveAn
 --= 12 - fire attack (for enemy)
 --= 13 - ice attack (for enemy)
 --= 14 - force of elements (for enemy)
+--= 15 - use item
 
 function updateAnimationLayer(time)
     if displayAnimation and 
     (animationId == 1 or animationId == 2 or animationId == 9
     or animationId == 10 or animationId == 11) then
         startAttackAnimation(battleAnimationLayer, animationId, time)
-    elseif displayAnimation and (animationId == 3 or animationId == 4) then
+    elseif displayAnimation and (animationId == 3 or animationId == 4
+    or animationId == 15) then
         startDefensiveAnimation(battleAnimationLayer, animationId, time)
     elseif displayAnimation and 
     (animationId == 5 or animationId == 6 or animationId == 12

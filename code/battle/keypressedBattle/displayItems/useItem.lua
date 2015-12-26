@@ -3,6 +3,8 @@ function useItem(number)
         --use health potion
         --recover small amount of HP
         items[1][2] = items[1][2] - 1
+    	displayAnimation = true
+    	animationId = 15
         Player.healthPoints = Player.healthPoints + 50
         if Player.healthPoints > Player.maxHealth then
             Player.healthPoints = Player.maxHealth
@@ -11,10 +13,14 @@ function useItem(number)
         --use health elixir
         --fully recover HP
         items[2][2] = items[2][2] - 1
+    	displayAnimation = true
+    	animationId = 15
         Player.healthPoints = Player.maxHealth
     elseif number == 3 and items[3][2] > 0 then
         --use speed potion
         items[3][2] = items[3][2] - 1
+    	displayAnimation = true
+    	animationId = 15
         if Player.waitingTime > 10 then
             Player.waitingTime = Player.waitingTime - 10
         else
@@ -23,6 +29,8 @@ function useItem(number)
     elseif number == 4 and items[4][2] > 0 then
         --use defence potion
         items[4][2] = items[4][2] - 1
+    	displayAnimation = true
+    	animationId = 15
         if Player.defence < 90 then
             Player.defence = Player.defence + 10
         else
@@ -32,6 +40,8 @@ function useItem(number)
         --use magic elixir
         --fully recover MP
         items[5][2] = items[5][2] - 1
+    	displayAnimation = true
+    	animationId = 15
         Player.magicPoints = Player.maxMagic
     else return
     end

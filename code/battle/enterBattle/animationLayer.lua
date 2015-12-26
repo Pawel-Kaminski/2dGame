@@ -68,6 +68,18 @@ function loadAnimationLayer()
             y = 0,
             active = false
         },
+	item = {
+            image = love.graphics.newImage("assets/sprites/item.png"),
+            x = 195,
+            y = 180,
+            active = false
+	},
+	itemBall = {
+            image = love.graphics.newImage("assets/sprites/itemBall.png"),
+            x = 285,
+            y = 0,
+            active = false
+	},
         poison = {
             image = love.graphics.newImage("assets/sprites/poison.png"),
             x = 0,
