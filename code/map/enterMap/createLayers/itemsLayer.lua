@@ -32,10 +32,12 @@ function createItemsLayer(mapId)
                         spriteLayer.sprites.player.y <= 480 then
                             itemsLayer.sprites.earthArtefact.active = true
                             active24 = true
+							items[8][2] = 0
                     elseif spriteLayer.sprites.player.y >= 660 and
                         spriteLayer.sprites.player.y <= 780 then
                             itemsLayer.sprites.fireArtefact.active = true
                             active26 = true
+							items[10][2] = 0
                     end
             elseif spriteLayer.sprites.player.x >= 1440 and
                 spriteLayer.sprites.player.x <= 1560 then
@@ -43,10 +45,12 @@ function createItemsLayer(mapId)
                         spriteLayer.sprites.player.y <= 480 then
                             itemsLayer.sprites.windArtefact.active = true
                             active25 = true
+							items[9][2] = 0
                     elseif spriteLayer.sprites.player.y >= 660 and
                         spriteLayer.sprites.player.y <= 780 then
                             itemsLayer.sprites.iceArtefact.active = true
                             active27 = true
+							items[11][2] = 0
                     end
             end
             if itemsLayer.sprites.earthArtefact.active and

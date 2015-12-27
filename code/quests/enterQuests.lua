@@ -1,5 +1,11 @@
 function enterQuests()
     changeMusic = false
+    if screenId == 4 then
+        local soundtrack = love.audio.newSource(
+            "music/other_themes/Raindrops_of_a_Dream.mp3")
+        love.audio.play(soundtrack)
+        soundtrack:setLooping(true)
+    end
     map2 = sti.new("assets/maps/old_map")
     map2:addCustomLayer("Background", 2)
     background = map2.layers["Background"]
