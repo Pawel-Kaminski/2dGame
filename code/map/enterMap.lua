@@ -37,7 +37,7 @@ function enterMap(mapId)
         end
     elseif mapId == 4 then
         if changeMusic then
-            sound = love.audio.newSource("music/03_Unleashed.mp3")
+            sound = love.audio.newSource("music/Divine_Madness.mp3")
             love.audio.stop()
             love.audio.play(sound)
         else
