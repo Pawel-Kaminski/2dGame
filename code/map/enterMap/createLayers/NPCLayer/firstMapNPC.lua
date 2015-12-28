@@ -56,6 +56,8 @@ function firstMapNPC()
                 "a ludzie, jedna osoba po drugiej, zaczną chorować. "..
                 "Jeśli legenda jest prawdziwa, nie pozostało wiele czasu. "..
                 "Afedia może znać sposób na rozwiązanie tych problemów.",
+            dialog4 = "Proszę, spróbuj znaleźć sposób, aby pozbyć się tej "..
+                "choroby.",
             quest = "Osigold jest poważnie chory. Zdobądź dla niego "..
                 "kwitarykson - magiczną roślinę leczniczą.",
             quest2 = "Osoby mieszkające w wiosce zaczynają chorować. "..
@@ -69,9 +71,7 @@ function firstMapNPC()
             y = 600,
             dialog = "Witaj, jestem Deatlana.",
             dialog2 = "Witaj, jestem Deatlana. Martwię się o Osigolda. "..
-                        "Ostatnio nie czuje się najlepiej.",
-            --dialog3 = "Czuję się bardzo źle. Proszę spróbuj pomóc mi "..
-                --"i Osigoldowi."
+                        "Ostatnio nie czuje się najlepiej."
         }
     }
 end

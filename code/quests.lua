@@ -44,6 +44,10 @@ function questsState:keypressed(key)
     if screenId == 4 and (key == "return" or key == "escape") then
         screenId = 5
     elseif screenId == 5 and (key == "return" or key == "escape") then
+        screenId = 6
+    elseif screenId == 6 and (key == "return" or key == "escape") then
+        screenId = 7
+    elseif screenId == 7 and (key == "return" or key == "escape") then
         love.event.quit()
     end
 end

@@ -7,7 +7,11 @@ function drawQuests(numberOfItems)
     if screenId == 4 then
         showEnding()
     elseif screenId == 5 then
-        showCredits()
+        showCreditsPart1()
+    elseif screenId == 6 then
+        showCreditsPart2()
+    elseif screenId == 7 then
+        showCreditsPart3()
     elseif screenId == 2 then
         love.graphics.setColor(255, 255, 255)
         love.graphics.printf(
