@@ -1,0 +1,37 @@
+%%\documentclass[a4paper,10pt]{article}
+\documentclass[wmii,inf,inz]{uwmthesis}
+\newcommand{\version}{1.0}
+
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage[dvips]{hyperref}
+
+
+\date{2015}
+\title{Stworzenie gry RPG z wykorzystaniem grafiki 2D. Wersja~\version}
+\author{Paweł Kamiński}
+\etitle{Creation of an RPG game using 2D graphics. Version~\version}
+\wykonanaw{katedrze Metod Matematycznych Informatyki}
+\ewykonanaw{the Department of Mathematical Methods of Informatics}
+
+\podkierunkiem{dr. Krzysztofa Sopyły}
+\epodkierunkiem{dr Krzysztof Sopyła}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{wstep.tex}
+\input{abstract.tex}
+\input{chapter1.tex}
+\input{chapter2.tex}
+\input{chapter3.tex}
+\input{chapter4.tex}
+\input{chapter5.tex}
+\input{chapter6.tex}
+\input{chapter7.tex}
+\end{document}

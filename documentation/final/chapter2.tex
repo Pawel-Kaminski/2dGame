@@ -1,0 +1,115 @@
+\chapter{Uruchomienie oraz obsługa gry}
+Do uruchomienia gry niezbędna jest instalacja środowiska uruchomieniowego LÖVE.
+Poprzedni rozdział opisuje sposób jego instalacji.
+
+Aby uruchomić grę po instalacji LÖVE, wystarczy dwukrotnie kliknąć na plik 
+z rozszerzeniem .love.
+
+Po uruchomieniu gry wyświetli się menu główne. Aby rozpocząć nowę grę, należy 
+wybrać opcję 'Nowa gra'. Aby nawigować po menu, należy użyć klawiszy 'strzałka 
+w górę' oraz 'strzałka w dół'. Aby potwierdzić wybór, należy nacisnąć klawisz 
+ENTER.
+
+Następnie gracz ma możliwość wyboru lokacji. Na samym początku dostępna jest 
+tylko jedna z czterech lokacji. Należy potwierdzić wybór klawiszem ENTER.
+Aby powrócić w przyszłości do tego ekranu, należy odnaleźć teleport na mapie i
+potwierdzić powrót klawiszem ENTER.
+
+W dowolnym momencie można opuścić grę, naciskając kombinację klawiszy 'alt' i 
+'F4'. Uwaga! Wyjście z gry spowoduje całkowitą utratę postępów osiągniętych 
+przez gracza.
+
+Po wybraniu lokacji, gracz jest przenoszony na mapę. Sterowanie na mapie:
+
+klawisze strzałek - poruszaj się po mapie
+
+Q - wyświetl ekran ekwipunku
+
+S - wyświetl listę umiejętności
+
+L - wyświetl listę zadań do wykonania.
+
+Na mapie można spotkać postaci, z którymi można porozmawiać.
+Aby porozmawiać z jakąś postacią, należy do niej podejść.
+Aby zamknąć okno dialogowe, należy odejść od napotkanej postaci.
+
+Oprócz tego na mapie można znaleźć przydatne lub ważne przedmioty.
+Aby wziąć przedmiot do ekwipunku, należy podejść w miejsce, w którym znajduje
+się przedmiot.
+
+Na mapie można również spotkać przeciwników.
+Przeciwnik znajdujący się na mapie reprezentuje grupkę przeciwników, z którymi 
+można stoczyć walkę.
+Aby rozpocząć walkę, należy do podejść do wyświetlanego na mapie przeciwnika.
+Walki odbywają się na przeznaczonej do tego arenie walki.
+
+Każdy z wojowników charakteryzuje się kilkoma ważnymi parametrami.
+Część z nich jest ukryta, a część jest wyświetlana na ekranie.
+Parametry, które są wyświetlane na ekranie, to:
+
+HP - punkty życia (health points)
+
+MP - punkty magiczne (magic points)
+
+Obrona - procentowy współczynnik określający odporność na obrażenia
+
+System walki to turowy system walki z elementami czasu rzeczywistego.
+Zazwyczaj gracz mierzy się z trójką przeciwników.
+Gracz i przeciwnicy mogą wykonywać swoje działania tylko wtedy, gdy trwa ich 
+tura.
+
+W przeciwieństwie do klasycznego turowego systemu walki, tury nie muszą
+występować na zmianę.
+Każda z postaci posiada licznik odliczający czas, który musi upłynąć, aby 
+nastąpiła tura tej postaci.
+Informacja o czasie pozostałym do wykonania ataku przez przeciwnika jest jawna 
+dla gracza. Gdy któryś licznik osiągnie 0, dana postać wykonuje akcję.
+Napotkani przeciwnicy mogą być szybsi lub wolniejsi od gracza w swoich 
+działaniach, tzn. każdy wojownik posiada swój własny współczynnik czasu 
+oczekiwania.
+
+Celem akcji wykonywanej w czasie swojej tury będzie zazwyczaj wykonanie ataku 
+odbierającego punkty życia (HP) przeciwnika. Czasami będą dostępne również inne 
+rozwiązania, takie jak np. rzucanie czarów defensywnych redukujących przyszłe 
+obrażenia. Aby skutecznie walczyć, należy analizować obecną sytuację na polu 
+bitwy i wybierać najbardziej opłacalne akcje z listy dostępnych akcji.
+
+Każda postać posiada współczynnik obrony.
+Jest on wyrażony w skali od 0 do 100\% i określa, ile procent obrażeń zadawanych 
+przez przeciwnika jest unikanych. Ilość punktów odbieranych przez atak jest 
+wyrażona wzorem:
+
+efektywna ilość obrażeń = ilość obrażeń, które zadaje atak * (100\% - współczynnik obrony).
+
+Jeżeli liczba punktów życia jakiegoś wojownika spadnie do 0, oznacza to śmierć 
+postaci. Jeżeli liczba punktów życia wszystkich przeciwników wyniesie 0, walka 
+jest zakończona sukcesem. Gracz jest przenoszony z powrotem na mapę.
+Jeżeli liczba punktów życia gracza wyniesie 0, walka jest zakończona porażką.
+Gracz otrzymuje wtedy propozycję podjęcia ponownej próby.
+
+W czasie tury wyświetlane są 3 opcje:
+
+Akcja - otwiera listę dostępnych akcji
+
+Przedmiot - otwiera listę przedmiotów do użycia w trakcie walki
+
+Ucieczka - pozwala uciec z ekranu walki na mapę
+
+Podczas nawigowana po menu, można wrócić do poprzedniego menu, naciskając 
+klawisz BACKSPACE.
+
+Po wybraniu opcji 'akcja', należy wybrać jedną z akcji z wyświetlonej listy.
+Do każdej z akcji wyświetlany jest opis wyjaśniający, co robi dana akcja.
+Jeżeli wybrana akcja jest atakiem, należy jeszcze wybrać przeciwnika, którego 
+chcemy zaatakować.
+Niektóre z akcji wymagają posiadania punktów magicznych (MP).
+Jeśli gracz nie posiada wystarczającej liczby MP, należy wybrać inną akcję.
+
+Po wybraniu opcji 'przedmiot', można wybrać jeden z przedmiotów z listy.
+W przeciwieństwie do akcji, ich dokładne działanie nie jest znane.
+Użycie przedmiotu powoduje jego bezpowrotną utratę.
+
+Opcja 'ucieczka' pozwala zrezygnować z walki. Ta opcja może być przydatna, gdy 
+walka z danym przeciwnikiem sprawia dużo problemów. Można wtedy wrócić do mapy 
+i poszukać łatwiejszych przeciwników lub zebrać znajdujące się na mapie 
+przedmioty.

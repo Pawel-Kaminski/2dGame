@@ -1,0 +1,10 @@
+\select@language {polish}
+\contentsline {chapter}{Wst\IeC {\k e}p}{2}{chapter*.2}
+\contentsline {chapter}{Abstract}{3}{chapter*.3}
+\contentsline {chapter}{Rozdzia\l \ 1\relax .\kern .5em Instrukcja instalacji \IeC {\'s}rodowiska uruchomieniowego L\IeC {\"O}VE wymaganego do uruchomienia gry}{4}{chapter.1}
+\contentsline {chapter}{Rozdzia\l \ 2\relax .\kern .5em Uruchomienie oraz obs\IeC {\l }uga gry}{5}{chapter.2}
+\contentsline {chapter}{Rozdzia\l \ 3\relax .\kern .5em Om\IeC {\'o}wienie element\IeC {\'o}w sk\IeC {\l }adowych gry}{7}{chapter.3}
+\contentsline {chapter}{Rozdzia\l \ 4\relax .\kern .5em Technologie u\IeC {\.z}yte do zrealizowania projektu}{8}{chapter.4}
+\contentsline {chapter}{Rozdzia\l \ 5\relax .\kern .5em Mechanizm prze\IeC {\l }\IeC {\k a}czania pomi\IeC {\k e}dzy stanami gry}{9}{chapter.5}
+\contentsline {chapter}{Rozdzia\l \ 6\relax .\kern .5em Logika gry}{10}{chapter.6}
+\contentsline {chapter}{Rozdzia\l \ 7\relax .\kern .5em Podsumowanie}{11}{chapter.7}
