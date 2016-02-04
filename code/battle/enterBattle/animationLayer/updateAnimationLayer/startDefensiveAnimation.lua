@@ -2,14 +2,15 @@ function startDefensiveAnimation(layer, id, dt, enemy)
     if id == 3 or id == 8 then
         mainSprite = layer.sprites.healingBall
         secondSprite = layer.sprites.heal
-        --duration = 1.5
+        duration = 1.5
     elseif id == 4 or id == 7 then
         mainSprite = layer.sprites.defenceBall
         secondSprite = layer.sprites.defend
-        --duration = 1
+        duration = 1
     elseif id == 15 then
-	mainSprite = layer.sprites.itemBall
-	secondSprite = layer.sprites.item
+	    mainSprite = layer.sprites.itemBall
+	    secondSprite = layer.sprites.item
+        duration = 1
     end
     if enemy == null then
         mainSprite.x = 285
